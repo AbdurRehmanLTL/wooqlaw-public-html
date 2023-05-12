@@ -1,0 +1,25 @@
+{
+    "name": "Quick Start Tailwind VS Code by ARM",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "postcss src/tailwind.css -o ./public/css/style.css -w --verbose",
+      "build": "cross-env NODE_ENV=production postcss src/tailwind.css -o ./public/css/style.css --verbose"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@tailwindcss/forms": "^0.5.2",
+      "cross-env": "^7.0.3",
+      "cssnano": "^5.1.12",
+      "postcss-cli": "^10.0.0"
+    },
+    "devDependencies": {
+      "autoprefixer": "^10.4.7",
+      "postcss": "^8.4.14",
+      "tailwindcss": "^3.1.6"
+    }
+  }
+  
