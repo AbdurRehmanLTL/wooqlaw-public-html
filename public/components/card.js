@@ -1,7 +1,9 @@
 // LitElement and html are the basic required imports
 import { LitElement, html, css } from "https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js";
 
-class ArmCard extends LitElement {
+import '../microuis/avatar.js';
+
+class Card extends LitElement {
     static get properties() {
         return {
             featured: { type: Boolean },
@@ -18,15 +20,9 @@ class ArmCard extends LitElement {
             <div class="@container relative flex w-full flex-col flex-wrap items-start gap-4 md:gap-8 rounded-2xl border bg-white p-2 @xl:p-4 shadow mb-3">
                <div class="group flex flex-col w-full @xl:flex-row @xl:items-center justify-between gap-2 rounded-xl bg-gradient-to-b  ${this.featured ? 'from-yellow-100' : 'from-gray-100'}  p-2">
                   <div class="flex items-center gap-3">
-                     <a href="#" class="relative flex w-20 h-20 shrink-0">
-                        <img class="object-cover w-20 h-20 rounded-full" src="https://prodwooqlaw.blob.core.windows.net/uploads/a858a2bd-ba68-4f01-14a5-08daf84f4e5c/128x128/8858132d-7abd-412b-b901-ba967a394f49.jpg" alt="saiqa-haleema">
-                           
-                        <span class="absolute right-0 flex w-3 h-3 bg-green-600 rounded-full outline outline-white bottom-2">
-                        </span>
-                        </a>
+                    <arm-avatar></arm-avatar>
                      <div content="flex flex-wrap">
-                        <a
-                           href="/profile?id=a858a2bd-ba68-4f01-14a5-08daf84f4e5c&amp;tab=overview" class="txt flex text-sm @xl:text-base font-medium text-black">Tanveer Iqbal Khan</a>
+                        <a href="/profile?id=a858a2bd-ba68-4f01-14a5-08daf84f4e5c&amp;tab=overview" class="txt flex text-sm @xl:text-base font-medium text-black">Tanveer Iqbal Khan</a>
                         <span class="mb-1 text-sm font-normal txt">
                            <h3 class="text-sm font-normal">Advocate Supreme Court of Pakistan</h3>
                         </span>
@@ -212,4 +208,4 @@ class ArmCard extends LitElement {
     }
 }
 
-customElements.define("arm-card", ArmCard);
+customElements.define("arm-card", Card);

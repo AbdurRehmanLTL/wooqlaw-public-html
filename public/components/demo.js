@@ -3,6 +3,27 @@ import { LitElement, html, css } from "https://cdn.jsdelivr.net/gh/lit/dist@2/co
 
 // Create a class definition for your component and extend the LitElement base class
 class ArmDemo extends LitElement {
+  // Properties are defined through a static getter. When defined, LitElement will decode any
+  // html attributes set on this component as properties which can be used from javascript.
+
+  // Keys should be the property name, value the property type.
+  // The type is used to deserialize html attribute string into a javascript property.
+  // The supported types are String, Number, Boolean, Array Object.
+  static get properties() {
+    return {
+      // message: { type: String },
+      // count: { type: Number }
+    };
+  }
+
+  constructor() {
+    super();
+
+    // default values can be set from the constructor
+    // this.count = 0;
+  }
+
+
   // The render callback renders your element's template. This should be a pure function,
   // it should always return the same template given the same properties. It should not perform
   // any side effects such as setting properties or manipulating the DOM. See the updated

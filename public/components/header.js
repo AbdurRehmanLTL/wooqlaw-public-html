@@ -1,7 +1,7 @@
 // LitElement and html are the basic required imports
 import { LitElement, html, css } from "https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js";
 
-class ArmHeader extends LitElement {
+class Header extends LitElement {
     render() {
         return html` 
             <div class="container top-0 z-20" :class="scrolAtTop ? 'sticky': 'relative'" @scroll.window="scrolAtTop = (window.pageYOffset > 80) ? true : false">
@@ -85,4 +85,4 @@ class ArmHeader extends LitElement {
     }
 }
 
-customElements.define("arm-header", ArmHeader);
+customElements.define("arm-header", Header);
