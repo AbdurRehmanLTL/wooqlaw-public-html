@@ -2,6 +2,7 @@
 import { LitElement, html, css } from "https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js";
 
 import '../microuis/avatar.js';
+import '../microuis/button.js';
 
 class Card extends LitElement {
     static get properties() {
@@ -123,6 +124,9 @@ class Card extends LitElement {
                         </div>
                         <span class="font-normal txt text-2xs">0 Reviews </span>
                      </div>
+                     <arm-button text="Play Intro" svg='<svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 26C6.04462 26 0 20.1793 0 13C0 5.82075 6.04462 0 13.5 0C20.9554 0 27 5.82075 27 13C27 20.1793 20.9554 26 13.5 26ZM10.125 6.50975V19.4902L20.25 13L10.125 6.50975Z" fill="white"></path></svg>'>
+                        
+                     </arm-button>
                      <button class="icon flex w-fit items-center justify-center gap-2 rounded-full border bg-orange-500 py-1 pr-1 @xl:pr-2 pl-1">
                         <span class="flex items-center justify-center circle">
                            <span class="icon">
