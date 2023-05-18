@@ -15,7 +15,7 @@ module.exports = {
       fontFamily: {
         'display': ['Poppins', 'sans-serif'],
         'body': ['Roboto', 'sans-serif'],
-        // 'jameel': ['jameel-noori-nastaleeq'],
+        'urdu': ['Noto Nastaliq Urdu', 'serif'],
       },
       extend: {
         fontSize: {

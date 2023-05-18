@@ -54,11 +54,14 @@
 /*}*/
 
 .city-name::before {
-  position: absolute;
   content: "";
-  width: 100%;
   height: 50%;
   background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 50.17%);
   z-index: -1;
-  @apply rounded-lg md:rounded-xl bottom-0
+  @apply w-full absolute rounded-lg md:rounded-xl bottom-0
+}
+.swiper-button-disabled {
+  opacity: .35;
+  cursor: auto;
+  pointer-events: none;
 }
