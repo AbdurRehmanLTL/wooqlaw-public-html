@@ -32,7 +32,15 @@
 <body x-data="{scrolAtTop: false}">
     <arm-header></arm-header>
     <div class="absolute top-0 flex w-full -z-10">
-        <img class="w-full h-[842px] md:h-[700px] object-cover md:object-none" src="./images/hero-bg-gradient.webp" alt="image" style="border-bottom-left-radius: 450px; border-bottom-right-radius: 450px;">
+        <picture>
+            <!-- load avif if supported -->
+            <source srcset="./images/hero-bg-gradient.avif" type="image/avif">
+            <!-- load webp if supported -->
+            <source srcset="./images/hero-bg-gradient.webp" type="image/webp">
+            <!-- load in case no `source` format applies 
+                  and use attributes for presentation -->
+            <img class="w-full h-[842px] md:h-[700px] object-cover md:object-none" loading="lazy" decoding="async" src="./images/hero-bg-gradient.png" alt="image" style="border-bottom-left-radius: 450px; border-bottom-right-radius: 450px;">
+        </picture>
     </div>
 
     <!-- Get instant legal help from verified lawyers across Pakistan -->
@@ -192,7 +200,12 @@
                         <div class="flex flex-wrap items-center gap-2 grow">
                             <div class="item"><a href="profile?id=94ab81b6-ce23-4979-4e25-08daf5810fb4&amp;tab=overview" class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200">
                                     <div class="flex items-center gap-2">
-                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white"><img class="object-cover w-10 h-10 rounded-full" src="https://prodwooqlaw.blob.core.windows.net/uploads/94ab81b6-ce23-4979-4e25-08daf5810fb4/128x128/7b6c7640-4be1-4b8c-a2de-943d9e08f7c7.jpg">
+                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white">
+                                            <picture>
+                                                <source srcset="./images/profile.avif" type="image/avif">
+                                                <source srcset="./images/profile.webp" type="image/webp">
+                                                <img class="object-cover w-10 h-10 rounded-full" src="./images/profile.jpg">
+                                            </picture>
                                             <span class="absolute -right-0.5 bottom-1 h-2 w-2 rounded-full bg-green-500 outline outline-white"></span>
                                         </div>
                                         
@@ -203,7 +216,12 @@
                                 </a></div>
                             <div class="item"><a href="profile?id=a858a2bd-ba68-4f01-14a5-08daf84f4e5c&amp;tab=overview" class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200">
                                     <div class="flex items-center gap-2">
-                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white"><img class="object-cover w-10 h-10 rounded-full" src="https://prodwooqlaw.blob.core.windows.net/uploads/a858a2bd-ba68-4f01-14a5-08daf84f4e5c/128x128/8858132d-7abd-412b-b901-ba967a394f49.jpg">
+                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white">
+                                             <picture>
+                                                <source srcset="./images/profile.avif" type="image/avif">
+                                                <source srcset="./images/profile.webp" type="image/webp">
+                                                <img class="object-cover w-10 h-10 rounded-full" src="./images/profile.jpg">
+                                            </picture>
                                             <span class="absolute -right-0.5 bottom-1 h-2 w-2 rounded-full bg-green-500 outline outline-white"></span>
                                         </div>
                                         
@@ -214,7 +232,12 @@
                                 </a></div>
                             <div class="item"><a href="profile?id=8de0a916-6d9b-49fc-14a7-08daf84f4e5c&amp;tab=overview" class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200">
                                     <div class="flex items-center gap-2">
-                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white"><img class="object-cover w-10 h-10 rounded-full" src="https://prodwooqlaw.blob.core.windows.net/uploads/8de0a916-6d9b-49fc-14a7-08daf84f4e5c/128x128/2a174728-1ab6-4d8a-b9d6-67ba9ca13632.jpg">
+                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white">
+                                             <picture>
+                                                <source srcset="./images/profile.avif" type="image/avif">
+                                                <source srcset="./images/profile.webp" type="image/webp">
+                                                <img class="object-cover w-10 h-10 rounded-full" src="./images/profile.jpg">
+                                            </picture>
                                             <span class="absolute -right-0.5 bottom-1 h-2 w-2 rounded-full bg-green-500 outline outline-white"></span>
                                         </div>
                                         
@@ -225,7 +248,12 @@
                                 </a></div>
                             <div class="item"><a href="profile?id=91282117-8183-4cfd-3080-08daefdcc721&amp;tab=overview" class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200">
                                     <div class="flex items-center gap-2">
-                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white"><img class="object-cover w-10 h-10 rounded-full" src="https://prodwooqlaw.blob.core.windows.net/uploads/91282117-8183-4cfd-3080-08daefdcc721/128x128/d82f7025-bfdf-4026-81ef-5270744705f7.jpg">
+                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white">
+                                             <picture>
+                                                <source srcset="./images/profile.avif" type="image/avif">
+                                                <source srcset="./images/profile.webp" type="image/webp">
+                                                <img class="object-cover w-10 h-10 rounded-full" src="./images/profile.jpg">
+                                            </picture>
                                             <span class="absolute -right-0.5 bottom-1 h-2 w-2 rounded-full bg-green-500 outline outline-white"></span>
                                         </div>
                                         
@@ -236,7 +264,12 @@
                                 </a></div>
                             <div class="item"><a href="profile?id=da9d6624-c142-4a30-3081-08daefdcc721&amp;tab=overview" class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200">
                                     <div class="flex items-center gap-2">
-                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white"><img class="object-cover w-10 h-10 rounded-full" src="https://prodwooqlaw.blob.core.windows.net/uploads/da9d6624-c142-4a30-3081-08daefdcc721/128x128/55909e5d-b235-41c2-a03e-34f9b80b1902.jpg">
+                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white">
+                                             <picture>
+                                                <source srcset="./images/profile.avif" type="image/avif">
+                                                <source srcset="./images/profile.webp" type="image/webp">
+                                                <img class="object-cover w-10 h-10 rounded-full" src="./images/profile.jpg">
+                                            </picture>
                                             <span class="absolute -right-0.5 bottom-1 h-2 w-2 rounded-full bg-green-500 outline outline-white"></span>
                                         </div>
                                         
@@ -247,7 +280,12 @@
                                 </a></div>
                             <div class="item"><a href="profile?id=d55da866-eaa4-4976-14a6-08daf84f4e5c&amp;tab=overview" class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200">
                                     <div class="flex items-center gap-2">
-                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white"><img class="object-cover w-10 h-10 rounded-full" src="https://prodwooqlaw.blob.core.windows.net/uploads/d55da866-eaa4-4976-14a6-08daf84f4e5c/128x128/8a227d90-7322-4a14-86d4-734555718cdf.jpg">
+                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white">
+                                             <picture>
+                                                <source srcset="./images/profile.avif" type="image/avif">
+                                                <source srcset="./images/profile.webp" type="image/webp">
+                                                <img class="object-cover w-10 h-10 rounded-full" src="./images/profile.jpg">
+                                            </picture>
                                             <span class="absolute -right-0.5 bottom-1 h-2 w-2 rounded-full bg-green-500 outline outline-white"></span>
                                         </div>
                                         
@@ -391,7 +429,12 @@
                             <span class="relative flex items-center justify-center w-6 h-6 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full">14</span>
                             <h3 class="text-base font-semibold text-white">Islamabad</h3>
                         </div>
-                        <img class="overflow-hidden rounded-lg -z-10 md:rounded-xl" alt="Islamabad" src="./images/quetta.webp">
+                         <picture>
+                                                <source srcset="./images/quetta.avif" type="image/avif">
+                                                <source srcset="./images/quetta.webp" type="image/webp">
+                        <img class="overflow-hidden rounded-lg -z-10 md:rounded-xl" alt="Islamabad" loading="lazy"
+  decoding="async" src="./images/quetta.jpg">
+  </picture>
                     </a>
                 </div>
                 <div class="swiper-slide">
@@ -400,7 +443,12 @@
                             <span class="relative flex items-center justify-center w-6 h-6 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full">14</span>
                             <h3 class="text-base font-semibold text-white">Islamabad</h3>
                         </div>
-                        <img class="overflow-hidden rounded-lg -z-10 md:rounded-xl" alt="Islamabad" src="./images/quetta.webp">
+                         <picture>
+                                                <source srcset="./images/quetta.avif" type="image/avif">
+                                                <source srcset="./images/quetta.webp" type="image/webp">
+                        <img class="overflow-hidden rounded-lg -z-10 md:rounded-xl" alt="Islamabad" loading="lazy"
+  decoding="async" src="./images/quetta.jpg">
+  </picture>
                     </a>
                 </div>
                 <div class="swiper-slide">
@@ -409,7 +457,12 @@
                             <span class="relative flex items-center justify-center w-6 h-6 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full">14</span>
                             <h3 class="text-base font-semibold text-white">Islamabad</h3>
                         </div>
-                        <img class="overflow-hidden rounded-lg -z-10 md:rounded-xl" alt="Islamabad" src="./images/quetta.webp">
+                         <picture>
+                                                <source srcset="./images/quetta.avif" type="image/avif">
+                                                <source srcset="./images/quetta.webp" type="image/webp">
+                        <img class="overflow-hidden rounded-lg -z-10 md:rounded-xl" alt="Islamabad" loading="lazy"
+  decoding="async" src="./images/quetta.jpg">
+  </picture>
                     </a>
                 </div>
                 <div class="swiper-slide">
@@ -418,7 +471,12 @@
                             <span class="relative flex items-center justify-center w-6 h-6 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full">14</span>
                             <h3 class="text-base font-semibold text-white">Islamabad</h3>
                         </div>
-                        <img class="overflow-hidden rounded-lg -z-10 md:rounded-xl" alt="Islamabad" src="./images/quetta.webp">
+                         <picture>
+                                                <source srcset="./images/quetta.avif" type="image/avif">
+                                                <source srcset="./images/quetta.webp" type="image/webp">
+                        <img class="overflow-hidden rounded-lg -z-10 md:rounded-xl" alt="Islamabad" loading="lazy"
+  decoding="async" src="./images/quetta.jpg">
+  </picture>
                     </a>
                 </div>
                 <div class="swiper-slide">
@@ -427,7 +485,12 @@
                             <span class="relative flex items-center justify-center w-6 h-6 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full">14</span>
                             <h3 class="text-base font-semibold text-white">Islamabad</h3>
                         </div>
-                        <img class="overflow-hidden rounded-lg -z-10 md:rounded-xl" alt="Islamabad" src="./images/quetta.webp">
+                         <picture>
+                                                <source srcset="./images/quetta.avif" type="image/avif">
+                                                <source srcset="./images/quetta.webp" type="image/webp">
+                        <img class="overflow-hidden rounded-lg -z-10 md:rounded-xl" alt="Islamabad" loading="lazy"
+  decoding="async" src="./images/quetta.jpg">
+  </picture>
                     </a>
                 </div>
                 <div class="swiper-slide">
@@ -436,7 +499,12 @@
                             <span class="relative flex items-center justify-center w-6 h-6 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full">14</span>
                             <h3 class="text-base font-semibold text-white">Islamabad</h3>
                         </div>
-                        <img class="overflow-hidden rounded-lg -z-10 md:rounded-xl" alt="Islamabad" src="./images/quetta.webp">
+                         <picture>
+                                                <source srcset="./images/quetta.avif" type="image/avif">
+                                                <source srcset="./images/quetta.webp" type="image/webp">
+                        <img class="overflow-hidden rounded-lg -z-10 md:rounded-xl" alt="Islamabad" loading="lazy"
+  decoding="async" src="./images/quetta.jpg">
+  </picture>
                     </a>
                 </div>
                 <div class="swiper-slide">
@@ -445,7 +513,12 @@
                             <span class="relative flex items-center justify-center w-6 h-6 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full">14</span>
                             <h3 class="text-base font-semibold text-white">Islamabad</h3>
                         </div>
-                        <img class="overflow-hidden rounded-lg -z-10 md:rounded-xl" alt="Islamabad" src="./images/quetta.webp">
+                         <picture>
+                            <source srcset="./images/quetta.avif" type="image/avif">
+                            <source srcset="./images/quetta.webp" type="image/webp">
+                        <img class="overflow-hidden rounded-lg -z-10 md:rounded-xl" alt="Islamabad" loading="lazy"
+  decoding="async" src="./images/quetta.jpg">
+  </picture>
                     </a>
                 </div>
             </div>
@@ -3417,7 +3490,11 @@
         </div>
         <div class="relative flex flex-col justify-between w-full mb-16 rounded-2xl lg:gap-x-12 md:bg-teal-100 md:flex-row md:gap-1 lg:mb-36">
             <div class="relative flex justify-center w-full md:w-1/3">
-                <img class="bottom-0 flex w-9/12 md:absolute md:w-fit" src="images/lawyer.webp" alt="">
+                <picture>
+                    <source srcset="./images/lawyer.avif" type="image/avif">
+                    <source srcset="./images/lawyer.webp" type="image/webp">
+                <img class="bottom-0 flex w-9/12 md:absolute md:w-fit" src="images/lawyer.png" alt="">
+                </picture>
             </div>
             <div class="flex flex-col w-full px-3 py-5 overflow-hidden bg-teal-100 md:bg-transparent md:w-2/3 lg:p-14 gap-7 rounded-2xl md:rounded-none">
                 <span class="flex flex-col items-center gap-4 md:gap-5 md:items-start">
@@ -3458,7 +3535,11 @@
                 </span>
             </div>
             <div class="relative flex justify-center w-full md:w-1/3">
-                <img class="bottom-0 flex w-9/12 md:absolute md:w-fit" src="images/client.webp" alt="">
+                <picture>
+                    <source srcset="./images/client.avif" type="image/avif">
+                    <source srcset="./images/client.webp" type="image/webp">
+                <img class="bottom-0 flex w-9/12 md:absolute md:w-fit" src="images/client.png" alt="">
+                </picture>
             </div>
         </div>
     </section>
@@ -3477,7 +3558,11 @@
                 </span>
                 </h2>
                 <div class="flex">
-                    <img src="images/testimonials-love.webp" alt="">
+                    <picture>
+                        <source srcset="./images/testimonials-love.avif" type="image/avif">
+                        <source srcset="./images/testimonials-love.webp" type="image/webp">
+                    <img src="images/testimonials-love.png" alt="">
+                    </picture>
                 </div>
             </div>
             <div class="w-full md:px-5 md:py-12 rounded-3xl md:rounded-full md:bg-gradient-to-b md:from-blue-100 md:to-yellow-100">
@@ -3519,7 +3604,11 @@
     <section class="container w-full mb-28">
         <div class="grid w-full grid-cols-1 gap-6 lg:grid-cols-2 md:flex-row md:gap-12">
             <div class="flex justify-center">
-                <img src="images/wooqlaw-apps.webp" alt="">
+                <picture>
+                    <source srcset="./images/wooqlaw-apps.avif" type="image/avif">
+                    <source srcset="./images/wooqlaw-apps.webp" type="image/webp">
+                <img src="images/wooqlaw-apps.png" alt="">
+                </picture>
             </div>
             <div class="flex flex-col items-center justify-center w-full gap-12 md:items-start">
                 <div class="flex flex-col items-center w-full gap-4 md:items-start">
