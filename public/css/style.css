@@ -2172,6 +2172,10 @@ select {
     margin-top: 2.25rem;
   }
 
+  .md\:\!block {
+    display: block !important;
+  }
+
   .md\:flex {
     display: flex;
   }
