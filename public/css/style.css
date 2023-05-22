@@ -1875,8 +1875,8 @@ select {
   pointer-events: none;
 }
 .swiper-pagination-bullet {
-  width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,16px));
-  height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,16px));
+  width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,16px)) !important;
+  height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,16px)) !important;
 }
 
 /* <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" /> */
