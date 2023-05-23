@@ -7,7 +7,7 @@ class Footer extends LitElement {
             <footer class="w-full py-0 md:py-12 md:bg-gray-200">
                 <div class="container px-0">
                     <div class="flex flex-col-reverse lg:flex-row w-full items-center justify-center gap-y-8">
-                        <div class="flex flex-col text-center md:flex-row gap-3 md:gap-0 md:divide-x py-6 md:py-0 md:divide-black w-full justify-center lg:justify-start text-base font-normal text-black bg-gray-200 text-center items-center">
+                        <div class="flex flex-col text-center md:flex-row gap-3 md:gap-0 md:divide-x py-6 md:py-0 md:divide-black w-full justify-center lg:justify-start text-base font-normal text-black bg-gray-200 items-center">
                             <div class="md:pr-3">
                                 <h2 class="">
                                     © 2023 wooqlaw

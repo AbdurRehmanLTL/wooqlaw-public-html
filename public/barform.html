@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- AlpineJs Scripts -->
+    <!-- alpine/tooltip v1.0 -->
+    <script defer src="./js/alpinetooltip.min.js"></script>
+    <!-- @alpinejs/ui v3.12 -->
+    <script defer src="./js/alpineui.min.js"></script>
+    <!-- @alpinejs/focus v3.12 -->
+    <script defer src="./js/alpinefocus.min.js"></script>
+    <!-- alpinejs v3.12 -->
+    <script defer src="./js/alpine.min.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <meta name="description" content="wooqlaw Public Portal">
+    <title>wooqlaw Public Portal</title>
+</head>
+
+<body x-data="{scrolAtTop: false}">
+    <section>
+        <div class="container mb-20">
+            <div class="flex flex-col items-stretch w-full md:flex-row md:space-x-5 font-display" x-data="{tab: 1}">
+                <div class="flex flex-row md:flex-col justify-center items-center w-full md:w-1/12 space-x-5 md:space-x-0 md:space-y-5 relative md:[&>*:not(:last-child)]:relative md:[&>*:not(:last-child)]:after:-bottom-5 md:[&>*:not(:last-child)]:after:flex md:[&>*:not(:last-child)]:after:absolute md:[&>*:not(:last-child)]:after:content-[''] md:[&>*:not(:last-child)]:after:w-0 md:[&>*:not(:last-child)]:after:border md:[&>*:not(:last-child)]:after:border-solid md:[&>*:not(:last-child)]:after:border-sky-400 md:[&>*:not(:last-child)]:after:h-6 ">
+                    <a class="flex flex-col items-center py-2 text-sm" href="#" @click.prevent="tab = 1">
+                        <span class="flex items-center justify-center w-16 h-16 mb-2 text-2xl text-white rounded-full bg-sky-500" :class="{'bg-sky-500': tab === 1, ' bg-sky-200': tab !== 1}">1</span>
+                        <span class="text-xs text-sky-600">Personal</span>
+                    </a>
+                    <a class="flex flex-col items-center py-2 text-sm" href="#" @click.prevent="tab = 2">
+                        <span class="flex items-center justify-center w-16 h-16 mb-2 text-2xl text-white rounded-full bg-sky-200" :class="{'bg-sky-500': tab === 2, ' bg-sky-200': tab !== 2}">2</span>
+                        <span class="text-xs text-sky-600">Education</span>
+                    </a>
+                    <a class="flex flex-col items-center py-2 text-sm" href="#" @click.prevent="tab = 3">
+                        <span class="flex items-center justify-center w-16 h-16 mb-2 text-2xl text-white rounded-full bg-sky-200" :class="{'bg-sky-500': tab === 3, ' bg-sky-200': tab !== 3}">3</span>
+                        <span class="text-xs text-sky-600">Documents</span>
+                    </a>
+                    <a class="flex flex-col items-center py-2 text-sm" href="#" @click.prevent="tab = 4">
+                        <span class="flex items-center justify-center w-16 h-16 mb-2 text-2xl text-white rounded-full bg-sky-200" :class="{'bg-sky-500': tab === 4, ' bg-sky-200': tab !== 4}">4</span>
+                        <span class="text-xs text-sky-600">Payment</span>
+                    </a>
+                </div>
+                <div class="relative w-full px-4 py-12 bg-white md:w-11/12 md:px-12 rounded-3xl drop-shadow md:min-h-[41.25rem]">
+                    <div class="flex flex-col justify-between w-full h-full" x-show="tab === 1">
+                        <div>
+                            <!-- Become a member of RBA -->
+                            <div class="flex flex-col gap-1 mb-10 md:gap-2">
+                                <h2 class="text-lg font-semibold text-gray-600 md:text-2xl">
+                                    Become a member of RBA
+                                </h2>
+                                <span class="text-xs font-medium md:text-sm text-violet-500">
+                                    Kindly Provide your personal details
+                                </span>
+                            </div>
+                            <div class="grid flex-wrap grid-cols-1 gap-10 mx-auto mb-10 bg-white rounded-lg md:grid-cols-2 md:gap-20">
+                                <div class="flex flex-col gap-2 md:gap-10">
+                                    <!-- First Name -->
+                                    <div class="flex flex-col gap-3 md:gap-5">
+                                        <div>
+                                            <label for="first name" class="block text-sm font-medium text-gray-900 md:w-4/5">First Name</label>
+                                            <input type="text" name="first name" id="first name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full md:w-8/12 p-2.5" placeholder="" required="">
+                                        </div>
+                                        <div>
+                                            <label for="father's name" class="block text-sm font-medium text-gray-900">Father's Name</label>
+                                            <input type="text" name="father's name" id="father's name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full md:w-8/12 p-2.5" placeholder="" required="">
+                                        </div>
+                                        <div>
+                                            <label for="permanent address" class="block text-sm font-medium text-gray-900">Permanent Address</label>
+                                            <input type="text" name="permanent address" id="permanent address" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="" required="">
+                                        </div>
+                                        <div>
+                                            <label for="office address" class="block text-sm font-medium text-gray-900">Office Address</label>
+                                            <input type="text" name="office address" id="office address" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="" required="">
+                                        </div>
+                                    </div>
+                                    <!-- Voter Member of Bar Association -->
+                                    <div class="flex flex-col gap-2 md:gap-3">
+                                        <span class="text-sm font-normal text-gray-500 md:text-base">
+                                            Voter Member of Bar Association
+                                        </span>
+                                        <div class="flex gap-2 md:gap-5">
+                                            <div>
+                                                <input id="yes-radio-1" type="radio" value="" checked name="yes-radio" class="w-4 h-4 text-violet-700">
+                                                <label for="yes-radio-1"  class="ml-2 text-sm font-medium text-gray-900">Yes</label>
+                                            </div>
+                                            <div>
+                                                <input id="no-radio-1" type="radio" value="" name="yes-radio" class="w-4 h-4 text-violet-700">
+                                                <label for="no-radio-1" class="ml-2 text-sm font-medium text-gray-900">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- I Shall:- -->
+                                    <div class="text-sm text-gray-600">
+                                        <p>
+                                            I Shall:-
+                                        </p>
+                                        <p>
+                                            (a) Abide by the memorandom of the association 1982.
+                                        </p>
+                                        <p>
+                                            (b) Pay regularly the prescribed subscription.
+                                        </p>
+                                        <p>
+                                            (c) Notify the change of address
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex flex-col gap-3 md:gap-5">
+                                        <div>
+                                            <label for="first name" class="block text-sm font-medium text-gray-900">Cell No</label>
+                                            <input type="text" name="first name" id="first name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="" required="">
+                                        <div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div>
+                                        </div>
+                                        <div>
+                                            <label for="father's name" class="block text-sm font-medium text-gray-900">CNIC No</label>
+                                            <input type="text" name="father's name" id="father's name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="" required="">
+                                        </div>
+                                        <div>
+                                            <label for="father's name" class="block text-sm font-medium text-gray-900">Date of Birth:</label>
+                                            <div x-data="{ date : new Date().toISOString().split('T')[0] }" class="w-full">
+                                                <input id="availability5-date" x-bind:value="date" type="date" class="block w-full p-2 pl-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Custom date">
+                                             </div>                                        
+                                        </div>
+                                        <div>
+                                            <label for="father's name" class="block text-sm font-medium text-gray-900">Date of enrollment:</label>
+                                            <div x-data="{ date : new Date().toISOString().split('T')[0] }" class="w-full">
+                                                <input id="availability5-date" x-bind:value="date" type="date" class="block w-full p-2 pl-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Custom date">
+                                             </div>                                        
+                                        </div>
+                                        <div>
+                                            <label for="permanent address" class="block text-sm font-medium text-gray-900">Biometric ID#</label>
+                                            <input type="text" name="permanent address" id="permanent address" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="" required="">
+                                        </div>
+                                        <div>
+                                            <label for="office address" class="block text-sm font-medium text-gray-900">Signature:</label>
+                                            <input type="text" name="office address" id="office address" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="" required="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <a class="px-10 py-2 text-white rounded-lg bg-sky-500 hover:bg-sky-800" href="#" @click.prevent="tab = 2" alt="Next">Next</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col justify-between w-full h-full" x-show="tab === 2" style="display: none;">
+                        <div class="mb-10">
+                            <!-- Become a member of RBA -->
+                            <div class="flex flex-col gap-1 mb-10 md:gap-2">
+                                <h2 class="text-lg font-semibold text-gray-600 md:text-2xl">
+                                    Become a member of RBA
+                                </h2>
+                                <span class="text-xs font-medium md:text-sm text-violet-500">
+                                    Kindly Provide your personal details
+                                </span>
+                            </div>
+                            <div class="mb-3 md:mb-5">
+                                <label for="first name" class="block text-sm font-medium text-gray-900">Institute Name</label>
+                                <input type="text" name="first name" id="first name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="" required="">
+                            </div>
+                            <div class="grid gap-3 mb-10 md:grid-cols-2 md:gap-11">
+                                <div class="grid gap-3 md:grid-cols-2 md:gap-11">
+                                    <div class="">
+                                        <label for="first name" class="block text-sm font-medium text-gray-900">Degree</label>
+                                        <input type="text" name="first name" id="first name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="" required="">
+                                    </div>
+                                    <div class="">
+                                        <label for="first name" class="block text-sm font-medium text-gray-900">Completion Year</label>
+                                        <input type="text" name="first name" id="first name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="" required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="mb-10">
+                            <a class="flex items-center gap-1 px-10 py-2 text-white rounded-lg w-fit bg-sky-500 hover:bg-sky-800" href="#" @click.prevent="tab = 3" alt="Next">
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 8.5H4Z" fill="white"/>
+                                <path d="M8 4.5V8.5M8 8.5V12.5M8 8.5H12M8 8.5H4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Add New
+                            </a>
+
+
+                        </div>
+                        <div class="flex flex-row justify-between">
+                            <a class="px-10 py-2 border border-solid rounded-lg text-sky-500 border-sky-500 hover:bg-sky-800 hover:text-white" href="#" @click.prevent="tab = 1" alt="Back">Back</a>
+                            <a class="px-10 py-2 text-white rounded-lg bg-sky-500 hover:bg-sky-800" href="#" @click.prevent="tab = 3" alt="Next">Next</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col justify-between w-full h-full" x-show="tab === 3" style="display: none;">
+                        <div class="mb-10">
+                             <!-- Become a member of RBA -->
+                             <div class="flex flex-col gap-1 mb-10 md:gap-2">
+                                <h2 class="text-lg font-semibold text-gray-600 md:text-2xl">
+                                    Become a member of RBA
+                                </h2>
+                                <span class="text-xs font-medium md:text-sm text-violet-500">
+                                    Kindly Provide your personal details
+                                </span>
+                            </div>
+                            <div class="flex flex-col gap-10 md:gap-16">
+                                <div class="grid justify-center grid-cols-1 gap-5 md:grid-cols-2">
+                                    <div class="flex flex-col text-sm font-medium text-gray-600 md:text-base gap-28">
+                                        <span>(i) Copy of the National Identity Card.</span>
+                                    </div>
+                                    <div class="grid flex-col items-center justify-between gap-24">
+                                        <div class="flex items-center justify-center gap-4">
+                                            <button class="flex items-center justify-center gap-2 px-3 py-2 rounded-md bg-sky-500 hover:bg-sky-600">
+                                                <span>
+                                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.54961 5.75591L8.90625 1.91627V13.6563C8.90625 13.9845 9.1718 14.2501 9.5 14.2501C9.8282 14.2501 10.0938 13.9845 10.0938 13.6563V1.91627L14.4504 5.78671C14.5617 5.8895 14.7027 5.93774 14.8438 5.93774C15.0073 5.93774 15.1708 5.8705 15.2879 5.73828C15.506 5.49359 15.4828 5.11783 15.2381 4.90037L9.89432 0.150457C9.66937 -0.0501524 9.33063 -0.0501524 9.10575 0.150457L3.762 4.90037C3.51723 5.11764 3.49422 5.49244 3.71094 5.73736C3.92766 5.98227 4.3084 6.00454 4.54961 5.75591ZM16.625 11.8751H12.4688C12.1409 11.8751 11.875 12.1409 11.875 12.4689C11.875 12.7968 12.1409 13.0626 12.4688 13.0626H16.625C17.2807 13.0626 17.8125 13.5944 17.8125 14.2501V16.625C17.8125 17.2808 17.2807 17.8125 16.625 17.8125H2.375C1.71928 17.8125 1.1875 17.2808 1.1875 16.625V14.2501C1.1875 13.5944 1.71928 13.0626 2.375 13.0626H6.53125C6.85781 13.0626 7.125 12.7954 7.125 12.4689C7.125 12.1423 6.85781 11.8751 6.53125 11.8751H2.375C1.06318 11.8751 0 12.9383 0 14.2501V16.625C0 17.9368 1.06318 19 2.375 19H16.625C17.9368 19 19 17.9368 19 16.625V14.2501C19 12.9402 17.935 11.8751 16.625 11.8751ZM16.3281 15.4376C16.3281 14.9459 15.9292 14.547 15.4375 14.547C14.9458 14.547 14.5469 14.9459 14.5469 15.4376C14.5469 15.9293 14.9458 16.3282 15.4375 16.3282C15.9292 16.3282 16.3281 15.9311 16.3281 15.4376Z" fill="white"></path>
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    <svg width="43" height="14" viewBox="0 0 43 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6.84961 0.546875H8.16211V7.28027C8.16211 8.02767 7.99577 8.64974 7.66309 9.14648C7.3304 9.64323 6.88835 10.0169 6.33691 10.2676C5.79004 10.5137 5.19531 10.6367 4.55273 10.6367C3.87826 10.6367 3.26758 10.5137 2.7207 10.2676C2.17839 10.0169 1.74772 9.64323 1.42871 9.14648C1.11426 8.64974 0.957031 8.02767 0.957031 7.28027V0.546875H2.2627V7.28027C2.2627 7.7998 2.3584 8.22819 2.5498 8.56543C2.74121 8.90267 3.00781 9.15332 3.34961 9.31738C3.69596 9.48145 4.09701 9.56348 4.55273 9.56348C5.01302 9.56348 5.41406 9.48145 5.75586 9.31738C6.10221 9.15332 6.37109 8.90267 6.5625 8.56543C6.75391 8.22819 6.84961 7.7998 6.84961 7.28027V0.546875ZM11.3066 4.52539V13.3438H10.0352V3.10352H11.1973L11.3066 4.52539ZM16.29 6.74023V6.88379C16.29 7.42155 16.2262 7.92057 16.0986 8.38086C15.971 8.83659 15.7842 9.23307 15.5381 9.57031C15.2965 9.90755 14.998 10.1696 14.6426 10.3564C14.2871 10.5433 13.8792 10.6367 13.4189 10.6367C12.9495 10.6367 12.5348 10.5592 12.1748 10.4043C11.8148 10.2493 11.5094 10.0238 11.2588 9.72754C11.0081 9.43132 10.8076 9.07585 10.6572 8.66113C10.5114 8.24642 10.4111 7.7793 10.3564 7.25977V6.49414C10.4111 5.94727 10.5137 5.45736 10.6641 5.02441C10.8145 4.59147 11.0127 4.22233 11.2588 3.91699C11.5094 3.6071 11.8125 3.3724 12.168 3.21289C12.5234 3.04883 12.9336 2.9668 13.3984 2.9668C13.8633 2.9668 14.2757 3.05794 14.6357 3.24023C14.9958 3.41797 15.2988 3.67318 15.5449 4.00586C15.791 4.33854 15.9756 4.7373 16.0986 5.20215C16.2262 5.66243 16.29 6.17513 16.29 6.74023ZM15.0186 6.88379V6.74023C15.0186 6.37109 14.9798 6.02474 14.9023 5.70117C14.8249 5.37305 14.7041 5.08594 14.54 4.83984C14.3805 4.58919 14.1755 4.39323 13.9248 4.25195C13.6742 4.10612 13.3757 4.0332 13.0293 4.0332C12.7103 4.0332 12.4323 4.08789 12.1953 4.19727C11.9629 4.30664 11.7646 4.45475 11.6006 4.6416C11.4365 4.82389 11.3021 5.03353 11.1973 5.27051C11.097 5.50293 11.0218 5.74447 10.9717 5.99512V7.76562C11.0628 8.08464 11.1904 8.38542 11.3545 8.66797C11.5186 8.94596 11.7373 9.17155 12.0107 9.34473C12.2842 9.51335 12.6283 9.59766 13.043 9.59766C13.3848 9.59766 13.6787 9.52702 13.9248 9.38574C14.1755 9.23991 14.3805 9.04167 14.54 8.79102C14.7041 8.54036 14.8249 8.25326 14.9023 7.92969C14.9798 7.60156 15.0186 7.25293 15.0186 6.88379ZM19.2773 0V10.5H18.0059V0H19.2773ZM20.9727 6.88379V6.72656C20.9727 6.19336 21.0501 5.69889 21.2051 5.24316C21.36 4.78288 21.5833 4.38411 21.875 4.04688C22.1667 3.70508 22.5199 3.44076 22.9346 3.25391C23.3493 3.0625 23.8141 2.9668 24.3291 2.9668C24.8486 2.9668 25.3158 3.0625 25.7305 3.25391C26.1497 3.44076 26.5052 3.70508 26.7969 4.04688C27.0931 4.38411 27.3187 4.78288 27.4736 5.24316C27.6286 5.69889 27.7061 6.19336 27.7061 6.72656V6.88379C27.7061 7.41699 27.6286 7.91146 27.4736 8.36719C27.3187 8.82292 27.0931 9.22168 26.7969 9.56348C26.5052 9.90072 26.152 10.165 25.7373 10.3564C25.3271 10.5433 24.8623 10.6367 24.3428 10.6367C23.8232 10.6367 23.3561 10.5433 22.9414 10.3564C22.5267 10.165 22.1712 9.90072 21.875 9.56348C21.5833 9.22168 21.36 8.82292 21.2051 8.36719C21.0501 7.91146 20.9727 7.41699 20.9727 6.88379ZM22.2373 6.72656V6.88379C22.2373 7.25293 22.2806 7.60156 22.3672 7.92969C22.4538 8.25326 22.5837 8.54036 22.7568 8.79102C22.9346 9.04167 23.1556 9.23991 23.4199 9.38574C23.6842 9.52702 23.9919 9.59766 24.3428 9.59766C24.6891 9.59766 24.9922 9.52702 25.252 9.38574C25.5163 9.23991 25.735 9.04167 25.9082 8.79102C26.0814 8.54036 26.2113 8.25326 26.2979 7.92969C26.389 7.60156 26.4346 7.25293 26.4346 6.88379V6.72656C26.4346 6.36198 26.389 6.0179 26.2979 5.69434C26.2113 5.36621 26.0791 5.07682 25.9014 4.82617C25.7282 4.57096 25.5094 4.37044 25.2451 4.22461C24.9854 4.07878 24.68 4.00586 24.3291 4.00586C23.9827 4.00586 23.6774 4.07878 23.4131 4.22461C23.1533 4.37044 22.9346 4.57096 22.7568 4.82617C22.5837 5.07682 22.4538 5.36621 22.3672 5.69434C22.2806 6.0179 22.2373 6.36198 22.2373 6.72656ZM33.6533 9.23535V5.42773C33.6533 5.13607 33.5941 4.88314 33.4756 4.66895C33.3617 4.4502 33.1885 4.28158 32.9561 4.16309C32.7236 4.0446 32.4365 3.98535 32.0947 3.98535C31.7757 3.98535 31.4954 4.04004 31.2539 4.14941C31.0169 4.25879 30.8301 4.40234 30.6934 4.58008C30.5612 4.75781 30.4951 4.94922 30.4951 5.1543H29.2305C29.2305 4.88997 29.2988 4.62793 29.4355 4.36816C29.5723 4.1084 29.7682 3.8737 30.0234 3.66406C30.2832 3.44987 30.5931 3.28125 30.9531 3.1582C31.3177 3.0306 31.7233 2.9668 32.1699 2.9668C32.7077 2.9668 33.1816 3.05794 33.5918 3.24023C34.0065 3.42253 34.3301 3.69824 34.5625 4.06738C34.7995 4.43197 34.918 4.88997 34.918 5.44141V8.88672C34.918 9.13281 34.9385 9.39486 34.9795 9.67285C35.0251 9.95085 35.0911 10.1901 35.1777 10.3906V10.5H33.8584C33.7946 10.3542 33.7445 10.1605 33.708 9.91895C33.6715 9.67285 33.6533 9.44499 33.6533 9.23535ZM33.8721 6.01562L33.8857 6.9043H32.6074C32.2474 6.9043 31.9261 6.93392 31.6436 6.99316C31.361 7.04785 31.124 7.13216 30.9326 7.24609C30.7412 7.36003 30.5954 7.50358 30.4951 7.67676C30.3949 7.84538 30.3447 8.04362 30.3447 8.27148C30.3447 8.50391 30.3971 8.71582 30.502 8.90723C30.6068 9.09863 30.764 9.2513 30.9736 9.36523C31.1878 9.47461 31.4499 9.5293 31.7598 9.5293C32.1471 9.5293 32.4889 9.44727 32.7852 9.2832C33.0814 9.11914 33.3161 8.91862 33.4893 8.68164C33.667 8.44466 33.7627 8.21452 33.7764 7.99121L34.3164 8.59961C34.2845 8.79102 34.1979 9.00293 34.0566 9.23535C33.9154 9.46777 33.7262 9.69108 33.4893 9.90527C33.2568 10.1149 32.9788 10.2904 32.6553 10.4316C32.3363 10.5684 31.9762 10.6367 31.5752 10.6367C31.0739 10.6367 30.6341 10.5387 30.2559 10.3428C29.8822 10.1468 29.5905 9.88477 29.3809 9.55664C29.1758 9.22396 29.0732 8.85254 29.0732 8.44238C29.0732 8.0459 29.1507 7.69727 29.3057 7.39648C29.4606 7.09115 29.6839 6.83822 29.9756 6.6377C30.2673 6.43262 30.6182 6.27767 31.0283 6.17285C31.4385 6.06803 31.8965 6.01562 32.4023 6.01562H33.8721ZM41.5693 9.06445V0H42.8408V10.5H41.6787L41.5693 9.06445ZM36.5928 6.88379V6.74023C36.5928 6.17513 36.6611 5.66243 36.7979 5.20215C36.9391 4.7373 37.1374 4.33854 37.3926 4.00586C37.6523 3.67318 37.96 3.41797 38.3154 3.24023C38.6755 3.05794 39.0765 2.9668 39.5186 2.9668C39.9834 2.9668 40.389 3.04883 40.7354 3.21289C41.0863 3.3724 41.3825 3.6071 41.624 3.91699C41.8701 4.22233 42.0638 4.59147 42.2051 5.02441C42.3464 5.45736 42.4443 5.94727 42.499 6.49414V7.12305C42.4489 7.66536 42.3509 8.15299 42.2051 8.58594C42.0638 9.01888 41.8701 9.38802 41.624 9.69336C41.3825 9.9987 41.0863 10.2334 40.7354 10.3975C40.3844 10.557 39.9743 10.6367 39.5049 10.6367C39.0719 10.6367 38.6755 10.5433 38.3154 10.3564C37.96 10.1696 37.6523 9.90755 37.3926 9.57031C37.1374 9.23307 36.9391 8.83659 36.7979 8.38086C36.6611 7.92057 36.5928 7.42155 36.5928 6.88379ZM37.8643 6.74023V6.88379C37.8643 7.25293 37.9007 7.59928 37.9736 7.92285C38.0511 8.24642 38.1696 8.53125 38.3291 8.77734C38.4886 9.02344 38.6914 9.21712 38.9375 9.3584C39.1836 9.49512 39.4775 9.56348 39.8193 9.56348C40.2386 9.56348 40.5827 9.47461 40.8516 9.29688C41.125 9.11914 41.3438 8.88444 41.5078 8.59277C41.6719 8.30111 41.7995 7.98438 41.8906 7.64258V5.99512C41.8359 5.74447 41.7562 5.50293 41.6514 5.27051C41.5511 5.03353 41.4189 4.82389 41.2549 4.6416C41.0954 4.45475 40.8971 4.30664 40.6602 4.19727C40.4277 4.08789 40.152 4.0332 39.833 4.0332C39.4867 4.0332 39.1882 4.10612 38.9375 4.25195C38.6914 4.39323 38.4886 4.58919 38.3291 4.83984C38.1696 5.08594 38.0511 5.37305 37.9736 5.70117C37.9007 6.02474 37.8643 6.37109 37.8643 6.74023Z" fill="white"></path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <span class="font-normal text-gray-500 text-2xs md:text-xs">
+                                                Accepted file format: JPG | PNG | PDF
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid justify-center grid-cols-1 gap-5 md:grid-cols-2">
+                                    <div class="flex flex-col text-sm font-medium text-gray-600 md:text-base gap-28">
+                                        <span>(ii) Copy of the Punjab Bar Council Liecence Card.</span>
+                                    </div>
+                                    <div class="grid flex-col items-center justify-between gap-24">
+                                        <div class="flex items-center justify-center gap-4">
+                                            <button class="flex items-center justify-center gap-2 px-3 py-2 rounded-md bg-sky-500 hover:bg-sky-600">
+                                                <span>
+                                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.54961 5.75591L8.90625 1.91627V13.6563C8.90625 13.9845 9.1718 14.2501 9.5 14.2501C9.8282 14.2501 10.0938 13.9845 10.0938 13.6563V1.91627L14.4504 5.78671C14.5617 5.8895 14.7027 5.93774 14.8438 5.93774C15.0073 5.93774 15.1708 5.8705 15.2879 5.73828C15.506 5.49359 15.4828 5.11783 15.2381 4.90037L9.89432 0.150457C9.66937 -0.0501524 9.33063 -0.0501524 9.10575 0.150457L3.762 4.90037C3.51723 5.11764 3.49422 5.49244 3.71094 5.73736C3.92766 5.98227 4.3084 6.00454 4.54961 5.75591ZM16.625 11.8751H12.4688C12.1409 11.8751 11.875 12.1409 11.875 12.4689C11.875 12.7968 12.1409 13.0626 12.4688 13.0626H16.625C17.2807 13.0626 17.8125 13.5944 17.8125 14.2501V16.625C17.8125 17.2808 17.2807 17.8125 16.625 17.8125H2.375C1.71928 17.8125 1.1875 17.2808 1.1875 16.625V14.2501C1.1875 13.5944 1.71928 13.0626 2.375 13.0626H6.53125C6.85781 13.0626 7.125 12.7954 7.125 12.4689C7.125 12.1423 6.85781 11.8751 6.53125 11.8751H2.375C1.06318 11.8751 0 12.9383 0 14.2501V16.625C0 17.9368 1.06318 19 2.375 19H16.625C17.9368 19 19 17.9368 19 16.625V14.2501C19 12.9402 17.935 11.8751 16.625 11.8751ZM16.3281 15.4376C16.3281 14.9459 15.9292 14.547 15.4375 14.547C14.9458 14.547 14.5469 14.9459 14.5469 15.4376C14.5469 15.9293 14.9458 16.3282 15.4375 16.3282C15.9292 16.3282 16.3281 15.9311 16.3281 15.4376Z" fill="white"></path>
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    <svg width="43" height="14" viewBox="0 0 43 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6.84961 0.546875H8.16211V7.28027C8.16211 8.02767 7.99577 8.64974 7.66309 9.14648C7.3304 9.64323 6.88835 10.0169 6.33691 10.2676C5.79004 10.5137 5.19531 10.6367 4.55273 10.6367C3.87826 10.6367 3.26758 10.5137 2.7207 10.2676C2.17839 10.0169 1.74772 9.64323 1.42871 9.14648C1.11426 8.64974 0.957031 8.02767 0.957031 7.28027V0.546875H2.2627V7.28027C2.2627 7.7998 2.3584 8.22819 2.5498 8.56543C2.74121 8.90267 3.00781 9.15332 3.34961 9.31738C3.69596 9.48145 4.09701 9.56348 4.55273 9.56348C5.01302 9.56348 5.41406 9.48145 5.75586 9.31738C6.10221 9.15332 6.37109 8.90267 6.5625 8.56543C6.75391 8.22819 6.84961 7.7998 6.84961 7.28027V0.546875ZM11.3066 4.52539V13.3438H10.0352V3.10352H11.1973L11.3066 4.52539ZM16.29 6.74023V6.88379C16.29 7.42155 16.2262 7.92057 16.0986 8.38086C15.971 8.83659 15.7842 9.23307 15.5381 9.57031C15.2965 9.90755 14.998 10.1696 14.6426 10.3564C14.2871 10.5433 13.8792 10.6367 13.4189 10.6367C12.9495 10.6367 12.5348 10.5592 12.1748 10.4043C11.8148 10.2493 11.5094 10.0238 11.2588 9.72754C11.0081 9.43132 10.8076 9.07585 10.6572 8.66113C10.5114 8.24642 10.4111 7.7793 10.3564 7.25977V6.49414C10.4111 5.94727 10.5137 5.45736 10.6641 5.02441C10.8145 4.59147 11.0127 4.22233 11.2588 3.91699C11.5094 3.6071 11.8125 3.3724 12.168 3.21289C12.5234 3.04883 12.9336 2.9668 13.3984 2.9668C13.8633 2.9668 14.2757 3.05794 14.6357 3.24023C14.9958 3.41797 15.2988 3.67318 15.5449 4.00586C15.791 4.33854 15.9756 4.7373 16.0986 5.20215C16.2262 5.66243 16.29 6.17513 16.29 6.74023ZM15.0186 6.88379V6.74023C15.0186 6.37109 14.9798 6.02474 14.9023 5.70117C14.8249 5.37305 14.7041 5.08594 14.54 4.83984C14.3805 4.58919 14.1755 4.39323 13.9248 4.25195C13.6742 4.10612 13.3757 4.0332 13.0293 4.0332C12.7103 4.0332 12.4323 4.08789 12.1953 4.19727C11.9629 4.30664 11.7646 4.45475 11.6006 4.6416C11.4365 4.82389 11.3021 5.03353 11.1973 5.27051C11.097 5.50293 11.0218 5.74447 10.9717 5.99512V7.76562C11.0628 8.08464 11.1904 8.38542 11.3545 8.66797C11.5186 8.94596 11.7373 9.17155 12.0107 9.34473C12.2842 9.51335 12.6283 9.59766 13.043 9.59766C13.3848 9.59766 13.6787 9.52702 13.9248 9.38574C14.1755 9.23991 14.3805 9.04167 14.54 8.79102C14.7041 8.54036 14.8249 8.25326 14.9023 7.92969C14.9798 7.60156 15.0186 7.25293 15.0186 6.88379ZM19.2773 0V10.5H18.0059V0H19.2773ZM20.9727 6.88379V6.72656C20.9727 6.19336 21.0501 5.69889 21.2051 5.24316C21.36 4.78288 21.5833 4.38411 21.875 4.04688C22.1667 3.70508 22.5199 3.44076 22.9346 3.25391C23.3493 3.0625 23.8141 2.9668 24.3291 2.9668C24.8486 2.9668 25.3158 3.0625 25.7305 3.25391C26.1497 3.44076 26.5052 3.70508 26.7969 4.04688C27.0931 4.38411 27.3187 4.78288 27.4736 5.24316C27.6286 5.69889 27.7061 6.19336 27.7061 6.72656V6.88379C27.7061 7.41699 27.6286 7.91146 27.4736 8.36719C27.3187 8.82292 27.0931 9.22168 26.7969 9.56348C26.5052 9.90072 26.152 10.165 25.7373 10.3564C25.3271 10.5433 24.8623 10.6367 24.3428 10.6367C23.8232 10.6367 23.3561 10.5433 22.9414 10.3564C22.5267 10.165 22.1712 9.90072 21.875 9.56348C21.5833 9.22168 21.36 8.82292 21.2051 8.36719C21.0501 7.91146 20.9727 7.41699 20.9727 6.88379ZM22.2373 6.72656V6.88379C22.2373 7.25293 22.2806 7.60156 22.3672 7.92969C22.4538 8.25326 22.5837 8.54036 22.7568 8.79102C22.9346 9.04167 23.1556 9.23991 23.4199 9.38574C23.6842 9.52702 23.9919 9.59766 24.3428 9.59766C24.6891 9.59766 24.9922 9.52702 25.252 9.38574C25.5163 9.23991 25.735 9.04167 25.9082 8.79102C26.0814 8.54036 26.2113 8.25326 26.2979 7.92969C26.389 7.60156 26.4346 7.25293 26.4346 6.88379V6.72656C26.4346 6.36198 26.389 6.0179 26.2979 5.69434C26.2113 5.36621 26.0791 5.07682 25.9014 4.82617C25.7282 4.57096 25.5094 4.37044 25.2451 4.22461C24.9854 4.07878 24.68 4.00586 24.3291 4.00586C23.9827 4.00586 23.6774 4.07878 23.4131 4.22461C23.1533 4.37044 22.9346 4.57096 22.7568 4.82617C22.5837 5.07682 22.4538 5.36621 22.3672 5.69434C22.2806 6.0179 22.2373 6.36198 22.2373 6.72656ZM33.6533 9.23535V5.42773C33.6533 5.13607 33.5941 4.88314 33.4756 4.66895C33.3617 4.4502 33.1885 4.28158 32.9561 4.16309C32.7236 4.0446 32.4365 3.98535 32.0947 3.98535C31.7757 3.98535 31.4954 4.04004 31.2539 4.14941C31.0169 4.25879 30.8301 4.40234 30.6934 4.58008C30.5612 4.75781 30.4951 4.94922 30.4951 5.1543H29.2305C29.2305 4.88997 29.2988 4.62793 29.4355 4.36816C29.5723 4.1084 29.7682 3.8737 30.0234 3.66406C30.2832 3.44987 30.5931 3.28125 30.9531 3.1582C31.3177 3.0306 31.7233 2.9668 32.1699 2.9668C32.7077 2.9668 33.1816 3.05794 33.5918 3.24023C34.0065 3.42253 34.3301 3.69824 34.5625 4.06738C34.7995 4.43197 34.918 4.88997 34.918 5.44141V8.88672C34.918 9.13281 34.9385 9.39486 34.9795 9.67285C35.0251 9.95085 35.0911 10.1901 35.1777 10.3906V10.5H33.8584C33.7946 10.3542 33.7445 10.1605 33.708 9.91895C33.6715 9.67285 33.6533 9.44499 33.6533 9.23535ZM33.8721 6.01562L33.8857 6.9043H32.6074C32.2474 6.9043 31.9261 6.93392 31.6436 6.99316C31.361 7.04785 31.124 7.13216 30.9326 7.24609C30.7412 7.36003 30.5954 7.50358 30.4951 7.67676C30.3949 7.84538 30.3447 8.04362 30.3447 8.27148C30.3447 8.50391 30.3971 8.71582 30.502 8.90723C30.6068 9.09863 30.764 9.2513 30.9736 9.36523C31.1878 9.47461 31.4499 9.5293 31.7598 9.5293C32.1471 9.5293 32.4889 9.44727 32.7852 9.2832C33.0814 9.11914 33.3161 8.91862 33.4893 8.68164C33.667 8.44466 33.7627 8.21452 33.7764 7.99121L34.3164 8.59961C34.2845 8.79102 34.1979 9.00293 34.0566 9.23535C33.9154 9.46777 33.7262 9.69108 33.4893 9.90527C33.2568 10.1149 32.9788 10.2904 32.6553 10.4316C32.3363 10.5684 31.9762 10.6367 31.5752 10.6367C31.0739 10.6367 30.6341 10.5387 30.2559 10.3428C29.8822 10.1468 29.5905 9.88477 29.3809 9.55664C29.1758 9.22396 29.0732 8.85254 29.0732 8.44238C29.0732 8.0459 29.1507 7.69727 29.3057 7.39648C29.4606 7.09115 29.6839 6.83822 29.9756 6.6377C30.2673 6.43262 30.6182 6.27767 31.0283 6.17285C31.4385 6.06803 31.8965 6.01562 32.4023 6.01562H33.8721ZM41.5693 9.06445V0H42.8408V10.5H41.6787L41.5693 9.06445ZM36.5928 6.88379V6.74023C36.5928 6.17513 36.6611 5.66243 36.7979 5.20215C36.9391 4.7373 37.1374 4.33854 37.3926 4.00586C37.6523 3.67318 37.96 3.41797 38.3154 3.24023C38.6755 3.05794 39.0765 2.9668 39.5186 2.9668C39.9834 2.9668 40.389 3.04883 40.7354 3.21289C41.0863 3.3724 41.3825 3.6071 41.624 3.91699C41.8701 4.22233 42.0638 4.59147 42.2051 5.02441C42.3464 5.45736 42.4443 5.94727 42.499 6.49414V7.12305C42.4489 7.66536 42.3509 8.15299 42.2051 8.58594C42.0638 9.01888 41.8701 9.38802 41.624 9.69336C41.3825 9.9987 41.0863 10.2334 40.7354 10.3975C40.3844 10.557 39.9743 10.6367 39.5049 10.6367C39.0719 10.6367 38.6755 10.5433 38.3154 10.3564C37.96 10.1696 37.6523 9.90755 37.3926 9.57031C37.1374 9.23307 36.9391 8.83659 36.7979 8.38086C36.6611 7.92057 36.5928 7.42155 36.5928 6.88379ZM37.8643 6.74023V6.88379C37.8643 7.25293 37.9007 7.59928 37.9736 7.92285C38.0511 8.24642 38.1696 8.53125 38.3291 8.77734C38.4886 9.02344 38.6914 9.21712 38.9375 9.3584C39.1836 9.49512 39.4775 9.56348 39.8193 9.56348C40.2386 9.56348 40.5827 9.47461 40.8516 9.29688C41.125 9.11914 41.3438 8.88444 41.5078 8.59277C41.6719 8.30111 41.7995 7.98438 41.8906 7.64258V5.99512C41.8359 5.74447 41.7562 5.50293 41.6514 5.27051C41.5511 5.03353 41.4189 4.82389 41.2549 4.6416C41.0954 4.45475 40.8971 4.30664 40.6602 4.19727C40.4277 4.08789 40.152 4.0332 39.833 4.0332C39.4867 4.0332 39.1882 4.10612 38.9375 4.25195C38.6914 4.39323 38.4886 4.58919 38.3291 4.83984C38.1696 5.08594 38.0511 5.37305 37.9736 5.70117C37.9007 6.02474 37.8643 6.37109 37.8643 6.74023Z" fill="white"></path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <span class="font-normal text-gray-500 text-2xs md:text-xs">
+                                                Accepted file format: JPG | PNG | PDF
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid justify-center grid-cols-1 gap-5 md:grid-cols-2">
+                                    <div class="flex flex-col text-sm font-medium text-gray-600 md:text-base gap-28">
+                                        <span>(iii) Passport size Photographs.</span>
+                                    </div>
+                                    <div class="grid flex-col items-center justify-between gap-24">
+                                        <div class="flex items-center justify-center gap-4">
+                                            <button class="flex items-center justify-center gap-2 px-3 py-2 rounded-md bg-sky-500 hover:bg-sky-600">
+                                                <span>
+                                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.54961 5.75591L8.90625 1.91627V13.6563C8.90625 13.9845 9.1718 14.2501 9.5 14.2501C9.8282 14.2501 10.0938 13.9845 10.0938 13.6563V1.91627L14.4504 5.78671C14.5617 5.8895 14.7027 5.93774 14.8438 5.93774C15.0073 5.93774 15.1708 5.8705 15.2879 5.73828C15.506 5.49359 15.4828 5.11783 15.2381 4.90037L9.89432 0.150457C9.66937 -0.0501524 9.33063 -0.0501524 9.10575 0.150457L3.762 4.90037C3.51723 5.11764 3.49422 5.49244 3.71094 5.73736C3.92766 5.98227 4.3084 6.00454 4.54961 5.75591ZM16.625 11.8751H12.4688C12.1409 11.8751 11.875 12.1409 11.875 12.4689C11.875 12.7968 12.1409 13.0626 12.4688 13.0626H16.625C17.2807 13.0626 17.8125 13.5944 17.8125 14.2501V16.625C17.8125 17.2808 17.2807 17.8125 16.625 17.8125H2.375C1.71928 17.8125 1.1875 17.2808 1.1875 16.625V14.2501C1.1875 13.5944 1.71928 13.0626 2.375 13.0626H6.53125C6.85781 13.0626 7.125 12.7954 7.125 12.4689C7.125 12.1423 6.85781 11.8751 6.53125 11.8751H2.375C1.06318 11.8751 0 12.9383 0 14.2501V16.625C0 17.9368 1.06318 19 2.375 19H16.625C17.9368 19 19 17.9368 19 16.625V14.2501C19 12.9402 17.935 11.8751 16.625 11.8751ZM16.3281 15.4376C16.3281 14.9459 15.9292 14.547 15.4375 14.547C14.9458 14.547 14.5469 14.9459 14.5469 15.4376C14.5469 15.9293 14.9458 16.3282 15.4375 16.3282C15.9292 16.3282 16.3281 15.9311 16.3281 15.4376Z" fill="white"></path>
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    <svg width="43" height="14" viewBox="0 0 43 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6.84961 0.546875H8.16211V7.28027C8.16211 8.02767 7.99577 8.64974 7.66309 9.14648C7.3304 9.64323 6.88835 10.0169 6.33691 10.2676C5.79004 10.5137 5.19531 10.6367 4.55273 10.6367C3.87826 10.6367 3.26758 10.5137 2.7207 10.2676C2.17839 10.0169 1.74772 9.64323 1.42871 9.14648C1.11426 8.64974 0.957031 8.02767 0.957031 7.28027V0.546875H2.2627V7.28027C2.2627 7.7998 2.3584 8.22819 2.5498 8.56543C2.74121 8.90267 3.00781 9.15332 3.34961 9.31738C3.69596 9.48145 4.09701 9.56348 4.55273 9.56348C5.01302 9.56348 5.41406 9.48145 5.75586 9.31738C6.10221 9.15332 6.37109 8.90267 6.5625 8.56543C6.75391 8.22819 6.84961 7.7998 6.84961 7.28027V0.546875ZM11.3066 4.52539V13.3438H10.0352V3.10352H11.1973L11.3066 4.52539ZM16.29 6.74023V6.88379C16.29 7.42155 16.2262 7.92057 16.0986 8.38086C15.971 8.83659 15.7842 9.23307 15.5381 9.57031C15.2965 9.90755 14.998 10.1696 14.6426 10.3564C14.2871 10.5433 13.8792 10.6367 13.4189 10.6367C12.9495 10.6367 12.5348 10.5592 12.1748 10.4043C11.8148 10.2493 11.5094 10.0238 11.2588 9.72754C11.0081 9.43132 10.8076 9.07585 10.6572 8.66113C10.5114 8.24642 10.4111 7.7793 10.3564 7.25977V6.49414C10.4111 5.94727 10.5137 5.45736 10.6641 5.02441C10.8145 4.59147 11.0127 4.22233 11.2588 3.91699C11.5094 3.6071 11.8125 3.3724 12.168 3.21289C12.5234 3.04883 12.9336 2.9668 13.3984 2.9668C13.8633 2.9668 14.2757 3.05794 14.6357 3.24023C14.9958 3.41797 15.2988 3.67318 15.5449 4.00586C15.791 4.33854 15.9756 4.7373 16.0986 5.20215C16.2262 5.66243 16.29 6.17513 16.29 6.74023ZM15.0186 6.88379V6.74023C15.0186 6.37109 14.9798 6.02474 14.9023 5.70117C14.8249 5.37305 14.7041 5.08594 14.54 4.83984C14.3805 4.58919 14.1755 4.39323 13.9248 4.25195C13.6742 4.10612 13.3757 4.0332 13.0293 4.0332C12.7103 4.0332 12.4323 4.08789 12.1953 4.19727C11.9629 4.30664 11.7646 4.45475 11.6006 4.6416C11.4365 4.82389 11.3021 5.03353 11.1973 5.27051C11.097 5.50293 11.0218 5.74447 10.9717 5.99512V7.76562C11.0628 8.08464 11.1904 8.38542 11.3545 8.66797C11.5186 8.94596 11.7373 9.17155 12.0107 9.34473C12.2842 9.51335 12.6283 9.59766 13.043 9.59766C13.3848 9.59766 13.6787 9.52702 13.9248 9.38574C14.1755 9.23991 14.3805 9.04167 14.54 8.79102C14.7041 8.54036 14.8249 8.25326 14.9023 7.92969C14.9798 7.60156 15.0186 7.25293 15.0186 6.88379ZM19.2773 0V10.5H18.0059V0H19.2773ZM20.9727 6.88379V6.72656C20.9727 6.19336 21.0501 5.69889 21.2051 5.24316C21.36 4.78288 21.5833 4.38411 21.875 4.04688C22.1667 3.70508 22.5199 3.44076 22.9346 3.25391C23.3493 3.0625 23.8141 2.9668 24.3291 2.9668C24.8486 2.9668 25.3158 3.0625 25.7305 3.25391C26.1497 3.44076 26.5052 3.70508 26.7969 4.04688C27.0931 4.38411 27.3187 4.78288 27.4736 5.24316C27.6286 5.69889 27.7061 6.19336 27.7061 6.72656V6.88379C27.7061 7.41699 27.6286 7.91146 27.4736 8.36719C27.3187 8.82292 27.0931 9.22168 26.7969 9.56348C26.5052 9.90072 26.152 10.165 25.7373 10.3564C25.3271 10.5433 24.8623 10.6367 24.3428 10.6367C23.8232 10.6367 23.3561 10.5433 22.9414 10.3564C22.5267 10.165 22.1712 9.90072 21.875 9.56348C21.5833 9.22168 21.36 8.82292 21.2051 8.36719C21.0501 7.91146 20.9727 7.41699 20.9727 6.88379ZM22.2373 6.72656V6.88379C22.2373 7.25293 22.2806 7.60156 22.3672 7.92969C22.4538 8.25326 22.5837 8.54036 22.7568 8.79102C22.9346 9.04167 23.1556 9.23991 23.4199 9.38574C23.6842 9.52702 23.9919 9.59766 24.3428 9.59766C24.6891 9.59766 24.9922 9.52702 25.252 9.38574C25.5163 9.23991 25.735 9.04167 25.9082 8.79102C26.0814 8.54036 26.2113 8.25326 26.2979 7.92969C26.389 7.60156 26.4346 7.25293 26.4346 6.88379V6.72656C26.4346 6.36198 26.389 6.0179 26.2979 5.69434C26.2113 5.36621 26.0791 5.07682 25.9014 4.82617C25.7282 4.57096 25.5094 4.37044 25.2451 4.22461C24.9854 4.07878 24.68 4.00586 24.3291 4.00586C23.9827 4.00586 23.6774 4.07878 23.4131 4.22461C23.1533 4.37044 22.9346 4.57096 22.7568 4.82617C22.5837 5.07682 22.4538 5.36621 22.3672 5.69434C22.2806 6.0179 22.2373 6.36198 22.2373 6.72656ZM33.6533 9.23535V5.42773C33.6533 5.13607 33.5941 4.88314 33.4756 4.66895C33.3617 4.4502 33.1885 4.28158 32.9561 4.16309C32.7236 4.0446 32.4365 3.98535 32.0947 3.98535C31.7757 3.98535 31.4954 4.04004 31.2539 4.14941C31.0169 4.25879 30.8301 4.40234 30.6934 4.58008C30.5612 4.75781 30.4951 4.94922 30.4951 5.1543H29.2305C29.2305 4.88997 29.2988 4.62793 29.4355 4.36816C29.5723 4.1084 29.7682 3.8737 30.0234 3.66406C30.2832 3.44987 30.5931 3.28125 30.9531 3.1582C31.3177 3.0306 31.7233 2.9668 32.1699 2.9668C32.7077 2.9668 33.1816 3.05794 33.5918 3.24023C34.0065 3.42253 34.3301 3.69824 34.5625 4.06738C34.7995 4.43197 34.918 4.88997 34.918 5.44141V8.88672C34.918 9.13281 34.9385 9.39486 34.9795 9.67285C35.0251 9.95085 35.0911 10.1901 35.1777 10.3906V10.5H33.8584C33.7946 10.3542 33.7445 10.1605 33.708 9.91895C33.6715 9.67285 33.6533 9.44499 33.6533 9.23535ZM33.8721 6.01562L33.8857 6.9043H32.6074C32.2474 6.9043 31.9261 6.93392 31.6436 6.99316C31.361 7.04785 31.124 7.13216 30.9326 7.24609C30.7412 7.36003 30.5954 7.50358 30.4951 7.67676C30.3949 7.84538 30.3447 8.04362 30.3447 8.27148C30.3447 8.50391 30.3971 8.71582 30.502 8.90723C30.6068 9.09863 30.764 9.2513 30.9736 9.36523C31.1878 9.47461 31.4499 9.5293 31.7598 9.5293C32.1471 9.5293 32.4889 9.44727 32.7852 9.2832C33.0814 9.11914 33.3161 8.91862 33.4893 8.68164C33.667 8.44466 33.7627 8.21452 33.7764 7.99121L34.3164 8.59961C34.2845 8.79102 34.1979 9.00293 34.0566 9.23535C33.9154 9.46777 33.7262 9.69108 33.4893 9.90527C33.2568 10.1149 32.9788 10.2904 32.6553 10.4316C32.3363 10.5684 31.9762 10.6367 31.5752 10.6367C31.0739 10.6367 30.6341 10.5387 30.2559 10.3428C29.8822 10.1468 29.5905 9.88477 29.3809 9.55664C29.1758 9.22396 29.0732 8.85254 29.0732 8.44238C29.0732 8.0459 29.1507 7.69727 29.3057 7.39648C29.4606 7.09115 29.6839 6.83822 29.9756 6.6377C30.2673 6.43262 30.6182 6.27767 31.0283 6.17285C31.4385 6.06803 31.8965 6.01562 32.4023 6.01562H33.8721ZM41.5693 9.06445V0H42.8408V10.5H41.6787L41.5693 9.06445ZM36.5928 6.88379V6.74023C36.5928 6.17513 36.6611 5.66243 36.7979 5.20215C36.9391 4.7373 37.1374 4.33854 37.3926 4.00586C37.6523 3.67318 37.96 3.41797 38.3154 3.24023C38.6755 3.05794 39.0765 2.9668 39.5186 2.9668C39.9834 2.9668 40.389 3.04883 40.7354 3.21289C41.0863 3.3724 41.3825 3.6071 41.624 3.91699C41.8701 4.22233 42.0638 4.59147 42.2051 5.02441C42.3464 5.45736 42.4443 5.94727 42.499 6.49414V7.12305C42.4489 7.66536 42.3509 8.15299 42.2051 8.58594C42.0638 9.01888 41.8701 9.38802 41.624 9.69336C41.3825 9.9987 41.0863 10.2334 40.7354 10.3975C40.3844 10.557 39.9743 10.6367 39.5049 10.6367C39.0719 10.6367 38.6755 10.5433 38.3154 10.3564C37.96 10.1696 37.6523 9.90755 37.3926 9.57031C37.1374 9.23307 36.9391 8.83659 36.7979 8.38086C36.6611 7.92057 36.5928 7.42155 36.5928 6.88379ZM37.8643 6.74023V6.88379C37.8643 7.25293 37.9007 7.59928 37.9736 7.92285C38.0511 8.24642 38.1696 8.53125 38.3291 8.77734C38.4886 9.02344 38.6914 9.21712 38.9375 9.3584C39.1836 9.49512 39.4775 9.56348 39.8193 9.56348C40.2386 9.56348 40.5827 9.47461 40.8516 9.29688C41.125 9.11914 41.3438 8.88444 41.5078 8.59277C41.6719 8.30111 41.7995 7.98438 41.8906 7.64258V5.99512C41.8359 5.74447 41.7562 5.50293 41.6514 5.27051C41.5511 5.03353 41.4189 4.82389 41.2549 4.6416C41.0954 4.45475 40.8971 4.30664 40.6602 4.19727C40.4277 4.08789 40.152 4.0332 39.833 4.0332C39.4867 4.0332 39.1882 4.10612 38.9375 4.25195C38.6914 4.39323 38.4886 4.58919 38.3291 4.83984C38.1696 5.08594 38.0511 5.37305 37.9736 5.70117C37.9007 6.02474 37.8643 6.37109 37.8643 6.74023Z" fill="white"></path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <span class="font-normal text-gray-500 text-2xs md:text-xs">
+                                                Accepted file format: JPG | PNG | PDF
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid justify-center grid-cols-1 gap-5 md:grid-cols-2">
+                                    <div class="flex flex-col text-sm font-medium text-gray-600 md:text-base gap-28">
+                                        <span>(iv) Copy L.L.B Final Result Card/Degree</span>
+                                    </div>
+                                    <div class="grid flex-col items-center justify-between gap-24">
+                                        <div class="flex items-center justify-center gap-4">
+                                            <button class="flex items-center justify-center gap-2 px-3 py-2 rounded-md bg-sky-500 hover:bg-sky-600">
+                                                <span>
+                                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.54961 5.75591L8.90625 1.91627V13.6563C8.90625 13.9845 9.1718 14.2501 9.5 14.2501C9.8282 14.2501 10.0938 13.9845 10.0938 13.6563V1.91627L14.4504 5.78671C14.5617 5.8895 14.7027 5.93774 14.8438 5.93774C15.0073 5.93774 15.1708 5.8705 15.2879 5.73828C15.506 5.49359 15.4828 5.11783 15.2381 4.90037L9.89432 0.150457C9.66937 -0.0501524 9.33063 -0.0501524 9.10575 0.150457L3.762 4.90037C3.51723 5.11764 3.49422 5.49244 3.71094 5.73736C3.92766 5.98227 4.3084 6.00454 4.54961 5.75591ZM16.625 11.8751H12.4688C12.1409 11.8751 11.875 12.1409 11.875 12.4689C11.875 12.7968 12.1409 13.0626 12.4688 13.0626H16.625C17.2807 13.0626 17.8125 13.5944 17.8125 14.2501V16.625C17.8125 17.2808 17.2807 17.8125 16.625 17.8125H2.375C1.71928 17.8125 1.1875 17.2808 1.1875 16.625V14.2501C1.1875 13.5944 1.71928 13.0626 2.375 13.0626H6.53125C6.85781 13.0626 7.125 12.7954 7.125 12.4689C7.125 12.1423 6.85781 11.8751 6.53125 11.8751H2.375C1.06318 11.8751 0 12.9383 0 14.2501V16.625C0 17.9368 1.06318 19 2.375 19H16.625C17.9368 19 19 17.9368 19 16.625V14.2501C19 12.9402 17.935 11.8751 16.625 11.8751ZM16.3281 15.4376C16.3281 14.9459 15.9292 14.547 15.4375 14.547C14.9458 14.547 14.5469 14.9459 14.5469 15.4376C14.5469 15.9293 14.9458 16.3282 15.4375 16.3282C15.9292 16.3282 16.3281 15.9311 16.3281 15.4376Z" fill="white"></path>
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    <svg width="43" height="14" viewBox="0 0 43 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6.84961 0.546875H8.16211V7.28027C8.16211 8.02767 7.99577 8.64974 7.66309 9.14648C7.3304 9.64323 6.88835 10.0169 6.33691 10.2676C5.79004 10.5137 5.19531 10.6367 4.55273 10.6367C3.87826 10.6367 3.26758 10.5137 2.7207 10.2676C2.17839 10.0169 1.74772 9.64323 1.42871 9.14648C1.11426 8.64974 0.957031 8.02767 0.957031 7.28027V0.546875H2.2627V7.28027C2.2627 7.7998 2.3584 8.22819 2.5498 8.56543C2.74121 8.90267 3.00781 9.15332 3.34961 9.31738C3.69596 9.48145 4.09701 9.56348 4.55273 9.56348C5.01302 9.56348 5.41406 9.48145 5.75586 9.31738C6.10221 9.15332 6.37109 8.90267 6.5625 8.56543C6.75391 8.22819 6.84961 7.7998 6.84961 7.28027V0.546875ZM11.3066 4.52539V13.3438H10.0352V3.10352H11.1973L11.3066 4.52539ZM16.29 6.74023V6.88379C16.29 7.42155 16.2262 7.92057 16.0986 8.38086C15.971 8.83659 15.7842 9.23307 15.5381 9.57031C15.2965 9.90755 14.998 10.1696 14.6426 10.3564C14.2871 10.5433 13.8792 10.6367 13.4189 10.6367C12.9495 10.6367 12.5348 10.5592 12.1748 10.4043C11.8148 10.2493 11.5094 10.0238 11.2588 9.72754C11.0081 9.43132 10.8076 9.07585 10.6572 8.66113C10.5114 8.24642 10.4111 7.7793 10.3564 7.25977V6.49414C10.4111 5.94727 10.5137 5.45736 10.6641 5.02441C10.8145 4.59147 11.0127 4.22233 11.2588 3.91699C11.5094 3.6071 11.8125 3.3724 12.168 3.21289C12.5234 3.04883 12.9336 2.9668 13.3984 2.9668C13.8633 2.9668 14.2757 3.05794 14.6357 3.24023C14.9958 3.41797 15.2988 3.67318 15.5449 4.00586C15.791 4.33854 15.9756 4.7373 16.0986 5.20215C16.2262 5.66243 16.29 6.17513 16.29 6.74023ZM15.0186 6.88379V6.74023C15.0186 6.37109 14.9798 6.02474 14.9023 5.70117C14.8249 5.37305 14.7041 5.08594 14.54 4.83984C14.3805 4.58919 14.1755 4.39323 13.9248 4.25195C13.6742 4.10612 13.3757 4.0332 13.0293 4.0332C12.7103 4.0332 12.4323 4.08789 12.1953 4.19727C11.9629 4.30664 11.7646 4.45475 11.6006 4.6416C11.4365 4.82389 11.3021 5.03353 11.1973 5.27051C11.097 5.50293 11.0218 5.74447 10.9717 5.99512V7.76562C11.0628 8.08464 11.1904 8.38542 11.3545 8.66797C11.5186 8.94596 11.7373 9.17155 12.0107 9.34473C12.2842 9.51335 12.6283 9.59766 13.043 9.59766C13.3848 9.59766 13.6787 9.52702 13.9248 9.38574C14.1755 9.23991 14.3805 9.04167 14.54 8.79102C14.7041 8.54036 14.8249 8.25326 14.9023 7.92969C14.9798 7.60156 15.0186 7.25293 15.0186 6.88379ZM19.2773 0V10.5H18.0059V0H19.2773ZM20.9727 6.88379V6.72656C20.9727 6.19336 21.0501 5.69889 21.2051 5.24316C21.36 4.78288 21.5833 4.38411 21.875 4.04688C22.1667 3.70508 22.5199 3.44076 22.9346 3.25391C23.3493 3.0625 23.8141 2.9668 24.3291 2.9668C24.8486 2.9668 25.3158 3.0625 25.7305 3.25391C26.1497 3.44076 26.5052 3.70508 26.7969 4.04688C27.0931 4.38411 27.3187 4.78288 27.4736 5.24316C27.6286 5.69889 27.7061 6.19336 27.7061 6.72656V6.88379C27.7061 7.41699 27.6286 7.91146 27.4736 8.36719C27.3187 8.82292 27.0931 9.22168 26.7969 9.56348C26.5052 9.90072 26.152 10.165 25.7373 10.3564C25.3271 10.5433 24.8623 10.6367 24.3428 10.6367C23.8232 10.6367 23.3561 10.5433 22.9414 10.3564C22.5267 10.165 22.1712 9.90072 21.875 9.56348C21.5833 9.22168 21.36 8.82292 21.2051 8.36719C21.0501 7.91146 20.9727 7.41699 20.9727 6.88379ZM22.2373 6.72656V6.88379C22.2373 7.25293 22.2806 7.60156 22.3672 7.92969C22.4538 8.25326 22.5837 8.54036 22.7568 8.79102C22.9346 9.04167 23.1556 9.23991 23.4199 9.38574C23.6842 9.52702 23.9919 9.59766 24.3428 9.59766C24.6891 9.59766 24.9922 9.52702 25.252 9.38574C25.5163 9.23991 25.735 9.04167 25.9082 8.79102C26.0814 8.54036 26.2113 8.25326 26.2979 7.92969C26.389 7.60156 26.4346 7.25293 26.4346 6.88379V6.72656C26.4346 6.36198 26.389 6.0179 26.2979 5.69434C26.2113 5.36621 26.0791 5.07682 25.9014 4.82617C25.7282 4.57096 25.5094 4.37044 25.2451 4.22461C24.9854 4.07878 24.68 4.00586 24.3291 4.00586C23.9827 4.00586 23.6774 4.07878 23.4131 4.22461C23.1533 4.37044 22.9346 4.57096 22.7568 4.82617C22.5837 5.07682 22.4538 5.36621 22.3672 5.69434C22.2806 6.0179 22.2373 6.36198 22.2373 6.72656ZM33.6533 9.23535V5.42773C33.6533 5.13607 33.5941 4.88314 33.4756 4.66895C33.3617 4.4502 33.1885 4.28158 32.9561 4.16309C32.7236 4.0446 32.4365 3.98535 32.0947 3.98535C31.7757 3.98535 31.4954 4.04004 31.2539 4.14941C31.0169 4.25879 30.8301 4.40234 30.6934 4.58008C30.5612 4.75781 30.4951 4.94922 30.4951 5.1543H29.2305C29.2305 4.88997 29.2988 4.62793 29.4355 4.36816C29.5723 4.1084 29.7682 3.8737 30.0234 3.66406C30.2832 3.44987 30.5931 3.28125 30.9531 3.1582C31.3177 3.0306 31.7233 2.9668 32.1699 2.9668C32.7077 2.9668 33.1816 3.05794 33.5918 3.24023C34.0065 3.42253 34.3301 3.69824 34.5625 4.06738C34.7995 4.43197 34.918 4.88997 34.918 5.44141V8.88672C34.918 9.13281 34.9385 9.39486 34.9795 9.67285C35.0251 9.95085 35.0911 10.1901 35.1777 10.3906V10.5H33.8584C33.7946 10.3542 33.7445 10.1605 33.708 9.91895C33.6715 9.67285 33.6533 9.44499 33.6533 9.23535ZM33.8721 6.01562L33.8857 6.9043H32.6074C32.2474 6.9043 31.9261 6.93392 31.6436 6.99316C31.361 7.04785 31.124 7.13216 30.9326 7.24609C30.7412 7.36003 30.5954 7.50358 30.4951 7.67676C30.3949 7.84538 30.3447 8.04362 30.3447 8.27148C30.3447 8.50391 30.3971 8.71582 30.502 8.90723C30.6068 9.09863 30.764 9.2513 30.9736 9.36523C31.1878 9.47461 31.4499 9.5293 31.7598 9.5293C32.1471 9.5293 32.4889 9.44727 32.7852 9.2832C33.0814 9.11914 33.3161 8.91862 33.4893 8.68164C33.667 8.44466 33.7627 8.21452 33.7764 7.99121L34.3164 8.59961C34.2845 8.79102 34.1979 9.00293 34.0566 9.23535C33.9154 9.46777 33.7262 9.69108 33.4893 9.90527C33.2568 10.1149 32.9788 10.2904 32.6553 10.4316C32.3363 10.5684 31.9762 10.6367 31.5752 10.6367C31.0739 10.6367 30.6341 10.5387 30.2559 10.3428C29.8822 10.1468 29.5905 9.88477 29.3809 9.55664C29.1758 9.22396 29.0732 8.85254 29.0732 8.44238C29.0732 8.0459 29.1507 7.69727 29.3057 7.39648C29.4606 7.09115 29.6839 6.83822 29.9756 6.6377C30.2673 6.43262 30.6182 6.27767 31.0283 6.17285C31.4385 6.06803 31.8965 6.01562 32.4023 6.01562H33.8721ZM41.5693 9.06445V0H42.8408V10.5H41.6787L41.5693 9.06445ZM36.5928 6.88379V6.74023C36.5928 6.17513 36.6611 5.66243 36.7979 5.20215C36.9391 4.7373 37.1374 4.33854 37.3926 4.00586C37.6523 3.67318 37.96 3.41797 38.3154 3.24023C38.6755 3.05794 39.0765 2.9668 39.5186 2.9668C39.9834 2.9668 40.389 3.04883 40.7354 3.21289C41.0863 3.3724 41.3825 3.6071 41.624 3.91699C41.8701 4.22233 42.0638 4.59147 42.2051 5.02441C42.3464 5.45736 42.4443 5.94727 42.499 6.49414V7.12305C42.4489 7.66536 42.3509 8.15299 42.2051 8.58594C42.0638 9.01888 41.8701 9.38802 41.624 9.69336C41.3825 9.9987 41.0863 10.2334 40.7354 10.3975C40.3844 10.557 39.9743 10.6367 39.5049 10.6367C39.0719 10.6367 38.6755 10.5433 38.3154 10.3564C37.96 10.1696 37.6523 9.90755 37.3926 9.57031C37.1374 9.23307 36.9391 8.83659 36.7979 8.38086C36.6611 7.92057 36.5928 7.42155 36.5928 6.88379ZM37.8643 6.74023V6.88379C37.8643 7.25293 37.9007 7.59928 37.9736 7.92285C38.0511 8.24642 38.1696 8.53125 38.3291 8.77734C38.4886 9.02344 38.6914 9.21712 38.9375 9.3584C39.1836 9.49512 39.4775 9.56348 39.8193 9.56348C40.2386 9.56348 40.5827 9.47461 40.8516 9.29688C41.125 9.11914 41.3438 8.88444 41.5078 8.59277C41.6719 8.30111 41.7995 7.98438 41.8906 7.64258V5.99512C41.8359 5.74447 41.7562 5.50293 41.6514 5.27051C41.5511 5.03353 41.4189 4.82389 41.2549 4.6416C41.0954 4.45475 40.8971 4.30664 40.6602 4.19727C40.4277 4.08789 40.152 4.0332 39.833 4.0332C39.4867 4.0332 39.1882 4.10612 38.9375 4.25195C38.6914 4.39323 38.4886 4.58919 38.3291 4.83984C38.1696 5.08594 38.0511 5.37305 37.9736 5.70117C37.9007 6.02474 37.8643 6.37109 37.8643 6.74023Z" fill="white"></path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <span class="font-normal text-gray-500 text-2xs md:text-xs">
+                                                Accepted file format: JPG | PNG | PDF
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-row justify-between">
+                            <a class="px-10 py-2 border border-solid rounded-lg text-sky-500 border-sky-500 hover:bg-sky-800 hover:text-white" href="#" @click.prevent="tab = 2" alt="Back">Back</a>
+                            <a class="px-10 py-2 text-white rounded-lg bg-sky-500 hover:bg-sky-800" href="#" @click.prevent="tab = 4" alt="Next">Next</a>
+                        </div>
+                    </div>
+
+                    <div class="z-10 flex flex-col justify-between w-full h-full" x-show="tab === 4" style="display: none;">
+                        <div class="flex flex-col payments" x-data="{tab: 1}">
+                            <h3 class="mb-5 text-2xl font-medium text-gray-500">Become a member of RBA</h3>
+                            <h2 class="mb-2 text-base font-medium text-black">Select Payment Method</h2>
+                            
+                            <div class="relative flex flex-row items-center w-full space-x-3 mb-7">
+                                <a class="flex items-center justify-center w-20 p-2 bg-white border-2 border-purple-900 border-solid rounded-2xl h-14 drop-shadow" :class="{'border-purple-900': tab === 1, ' border-gray-100': tab !== 1}" href="#" @click.prevent="tab = 1">
+                                    <img src="./images/visa-logo.svg" alt="visa">
+                                </a>
+                                <a class="flex items-center justify-center w-20 p-2 bg-white border-2 border-gray-100 border-solid rounded-2xl h-14 drop-shadow" :class="{'border-purple-900': tab === 2, ' border-gray-100': tab !== 2}" href="#" @click.prevent="tab = 2">
+                                    <img src="./images/mastercard-logo.svg" alt="visa">
+                                </a>
+                                <a class="flex items-center justify-center w-20 p-2 bg-white border-2 border-gray-100 border-solid rounded-2xl h-14 drop-shadow" :class="{'border-purple-900': tab === 5, ' border-gray-100': tab !== 5}" href="#" @click.prevent="tab = 5">
+                                    <img src="./images/easypaisa-logo.png" alt="visa">
+                                </a>
+                            </div>
+                            <div>
+                                <div class="flex flex-col justify-between w-full h-full" x-show="tab === 1">
+                                    <h4 class="mb-3 text-base font-medium text-black">Enter you card details</h4>
+                                    <form>
+                                        <div class="grid gap-3 mb-6 md:grid-cols-2 md:gap-11">
+                                            <label class="block" for="card-name">
+                                                <span class="text-sm font-medium text-black">Card Holder Name</span>
+                                                <input type="text" id="card-name" placeholder="e.g Mickel Hurle" class="block w-full mt-1 border-gray-300 rounded-md drop-shadow peer focus:invalid:ring-red-500 focus:valid:ring-green-500 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required="">
+                                                <p class="invisible mt-1 font-light text-gray-800 peer-invalid:visible peer-empty:hidden peer-focus:block">
+                                                    Please enter your card holder name
+                                                </p>
+                                            </label>
+                                            <label class="block" for="card-number">
+                                                <span class="text-sm font-medium text-black">Card Number</span>
+                                                <input type="number" id="card-number" placeholder="4568 1548 2001 5765" class="block w-full mt-1 border-gray-300 rounded-md drop-shadow peer focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 focus:invalid:ring-red-500 focus:valid:ring-green-500" required="">
+                                                <p class="invisible mt-1 font-light text-gray-800 peer-invalid:visible peer-empty:hidden peer-focus:block">
+                                                    Please enter your card number
+                                                </p>
+                                            </label>
+                                        </div>
+                                        <div class="grid gap-3 md:grid-cols-2 md:gap-11 mb-14">
+                                            <div class="flex flex-row items-center justify-between w-full mb-6 md:mb-0">
+                                                <label class="flex flex-col w-full grow" for="month">
+                                                    <span class="text-sm font-medium text-black">Expiration Date</span>
+                                                    <div class="flex gap-2 mt-1">
+                                                        <select name="month" id="month" class="border-gray-300 rounded-md w-fit form-select drop-shadow peer focus:invalid:ring-red-500 focus:valid:ring-green-500 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required="">
+                                                            <option selected="" value="01">01</option>
+                                                            <option value="02">02</option>
+                                                            <option value="03">03</option>
+                                                            <option value="04">04</option>
+                                                            <option value="05">05</option>
+                                                            <option value="06">06</option>
+                                                            <option value="07">07</option>
+                                                            <option value="08">08</option>
+                                                            <option value="09">09</option>
+                                                            <option value="10">10</option>
+                                                            <option value="11">11</option>
+                                                            <option value="12">12</option>
+                                                        </select>
+                                                        <select name="year" id="year" class="border-gray-300 rounded-md w-fit form-select drop-shadow peer focus:invalid:ring-red-500 focus:valid:ring-green-500 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required="">
+                                                            <option selected="" value="2022">2022</option>
+                                                            <option value="2023">2023</option>
+                                                            <option value="2024">2024</option>
+                                                            <option value="2025">2025</option>
+                                                            <option value="2026">2026</option>
+                                                            <option value="2027">2027</option>
+                                                            <option value="2028">2028</option>
+                                                        </select>
+                                                    </div>
+                                                </label>
+                                                <label class="flex flex-col shrink-0" for="cvv">
+                                                    <span class="text-sm font-medium text-black">CVV</span>
+                                                    <input type="text" id="cvv" placeholder="e.g 405" class="w-24 mt-1 border-gray-300 rounded-md peer drop-shadow focus:invalid:ring-red-500 focus:valid:ring-green-500 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required="">
+                                                </label>
+                                            </div>
+                                            <div class="flex flex-col gap-3 lg:items-center lg:justify-between lg:flex-row">
+                                                <div class="flex items-center">
+                                                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-purple-900 bg-gray-100 border-gray-300 rounded focus:ring-purple-900 focus:ring-2">
+                                                    <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-900">I agree to the <a class="text-purple-900" href="#" alt="term & conditions">terms & conditions.</a></label>
+                                                </div>
+                                                <div class="flex flex-col items-end pr-3 md:flex-row md:items-center md:gap-3 lg:justify-end lg:gap-0 lg:items-end lg:flex-col md:pr-0">
+                                                    <h2 class="text-2xl text-purple-900">Rs 1,600</h2>
+                                                    <p class="text-sm text-purple-900">Total Amount</p>
+                                                    <p class="font-medium text-gray-700 text-2xs">Includes GST</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="flex flex-col justify-between w-full h-full" x-show="tab === 2" style="display: none;">
+                                    <h2 class="mb-3 text-base font-bold text-black">Enter your master card details</h2>
+                                </div>
+                                <div class="flex flex-col justify-between w-full h-full" x-show="tab === 5" style="display: none;">
+                                    <h2 class="mb-3 text-base font-bold text-black">Enter you card details esaypaisa</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-row justify-between">
+                            <a class="px-10 py-2 border border-solid rounded-lg text-sky-500 border-sky-500 hover:bg-sky-800 hover:text-white" href="#" @click.prevent="tab = 3" alt="Back">Back</a>
+                            <a class="px-10 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700" href="#" alt="Next">PAY</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
