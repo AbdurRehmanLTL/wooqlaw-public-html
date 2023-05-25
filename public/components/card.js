@@ -3,6 +3,7 @@ import { LitElement, html, css } from "https://cdn.jsdelivr.net/gh/lit/dist@2/co
 
 import '../microuis/avatar.js';
 import '../microuis/button.js';
+import '../microuis/rating.js';
 
 class Card extends LitElement {
     static get properties() {
@@ -21,9 +22,9 @@ class Card extends LitElement {
             <div class="@container relative flex w-full flex-col flex-wrap items-start gap-4 md:gap-8 rounded-2xl border bg-white p-2 @xl:p-4 shadow mb-3">
                <div class="group flex flex-col w-full @xl:flex-row @xl:items-center justify-between gap-2 rounded-xl bg-gradient-to-b  ${this.featured ? 'from-yellow-100' : 'from-gray-100'}  p-2">
                   <div class="flex items-center gap-3">
-                    <arm-avatar></arm-avatar>
+                    <arm-avatar size="lg" circle="true" status="true" srcpath="https://prodwooqlaw.blob.core.windows.net/uploads/a858a2bd-ba68-4f01-14a5-08daf84f4e5c/128x128/8858132d-7abd-412b-b901-ba967a394f49.jpg"></arm-avatar>
                      <div content="flex flex-wrap">
-                        <a href="/profile?id=a858a2bd-ba68-4f01-14a5-08daf84f4e5c&amp;tab=overview" class="txt flex text-sm @xl:text-base font-medium text-black">Tanveer Iqbal Khan</a>
+                        <a href="/profile?id=a858a2bd-ba68-4f01-14a5-08daf84f4e5c&tab=overview" class="txt flex text-sm @xl:text-base font-medium text-black">Tanveer Iqbal Khan</a>
                         <span class="mb-1 text-sm font-normal txt">
                            <h3 class="text-sm font-normal">Advocate Supreme Court of Pakistan</h3>
                         </span>
@@ -113,17 +114,8 @@ class Card extends LitElement {
                         </span>
                      </div>
                   </div>
-                  <div class="flex flex-row justify-between @xl:flex-col items-center @xl:items-start @xl:items-end gap-2">
-                     <div class="flex flex-col items-end gap-1 star">
-                        <div class="flex items-center">
-                           <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                           <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                           <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Third star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                           <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                           <svg aria-hidden="true" class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                        </div>
-                        <span class="font-normal txt text-2xs">0 Reviews </span>
-                     </div>
+                  <div class="flex flex-row justify-between @xl:flex-col items-center @xl:items-start gap-2">
+                     <arm-rating size="sm"></arm-rating>
                      <arm-button color="primary" textclass="font-normal text-sm text-white hidden @xl:block" customclass="icon flex w-fit items-center justify-center gap-2 rounded-full border bg-orange-500 hover:bg-orange-600 py-1 pr-1 @xl:pr-2 pl-1" text="Play Intro" svgleft='<svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 26C6.04462 26 0 20.1793 0 13C0 5.82075 6.04462 0 13.5 0C20.9554 0 27 5.82075 27 13C27 20.1793 20.9554 26 13.5 26ZM10.125 6.50975V19.4902L20.25 13L10.125 6.50975Z" fill="white"></path></svg>'> 
                      </arm-button>
                   </div>
