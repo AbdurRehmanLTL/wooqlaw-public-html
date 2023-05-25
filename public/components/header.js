@@ -24,7 +24,7 @@ class Header extends LitElement {
                                     </button>
                                 </div>
                             </div>
-                            <nav :class="{'flex h-[calc(100dvh-3rem)] pt-5 gap-y-8': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 divide-x md:items-center md:pb-0 md:flex md:justify-end md:flex-row">
+                            <nav :class="open ? 'flex h-[calc(100vh-3rem)] md:h-auto pt-5 md:pt-0 gap-y-8 md-gap-y-0' : 'hidden'" class="flex-col flex grow pb-4 divide-x md:items-center md:pb-0 md:flex md:justify-end md:flex-row">
                                 <div class="pr-3">
                                     <a x-on:click="open = !open" class="items-center px-2.5 py-1 text-sm font-medium rounded-lg bg-primary-100 text-violet-700 md:text-base hover:text-violet-800" href="/listing.html">Find a Lawyer</a>
                                 </div>

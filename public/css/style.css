@@ -975,6 +975,9 @@ select {
 .h-screen {
   height: 100vh;
 }
+.h-\[calc\(100vh-3rem\)\] {
+  height: calc(100vh - 3rem);
+}
 .w-10 {
   width: 2.5rem;
 }
@@ -2423,6 +2426,10 @@ select {
     height: 700px;
   }
 
+  .md\:h-auto {
+    height: auto;
+  }
+
   .md\:min-h-\[41\.25rem\] {
     min-height: 41.25rem;
   }
@@ -2796,6 +2803,10 @@ select {
 
   .md\:pt-5 {
     padding-top: 1.25rem;
+  }
+
+  .md\:pt-0 {
+    padding-top: 0px;
   }
 
   .md\:text-start {
