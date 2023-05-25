@@ -57,7 +57,7 @@
   content: "";
   height: 50%;
   background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 50.17%);
-  z-index: -1;
+  z-index: 0;
   @apply w-full absolute rounded-lg md:rounded-xl bottom-0
 }
 .swiper-button-disabled {
