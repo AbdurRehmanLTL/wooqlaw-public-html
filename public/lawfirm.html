@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- AlpineJs Scripts --> 
+
+    <!-- alpine/tooltip v1.0 --> 
+    <script defer src="./js/alpinetooltip.min.js"></script> 
+    <!-- @alpinejs/ui v3.12 --> 
+    <script defer src="./js/alpineui.min.js"></script> 
+    <!-- @alpinejs/focus v3.12 --> 
+    <script defer src="./js/alpinefocus.min.js"></script> 
+    <!-- alpinejs v3.12 --> 
+    <script defer src="./js/alpine.min.js"></script>
+
+
+    <meta name="description" content="wooqlaw profile">
+    <title>wooqlaw Public Portal</title>
+</head>
+
+<body x-data="{scrolAtTop: false, lawfirmfilter: false}">
+    <arm-header></arm-header>
+    <div class="flex flex-col gap-6 main md:p-10 font-display bg-gray-50">
+        <section class="container card">
+            <div class="flex flex-col gap-2">
+                <div class="flex flex-col justify-between w-full gap-3 p-2 bg-white md:flex-row md:p-5 rounded-t-xl">
+                    <div class="flex items-center gap-2 md:gap-5">
+                        <div class="relative flex">
+                            <a href="#" class="relative flex w-24 h-24 md:w-36 md:h-36">
+                                    <img class="w-24 h-24 md:w-36 md:h-36" src="images/lawfirm.png" alt="lawfirm">
+                                <span class="absolute right-0 flex w-3 h-3 bg-green-600 rounded-full md:w-5 md:h-5 outline outline-white bottom-2">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="flex flex-col gap-3 md:gap-8">
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-2">
+                                    <h2 class="text-base font-normal text-black md:text-lg md:font-medium">
+                                        Tanveer Iqbal Law Firm
+                                    </h2>
+                                    <span class="w-5 h-5 md:w-6 md:h-6">
+                                        <svg class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.0449 3.59661L11.7949 0.159113C11.5854 0.0718438 11.2295 0 11.0026 0C10.7743 0 10.4204 0.0718438 10.2094 0.159113L1.9598 3.59661C1.19023 3.91415 0.6875 4.66611 0.6875 5.46103C0.6875 16.5513 8.81719 21.9997 10.9957 21.9997C13.1957 21.9997 21.3125 16.4911 21.3125 5.46103C21.3125 4.66611 20.8098 3.91415 20.0449 3.59661ZM15.125 8.59345C15.125 8.83111 15.0433 9.06997 14.8766 9.26462L10.7516 14.0771C10.4629 14.4157 10.0805 14.3985 9.96875 14.3985C9.69616 14.3985 9.43293 14.2898 9.23957 14.0964L7.17707 12.0339C6.97383 11.872 6.875 11.6056 6.875 11.3048C6.875 10.7552 7.31758 10.2735 7.90625 10.2735C8.17012 10.2735 8.43391 10.3742 8.63543 10.5756L9.91117 11.8514L13.3113 7.88365C13.5158 7.64595 13.8046 7.52434 14.095 7.52434C14.8844 7.5622 15.125 8.27548 15.125 8.59345Z" fill="#0EA5E9"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <a href="#" class="flex items-center justify-center gap-1 p-1 pr-1 bg-orange-700 rounded-full w-fit h-9 hover:bg-orange-800">
+                                <span class="w-7 h-7">
+                                    <svg class="w-7 h-7" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.5 27.5C6.04463 27.5 0 21.4554 0 14C0 6.54463 6.04463 0.5 13.5 0.5C20.9554 0.5 27 6.54463 27 14C27 21.4554 20.9554 27.5 13.5 27.5ZM10.125 7.26013V20.7399L20.25 14L10.125 7.26013Z" fill="white"/>
+                                    </svg>
+                                </span>
+                                <span class="flex pr-3 text-sm font-medium text-white">
+                                    Play Intro
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end gap-8">
+                        <div class="grid w-full grid-cols-2 gap-1 lg:flex lg:flex-row">
+                            <div class="flex flex-row items-center justify-start w-full h-16 gap-2 p-3 rounded-lg md:flex-col lg:w-28 bg-gray-50 md:justify-center">
+                                <h3 class="flex items-center justify-center gap-2">
+                                    <span class="flex text-base font-medium text-black md:text-xl">
+                                        0
+                                   </span>
+                                   <span class="font-normal text-black text-2xs md:text-sm">
+                                        years
+                                   </span>
+                                </h3>
+                                   <h3 class="text-xs font-medium text-gray-600 md:text-sm">
+                                        Experience
+                                   </h3>
+                            </div>
+                            <div class="flex flex-row items-center justify-start w-full h-16 gap-2 p-3 rounded-lg md:flex-col lg:w-28 bg-gray-50 md:justify-center">
+                                <h3 class="flex items-center justify-center">
+                                    <span class="flex text-base font-medium text-black md:text-xl">
+                                      0
+                                   </span>
+                                </h3>
+                                   <h3 class="text-xs font-medium text-gray-600 md:text-sm">
+                                      Profile
+                                    <span class="text-xs font-medium text-gray-600">
+                                      Views
+                                    </span>
+                                   </h3>
+                            </div>
+                            <div class="flex flex-row items-center justify-start w-full h-16 gap-2 p-3 rounded-lg md:flex-col lg:w-28 bg-gray-50 md:justify-center">
+                                <h3 class="flex items-center justify-center">
+                                    <span class="flex text-base font-medium text-black md:text-xl">
+                                    0
+                                   </span>
+                                </h3>
+                                   <h3 class="text-xs font-medium text-gray-600 md:text-sm">
+                                    Reviews
+                                   </h3>
+                            </div>
+                            <div class="flex flex-row items-center justify-start w-full h-16 gap-2 p-3 rounded-lg md:flex-col lg:w-28 bg-gray-50 md:justify-center">
+                                <h3 class="flex items-center justify-center">
+                                    <span class="flex text-base font-medium text-black md:text-xl">
+                                    0
+                                   </span>
+                                </h3>
+                                   <h3 class="text-xs font-medium text-gray-600 md:text-sm">
+                                    Likes
+                                   </h3>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between w-full gap-4 md:w-fit md:justify-end">
+                            <a href="#" class="flex border rounded-lg gap-2 px-8 py-2.5 hover:bg-gray-100 justify-center items-center">
+                                <span class="flex text-sm font-medium text-gray-800">
+                                    Like
+                                </span>
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.96875 8.5C0.96875 8.30302 1.00755 8.10796 1.08293 7.92597C1.15831 7.74399 1.2688 7.57863 1.40809 7.43934C1.54738 7.30005 1.71274 7.18956 1.89472 7.11418C2.07671 7.0388 2.27177 7 2.46875 7C2.66573 7 2.86079 7.0388 3.04278 7.11418C3.22476 7.18956 3.39012 7.30005 3.52941 7.43934C3.6687 7.57863 3.77919 7.74399 3.85457 7.92597C3.92995 8.10796 3.96875 8.30302 3.96875 8.5V14.5C3.96875 14.8978 3.81071 15.2794 3.52941 15.5607C3.24811 15.842 2.86657 16 2.46875 16C2.07093 16 1.68939 15.842 1.40809 15.5607C1.12679 15.2794 0.96875 14.8978 0.96875 14.5V8.5ZM4.96875 8.333V13.763C4.96858 14.1347 5.07197 14.499 5.26733 14.8152C5.46269 15.1314 5.74228 15.3869 6.07475 15.553L6.12475 15.578C6.67964 15.8553 7.29142 15.9998 7.91175 16H13.3278C13.7903 16.0002 14.2386 15.84 14.5963 15.5469C14.954 15.2537 15.1991 14.8456 15.2897 14.392L16.4897 8.392C16.5477 8.10187 16.5406 7.80249 16.469 7.51544C16.3973 7.22839 16.2628 6.96082 16.0752 6.73201C15.8876 6.50321 15.6516 6.31887 15.3842 6.19229C15.1168 6.0657 14.8246 6.00003 14.5288 6H10.9688V2C10.9688 1.46957 10.758 0.960859 10.383 0.585786C10.0079 0.210714 9.49918 0 8.96875 0C8.70353 0 8.44918 0.105357 8.26164 0.292893C8.07411 0.48043 7.96875 0.734784 7.96875 1V1.667C7.96875 2.53248 7.68804 3.37462 7.16875 4.067L5.76875 5.933C5.24946 6.62538 4.96875 7.46752 4.96875 8.333V8.333Z" fill="#1F2A37"/>
+                                </svg>
+                                    
+                            </a>
+                            <span class="flex flex-col items-end gap-1">
+                                <svg width="136" height="25" viewBox="0 0 136 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_180496_144159)">
+                                    <path d="M134 9.74L126.81 9.12L124 2.5L121.19 9.13L114 9.74L119.46 14.47L117.82 21.5L124 17.77L130.18 21.5L128.55 14.47L134 9.74ZM124 15.9L120.24 18.17L121.24 13.89L117.92 11.01L122.3 10.63L124 6.6L125.71 10.64L130.09 11.02L126.77 13.9L127.77 18.18L124 15.9Z" fill="#F59E0B"/>
+                                    </g>
+                                    <g clip-path="url(#clip1_180496_144159)">
+                                    <path d="M106.348 9.74L99.1577 9.12L96.3477 2.5L93.5377 9.13L86.3477 9.74L91.8077 14.47L90.1677 21.5L96.3477 17.77L102.528 21.5L100.898 14.47L106.348 9.74ZM96.3477 15.9L92.5877 18.17L93.5877 13.89L90.2677 11.01L94.6477 10.63L96.3477 6.6L98.0577 10.64L102.438 11.02L99.1177 13.9L100.118 18.18L96.3477 15.9Z" fill="#F59E0B"/>
+                                    </g>
+                                    <g clip-path="url(#clip2_180496_144159)">
+                                    <path d="M78.5586 9.74L71.3686 9.12L68.5586 2.5L65.7486 9.13L58.5586 9.74L64.0186 14.47L62.3786 21.5L68.5586 17.77L74.7386 21.5L73.1086 14.47L78.5586 9.74ZM68.5586 15.9L64.7986 18.17L65.7986 13.89L62.4786 11.01L66.8586 10.63L68.5586 6.6L70.2686 10.64L74.6486 11.02L71.3286 13.9L72.3286 18.18L68.5586 15.9Z" fill="#F59E0B"/>
+                                    </g>
+                                    <g clip-path="url(#clip3_180496_144159)">
+                                    <path d="M50.7617 9.74L43.5717 9.12L40.7617 2.5L37.9517 9.13L30.7617 9.74L36.2217 14.47L34.5817 21.5L40.7617 17.77L46.9417 21.5L45.3117 14.47L50.7617 9.74ZM40.7617 15.9L37.0017 18.17L38.0017 13.89L34.6817 11.01L39.0617 10.63L40.7617 6.6L42.4717 10.64L46.8517 11.02L43.5317 13.9L44.5317 18.18L40.7617 15.9Z" fill="#F59E0B"/>
+                                    </g>
+                                    <g clip-path="url(#clip4_180496_144159)">
+                                    <path d="M22.9688 9.74L15.7788 9.12L12.9688 2.5L10.1587 9.13L2.96875 9.74L8.42875 14.47L6.78875 21.5L12.9688 17.77L19.1488 21.5L17.5187 14.47L22.9688 9.74ZM12.9688 15.9L9.20875 18.17L10.2087 13.89L6.88875 11.01L11.2688 10.63L12.9688 6.6L14.6788 10.64L19.0588 11.02L15.7388 13.9L16.7388 18.18L12.9688 15.9Z" fill="#F59E0B"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_180496_144159">
+                                    <rect width="24" height="24" fill="white" transform="translate(112 0.5)"/>
+                                    </clipPath>
+                                    <clipPath id="clip1_180496_144159">
+                                    <rect width="24" height="24" fill="white" transform="translate(84.3477 0.5)"/>
+                                    </clipPath>
+                                    <clipPath id="clip2_180496_144159">
+                                    <rect width="24" height="24" fill="white" transform="translate(56.5586 0.5)"/>
+                                    </clipPath>
+                                    <clipPath id="clip3_180496_144159">
+                                    <rect width="24" height="24" fill="white" transform="translate(28.7617 0.5)"/>
+                                    </clipPath>
+                                    <clipPath id="clip4_180496_144159">
+                                    <rect width="24" height="24" fill="white" transform="translate(0.96875 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                    
+                                <span class="flex text-sm font-medium text-gray-600">
+                                    0 Rating
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container profile-tabs">
+            <div class="justify-between w-full bg-white shadow rounded-xl">
+                <div class="grid w-full grid-cols-1 gap-5 p-2 md:grid-cols-2 md:p-5">
+                    <section class="w-full">
+                        <!--Card-->
+                        <arm-card featured="true"></arm-card>
+                        <!--Card-->
+                        <arm-card></arm-card>
+                        <!--Card-->
+                        <arm-card></arm-card>
+                        <!--Card-->
+                        <arm-card></arm-card>
+                    </section>
+                    <section class="flex flex-col items-start w-full gap-10 p-2 about">
+                            <!-- About -->
+                            <div class="flex flex-col w-full gap-2">
+                            <h2 class="p-2 text-base font-medium text-gray-600 md:text-lg md:p-3">
+                                    About
+                            </h2>
+                        <div class="p-3 text-sm font-medium text-gray-900 rounded-lg md:text-base bg-gray-50 md:p-5">
+                            <p>We are DV Solicitors, a legal firm with
+                                experienced attorneys who are dedicated to providing top-notch legal services to our clients.
+                            </p>
+                            <p>We understand that legal matters can be complex and stressful, which is why we strive to make the
+                                process
+                                as seamless and efficient as possible. Our team is committed to delivering personalized attention
+                                and
+                                tailored solutions to meet the unique needs of each client.
+                            </p>
+                            <p>Whether you are facing a legal dispute, need help with a transaction, or require advice on compliance
+                                and
+                                risk management, we have the expertise to help you navigate the legal landscape. Our areas of
+                                practice
+                                include but are not limited to corporate law, intellectual property law, employment law, and
+                                litigation.
+                            </p>
+                            <p>At our law firm, we believe in building long-lasting relationships with our clients based on trust,
+                                transparency, and open communication. We pride ourselves on being responsive, accessible, and
+                                accountable to our clients throughout the entire legal process.
+                            </p>
+                            <p>Thank you for considering our law firm for your legal needs. We look forward to serving you with
+                                excellence and professionalism...
+                            </p>
+                            <a class="p-1 text-sm font-medium text-blue-600" href="#">
+                                Show More
+                            </a> 
+                        </div>
+                            </div>
+                        <!-- Experience -->
+                        <div class="flex flex-col w-full gap-2">
+                            <h2 class="p-2 text-base font-medium text-gray-600 md:text-lg md:p-3">
+                                Experience
+                            </h2>
+                        <div class="p-3 text-sm font-medium text-gray-900 rounded-lg md:text-base bg-gray-50 md:p-5">
+                            <h2>12 Years</h2>
+                        </div>
+                        </div>
+                        <!-- Services -->
+                        <div class="flex flex-col w-full gap-2 main">
+                            <h2 class="p-2 text-base font-medium text-gray-600 md:text-lg md:p-3">
+                                Services
+                            </h2> 
+                            <div class="p-3 text-sm font-medium text-gray-900 rounded-lg md:text-base bg-gray-50 md:p-5">
+                                <h2>
+                                    Criminal Law | Property Law | Family Law
+                                </h2>
+                            </div>
+                        </div>
+                        <!-- Address & Location -->
+                        <div class="flex flex-col w-full gap-2 main">
+                                <h2 class="p-2 text-base font-medium text-gray-600 md:text-lg md:p-3">
+                                    Address & Location
+                                </h2>
+                            <div class="flex-col gap-5 p-3 text-base font-medium text-gray-700 rounded-lg bg-gray-50 md:p-5">
+                                <div class="pb-3 border-b address-1">
+                                    <h2 class="py-1 text-sm font-medium text-gray-700 md:text-base">
+                                        Islamabad office
+                                    </h2>
+                                    <h2 class="py-1 text-xs font-medium text-gray-600 md:text-sm">
+                                        Hajvairy Mansion, China Chowk Underpass, Block B G 6/3 Blue Area, Islamabad
+                                    </h2>
+                                </div>
+                                <div class="pt-3 address-2">
+                                    <h2 class="py-1 text-sm font-medium text-gray-700 md:text-base">
+                                        I9 Office
+                                    </h2>
+                                    <h2 class="py-1 text-xs font-medium text-gray-600 md:text-sm">
+                                        Hajvairy Mansion, China Chowk Underpass, Block B G 6/3 Blue Area, Islamabad
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Courts -->
+                        <div class="flex flex-col w-full gap-2 main">
+                                <h2 class="p-2 text-base font-medium text-gray-600 md:text-lg md:p-3">
+                                    Courts
+                                </h2>
+                            <div class="p-3 text-sm font-medium text-gray-900 rounded-lg md:text-base bg-gray-50 md:p-5">
+                                <h2>District Court | High Court | Supreme Court</h2>
+                            </div>
+                        </div>
+                        <!-- Bar Council -->
+                        <div class="flex flex-col w-full gap-2 main">
+                                <h2 class="p-2 text-base font-medium text-gray-600 md:text-lg md:p-3">
+                                    Bar Council
+                                </h2>
+                            <div class="p-3 text-sm font-medium text-gray-900 rounded-lg md:text-base bg-gray-50 md:p-5">
+                                <h2>Islamabad District Bar</h2>
+                            </div>
+                        </div>
+                        <!-- Language -->
+                        <div class="flex flex-col w-full gap-2 main">
+                                <h2 class="p-2 text-base font-medium text-gray-600 md:text-lg md:p-3">
+                                    Language
+                                </h2>
+                            <div class="p-3 text-sm font-medium text-gray-900 rounded-lg md:text-base bg-gray-50 md:p-5">
+                                <h2>Urdu | Punjabi | English</h2>
+                            </div>
+                        </div>
+                    </section>
+                    
+                </div>
+            </div>    
+        </section>
+
+        <div class="justify-between w-full bg-white shadow rounded-xl" x-data x-tabs>
+            <ul class="flex gap-2 px-2 pt-2 overflow-x-auto text-base font-semibold text-center text-gray-600 border-b border-gray-100 flex-nowrap md:px-5 md:pt-3" x-tabs:list>
+                    <li class="basis-auto shrink-0 grow-0 md:grow">
+                    <a
+                        x-tabs:tab
+                        :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-600 border-white'"
+                        href="javascript:;"
+                        class="flex items-center justify-center gap-1 px-3 py-5 bg-white border-b-2 md:px-4"
+                    >
+                        <span>Success Stories</span>
+                        <span :class="$tab.isSelected ? 'bg-violet-700' : 'bg-gray-500' " class="flex items-center justify-center w-6 h-6 text-xs font-medium text-white rounded-2xl">
+                            03
+                        </span>
+                    </a>
+                    </li>
+                    <li class="basis-auto shrink-0 grow-0 md:grow">
+                    <a
+                        x-tabs:tab
+                        :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-600 border-white'"
+                        href="javascript:;"
+                        class="flex items-center justify-center gap-1 px-3 py-5 bg-white border-b-2 md:px-4"
+                    >
+                        <span>Posts</span>
+                        <span :class="$tab.isSelected ? 'bg-violet-700' : 'bg-gray-500' " class="flex items-center justify-center w-6 h-6 text-xs font-medium text-white rounded-2xl">
+                            03
+                        </span>
+                    </a>
+                    </li>
+                    <li class="basis-auto shrink-0 grow-0 md:grow">
+                    <a
+                        x-tabs:tab
+                        :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-600 border-white'"
+                        href="javascript:;"
+                        class="flex items-center justify-center gap-1 px-3 py-5 bg-white border-b-2 md:px-4"
+                    >
+                        <span>Recommendations</span>
+                        <span :class="$tab.isSelected ? 'bg-violet-700' : 'bg-gray-500' " class="flex items-center justify-center w-6 h-6 text-xs font-medium text-white rounded-2xl">
+                            03
+                        </span>
+                    </a>
+                    </li>
+                    <li class="basis-auto shrink-0 grow-0 md:grow">
+                    <a
+                        x-tabs:tab
+                        :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-600 border-white'"
+                        href="javascript:;"
+                        class="flex items-center justify-center gap-1 px-3 py-5 bg-white border-b-2 md:px-4"
+                    >
+                        <span>FAQs</span>
+                        <span :class="$tab.isSelected ? 'bg-violet-700' : 'bg-gray-500' " class="flex items-center justify-center w-6 h-6 text-xs font-medium text-white rounded-2xl">
+                            03
+                        </span>
+                    </a>
+                    </li>
+            </ul>
+            <div id="myTabContent" x-tabs:panels>
+                <div x-tabs:panel>
+                    <section class="success">
+                        <div class="flex justify-center py-4 md:py-8">
+                            <svg width="588" height="258" viewBox="0 0 588 258" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_dd_180853_148684)">
+                                <rect x="3.5" y="2" width="581" height="200" rx="8" fill="#F4F4F5"/>
+                                </g>
+                                <rect x="18.5" y="57" width="541" height="59" rx="4" fill="#E4E4E7"/>
+                                <circle cx="32" cy="28.5" r="13.5" fill="#D9D9D9"/>
+                                <rect x="49.5" y="19" width="58" height="9" rx="4.5" fill="#D9D9D9"/>
+                                <rect x="20.5" y="168" width="161" height="17" rx="8.5" fill="#D9D9D9"/>
+                                <rect x="209.5" y="168" width="161" height="17" rx="8.5" fill="#D9D9D9"/>
+                                <rect x="398.5" y="168" width="161" height="17" rx="8.5" fill="#D9D9D9"/>
+                                <rect x="509.5" y="16" width="58" height="17" rx="8.5" fill="#D9D9D9"/>
+                                <rect x="49.5" y="33" width="32" height="9" rx="4.5" fill="#D9D9D9"/>
+                                <path d="M211.42 250H209.14L202.28 239.62V250H200V236.08H202.28L209.14 246.44V236.08H211.42V250ZM218.794 250.18C217.754 250.18 216.814 249.947 215.974 249.48C215.134 249 214.474 248.333 213.994 247.48C213.514 246.613 213.274 245.613 213.274 244.48C213.274 243.36 213.521 242.367 214.014 241.5C214.507 240.633 215.181 239.967 216.034 239.5C216.887 239.033 217.841 238.8 218.894 238.8C219.947 238.8 220.901 239.033 221.754 239.5C222.607 239.967 223.281 240.633 223.774 241.5C224.267 242.367 224.514 243.36 224.514 244.48C224.514 245.6 224.261 246.593 223.754 247.46C223.247 248.327 222.554 249 221.674 249.48C220.807 249.947 219.847 250.18 218.794 250.18ZM218.794 248.2C219.381 248.2 219.927 248.06 220.434 247.78C220.954 247.5 221.374 247.08 221.694 246.52C222.014 245.96 222.174 245.28 222.174 244.48C222.174 243.68 222.021 243.007 221.714 242.46C221.407 241.9 221.001 241.48 220.494 241.2C219.987 240.92 219.441 240.78 218.854 240.78C218.267 240.78 217.721 240.92 217.214 241.2C216.721 241.48 216.327 241.9 216.034 242.46C215.741 243.007 215.594 243.68 215.594 244.48C215.594 245.667 215.894 246.587 216.494 247.24C217.107 247.88 217.874 248.2 218.794 248.2ZM238.383 250L235.183 244.44H233.443V250H231.163V236.1H235.963C237.03 236.1 237.93 236.287 238.663 236.66C239.41 237.033 239.963 237.533 240.323 238.16C240.697 238.787 240.883 239.487 240.883 240.26C240.883 241.167 240.617 241.993 240.083 242.74C239.563 243.473 238.757 243.973 237.663 244.24L241.103 250H238.383ZM233.443 242.62H235.963C236.817 242.62 237.457 242.407 237.883 241.98C238.323 241.553 238.543 240.98 238.543 240.26C238.543 239.54 238.33 238.98 237.903 238.58C237.477 238.167 236.83 237.96 235.963 237.96H233.443V242.62ZM253.5 244.22C253.5 244.633 253.473 245.007 253.42 245.34H245C245.067 246.22 245.393 246.927 245.98 247.46C246.567 247.993 247.287 248.26 248.14 248.26C249.367 248.26 250.233 247.747 250.74 246.72H253.2C252.867 247.733 252.26 248.567 251.38 249.22C250.513 249.86 249.433 250.18 248.14 250.18C247.087 250.18 246.14 249.947 245.3 249.48C244.473 249 243.82 248.333 243.34 247.48C242.873 246.613 242.64 245.613 242.64 244.48C242.64 243.347 242.867 242.353 243.32 241.5C243.787 240.633 244.433 239.967 245.26 239.5C246.1 239.033 247.06 238.8 248.14 238.8C249.18 238.8 250.107 239.027 250.92 239.48C251.733 239.933 252.367 240.573 252.82 241.4C253.273 242.213 253.5 243.153 253.5 244.22ZM251.12 243.5C251.107 242.66 250.807 241.987 250.22 241.48C249.633 240.973 248.907 240.72 248.04 240.72C247.253 240.72 246.58 240.973 246.02 241.48C245.46 241.973 245.127 242.647 245.02 243.5H251.12ZM259.604 247.96L262.724 238.98H265.144L260.944 250H258.224L254.044 238.98H256.484L259.604 247.96ZM267.627 237.52C267.214 237.52 266.867 237.38 266.587 237.1C266.307 236.82 266.167 236.473 266.167 236.06C266.167 235.647 266.307 235.3 266.587 235.02C266.867 234.74 267.214 234.6 267.627 234.6C268.027 234.6 268.367 234.74 268.647 235.02C268.927 235.3 269.067 235.647 269.067 236.06C269.067 236.473 268.927 236.82 268.647 237.1C268.367 237.38 268.027 237.52 267.627 237.52ZM268.747 238.98V250H266.467V238.98H268.747ZM281.441 244.22C281.441 244.633 281.414 245.007 281.361 245.34H272.941C273.007 246.22 273.334 246.927 273.921 247.46C274.507 247.993 275.227 248.26 276.081 248.26C277.307 248.26 278.174 247.747 278.681 246.72H281.141C280.807 247.733 280.201 248.567 279.321 249.22C278.454 249.86 277.374 250.18 276.081 250.18C275.027 250.18 274.081 249.947 273.241 249.48C272.414 249 271.761 248.333 271.281 247.48C270.814 246.613 270.581 245.613 270.581 244.48C270.581 243.347 270.807 242.353 271.261 241.5C271.727 240.633 272.374 239.967 273.201 239.5C274.041 239.033 275.001 238.8 276.081 238.8C277.121 238.8 278.047 239.027 278.861 239.48C279.674 239.933 280.307 240.573 280.761 241.4C281.214 242.213 281.441 243.153 281.441 244.22ZM279.061 243.5C279.047 242.66 278.747 241.987 278.161 241.48C277.574 240.973 276.847 240.72 275.981 240.72C275.194 240.72 274.521 240.973 273.961 241.48C273.401 241.973 273.067 242.647 272.961 243.5H279.061ZM298.084 238.98L294.664 250H292.264L290.044 241.86L287.824 250H285.424L281.984 238.98H284.304L286.604 247.84L288.944 238.98H291.324L293.564 247.8L295.844 238.98H298.084ZM306.844 240.84V246.94C306.844 247.353 306.937 247.653 307.124 247.84C307.324 248.013 307.657 248.1 308.124 248.1H309.524V250H307.724C306.697 250 305.91 249.76 305.364 249.28C304.817 248.8 304.544 248.02 304.544 246.94V240.84H303.244V238.98H304.544V236.24H306.844V238.98H309.524V240.84H306.844ZM316.005 250.18C314.965 250.18 314.025 249.947 313.185 249.48C312.345 249 311.685 248.333 311.205 247.48C310.725 246.613 310.485 245.613 310.485 244.48C310.485 243.36 310.732 242.367 311.225 241.5C311.718 240.633 312.392 239.967 313.245 239.5C314.098 239.033 315.052 238.8 316.105 238.8C317.158 238.8 318.112 239.033 318.965 239.5C319.818 239.967 320.492 240.633 320.985 241.5C321.478 242.367 321.725 243.36 321.725 244.48C321.725 245.6 321.472 246.593 320.965 247.46C320.458 248.327 319.765 249 318.885 249.48C318.018 249.947 317.058 250.18 316.005 250.18ZM316.005 248.2C316.592 248.2 317.138 248.06 317.645 247.78C318.165 247.5 318.585 247.08 318.905 246.52C319.225 245.96 319.385 245.28 319.385 244.48C319.385 243.68 319.232 243.007 318.925 242.46C318.618 241.9 318.212 241.48 317.705 241.2C317.198 240.92 316.652 240.78 316.065 240.78C315.478 240.78 314.932 240.92 314.425 241.2C313.932 241.48 313.538 241.9 313.245 242.46C312.952 243.007 312.805 243.68 312.805 244.48C312.805 245.667 313.105 246.587 313.705 247.24C314.318 247.88 315.085 248.2 316.005 248.2ZM332.374 250.18C331.508 250.18 330.728 250.027 330.034 249.72C329.354 249.4 328.814 248.973 328.414 248.44C328.014 247.893 327.801 247.287 327.774 246.62H330.134C330.174 247.087 330.394 247.48 330.794 247.8C331.208 248.107 331.721 248.26 332.334 248.26C332.974 248.26 333.468 248.14 333.814 247.9C334.174 247.647 334.354 247.327 334.354 246.94C334.354 246.527 334.154 246.22 333.754 246.02C333.368 245.82 332.748 245.6 331.894 245.36C331.068 245.133 330.394 244.913 329.874 244.7C329.354 244.487 328.901 244.16 328.514 243.72C328.141 243.28 327.954 242.7 327.954 241.98C327.954 241.393 328.128 240.86 328.474 240.38C328.821 239.887 329.314 239.5 329.954 239.22C330.608 238.94 331.354 238.8 332.194 238.8C333.448 238.8 334.454 239.12 335.214 239.76C335.988 240.387 336.401 241.247 336.454 242.34H334.174C334.134 241.847 333.934 241.453 333.574 241.16C333.214 240.867 332.728 240.72 332.114 240.72C331.514 240.72 331.054 240.833 330.734 241.06C330.414 241.287 330.254 241.587 330.254 241.96C330.254 242.253 330.361 242.5 330.574 242.7C330.788 242.9 331.048 243.06 331.354 243.18C331.661 243.287 332.114 243.427 332.714 243.6C333.514 243.813 334.168 244.033 334.674 244.26C335.194 244.473 335.641 244.793 336.014 245.22C336.388 245.647 336.581 246.213 336.594 246.92C336.594 247.547 336.421 248.107 336.074 248.6C335.728 249.093 335.234 249.48 334.594 249.76C333.968 250.04 333.228 250.18 332.374 250.18ZM344.358 238.8C345.198 238.8 345.944 238.98 346.598 239.34C347.264 239.7 347.784 240.233 348.158 240.94C348.544 241.647 348.738 242.5 348.738 243.5V250H346.478V243.84C346.478 242.853 346.231 242.1 345.738 241.58C345.244 241.047 344.571 240.78 343.718 240.78C342.864 240.78 342.184 241.047 341.678 241.58C341.184 242.1 340.938 242.853 340.938 243.84V250H338.658V235.2H340.938V240.26C341.324 239.793 341.811 239.433 342.398 239.18C342.998 238.927 343.651 238.8 344.358 238.8ZM356.026 250.18C354.986 250.18 354.046 249.947 353.206 249.48C352.366 249 351.706 248.333 351.226 247.48C350.746 246.613 350.506 245.613 350.506 244.48C350.506 243.36 350.753 242.367 351.246 241.5C351.739 240.633 352.413 239.967 353.266 239.5C354.119 239.033 355.073 238.8 356.126 238.8C357.179 238.8 358.133 239.033 358.986 239.5C359.839 239.967 360.513 240.633 361.006 241.5C361.499 242.367 361.746 243.36 361.746 244.48C361.746 245.6 361.493 246.593 360.986 247.46C360.479 248.327 359.786 249 358.906 249.48C358.039 249.947 357.079 250.18 356.026 250.18ZM356.026 248.2C356.613 248.2 357.159 248.06 357.666 247.78C358.186 247.5 358.606 247.08 358.926 246.52C359.246 245.96 359.406 245.28 359.406 244.48C359.406 243.68 359.253 243.007 358.946 242.46C358.639 241.9 358.233 241.48 357.726 241.2C357.219 240.92 356.673 240.78 356.086 240.78C355.499 240.78 354.953 240.92 354.446 241.2C353.953 241.48 353.559 241.9 353.266 242.46C352.973 243.007 352.826 243.68 352.826 244.48C352.826 245.667 353.126 246.587 353.726 247.24C354.339 247.88 355.106 248.2 356.026 248.2ZM378.4 238.98L374.98 250H372.58L370.36 241.86L368.14 250H365.74L362.3 238.98H364.62L366.92 247.84L369.26 238.98H371.64L373.88 247.8L376.16 238.98H378.4Z" fill="#71717A"/>
+                                <g clip-path="url(#clip0_180853_148684)">
+                                <path d="M425.852 147.27L432.729 151L430.904 143.97L436.979 139.24L428.979 138.63L425.852 132L422.725 138.63L414.725 139.24L420.8 143.97L418.975 151L425.852 147.27Z" fill="#D4D4D8"/>
+                                </g>
+                                <g clip-path="url(#clip1_180853_148684)">
+                                <path d="M457.008 147.27L463.885 151L462.06 143.97L468.135 139.24L460.135 138.63L457.008 132L453.881 138.63L445.881 139.24L451.956 143.97L450.131 151L457.008 147.27Z" fill="#D4D4D8"/>
+                                </g>
+                                <g clip-path="url(#clip2_180853_148684)">
+                                <path d="M488.166 147.27L495.043 151L493.218 143.97L499.294 139.24L491.293 138.63L488.166 132L485.04 138.63L477.039 139.24L483.115 143.97L481.29 151L488.166 147.27Z" fill="#D4D4D8"/>
+                                </g>
+                                <g clip-path="url(#clip3_180853_148684)">
+                                <path d="M557.153 139.24L549.152 138.62L546.026 132L542.899 138.63L534.898 139.24L540.974 143.97L539.149 151L546.026 147.27L552.902 151L551.089 143.97L557.153 139.24ZM546.026 145.4L541.842 147.67L542.955 143.39L539.26 140.51L544.134 140.13L546.026 136.1L547.928 140.14L552.802 140.52L549.108 143.4L550.221 147.68L546.026 145.4Z" fill="#D4D4D8"/>
+                                </g>
+                                <g clip-path="url(#clip4_180853_148684)">
+                                <path d="M530.45 139.24L522.449 138.62L519.323 132L516.196 138.63L508.195 139.24L514.271 143.97L512.446 151L519.323 147.27L526.199 151L524.385 143.97L530.45 139.24ZM519.323 145.4V136.1L521.225 140.14L526.099 140.52L522.405 143.4L523.518 147.68L519.323 145.4Z" fill="#D4D4D8"/>
+                                </g>
+                                <defs>
+                                <filter id="filter0_dd_180853_148684" x="0.5" y="0" width="587" height="206" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dy="1"/>
+                                <feGaussianBlur stdDeviation="1.5"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_180853_148684"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dy="1"/>
+                                <feGaussianBlur stdDeviation="1"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/>
+                                <feBlend mode="normal" in2="effect1_dropShadow_180853_148684" result="effect2_dropShadow_180853_148684"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_180853_148684" result="shape"/>
+                                </filter>
+                                <clipPath id="clip0_180853_148684">
+                                <rect x="412.5" y="130" width="26.7055" height="24" rx="4" fill="white"/>
+                                </clipPath>
+                                <clipPath id="clip1_180853_148684">
+                                <rect x="443.656" y="130" width="26.7055" height="24" rx="4" fill="white"/>
+                                </clipPath>
+                                <clipPath id="clip2_180853_148684">
+                                <rect x="474.814" y="130" width="26.7055" height="24" rx="4" fill="white"/>
+                                </clipPath>
+                                <clipPath id="clip3_180853_148684">
+                                <rect x="532.674" y="130" width="26.7055" height="24" rx="4" fill="white"/>
+                                </clipPath>
+                                <clipPath id="clip4_180853_148684">
+                                <rect x="505.971" y="130" width="26.7055" height="24" rx="4" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </div>
+                    </section>
+                </div>
+                <div x-tabs:panel>
+                    <section class="posts">
+                        <div class="flex justify-center py-4 md:py-8">
+                                    <svg width="302" height="336" viewBox="0 0 302 336" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_dd_180853_148524)">
+                                        <rect x="3.5" y="2" width="295" height="290" rx="8" fill="#F4F4F5"/>
+                                        </g>
+                                        <rect x="8.5" y="49" width="286" height="182" rx="4" fill="#E4E4E7"/>
+                                        <rect x="8.5" y="263" width="286" height="23" rx="4" fill="#E4E4E7"/>
+                                        <circle cx="25" cy="23.5" r="13.5" fill="#D9D9D9"/>
+                                        <rect x="42.5" y="14" width="58" height="9" rx="4.5" fill="#D9D9D9"/>
+                                        <rect x="8.5" y="239" width="58" height="17" rx="8.5" fill="#D9D9D9"/>
+                                        <rect x="236.5" y="239" width="58" height="17" rx="8.5" fill="#D9D9D9"/>
+                                        <rect x="42.5" y="28" width="32" height="9" rx="4.5" fill="#D9D9D9"/>
+                                        <path d="M68.42 328H66.14L59.28 317.62V328H57V314.08H59.28L66.14 324.44V314.08H68.42V328ZM75.7941 328.18C74.7541 328.18 73.8141 327.947 72.9741 327.48C72.1341 327 71.4741 326.333 70.9941 325.48C70.5141 324.613 70.2741 323.613 70.2741 322.48C70.2741 321.36 70.5207 320.367 71.0141 319.5C71.5074 318.633 72.1807 317.967 73.0341 317.5C73.8874 317.033 74.8407 316.8 75.8941 316.8C76.9474 316.8 77.9007 317.033 78.7541 317.5C79.6074 317.967 80.2807 318.633 80.7741 319.5C81.2674 320.367 81.5141 321.36 81.5141 322.48C81.5141 323.6 81.2607 324.593 80.7541 325.46C80.2474 326.327 79.5541 327 78.6741 327.48C77.8074 327.947 76.8474 328.18 75.7941 328.18ZM75.7941 326.2C76.3807 326.2 76.9274 326.06 77.4341 325.78C77.9541 325.5 78.3741 325.08 78.6941 324.52C79.0141 323.96 79.1741 323.28 79.1741 322.48C79.1741 321.68 79.0207 321.007 78.7141 320.46C78.4074 319.9 78.0007 319.48 77.4941 319.2C76.9874 318.92 76.4407 318.78 75.8541 318.78C75.2674 318.78 74.7207 318.92 74.2141 319.2C73.7207 319.48 73.3274 319.9 73.0341 320.46C72.7407 321.007 72.5941 321.68 72.5941 322.48C72.5941 323.667 72.8941 324.587 73.4941 325.24C74.1074 325.88 74.8741 326.2 75.7941 326.2ZM86.028 318.84V324.94C86.028 325.353 86.1213 325.653 86.308 325.84C86.508 326.013 86.8413 326.1 87.308 326.1H88.708V328H86.908C85.8813 328 85.0946 327.76 84.548 327.28C84.0013 326.8 83.728 326.02 83.728 324.94V318.84H82.428V316.98H83.728V314.24H86.028V316.98H88.708V318.84H86.028ZM96.1094 316.8C96.9494 316.8 97.696 316.98 98.3494 317.34C99.016 317.7 99.536 318.233 99.9094 318.94C100.296 319.647 100.489 320.5 100.489 321.5V328H98.2294V321.84C98.2294 320.853 97.9827 320.1 97.4894 319.58C96.996 319.047 96.3227 318.78 95.4694 318.78C94.616 318.78 93.936 319.047 93.4294 319.58C92.936 320.1 92.6894 320.853 92.6894 321.84V328H90.4094V313.2H92.6894V318.26C93.076 317.793 93.5627 317.433 94.1494 317.18C94.7494 316.927 95.4027 316.8 96.1094 316.8ZM104.158 315.52C103.744 315.52 103.398 315.38 103.118 315.1C102.838 314.82 102.698 314.473 102.698 314.06C102.698 313.647 102.838 313.3 103.118 313.02C103.398 312.74 103.744 312.6 104.158 312.6C104.558 312.6 104.898 312.74 105.178 313.02C105.458 313.3 105.598 313.647 105.598 314.06C105.598 314.473 105.458 314.82 105.178 315.1C104.898 315.38 104.558 315.52 104.158 315.52ZM105.278 316.98V328H102.998V316.98H105.278ZM113.431 316.8C114.298 316.8 115.071 316.98 115.751 317.34C116.444 317.7 116.984 318.233 117.371 318.94C117.758 319.647 117.951 320.5 117.951 321.5V328H115.691V321.84C115.691 320.853 115.444 320.1 114.951 319.58C114.458 319.047 113.784 318.78 112.931 318.78C112.078 318.78 111.398 319.047 110.891 319.58C110.398 320.1 110.151 320.853 110.151 321.84V328H107.871V316.98H110.151V318.24C110.524 317.787 110.998 317.433 111.571 317.18C112.158 316.927 112.778 316.8 113.431 316.8ZM124.899 316.8C125.753 316.8 126.506 316.973 127.159 317.32C127.826 317.653 128.346 318.073 128.719 318.58V316.98H131.019V328.18C131.019 329.193 130.806 330.093 130.379 330.88C129.953 331.68 129.333 332.307 128.519 332.76C127.719 333.213 126.759 333.44 125.639 333.44C124.146 333.44 122.906 333.087 121.919 332.38C120.933 331.687 120.373 330.74 120.239 329.54H122.499C122.673 330.113 123.039 330.573 123.599 330.92C124.173 331.28 124.853 331.46 125.639 331.46C126.559 331.46 127.299 331.18 127.859 330.62C128.433 330.06 128.719 329.247 128.719 328.18V326.34C128.333 326.86 127.806 327.3 127.139 327.66C126.486 328.007 125.739 328.18 124.899 328.18C123.939 328.18 123.059 327.94 122.259 327.46C121.473 326.967 120.846 326.287 120.379 325.42C119.926 324.54 119.699 323.547 119.699 322.44C119.699 321.333 119.926 320.353 120.379 319.5C120.846 318.647 121.473 317.987 122.259 317.52C123.059 317.04 123.939 316.8 124.899 316.8ZM128.719 322.48C128.719 321.72 128.559 321.06 128.239 320.5C127.933 319.94 127.526 319.513 127.019 319.22C126.513 318.927 125.966 318.78 125.379 318.78C124.793 318.78 124.246 318.927 123.739 319.22C123.233 319.5 122.819 319.92 122.499 320.48C122.193 321.027 122.039 321.68 122.039 322.44C122.039 323.2 122.193 323.867 122.499 324.44C122.819 325.013 123.233 325.453 123.739 325.76C124.259 326.053 124.806 326.2 125.379 326.2C125.966 326.2 126.513 326.053 127.019 325.76C127.526 325.467 127.933 325.04 128.239 324.48C128.559 323.907 128.719 323.24 128.719 322.48ZM148.129 318.24C148.129 318.947 147.963 319.613 147.629 320.24C147.296 320.867 146.763 321.38 146.029 321.78C145.296 322.167 144.356 322.36 143.209 322.36H140.689V328H138.409V314.1H143.209C144.276 314.1 145.176 314.287 145.909 314.66C146.656 315.02 147.209 315.513 147.569 316.14C147.943 316.767 148.129 317.467 148.129 318.24ZM143.209 320.5C144.076 320.5 144.723 320.307 145.149 319.92C145.576 319.52 145.789 318.96 145.789 318.24C145.789 316.72 144.929 315.96 143.209 315.96H140.689V320.5H143.209ZM154.684 328.18C153.644 328.18 152.704 327.947 151.864 327.48C151.024 327 150.364 326.333 149.884 325.48C149.404 324.613 149.164 323.613 149.164 322.48C149.164 321.36 149.411 320.367 149.904 319.5C150.397 318.633 151.071 317.967 151.924 317.5C152.777 317.033 153.731 316.8 154.784 316.8C155.837 316.8 156.791 317.033 157.644 317.5C158.497 317.967 159.171 318.633 159.664 319.5C160.157 320.367 160.404 321.36 160.404 322.48C160.404 323.6 160.151 324.593 159.644 325.46C159.137 326.327 158.444 327 157.564 327.48C156.697 327.947 155.737 328.18 154.684 328.18ZM154.684 326.2C155.271 326.2 155.817 326.06 156.324 325.78C156.844 325.5 157.264 325.08 157.584 324.52C157.904 323.96 158.064 323.28 158.064 322.48C158.064 321.68 157.911 321.007 157.604 320.46C157.297 319.9 156.891 319.48 156.384 319.2C155.877 318.92 155.331 318.78 154.744 318.78C154.157 318.78 153.611 318.92 153.104 319.2C152.611 319.48 152.217 319.9 151.924 320.46C151.631 321.007 151.484 321.68 151.484 322.48C151.484 323.667 151.784 324.587 152.384 325.24C152.997 325.88 153.764 326.2 154.684 326.2ZM166.258 328.18C165.391 328.18 164.611 328.027 163.918 327.72C163.238 327.4 162.698 326.973 162.298 326.44C161.898 325.893 161.684 325.287 161.658 324.62H164.018C164.058 325.087 164.278 325.48 164.678 325.8C165.091 326.107 165.604 326.26 166.218 326.26C166.858 326.26 167.351 326.14 167.698 325.9C168.058 325.647 168.238 325.327 168.238 324.94C168.238 324.527 168.038 324.22 167.638 324.02C167.251 323.82 166.631 323.6 165.778 323.36C164.951 323.133 164.278 322.913 163.758 322.7C163.238 322.487 162.784 322.16 162.398 321.72C162.024 321.28 161.838 320.7 161.838 319.98C161.838 319.393 162.011 318.86 162.358 318.38C162.704 317.887 163.198 317.5 163.838 317.22C164.491 316.94 165.238 316.8 166.078 316.8C167.331 316.8 168.338 317.12 169.098 317.76C169.871 318.387 170.284 319.247 170.338 320.34H168.058C168.018 319.847 167.818 319.453 167.458 319.16C167.098 318.867 166.611 318.72 165.998 318.72C165.398 318.72 164.938 318.833 164.618 319.06C164.298 319.287 164.138 319.587 164.138 319.96C164.138 320.253 164.244 320.5 164.458 320.7C164.671 320.9 164.931 321.06 165.238 321.18C165.544 321.287 165.998 321.427 166.598 321.6C167.398 321.813 168.051 322.033 168.558 322.26C169.078 322.473 169.524 322.793 169.898 323.22C170.271 323.647 170.464 324.213 170.478 324.92C170.478 325.547 170.304 326.107 169.958 326.6C169.611 327.093 169.118 327.48 168.478 327.76C167.851 328.04 167.111 328.18 166.258 328.18ZM175.201 318.84V324.94C175.201 325.353 175.295 325.653 175.481 325.84C175.681 326.013 176.015 326.1 176.481 326.1H177.881V328H176.081C175.055 328 174.268 327.76 173.721 327.28C173.175 326.8 172.901 326.02 172.901 324.94V318.84H171.601V316.98H172.901V314.24H175.201V316.98H177.881V318.84H175.201ZM189.683 322.22C189.683 322.633 189.656 323.007 189.603 323.34H181.183C181.249 324.22 181.576 324.927 182.163 325.46C182.749 325.993 183.469 326.26 184.323 326.26C185.549 326.26 186.416 325.747 186.923 324.72H189.383C189.049 325.733 188.443 326.567 187.563 327.22C186.696 327.86 185.616 328.18 184.323 328.18C183.269 328.18 182.323 327.947 181.483 327.48C180.656 327 180.003 326.333 179.523 325.48C179.056 324.613 178.823 323.613 178.823 322.48C178.823 321.347 179.049 320.353 179.503 319.5C179.969 318.633 180.616 317.967 181.443 317.5C182.283 317.033 183.243 316.8 184.323 316.8C185.363 316.8 186.289 317.027 187.103 317.48C187.916 317.933 188.549 318.573 189.003 319.4C189.456 320.213 189.683 321.153 189.683 322.22ZM187.303 321.5C187.289 320.66 186.989 319.987 186.403 319.48C185.816 318.973 185.089 318.72 184.223 318.72C183.436 318.72 182.763 318.973 182.203 319.48C181.643 319.973 181.309 320.647 181.203 321.5H187.303ZM190.767 322.44C190.767 321.333 190.993 320.353 191.447 319.5C191.913 318.647 192.54 317.987 193.327 317.52C194.127 317.04 195.013 316.8 195.987 316.8C196.707 316.8 197.413 316.96 198.107 317.28C198.813 317.587 199.373 318 199.787 318.52V313.2H202.087V328H199.787V326.34C199.413 326.873 198.893 327.313 198.227 327.66C197.573 328.007 196.82 328.18 195.967 328.18C195.007 328.18 194.127 327.94 193.327 327.46C192.54 326.967 191.913 326.287 191.447 325.42C190.993 324.54 190.767 323.547 190.767 322.44ZM199.787 322.48C199.787 321.72 199.627 321.06 199.307 320.5C199 319.94 198.593 319.513 198.087 319.22C197.58 318.927 197.033 318.78 196.447 318.78C195.86 318.78 195.313 318.927 194.807 319.22C194.3 319.5 193.887 319.92 193.567 320.48C193.26 321.027 193.107 321.68 193.107 322.44C193.107 323.2 193.26 323.867 193.567 324.44C193.887 325.013 194.3 325.453 194.807 325.76C195.327 326.053 195.873 326.2 196.447 326.2C197.033 326.2 197.58 326.053 198.087 325.76C198.593 325.467 199 325.04 199.307 324.48C199.627 323.907 199.787 323.24 199.787 322.48ZM219.397 316.98L212.637 333.18H210.277L212.517 327.82L208.177 316.98H210.717L213.817 325.38L217.037 316.98H219.397ZM230.817 322.22C230.817 322.633 230.791 323.007 230.737 323.34H222.317C222.384 324.22 222.711 324.927 223.297 325.46C223.884 325.993 224.604 326.26 225.457 326.26C226.684 326.26 227.551 325.747 228.057 324.72H230.517C230.184 325.733 229.577 326.567 228.697 327.22C227.831 327.86 226.751 328.18 225.457 328.18C224.404 328.18 223.457 327.947 222.617 327.48C221.791 327 221.137 326.333 220.657 325.48C220.191 324.613 219.957 323.613 219.957 322.48C219.957 321.347 220.184 320.353 220.637 319.5C221.104 318.633 221.751 317.967 222.577 317.5C223.417 317.033 224.377 316.8 225.457 316.8C226.497 316.8 227.424 317.027 228.237 317.48C229.051 317.933 229.684 318.573 230.137 319.4C230.591 320.213 230.817 321.153 230.817 322.22ZM228.437 321.5C228.424 320.66 228.124 319.987 227.537 319.48C226.951 318.973 226.224 318.72 225.357 318.72C224.571 318.72 223.897 318.973 223.337 319.48C222.777 319.973 222.444 320.647 222.337 321.5H228.437ZM235.321 318.84V324.94C235.321 325.353 235.414 325.653 235.601 325.84C235.801 326.013 236.134 326.1 236.601 326.1H238.001V328H236.201C235.174 328 234.388 327.76 233.841 327.28C233.294 326.8 233.021 326.02 233.021 324.94V318.84H231.721V316.98H233.021V314.24H235.321V316.98H238.001V318.84H235.321ZM242.562 314.1L242.302 323.8H240.402L240.142 314.1H242.562ZM241.422 328.14C241.009 328.14 240.662 328 240.382 327.72C240.102 327.44 239.962 327.093 239.962 326.68C239.962 326.267 240.102 325.92 240.382 325.64C240.662 325.36 241.009 325.22 241.422 325.22C241.822 325.22 242.162 325.36 242.442 325.64C242.722 325.92 242.862 326.267 242.862 326.68C242.862 327.093 242.722 327.44 242.442 327.72C242.162 328 241.822 328.14 241.422 328.14Z" fill="#71717A"/>
+                                        <g clip-path="url(#clip0_180853_148524)">
+                                        <path d="M160.95 166.952C160.95 168.322 159.842 169.432 158.475 169.432H133.725C132.358 169.432 131.25 168.322 131.25 166.952V119.837H113.925C109.824 119.837 106.5 123.17 106.5 127.277V171.912C106.5 176.02 109.824 179.351 113.925 179.351H178.275C182.376 179.351 185.7 176.02 185.7 171.912L185.7 159.513H160.95V166.952ZM122.587 168.037C122.587 168.807 121.964 169.432 121.195 169.432H116.555C115.786 169.432 115.162 168.807 115.162 168.037V163.388C115.162 162.617 115.786 161.993 116.555 161.993H121.195C121.964 161.993 122.587 162.617 122.587 163.388V168.037ZM122.587 151.919C122.587 152.689 121.964 153.314 121.195 153.314H116.555C115.786 153.314 115.162 152.689 115.162 151.919V147.269C115.162 146.499 115.786 145.874 116.555 145.874H121.195C121.964 145.874 122.587 146.499 122.587 147.269V151.919ZM122.587 135.801C122.587 136.571 121.964 137.195 121.195 137.195H116.555C115.786 137.195 115.162 136.571 115.162 135.801V131.151C115.162 130.376 115.786 129.756 116.555 129.756H121.195C121.964 129.756 122.587 130.381 122.587 131.151V135.801ZM169.612 163.388C169.612 162.617 170.236 161.993 171.005 161.993H175.645C176.414 161.993 177.037 162.617 177.037 163.388V168.037C177.037 168.807 176.414 169.432 175.645 169.432H171.005C170.236 169.432 169.612 168.807 169.612 168.037V163.388ZM195.182 140.776L178.677 115.978C178.229 115.292 177.455 114.878 176.62 114.878C175.792 114.878 175.019 115.292 174.561 115.982L164.856 130.568L161.399 125.816C160.934 125.169 160.192 124.797 159.264 124.797C158.474 124.797 157.73 125.175 157.264 125.816L146.436 140.694C146.023 141.442 145.945 142.449 146.363 143.286C146.796 144.108 147.508 144.635 148.436 144.635H192.986C193.898 144.635 194.737 144.132 195.168 143.325C195.739 142.511 195.693 141.535 195.182 140.776Z" fill="#FAFAFA"/>
+                                        <path opacity="0.4" d="M197.936 100H143.486C139.526 100 136.061 103.331 136.061 107.439V147.115C136.061 151.223 139.385 154.554 143.486 154.554H197.936C202.036 154.554 205.361 151.223 205.361 147.115V107.439C205.5 103.331 202.174 100 197.936 100ZM153.386 109.919C156.12 109.919 158.336 112.14 158.336 114.878C158.336 117.617 156.12 119.838 153.386 119.838C150.787 119.838 148.436 117.622 148.436 114.878C148.436 112.135 150.787 109.919 153.386 109.919ZM195.306 143.333C194.873 144.139 194.037 144.635 193.125 144.635H148.436C147.507 144.635 146.796 144.108 146.363 143.287C145.945 142.45 146.022 141.442 146.579 140.698L157.407 125.82C157.871 125.169 158.614 124.797 159.264 124.797C160.054 124.797 160.797 125.176 161.264 125.816L164.721 130.568L174.426 115.982C174.887 115.292 175.661 114.878 176.62 114.878C177.447 114.878 178.219 115.292 178.679 115.983L195.184 140.78C195.693 141.535 195.739 142.512 195.306 143.333Z" fill="#FAFAFA"/>
+                                        </g>
+                                        <defs>
+                                        <filter id="filter0_dd_180853_148524" x="0.5" y="0" width="301" height="296" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feOffset dy="1"/>
+                                        <feGaussianBlur stdDeviation="1.5"/>
+                                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_180853_148524"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feOffset dy="1"/>
+                                        <feGaussianBlur stdDeviation="1"/>
+                                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/>
+                                        <feBlend mode="normal" in2="effect1_dropShadow_180853_148524" result="effect2_dropShadow_180853_148524"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_180853_148524" result="shape"/>
+                                        </filter>
+                                        <clipPath id="clip0_180853_148524">
+                                        <rect width="99" height="79.3511" fill="white" transform="translate(106.5 100)"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        
+                        </div>
+                    </section>
+                </div>
+                <div x-tabs:panel>
+                    <section class="recommendations">
+                    <!-- Main Container 1 -->
+                        <div x-data="{ open: false }">
+                        <span x-show="!open">
+                        <div class="p-5">
+                            <div class="py-5 main-frame bg-gray-50 rounded-xl">
+                                <!-- Content -->
+                                <div class="flex flex-col flex-wrap items-center justify-center gap-5 Content">
+                                    <div class="profile-phot"><a href="#">
+                                            <img src="images/Ellipse 291.png" alt="Profile Picture">
+                                        </a></div>
+                                    <div class="flex flex-col items-center details">
+                                        <div class="text-base font-medium heading">Write a Recommendation</div>
+                                        <div class="text-center text-gray-600 sub-heading text">Share your experience of working with Nimra
+                                            Jalil</div>
+                                    </div>
+                                    <!-- BUTTON -->
+                                    <a href="#">
+                                        <div class="flex justify-center button">
+                                            <button
+                                                class="w-48 h-10 text-sm font-medium text-white rounded-lg bg-violet-700 hover:bg-violet-800" x-on:click="open = !open">
+                                                <p>Log in to reccomendation</p>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        </span>
+                        <span x-show="open">
+                        <!-- Main Container 2 -->
+                        <section class="">
+                            <div x-data="{ open: false }">
+                        <span x-show="!open">
+                                <div class="p-5">
+                            <div class="main-frame bg-gray-50 rounded-xl">
+                                <!-- Content -->
+                                <div class="flex flex-col flex-wrap items-center justify-center gap-5 py-5 Content">
+                                    <div class="profile-photo"><a href="#">
+                                            <img src="images/Ellipse 291.png" alt="Profile Picture">
+                                        </a></div>
+                                    <div class="text-base font-medium heading">Write a Recommendation</div>
+                                    <div class="text-center text-gray-600 sub-heading text">Share your experience of working with Nimra
+                                        Jalil</div>
+                                    <div class="rating">
+                                        <div class="starics">
+                                            <svg width="160" height="32" viewBox="0 0 160 32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_180539_144460)">
+                                                    <path
+                                                        d="M29.3337 12.32L19.747 11.4933L16.0003 2.66667L12.2537 11.5067L2.66699 12.32L9.94699 18.6267L7.76033 28L16.0003 23.0267L24.2403 28L22.067 18.6267L29.3337 12.32ZM16.0003 20.5333L10.987 23.56L12.3203 17.8533L7.89366 14.0133L13.7337 13.5067L16.0003 8.13334L18.2803 13.52L24.1203 14.0267L19.6937 17.8667L21.027 23.5733L16.0003 20.5333Z"
+                                                        fill="#F0BD09" />
+                                                </g>
+                                                <g clip-path="url(#clip1_180539_144460)">
+                                                    <path
+                                                        d="M61.3337 12.32L51.747 11.4933L48.0003 2.66667L44.2537 11.5067L34.667 12.32L41.947 18.6267L39.7603 28L48.0003 23.0267L56.2403 28L54.067 18.6267L61.3337 12.32ZM48.0003 20.5333L42.987 23.56L44.3203 17.8533L39.8937 14.0133L45.7337 13.5067L48.0003 8.13334L50.2803 13.52L56.1203 14.0267L51.6937 17.8667L53.027 23.5733L48.0003 20.5333Z"
+                                                        fill="#F0BD09" />
+                                                </g>
+                                                <g clip-path="url(#clip2_180539_144460)">
+                                                    <path
+                                                        d="M93.3337 12.32L83.747 11.4933L80.0003 2.66667L76.2537 11.5067L66.667 12.32L73.947 18.6267L71.7603 28L80.0003 23.0267L88.2403 28L86.067 18.6267L93.3337 12.32ZM80.0003 20.5333L74.987 23.56L76.3203 17.8533L71.8937 14.0133L77.7337 13.5067L80.0003 8.13334L82.2803 13.52L88.1203 14.0267L83.6937 17.8667L85.027 23.5733L80.0003 20.5333Z"
+                                                        fill="#F0BD09" />
+                                                </g>
+                                                <g clip-path="url(#clip3_180539_144460)">
+                                                    <path
+                                                        d="M125.334 12.32L115.747 11.4933L112 2.66667L108.254 11.5067L98.667 12.32L105.947 18.6267L103.76 28L112 23.0267L120.24 28L118.067 18.6267L125.334 12.32ZM112 20.5333L106.987 23.56L108.32 17.8533L103.894 14.0133L109.734 13.5067L112 8.13334L114.28 13.52L120.12 14.0267L115.694 17.8667L117.027 23.5733L112 20.5333Z"
+                                                        fill="#F0BD09" />
+                                                </g>
+                                                <g clip-path="url(#clip4_180539_144460)">
+                                                    <path
+                                                        d="M157.334 12.32L147.747 11.4933L144 2.66667L140.254 11.5067L130.667 12.32L137.947 18.6267L135.76 28L144 23.0267L152.24 28L150.067 18.6267L157.334 12.32ZM144 20.5333L138.987 23.56L140.32 17.8533L135.894 14.0133L141.734 13.5067L144 8.13334L146.28 13.52L152.12 14.0267L147.694 17.8667L149.027 23.5733L144 20.5333Z"
+                                                        fill="#F0BD09" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_180539_144460">
+                                                        <rect width="32" height="32" rx="4" fill="white" />
+                                                    </clipPath>
+                                                    <clipPath id="clip1_180539_144460">
+                                                        <rect x="32" width="32" height="32" rx="4" fill="white" />
+                                                    </clipPath>
+                                                    <clipPath id="clip2_180539_144460">
+                                                        <rect x="64" width="32" height="32" rx="4" fill="white" />
+                                                    </clipPath>
+                                                    <clipPath id="clip3_180539_144460">
+                                                        <rect x="96" width="32" height="32" rx="4" fill="white" />
+                                                    </clipPath>
+                                                    <clipPath id="clip4_180539_144460">
+                                                        <rect x="128" width="32" height="32" rx="4" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="text-sm text">Rate your experience</div>
+                                    </div>
+                                    <!-- Your Message Portion -->
+
+                                    <div class="w-full message-portion sm:max-w-xl">
+                                        <label for="message1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                                            message</label>
+                                        <textarea id="message1" rows="6"
+                                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            placeholder="Write your thoughts here ..."></textarea>
+                                    </div>
+
+                                    <!-- BUTTON -->
+                                    <a href="#">
+                                        <div class="flex justify-center button">
+                                            <button
+                                                class="w-48 h-10 text-sm font-medium text-white rounded-lg bg-violet-700 hover:bg-violet-800" x-on:click="open = !open">
+                                                <p>Log in to reccomendation</p>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                                </div> 
+                        </span>
+                        <span x-show="open">
+                        <!-- Main Container 3 -->
+                        <div class="p-5">
+                            <div class="gap-5 py-5 bg-gray-50 rounded-xl">
+                                <!-- Content -->
+                                <div class="flex flex-col flex-wrap items-center justify-center gap-5">
+                                    <div class="profile-photo"><a href="#">
+                                            <img src="images/Ellipse 291.png" alt="Profile Picture">
+                                        </a></div>
+                                    <div class="flex flex-col items-center details">
+                                        <div class="text-xl font-semibold text-green-500 heading">Thank you!</div>
+                                        <div class="text-sm text-center text-gray-600 sub-heading"> Your recommendation has been submitted successfully.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </span>
+                        </div>
+                        </section>
+                        </span>
+                        </div>
+                    </section>
+                </div>
+                <div x-tabs:panel>
+                    <section class="px-3 py-4">
+                        <div id="faqs" x-data>
+                            <div x-disclosure>
+                                <h2>
+                                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 border-b border-gray-200" x-disclosure:button>
+                                    <span>Can I use FlowBite in open-source projects?</span>
+                                    <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    </button>
+                                </h2>
+                                <div x-disclosure:panel>
+                                    <div class="py-5 border-b border-gray-200">
+                                        <p class="mb-2 text-base font-normal text-gray-600">Generally, it is accepted to use FlowBite in open-source projects, as long as it is not a UI library, a theme, a template, a page-builder that would be considered as an alternative to FlowBite itself. With that being said, feel free to use this design kit for your open-source projects.</p>
+                                        <p class="text-base font-normal text-gray-600">Find out more information by <a href="/docs/getting-started/introduction/" class="text-base font-medium text-blue-600 hover:underline">reading the license.</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div x-disclosure>
+                                <h2>
+                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 border-b border-gray-200" x-disclosure:button>
+                                    <span>Where can I access my download files?</span>
+                                    <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </button>
+                                </h2>
+                                <div x-disclosure:panel>
+                                <div class="py-5 border-b border-gray-200">
+                                    <p class="mb-2 text-gray-600">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
+                                    <p class="text-gray-600">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+                                </div>
+                                </div>
+                            </div>
+                            <div x-disclosure>
+                                <h2>
+                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 border-b border-gray-200" x-disclosure:button>
+                                    <span>Can I use FlowBite for commercial purposes?</span>
+                                    <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </button>
+                                </h2>
+                                <div x-disclosure:panel>
+                                <div class="py-5 border-b border-gray-200">
+                                    <p class="mb-2 text-gray-600">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
+                                    <p class="mb-2 text-gray-600">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
+                                    <p class="mb-2 text-gray-600">Learn more about these technologies:</p>
+                                    <ul class="pl-5 text-gray-600 list-disc">
+                                    <li><a href="https://flowbite.com/pro/" class="text-blue-600 hover:underline">Flowbite Pro</a></li>
+                                    <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 hover:underline">Tailwind UI</a></li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                            <div x-disclosure>
+                                <h2>
+                                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600" x-disclosure:button>
+                                    <span>What about browser support?</span>
+                                    <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    </button>
+                                </h2>
+                                <div x-disclosure:panel>
+                                <div class="py-5 border-b border-gray-200">
+                                    <p class="mb-2 text-gray-600">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
+                                    <p class="mb-2 text-gray-600">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
+                                    <p class="mb-2 text-gray-600">Learn more about these technologies:</p>
+                                    <ul class="pl-5 text-gray-600 list-disc">
+                                    <li><a href="https://flowbite.com/pro/" class="text-blue-600 hover:underline">Flowbite Pro</a></li>
+                                    <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 hover:underline">Tailwind UI</a></li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <script type="module" src="./components/header.js"></script>
+    <script type="module" src="./components/card.js"></script>
+</body>
+
+</html>
