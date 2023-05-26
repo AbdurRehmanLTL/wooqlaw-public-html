@@ -1029,6 +1029,9 @@ select {
 .h-\[clac\(100\%-8rem\)\] {
   height: clac(100%-8rem);
 }
+.h-\[100dvh\] {
+  height: 100dvh;
+}
 .min-h-\[64px\] {
   min-height: 64px;
 }
@@ -1880,6 +1883,9 @@ select {
 .pt-4 {
   padding-top: 1rem;
 }
+.pr-5 {
+  padding-right: 1.25rem;
+}
 .text-left {
   text-align: left;
 }
@@ -2384,6 +2390,9 @@ select {
 }.focus\:border-primary-600:focus {
   --tw-border-opacity: 1;
   border-color: rgb(37 99 235 / var(--tw-border-opacity));
+}.focus\:border-violet-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(139 92 246 / var(--tw-border-opacity));
 }.focus\:placeholder-gray-400:focus::-moz-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(156 163 175 / var(--tw-placeholder-opacity));
