@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- AlpineJs Scripts -->
+    <!-- alpine/tooltip v1.0 --> 
+    <script defer src="./js/alpinetooltip.min.js"></script>
+    <!-- @alpinejs/ui v3.12 -->
+    <script defer src="./js/alpineui.min.js"></script>
+    <!-- @alpinejs/focus v3.12 -->
+    <script defer src="./js/alpinefocus.min.js"></script>
+    <!-- alpinejs v3.12 -->
+    <script defer src="./js/alpine.min.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css" />
+    <meta name="description" content="wooqlaw Public Portal">
+    <title>wooqlaw Public Portal</title>
+</head>
+
+<body x-data="{scrolAtTop: false}">
+
+    <div x-data="chatBot()">
+        <div class="flex flex-col flex-1 h-screen bg-violet-50">
+            <div class="sticky top-0 flex items-center justify-between p-2 bg-white rounded-lg shadow">
+                <div class="flex items-center gap-2 md:gap-3">
+                    <a href="./messaging.html">
+                        <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.54402 11.7819L0.181094 6.90309C0.0528984 6.7397 0 6.58652 0 6.45632C0 6.32611 0.0528746 6.15072 0.159363 6.03277L4.52229 1.15396C4.74037 0.909026 5.10227 0.90106 5.33007 1.13561C5.55941 1.36858 5.56687 1.75778 5.34719 2.00134L1.36392 6.45632L5.36705 10.9343C5.58672 11.1768 5.57926 11.5669 5.34992 11.8C5.12305 12.0346 4.76086 12.027 4.54402 11.7819Z"
+                                fill="black" />
+                        </svg>
+                    </a>
+                    <a class="relative flex shrink-0" href="#">
+                        <img class="w-12 h-12 rounded-full" src="images/kamransaeed.png" alt="kamran saeed">
+                        <span
+                            class="top-0 left-9 absolute  w-2.5 h-2.5 bg-green-400 border-2 border-white rounded-full"></span>
+                    </a>
+                    <div class="flex items-center gap-8 md:gap-32">
+                        <div class="content flex flex-col gap-0.5 md:gap-1">
+                            <div class="flex items-center gap-2 ">
+                                <a class="text-sm font-semibold md:text-base" href="#">
+                                    Kamran Saeed
+                                </a> 
+                                <a class="flex items-center justify-center w-10 h-4 font-medium text-white bg-green-500 rounded-full text-3xs md:text-2xs"
+                                    href="">online</a>
+                            </div>
+                            <span class="text-xs font-medium text-gray-600 md:text-sm">Discussion on court documents with
+                                client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-1">
+                    <a class="flex items-center pl-1 bg-gray-100 rounded-md w-9 h-9" href="#">
+                        <svg aria-hidden="true" class="w-6 h-6 text-gray-500 dark:text-gray-400" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a class="flex items-center pl-1 rounded-md w-9 h-9" href="#">
+                        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.0711 17.7921C14.2744 17.7921 15.2497 18.7679 15.2497 19.9707C15.2497 21.1734 14.2744 22.1492 13.0711 22.1492C11.8679 22.1492 10.8926 21.1734 10.8926 19.9707C10.8926 18.7679 11.8679 17.7921 13.0711 17.7921ZM13.0711 10.5302C14.2744 10.5302 15.2497 11.506 15.2497 12.7088C15.2497 13.9115 14.2744 14.8873 13.0711 14.8873C11.8679 14.8873 10.8926 13.9115 10.8926 12.7088C10.8926 11.506 11.8679 10.5302 13.0711 10.5302ZM13.0711 7.62542C11.8679 7.62542 10.8926 6.6496 10.8926 5.44685C10.8926 4.24364 11.8679 3.26828 13.0711 3.26828C14.2744 3.26828 15.2497 4.24364 15.2497 5.44685C15.2497 6.6496 14.2744 7.62542 13.0711 7.62542Z"
+                                fill="black" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div id="messages" class="flex flex-col h-full p-3 space-y-4 overflow-y-auto scrolling-touch scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2">
+                <template x-for="(message, key) in messages">
+                    <div>
+                        <div class="flex gap-1 md:gap-3" :class="message.from=='bot'?'':'justify-end'">
+                            <div class="flex flex-col gap-2" :class="message.from=='bot'?'order-2 items-start':'order-1 items-end'">
+                                <div class="flex gap-3 md:gap-7">
+                                    <span class="font-normal text-gray-500 text-2xs md:text-xs">Kamran Saeed</span>
+                                    <span class="font-normal text-gray-600 text-2xs md:text-xs">01:45 AM</span>
+                                </div>
+                                <div class="flex items-center gap-1 text-center md:gap-2">
+                                    <div class="flex flex-col max-w-lg space-y-2 leading-tight text-md" :class="message.from=='bot'?'order-1 items-end':'order-2 items-start'">
+                                        <div>
+                                            <span class="inline-block px-4 py-3 rounded-xl" :class="message.from=='bot'?'rounded-bl-none bg-violet-500 text-white':'rounded-br-none bg-gray-200 text-gray-900'" x-html="message.text"></span>
+                                        </div>
+                                    </div> 
+                                    <div class="flex flex-col gap-1" :class="message.from=='bot'?'order-2 items-start':'order-1 items-end'">
+                                        <span  class="flex items-center justify-center w-3 h-3 p-1 font-medium text-white bg-green-500 rounded-sm text-2xs md:text-xs md:h-5 md:w-5">
+                                        R
+                                        </span>
+                                        <span  class="flex items-center justify-center w-3 h-3 p-1 font-medium text-white bg-gray-900 rounded-sm text-2xs md:text-xs md:h-5 md:w-5">
+                                        D
+                                        </span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <img :src="message.from=='bot'?'images/kamransaeed.png':'https://i.pravatar.cc/100?img=7'" alt="" class="w-8 h-8 rounded-full" :class="message.from=='bot'?'order-1':'order-2'">
+                        </div>
+                    </div>
+                </template>
+                <div x-show="botTyping" style="display: none;">
+                    <div class="flex items-end">
+                        <div class="flex flex-col items-start order-2 mx-2 space-y-2 leading-tight text-md">
+                            <div><img src="https://support.signal.org/hc/article_attachments/360016877511/typing-animation-3x.gif" alt="..." class="w-16 ml-6 bg-violet-50"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full h-12 gap-1 p-1 bg-white border rounded-lg md:h-16 md:p-2 md:gap-2">
+                <div class="relative flex gap-1">
+                    <div class="flex gap-1 md:gap-2">
+                        <a class="flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full shrink-0 md:w-10 md:h-10"
+                            href="#">
+                            <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 13.75C11.4531 13.75 12.4688 13.0664 13.0625 12.4258C13.4102 12.0469 14.0039 12.0195 14.3867 12.3711C14.7656 12.7227 14.7891 13.3164 14.4375 13.6953C13.582 14.6289 12.0977 15.625 10 15.625C7.90234 15.625 6.41797 14.6289 5.5625 13.6953C5.21094 13.3164 5.19922 12.7227 5.61328 12.3711C5.99609 12.0195 6.58984 12.0469 6.9375 12.4258C7.53125 13.0664 8.54688 13.75 10 13.75ZM8.14062 8.125C8.14062 8.81641 7.57812 9.375 6.89062 9.375C6.19922 9.375 5.64062 8.81641 5.64062 8.125C5.64062 7.43359 6.19922 6.875 6.89062 6.875C7.57812 6.875 8.14062 7.43359 8.14062 8.125ZM11.8906 8.125C11.8906 7.43359 12.4492 6.875 13.1406 6.875C13.8281 6.875 14.3906 7.43359 14.3906 8.125C14.3906 8.81641 13.8281 9.375 13.1406 9.375C12.4492 9.375 11.8906 8.81641 11.8906 8.125ZM20 10C20 15.5234 15.5234 20 10 20C4.47656 20 0 15.5234 0 10C0 4.47656 4.47656 0 10 0C15.5234 0 20 4.47656 20 10ZM10 1.875C5.51172 1.875 1.875 5.51172 1.875 10C1.875 14.4883 5.51172 18.125 10 18.125C14.4883 18.125 18.125 14.4883 18.125 10C18.125 5.51172 14.4883 1.875 10 1.875Z"
+                                    fill="#71717A" />
+                            </svg>
+                        </a>
+                        <a class="flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full shrink-0 md:w-10 md:h-10"
+                            href="#">
+                            <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.3175 9.99952C20.3175 10.6389 19.7949 11.1534 19.1453 11.1534H11.3309V18.8457C11.3309 19.4827 10.8059 20 10.1587 20C9.5116 20 8.98657 19.4851 8.98657 18.8457V11.1534H1.17216C0.52503 11.1534 0 10.637 0 10C0 9.3649 0.52503 8.84567 1.17216 8.84567H8.98657V1.15337C8.98657 0.516346 9.5116 0 10.1587 0C10.8059 0 11.3309 0.516346 11.3309 1.15337V8.84567H19.1453C19.7949 8.84567 20.3175 9.3649 20.3175 9.99952Z"
+                                    fill="#71717A" />
+                            </svg>
+                        </a>
+                    </div>
+                    <input type="text" placeholder="Write your message..." autocomplete="off" autofocus="true" @keydown.enter="updateChat($event.target)" class="w-full py-2 pl-5 pr-16 text-gray-600 placeholder-gray-600 bg-gray-100 border-2 border-gray-200 rounded-full text-md focus:outline-none focus:placeholder-gray-400 focus:border-blue-500" x-ref="input" />
+                    <div class="flex gap-1 md:gap-2">
+                        <a class="flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full hover:bg-gray-200 shrink-0 md:w-10 md:h-10"
+                            href="#">
+                            <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 15 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.0874 7.59253C12.5567 7.59253 12.1298 8.01566 12.1298 8.50601V10.1234C12.1298 13.0793 9.55622 15.4579 6.51179 15.1613C3.86239 14.9043 1.91523 12.5395 1.91523 9.89402V8.50601C1.91523 8.01566 1.4863 7.59253 0.957617 7.59253C0.428932 7.59253 0 8.01566 0 8.50601V9.77736C0 13.3217 2.55364 16.4841 6.06491 16.9626V18.3486H4.11376C3.61899 18.3486 3.19206 18.7717 3.19206 19.2621C3.19206 19.7525 3.61899 20.2468 4.11376 20.2468H9.85946C10.4261 20.2468 10.853 19.8236 10.853 19.2977C10.853 18.7717 10.4261 18.3486 9.89537 18.3486H7.98014V17.0132C11.4036 16.5494 14.045 13.6389 14.045 10.1234V8.50601C14.045 8.01566 13.6181 7.59253 13.0874 7.59253ZM7.02252 13.9196C9.13726 13.9196 10.853 12.2192 10.853 10.1234V3.79627C10.853 1.736 9.13726 0 7.02252 0C4.90779 0 3.19206 1.70041 3.19206 3.79627V10.1234C3.19206 12.2192 4.90779 13.9196 7.02252 13.9196ZM5.10729 3.79627C5.10729 2.74834 5.96515 1.89813 7.02252 1.89813C8.07989 1.89813 8.93776 2.74834 8.93776 3.79627V10.1234C8.93776 11.1713 8.07989 12.0215 7.02252 12.0215C5.96515 12.0215 5.10729 11.1713 5.10729 10.1234V3.79627Z"
+                                    fill="#71717A" />
+                            </svg>
+                        </a>
+                        <a @click.prevent="updateChat($refs.input)" class="flex items-center justify-center w-8 h-8 rounded-full shrink-0 md:w-10 md:h-10 bg-violet-700 hover:bg-violet-800"
+                            href="javascript:;">
+                            <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 23 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.946 8.70979L1.98699 0.155484C1.80611 0.0779649 1.61543 0 1.42654 0C1.04237 0 0.664707 0.155885 0.388489 0.447741C-0.0221989 0.922659 -0.116857 1.56821 0.150451 2.10327L4.27693 10.0196L0.150585 17.9364C-0.116724 18.4719 -0.0220519 19.117 0.388667 19.5523C0.664351 19.8439 1.04179 20 1.42582 20C1.61517 20 1.80589 19.9624 1.98672 19.8844L21.946 11.3294C22.4708 11.1053 22.8107 10.5894 22.8107 10.0192C22.7702 9.44935 22.4717 8.93255 21.946 8.70979ZM2.98138 2.90831L17.081 8.95037H6.13027L2.98138 2.90831ZM6.13027 11.0888H17.0765L2.98049 17.13L6.13027 11.0888Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function chatBot() {
+    return {
+        prompts: [
+            ["hi", "hey", "hello", "good morning", "good afternoon"],
+            ["how are you", "how is life", "how are things"],
+            ["what are you doing", "what is going on", "what is up"],
+            ["how old are you"],
+            ["who are you", "are you human", "are you bot", "are you human or bot"],
+            ["who created you", "who made you"],
+            ["your name please", "your name", "may i know your name", "what is your name", "what call yourself"],
+            ["i love you"],
+            ["happy", "good", "fun", "wonderful", "fantastic", "cool"],
+            ["bad", "bored", "tired"],
+            ["help me", "tell me story", "tell me joke"],
+            ["ah", "yes", "ok", "okay", "nice"],
+            ["bye", "good bye", "goodbye", "see you later"],
+            ["what should i eat today"],
+            ["bro"],
+            ["what", "why", "how", "where", "when"],
+            ["no", "not sure", "maybe", "no thanks"],
+            [""],
+            ["haha", "ha", "lol", "hehe", "funny", "joke"],
+            ["flip a coin", "heads or tails", "tails or heads", "head or tails", "head or tail", "tail or heads", "tail or head"],
+            ["beer","buy me a beer","want a beer"]
+        ],
+        replies: [
+            ["Hello!", "Hi!", "Hey!", "Hi there!", "Howdy"],
+            ["Fine... how are you?", "Pretty well, how are you?", "Fantastic, how are you?"],
+            ["Nothing much", "About to go to sleep", "Can you guess?", "I don't know actually"],
+            ["I am infinite"],
+            ["I am just a bot", "I am a bot. What are you?"],
+            ["The one true God, JavaScript"],
+            ["I am nameless", "I don't have a name"],
+            ["I love you too", "Me too"],
+            ["Have you ever felt bad?", "Glad to hear it"],
+            ["Why?", "Why? You shouldn't!", "Try watching TV"],
+            ["What about?", "Once upon a time..."],
+            ["Tell me a story", "Tell me a joke", "Tell me about yourself"],
+            ["Bye", "Goodbye", "See you later"],
+            ["Sushi", "Pizza"],
+            ["Bro!"],
+            ["Great question"],
+            ["That's ok", "I understand", "What do you want to talk about?"],
+            ["Please say something :("],
+            ["Haha!", "Good one!"],
+            ["Heads", "Tails"],
+            ["You can buy me a beer at: <a href=\"https://www.buymeacoffee.com/scottwindon\" target=\"_blank\" style=\"text-decoration:underline;\">https://www.buymeacoffee.com/scottwindon</a>"]
+        ],
+        alternative: ["Same", "Go on...", "Bro...", "Try again", "I'm listening...", "I don't understand :/"],
+        coronavirus: ["Please stay home", "Wear a mask", "Fortunately, I don't have COVID", "These are uncertain times"],
+        botTyping: false,
+        messages: [{
+            from: 'bot',
+            text: 'Hello world!'
+        }],
+        output: function(input) {
+            let product;
+
+            // Regex remove non word/space chars
+            // Trim trailing whitespce
+            // Remove digits - not sure if this is best
+            // But solves problem of entering something like 'hi1'
+
+            let text = input.toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim();
+            text = text
+                .replace(/ a /g, " ") // 'tell me a story' -> 'tell me story'
+                .replace(/i feel /g, "")
+                .replace(/whats/g, "what is")
+                .replace(/please /g, "")
+                .replace(/ please/g, "")
+                .replace(/r u/g, "are you");
+
+            if (this.compare(this.prompts, this.replies, text)) {
+                // Search for exact match in `prompts`
+                product = this.compare(this.prompts, this.replies, text);
+            } else if (text.match(/thank/gi)) {
+                product = "You're welcome!"
+            } else if (text.match(/(corona|covid|virus)/gi)) {
+                // If no match, check if message contains `coronavirus`
+                product = this.coronavirus[Math.floor(Math.random() * this.coronavirus.length)];
+            } else {
+                // If all else fails: random this.alternative
+                product = this.alternative[Math.floor(Math.random() * this.alternative.length)];
+            }
+
+            // Update DOM
+            this.addChat(input, product);
+        },
+        compare: function(promptsArray, repliesArray, string) {
+            let reply;
+            let replyFound = false;
+            for (let x = 0; x < promptsArray.length; x++) {
+                for (let y = 0; y < promptsArray[x].length; y++) {
+                    if (promptsArray[x][y] === string) {
+                        let replies = repliesArray[x];
+                        reply = replies[Math.floor(Math.random() * replies.length)];
+                        replyFound = true;
+                        // Stop inner loop when input value matches this.prompts
+                        break;
+                    }
+                }
+                if (replyFound) {
+                    // Stop outer loop when reply is found instead of interating through the entire array
+                    break;
+                }
+            }
+            if (!reply) {
+                for (let x = 0; x < promptsArray.length; x++) {
+                    for (let y = 0; y < promptsArray[x].length; y++) {
+                        if (this.levenshtein(promptsArray[x][y], string) >= 0.75) {
+                            let replies = repliesArray[x];
+                            reply = replies[Math.floor(Math.random() * replies.length)];
+                            replyFound = true;
+                            // Stop inner loop when input value matches this.prompts
+                            break;
+                        }
+                    }
+                    if (replyFound) {
+                        // Stop outer loop when reply is found instead of interating through the entire array
+                        break;
+                    }
+                }
+            }
+            return reply;
+        },
+        levenshtein: function(s1, s2) {
+            var longer = s1;
+            var shorter = s2;
+            if (s1.length < s2.length) {
+                longer = s2;
+                shorter = s1;
+            }
+            var longerLength = longer.length;
+            if (longerLength == 0) {
+                return 1.0;
+            }
+            return (longerLength - this.editDistance(longer, shorter)) / parseFloat(longerLength);
+        },
+        editDistance: function(s1, s2) {
+            s1 = s1.toLowerCase();
+            s2 = s2.toLowerCase();
+
+            var costs = new Array();
+            for (var i = 0; i <= s1.length; i++) {
+                var lastValue = i;
+                for (var j = 0; j <= s2.length; j++) {
+                    if (i == 0)
+                        costs[j] = j;
+                    else {
+                        if (j > 0) {
+                            var newValue = costs[j - 1];
+                            if (s1.charAt(i - 1) != s2.charAt(j - 1))
+                                newValue = Math.min(Math.min(newValue, lastValue),
+                                    costs[j]) + 1;
+                            costs[j - 1] = lastValue;
+                            lastValue = newValue;
+                        }
+                    }
+                }
+                if (i > 0)
+                    costs[s2.length] = lastValue;
+            }
+            return costs[s2.length];
+        },
+        addChat: function(input, product) {
+
+            // Add user message
+            this.messages.push({
+                from: 'user',
+                text: input
+            });
+
+            // Keep messages at most recent
+            this.scrollChat();
+
+            // Fake delay to seem "real"
+            setTimeout(() => {
+                this.botTyping = true;
+                this.scrollChat();
+            }, 1000)
+
+            // add bit message with Fake delay to seem "real"
+            setTimeout(() => {
+                this.botTyping = false;
+                this.messages.push({
+                    from: 'bot',
+                    text: product
+                });
+                this.scrollChat();
+            }, ((product.length / 10) * 1000) + (Math.floor(Math.random() * 2000) + 1500))
+
+        },
+        scrollChat: function() {
+            const messagesContainer = document.getElementById("messages");
+            messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer.clientHeight;
+            setTimeout(() => {
+                messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer.clientHeight;
+            }, 100);
+        },
+        updateChat: function(target) {
+            if (target.value.trim()) {
+                this.output(target.value.trim());
+                target.value = '';
+            }
+        }
+    }
+}
+    </script>
+
+</body>
+
+</html>
