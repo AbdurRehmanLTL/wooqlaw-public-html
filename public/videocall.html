@@ -128,37 +128,19 @@
 
     <script>
         // Prefer camera resolution nearest to 1280x720.
-var constraints = { audio: true, video: { width: 1280, height: 720 } };
+        var constraints = { audio: true, video: true };
 
-navigator.mediaDevices.getUserMedia(constraints)
-.then(function(mediaStream) {
-  var video = document.getElementById('myvideo');
-  video.srcObject = mediaStream;
-  video.onloadedmetadata = function(e) {
-    video.play();
-  };
-})
-.catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
-        // navigator.getUserMedia  = navigator.getUserMedia ||
-        //                     navigator.webkitGetUserMedia ||
-        //                     navigator.mozGetUserMedia ||
-        //                     navigator.msGetUserMedia;
-
-        // var video = document.getElementById('myvideo');
-
+        navigator.mediaDevices.getUserMedia(constraints)
+        .then(function(mediaStream) {
+            var video = document.getElementById('myvideo');
+            video.srcObject = mediaStream;
+            video.onloadedmetadata = function(e) {
+                video.play();
+            };
+        })
+        .catch(function(err) { console.log(err.name + ": " + err.message); }); 
+        // always check for errors at the end.
         
-        // if (navigator.getUserMedia) {
-        //     navigator.getUserMedia(
-        //         {
-        //             audio: true, 
-        //             video: true
-        //         }, 
-        //         function(stream) {
-        //             video.src = window.URL.createObjectURL(stream);
-        //     }, errorCallback);
-        // } else {
-        //     video.src = 'https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_5MB.mp4'; // fallback.
-        // }
     </script>
 
 </body>

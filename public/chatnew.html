@@ -34,20 +34,19 @@
 <body x-data="{scrolAtTop: false}">
 
     <div x-data="chatBot()">
-        <div class="flex flex-col flex-1 h-[100dvh] bg-violet-50">
+        <div class="flex flex-col flex-1 h-[100dvh] bg-violet-50" x-data="{newchat : true}">
             <div class="sticky top-0 flex items-center justify-between p-2 bg-white rounded-lg shadow">
                 <div class="flex items-center gap-2 md:gap-3">
                     <a class="relative flex shrink-0" href="#">
                         <img class="w-12 h-12 rounded-full" src="images/kamransaeed.png" alt="kamran saeed">
-                        <span
-                            class="top-0 left-9 absolute  w-2.5 h-2.5 bg-green-400 border-2 border-white rounded-full"></span>
+                        <span class="top-0 left-9 absolute  w-2.5 h-2.5 bg-green-400 border-2 border-white rounded-full"></span>
                     </a>
                     <div class="flex items-center gap-8 md:gap-32">
                         <div class="content flex flex-col gap-0.5 md:gap-1">
                             <div class="flex items-center gap-2 ">
                                 <a class="text-sm font-semibold md:text-base" href="#">
                                     Kamran Saeed
-                                </a> 
+                                </a>
                                 <a class="flex items-center justify-center w-10 h-4 font-medium text-white bg-green-500 rounded-full text-3xs md:text-2xs"
                                     href="">online</a>
                             </div>
@@ -64,7 +63,35 @@
                     </a>
                 </div>
             </div>
-            <div id="messages" class="flex flex-col h-full p-3 space-y-4 overflow-y-auto scrolling-touch scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-violet-lighter scrollbar-w-2">
+
+            <div class="flex items-center justify-center h-full" x-show="newchat == true">
+                <!-- Modal content -->
+                <div class="relative w-full max-w-sm bg-white rounded-lg shadow">
+                    <!-- Modal header -->
+                    <div class="flex items-start justify-between p-4 border-b rounded-t">
+                        <h3 class="text-xl font-semibold text-gray-900">
+                            New message
+                        </h3>
+                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                            <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="p-6">
+                        <div>
+                            <label for="subject" class="block mb-2 text-sm font-medium text-gray-900">Subject</label>
+                            <input type="text" id="subject" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Discussion on court documents with client">
+                            <p id="helper-text-explanation" class="mt-2 text-sm text-gray-500">Max 30 Characters</p>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="flex items-center justify-end p-6 border-t border-gray-200 rounded-b gap-x-2">
+                        <button x-on:click="newchat = false" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Start Messaging</button>
+                    </div>
+                </div>
+            </div>
+            <div x-show="newchat == false"  id="messages" class="flex flex-col h-full p-3 space-y-4 overflow-y-auto scrolling-touch scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-violet-lighter scrollbar-w-2">
                 <template x-for="(message, key) in messages">
                     <div>
                         <div class="flex gap-1 md:gap-3" :class="message.from=='bot'?'':'justify-end'">
@@ -132,7 +159,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full gap-1 p-1 bg-white border rounded-lg md:h-16 md:p-2 md:gap-2">
+            <div x-show="newchat == false" class="w-full gap-1 p-1 bg-white border rounded-lg md:h-16 md:p-2 md:gap-2">
                 <div class="relative flex items-center gap-1">
                     <div class="flex gap-1 md:gap-2">
                         <a class="flex items-center justify-center w-8 h-8 bg-gray-100 rounded-lg hover:bg-gray-200 shrink-0 md:w-10 md:h-10"
