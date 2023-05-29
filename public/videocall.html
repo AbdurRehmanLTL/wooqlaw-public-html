@@ -85,7 +85,7 @@
                     <div :class="myvideo == true ? 'hidden': 'flex' " class="flex-col items-center justify-center bg-gray-100 rounded-full shadow w-9 h-9 md:w-12 md:h-12">
                         <p class="text-sm font-medium leading-10 text-center text-gray-900 md:text-base">YK</p>
                     </div>
-                    <video :class="myvideo == true ? 'block': 'hidden' " autoplay class="w-full rounded-lg md:rounded-3xl">
+                    <video id="myvideo" :class="myvideo == true ? 'block': 'hidden' " autoplay class="w-full rounded-lg md:rounded-3xl">
                         <source src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_5MB.mp4">
                     </video>
                 </div>
@@ -125,6 +125,28 @@
         </div>
         
     </div>
+
+    <script>
+        navigator.getUserMedia  = navigator.getUserMedia ||
+                            navigator.webkitGetUserMedia ||
+                            navigator.mozGetUserMedia ||
+                            navigator.msGetUserMedia;
+
+        var video = document.getElementById('myvideo');
+
+        if (navigator.getUserMedia) {
+            navigator.getUserMedia(
+                {
+                    audio: true, 
+                    video: true
+                }, 
+                function(stream) {
+                    video.src = window.URL.createObjectURL(stream);
+            }, errorCallback);
+        } else {
+            video.src = 'https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_5MB.mp4'; // fallback.
+        }
+    </script>
 
 </body>
 
