@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Job Board</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+    <div class="w-full lg:fixed">
+        <nav class="container flex flex-wrap items-center justify-center p-6 mx-auto lg:justify-between lg:px-0"
+            x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
+            <div class="flex items-center"><a href="/" class="text-lg font-bold text-indigo-500">Home</a></div><button
+                @click="isOpen = !isOpen" type="button"
+                class="block px-2 ml-auto lg:hidden text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500"
+                :class="{ 'transition transform-180': isOpen }" aria-label="Menu"><svg class="w-6 h-6 fill-current"
+                    xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                    <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
+                    <path x-show="!isOpen" fill-rule="evenodd"
+                        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                </svg></button>
+            <div class="flex-grow w-full text-center lg:flex lg:items-center lg:w-auto"
+                :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" x-show.transition="true">
+                <ul class="items-center justify-end flex-1 pt-6 lg:pt-0 list-reset lg:flex">
+                    <li class="mr-3 nav__item"><a @click="isOpen = false"
+                            class="inline-block px-4 py-2 text-gray-500 no-underline text-ml hover:text-indigo-500"
+                            href="https://joaquinc.com">Portfolio</a></li>
+                    <li class="mr-3 nav__item"><a @click="isOpen = false"
+                            class="inline-block px-4 py-2 text-gray-500 no-underline text-ml hover:text-indigo-500"
+                            href="https://joaquinc.com/blog">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container flex flex-col items-center justify-start min-h-screen pt-32 mx-auto"
+        x-init="$watch(editModal, val => modalhandler(val)); $watch(newModal, val => modalhandler(val))" 
+        x-data="{ 
+    newModal: false,
+    editModal: false,
+    admin: false,
+    jobList: $persist([ 
+    { 
+      id: '1', title: 'Back End Developer', type:
+      'Full-time', location: 'Remote', category: 'Engineering', apply: '' },
+    { 
+      id: '2', title:
+      'User Interface Engineer', type: 'Part-time', location: 'Remote', category:
+      'Design', apply: '' 
+    }]),
+    activeJob: { 
+      title: '', type:
+      '', location: '', category: '', apply: '' 
+    },
+
+    removeJob(id ){
+      const find = this.jobList.find((item) => item.id === id)
+      if(find) this.jobList.splice(this.jobList.indexOf(find) , 1)
+    },
+    editJob(id ){
+      this.editModal = true;
+      this.activeJob = this.jobList.find((item) => item.id === id)
+    },
+    updateJob(id){   
+      console.log(id) 
+      const find = this.jobList.find((item) => item.id === id)
+      if(find) this.jobList.splice(this.jobList.indexOf(find) , 1, this.activeJob)
+
+      this.editModal = false;
+    },
+  }">
+        <div id="popup" class="fixed inset-0 z-50 flex justify-center w-full" x-cloak
+            x-show="newModal === true || editModal === true" x-effect="populate(activeJob)" x-data="{editableJob: {test: 'true'}, populate(data) {
+    this.editableJob = {...data}
+  }}">
+            <div class="w-full h-full bg-gray-900/[.99] z-0 absolute inset-0" @click="newModal=false; editModal=false;">
+            </div>
+            <div class="container mx-auto">
+                <div class="flex items-center justify-center w-full h-full">
+                    <div
+                        class="fixed w-10/12 overflow-y-auto bg-white rounded-md shadow dark:bg-gray-800 sm:h-auto md:w-8/12 lg:w-1/2 2xl:w-2/5">
+                        <div
+                            class="flex items-center justify-between px-4 bg-gray-100 dark:bg-gray-600 rounded-tl-md rounded-tr-md md:px-8 md:py-4 py-7">
+                            <p class="text-base font-semibold text-white light:text-black"
+                                x-text="newModal ? 'Create a New Job' : 'Edit Job'">Create New Job</p><button
+                                role="button" type="button" aria-label="close label"
+                                class="focus:ring-2 focus:ring-offset-2 focus:ring-gray-600 focus:outline-none"
+                                @click="newModal=false; editModal=false; "><img
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/add_user-svg1.svg"
+                                    alt="icon"></button>
+                        </div>
+                        <div class="px-4 pt-6 md:px-10 md:pt-12 md:pb-4 pb-7">
+                            <form x-ref="jobform" class="mt-11">
+                                <div class="flex items-center gap-x-6"><input required name="title" type="text"
+                                        placeholder="Job Title"
+                                        class="w-1/2 px-3 py-3 text-sm leading-none text-gray-500 placeholder-gray-500 bg-white border border-gray-200 rounded focus:ring-2 focus:ring-gray-400 focus:outline-none light:text-black dark:bg-gray-900 dark:border-gray-700"
+                                        x-model="editableJob.title">
+                                    <div
+                                        class="focus:outline-none focus:ring-2 focus:ring-gray-400 w-1/2 bg-white dark:bg-gray-900 border rounded border-gray-200 dark:border-gray-700 py-2.5 px-3">
+                                        <select required name="location" type="text" aria-label="select an option"
+                                            class="w-full text-sm text-gray-500 light:text-black dark:bg-gray-900 focus:outline-none"
+                                            id="category" x-model="editableJob.location">
+                                            <option selected="" disabled="" value="">Location</option>
+                                            <option>Remote</option>
+                                            <option>On-site</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="flex items-center mt-6 gap-x-6"><input required name="type" type="text"
+                                        placeholder="Type"
+                                        class="w-1/2 px-3 py-3 text-sm leading-none text-gray-500 placeholder-gray-500 bg-white border border-gray-200 rounded focus:ring-2 focus:ring-gray-400 focus:outline-none light:text-black dark:bg-gray-900 dark:border-gray-700"
+                                        x-model="editableJob.type">
+                                    <div
+                                        class="focus:outline-none focus:ring-2 focus:ring-gray-400 w-1/2 bg-white dark:bg-gray-900 border rounded border-gray-200 dark:border-gray-700 py-2.5 px-3">
+                                        <select required name="category" type="text" aria-label="select an option"
+                                            class="w-full text-sm text-gray-500 light:text-black dark:bg-gray-900 focus:outline-none"
+                                            id="category" x-model="editableJob.category">
+                                            <option selected="" disabled="" value="">Category</option>
+                                            <option>Designer</option>
+                                            <option>Developer</option>
+                                            <option>Engineering</option>
+                                            <option>Manager</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mt-6"><textarea name="message" placeholder="Description"
+                                        class="w-full h-24 py-3 pl-3 overflow-y-auto text-white placeholder-gray-500 border border-gray-200 rounded resize-none focus:outline-none focus:ring-2 focus:ring-gray-400 dark:bg-gray-900 dark:border-gray-700 light:text-black"></textarea>
+                                </div>
+                                <div class="flex items-center justify-end mt-6 mb-6"><input type="url" name="url"
+                                        id="url" placeholder="https://example.com"
+                                        pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?"
+                                        class="w-1/2 px-3 py-3 text-sm leading-none text-gray-500 placeholder-gray-500 bg-white border border-gray-200 rounded focus:ring-2 focus:ring-gray-400 focus:outline-none light:text-black dark:bg-gray-900 dark:border-gray-700"
+                                        x-model="editableJob.apply"></div>
+                                <div class="flex items-center justify-between mt-9"><button role="button" type="button"
+                                        aria-label="close button"
+                                        class="px-6 py-3 text-sm text-white bg-gray-600 rounded shadow focus:ring-2 focus:ring-offset-2 focus:bg-gray-600 focus:ring-gray-600 focus:outline-none hover:bg-gray-500"
+                                        @click="newModal=false; editModal=false;">Cancel</button> <input type="submit"
+                                        name="submit" value="Submit" aria-hidden="true" aria-label="add user"
+                                        role="button" x-ref="submitbutton" class="h-0 pointer-events-none"> <button
+                                        type="button" aria-label="add user" aria-roledescription="submit" role="button"
+                                        class="px-6 py-3 text-sm text-white bg-indigo-700 rounded shadow focus:ring-2 focus:ring-offset-2 focus:ring-indigo-800 focus:outline-none hover:bg-opacity-80"
+                                        x-text="newModal ? 'Post Job' : 'Update Job'" @click="
+                  if(modalValidation({form: $refs.jobform, submit: $refs.submitbutton})){
+                    activeJob = {...editableJob};
+
+                    if(newModal)
+                      jobList.unshift(activeJob)
+                    if(editModal)
+                      updateJob(activeJob.id)
+
+                    editModal = false;
+                    newModal = false;
+                  }
+                ">Post Job</button></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="pb-12">Welcome to <strong
+                class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-purple-500">Job Board</strong>
+        </h1>
+        <div class="w-full sm:px-6">
+            <div class="px-4 py-4 bg-gray-100 rounded-tl-lg rounded-tr-lg md:px-10 md:py-7 dark:bg-gray-700">
+                <div class="items-center justify-between sm:flex">
+                    <div class="flex items-center gap-x-6">
+                        <p tabindex="0"
+                            class="text-base font-bold leading-normal text-gray-800 focus:outline-none sm:text-lg md:text-xl lg:text-2xl dark:text-white">
+                            Job Position</p><span class="text-purple-400 cursor-pointer"
+                            @click="admin=!admin">Admin</span>
+                    </div><button
+                        class="inline-flex items-start justify-start px-6 py-3 text-gray-800 bg-indigo-700 rounded focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 hover:bg-indigo-600 focus:outline-none dark:text-white"
+                        x-show="admin" @click="newModal=true; activeJob={}">Add Position</button>
+                </div>
+            </div>
+            <div class="px-4 pt-4 pb-5 overflow-y-auto bg-white shadow dark:bg-gray-800 md:px-10 md:pt-7">
+                <table class="w-full whitespace-nowrap">
+                    <thead>
+                        <tr tabindex="0"
+                            class="w-full h-16 text-sm leading-none text-gray-800 focus:outline-none dark:text-white">
+                            <th class="pl-4 font-normal text-left">Position</th>
+                            <th class="pl-4 font-normal text-left">Category</th>
+                            <th class="pl-4 font-normal">
+                                <div class="flex justify-end pl-4 mr-2 px-7 2xl:px-0">
+                                    <p class="px-4 w-28">Apply</p>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="w-full"><template x-for="job in jobList">
+                            <tr tabindex="0"
+                                class="h-20 my-4 text-sm leading-none text-gray-800 bg-white border-t border-b border-gray-100 focus:outline-none dark:text-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 dark:border-gray-700">
+                                <td class="pl-4 cursor-pointer">
+                                    <div class="flex items-center">
+                                        <div class="mr-4" x-show="admin"><img height="22px" width="22px"
+                                                src="/static/img/edit.svg" alt=""
+                                                class="mb-2 cursor-pointer edit_posting" @click="editJob(job.id)"> <img
+                                                height="22px" width="22px" src="/static/img/delete.svg" alt=""
+                                                class="cursor-pointer del_posting" @click="removeJob(job.id)"></div>
+                                        <div class="pl-4">
+                                            <p class="font-medium" x-text="job.title">UX Design &amp; Visual Strategy
+                                            </p>
+                                            <p class="pt-2 text-xs leading-3 text-gray-600 dark:text-gray-200"><span
+                                                    class="map_pin"></span> <span x-text="job.location">Remote</span>
+                                                <span x-text="job.type">Full-time</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="pl-4">
+                                    <div class="flex items-center">
+                                        <p class="font-medium" x-text="job.category">UX Strategy</p>
+                                    </div>
+                                </td>
+                                <td class="flex justify-end pl-4 px-7 2xl:px-0"><button
+                                        class="h-12 px-4 py-3 mr-2 bg-indigo-700 rounded w-28 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 hover:bg-indigo-600 focus:outline-none"
+                                        role="button" aria-label="options">
+                                        <p class="text-sm font-medium leading-none text-white"
+                                            x-text="job.apply === '' ? 'Quick Apply' : 'On Website'">On Website</p>
+                                    </button></td>
+                            </tr>
+                        </template></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="fixed bottom-0 w-full py-4 text-center"><small class="text-gray-500">Copyright © Job Board 2020. Made
+            with ❤ by <a href="https://joaquinc.com/" target="_blank" class="underline">Francis Joaquin</a> • <a
+                href="https://github.com/fajoaq/" class="underline" target="_blank" rel="noopener">View
+                Github</a></small></footer>
+    <script defer="defer" src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
+<!-- alpinejs v3.12 -->
+<script defer src="./js/alpine.min.js"></script>
+    <script defer="defer">
+        function popuphandler(flag) {
+            if (flag) {
+                document.getElementById("popup").classList.remove("hidden");
+            } else {
+                document.getElementById("popup").classList.add("hidden");
+            }
+        }
+
+        function modalValidation(els) {
+            let validate = els.form.checkValidity();
+
+            els.form.addEventListener("submit", (e) => e.preventDefault(), true);
+
+            if (!validate) els.submit.click();
+
+            return validate;
+        }
+    </script>
+</body>
+
+</html>
