@@ -189,7 +189,11 @@ class Card extends LitElement {
                   </button>
                </div>
             </div>
-            <arm-modal></arm-modal>
+            <arm-modal title="Video" name="modal-createnew" size="xl">
+               <div>
+                  <p>fdfg</p>
+               </div>
+            </arm-modal>
         `;
     }
 
