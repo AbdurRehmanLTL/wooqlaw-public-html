@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- AlpineJs Scripts --> 
+
+    <!-- alpine/tooltip v1.0 --> 
+    <script defer src="./js/alpinetooltip.min.js"></script> 
+    <!-- @alpinejs/ui v3.12 --> 
+    <script defer src="./js/alpineui.min.js"></script> 
+    <!-- @alpinejs/focus v3.12 --> 
+    <script defer src="./js/alpinefocus.min.js"></script> 
+    <!-- alpinejs v3.12 --> 
+    <script defer src="./js/alpine.min.js"></script>
+
+    
+    <style>
+    
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+  </style>
+    <meta name="description" content="wooqlaw profile">
+    <title>wooqlaw Public Portal</title>
+</head>
+
+<body>
+    <div class="flex flex-col gap-6 main md:p-10 font-display bg-gray-50 animate-pulse">
+        <section class="container card">
+            <div class="flex flex-col gap-2">
+                <div class="flex flex-col justify-between w-full gap-3 p-2 bg-white md:flex-row md:p-5 rounded-t-xl">
+                    <div class="flex items-center gap-2 md:gap-5">
+                        <div class="relative flex">
+                            <div class="relative flex items-center justify-center w-24 h-24 bg-gray-200 rounded-full md:w-36 md:h-36">
+                                <svg class="z-20 w-12 h-12 text-gray-300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" viewBox="0 0 640 512"><path d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"/></svg>
+                                <span class="absolute flex w-3 h-3 bg-gray-300 rounded-full right-3 md:w-5 md:h-5 outline outline-white bottom-2">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 md:gap-8">
+                            <div class="flex flex-col gap-1">
+                                <span class="flex items-center gap-2">
+                                    <div class="h-5 bg-gray-200 rounded-lg w-36"></div>
+                                    <span class="w-5 h-5 md:w-6 md:h-6">
+                                        <svg class="w-5 h-5 text-gray-200 md:w-6 md:h-6" viewBox="0 0 22 22" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.0449 3.59661L11.7949 0.159113C11.5854 0.0718438 11.2295 0 11.0026 0C10.7743 0 10.4204 0.0718438 10.2094 0.159113L1.9598 3.59661C1.19023 3.91415 0.6875 4.66611 0.6875 5.46103C0.6875 16.5513 8.81719 21.9997 10.9957 21.9997C13.1957 21.9997 21.3125 16.4911 21.3125 5.46103C21.3125 4.66611 20.8098 3.91415 20.0449 3.59661ZM15.125 8.59345C15.125 8.83111 15.0433 9.06997 14.8766 9.26462L10.7516 14.0771C10.4629 14.4157 10.0805 14.3985 9.96875 14.3985C9.69616 14.3985 9.43293 14.2898 9.23957 14.0964L7.17707 12.0339C6.97383 11.872 6.875 11.6056 6.875 11.3048C6.875 10.7552 7.31758 10.2735 7.90625 10.2735C8.17012 10.2735 8.43391 10.3742 8.63543 10.5756L9.91117 11.8514L13.3113 7.88365C13.5158 7.64595 13.8046 7.52434 14.095 7.52434C14.8844 7.5622 15.125 8.27548 15.125 8.59345Z" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <div class="h-5 bg-gray-200 rounded-lg w-52"></div>
+                            </div>
+                            <div class="flex items-center justify-center gap-1 p-1 pr-1 bg-gray-200 rounded-full w-fit h-9">
+                                <span class="w-7 h-7">
+                                    <svg class="w-7 h-7" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.5 27.5C6.04463 27.5 0 21.4554 0 14C0 6.54463 6.04463 0.5 13.5 0.5C20.9554 0.5 27 6.54463 27 14C27 21.4554 20.9554 27.5 13.5 27.5ZM10.125 7.26013V20.7399L20.25 14L10.125 7.26013Z" fill="white"/>
+                                    </svg>
+                                </span>
+                                <span class="flex w-20 h-3 px-3 bg-gray-300 rounded-lg"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end gap-8">
+                        <div class="grid w-full grid-cols-2 gap-1 lg:flex lg:flex-row">
+                            <div class="flex flex-row items-center justify-start w-full h-16 gap-2 p-3 rounded-lg md:flex-col lg:w-28 bg-gray-50 md:justify-center">
+                                <div class="flex items-center justify-center gap-2">
+                                    <span class="flex w-5 h-5 bg-gray-300 rounded-full"></span>
+                                    <span class="w-12 h-3 bg-gray-300 rounded-lg"></span>
+                                </div>
+                                <div class="flex w-20 h-3 bg-gray-300 rounded-lg"></div>
+                            </div>
+                            <div class="flex flex-row items-center justify-start w-full h-16 gap-2 p-3 rounded-lg md:flex-col lg:w-28 bg-gray-50 md:justify-center">
+                                <div class="flex items-center justify-center">
+                                    <span class="flex w-5 h-5 bg-gray-300 rounded-full"></span>
+                                </div>
+                                <div class="flex w-20 h-3 bg-gray-300 rounded-lg"></div>
+                            </div>
+                            <div class="flex flex-row items-center justify-start w-full h-16 gap-2 p-3 rounded-lg md:flex-col lg:w-28 bg-gray-50 md:justify-center">
+                                <div class="flex items-center justify-center">
+                                    <span class="flex w-5 h-5 bg-gray-300 rounded-full"></span>
+                                </div>
+                                <div class="flex w-20 h-3 bg-gray-300 rounded-lg"></div>
+                            </div>
+                            <div class="flex flex-row items-center justify-start w-full h-16 gap-2 p-3 rounded-lg md:flex-col lg:w-28 bg-gray-50 md:justify-center">
+                                <div class="flex items-center justify-center">
+                                    <span class="flex w-5 h-5 bg-gray-300 rounded-full"></span>
+                                </div>
+                                <div class="flex w-20 h-3 bg-gray-300 rounded-lg"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between w-full gap-4 md:w-fit md:justify-end">
+                            <div class="flex border rounded-lg gap-2 px-8 py-2.5 justify-center items-center">
+                                <span class="flex w-10 h-3 bg-gray-200 rounded-lg"></span>
+                                <svg class="text-gray-200" width="17" height="16" viewBox="0 0 17 16" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.96875 8.5C0.96875 8.30302 1.00755 8.10796 1.08293 7.92597C1.15831 7.74399 1.2688 7.57863 1.40809 7.43934C1.54738 7.30005 1.71274 7.18956 1.89472 7.11418C2.07671 7.0388 2.27177 7 2.46875 7C2.66573 7 2.86079 7.0388 3.04278 7.11418C3.22476 7.18956 3.39012 7.30005 3.52941 7.43934C3.6687 7.57863 3.77919 7.74399 3.85457 7.92597C3.92995 8.10796 3.96875 8.30302 3.96875 8.5V14.5C3.96875 14.8978 3.81071 15.2794 3.52941 15.5607C3.24811 15.842 2.86657 16 2.46875 16C2.07093 16 1.68939 15.842 1.40809 15.5607C1.12679 15.2794 0.96875 14.8978 0.96875 14.5V8.5ZM4.96875 8.333V13.763C4.96858 14.1347 5.07197 14.499 5.26733 14.8152C5.46269 15.1314 5.74228 15.3869 6.07475 15.553L6.12475 15.578C6.67964 15.8553 7.29142 15.9998 7.91175 16H13.3278C13.7903 16.0002 14.2386 15.84 14.5963 15.5469C14.954 15.2537 15.1991 14.8456 15.2897 14.392L16.4897 8.392C16.5477 8.10187 16.5406 7.80249 16.469 7.51544C16.3973 7.22839 16.2628 6.96082 16.0752 6.73201C15.8876 6.50321 15.6516 6.31887 15.3842 6.19229C15.1168 6.0657 14.8246 6.00003 14.5288 6H10.9688V2C10.9688 1.46957 10.758 0.960859 10.383 0.585786C10.0079 0.210714 9.49918 0 8.96875 0C8.70353 0 8.44918 0.105357 8.26164 0.292893C8.07411 0.48043 7.96875 0.734784 7.96875 1V1.667C7.96875 2.53248 7.68804 3.37462 7.16875 4.067L5.76875 5.933C5.24946 6.62538 4.96875 7.46752 4.96875 8.333V8.333Z"/>
+                                </svg>
+                                    
+                            </div>
+                            <span class="flex flex-col items-end gap-1">
+                                <div class="flex flex-col items-end justify-center rounded">
+                                    <div class="flex mb-1 space-x-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 text-gray-300 transition duration-150 ">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 text-gray-300 transition duration-150 ">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 text-gray-300 transition duration-150 ">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 text-gray-300 transition duration-150 ">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 text-gray-300 transition duration-150 ">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="w-20 h-3 bg-gray-200 rounded-lg"></span>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col items-center w-full gap-2 p-2 bg-gray-100 md:flex-row md:p-4 md:gap-5 rounded-b-xl">
+                <div class="flex items-center justify-between w-full h-16 p-5 bg-white rounded-lg drop-shadow">
+                    <div class="flex flex-col gap-1">
+                        <div class="w-56 h-4 bg-gray-200 rounded-lg"></div>
+                        <div class="h-4 bg-gray-200 rounded-lg w-36"> </div>
+                    </div>
+                    <div class="flex items-center justify-center bg-gray-100 rounded w-7 md:w-10 h-7 md:h-10">
+                        <svg class="h-4 text-gray-400 md:h-6" viewBox="0 0 22 25" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.25 12.5004C10.6625 12.5004 11 12.8379 11 13.2504V17.7504C11 18.1629 10.6625 18.5004 10.25 18.5004H5.75C5.3375 18.5004 5 18.1629 5 17.7504V13.2504C5 12.8379 5.3375 12.5004 5.75 12.5004H10.25ZM6.5 0.500366C7.12344 0.500366 7.625 1.00427 7.625 1.62537V3.50037H14.375V1.62537C14.375 1.00427 14.8766 0.500366 15.5 0.500366C16.1234 0.500366 16.625 1.00427 16.625 1.62537V3.50037H18.5C20.1547 3.50037 21.5 4.84334 21.5 6.50037V21.5004C21.5 23.1551 20.1547 24.5004 18.5 24.5004H3.5C1.84297 24.5004 0.5 23.1551 0.5 21.5004V6.50037C0.5 4.84334 1.84297 3.50037 3.5 3.50037H5.375V1.62537C5.375 1.00427 5.87656 0.500366 6.5 0.500366ZM19.25 9.50037H2.75V21.5004C2.75 21.9129 3.08562 22.2504 3.5 22.2504H18.5C18.9125 22.2504 19.25 21.9129 19.25 21.5004V9.50037Z"/>
+                        </svg>
+                    </div>  
+                </div>
+                <div class="flex items-center justify-between w-full h-16 p-5 bg-white rounded-lg drop-shadow">
+                    <div class="flex flex-col gap-1">
+                        <div class="h-4 bg-gray-200 rounded-lg w-44"></div>
+                        <div class="w-32 h-4 bg-gray-200 rounded-lg"> </div>
+                    </div>
+                    <div class="flex items-center justify-center bg-gray-100 rounded w-7 md:w-10 h-7 md:h-10">
+                        <svg class="h-4 text-gray-400 md:h-6" viewBox="0 0 31 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.4588 0.248291C15.6858 0.248291 19.9211 3.76901 19.9211 8.11183C19.9211 12.4546 15.6858 15.9754 10.4588 15.9754C9.60813 15.9754 8.78473 15.8726 7.99773 15.6983C6.60569 16.5473 4.59633 17.4051 2.1316 17.4051C1.67759 17.4051 1.26635 17.1415 1.08838 16.7304C0.91033 16.3194 0.996245 15.8458 1.30315 15.5241C1.32685 15.5062 2.33312 14.4295 3.07691 13.0221C1.77813 11.6772 0.996582 9.97048 0.996582 8.11183C0.996582 3.76901 5.23321 0.248291 10.4588 0.248291ZM8.48449 13.5672C9.14866 13.7548 9.81284 13.8308 10.4588 13.8308C14.4712 13.8308 17.7375 11.2662 17.7375 8.11183C17.7375 4.95748 14.4712 2.39289 10.4588 2.39289C6.44647 2.39289 3.18017 4.95748 3.18017 8.11183C3.18017 9.68453 3.98583 10.8462 4.66183 11.5477L5.73225 12.6602L5.01394 14.0139C4.85153 14.282 4.66911 14.6305 4.47896 14.9254C5.28461 14.6975 6.07798 14.3446 6.85134 13.8352L7.61105 13.4108L8.48449 13.5672ZM21.0856 5.97616C26.1079 6.16381 30.1112 9.60858 30.1112 13.8308C30.1112 15.6894 29.3287 17.3962 28.0322 18.741C28.7737 20.1484 29.7791 21.2252 29.8064 21.243C30.1112 21.5647 30.1976 22.0383 29.9792 22.4494C29.8428 22.8604 29.4288 23.124 28.9739 23.124C26.5128 23.124 24.502 22.2662 23.11 21.4173C22.323 21.5915 21.4996 21.6943 20.6489 21.6943C16.9186 21.6943 13.6933 19.8982 12.1511 17.2934C12.9381 17.1906 13.6933 17.0164 14.412 16.7751C15.6858 18.4372 18.0059 19.5497 20.6489 19.5497C21.2949 19.5497 21.9591 19.4737 22.6232 19.2861L23.4967 19.1297L24.2564 19.5542C25.0297 20.0635 25.8213 20.4165 26.6311 20.6443C26.44 20.3495 26.258 20.001 26.0943 19.7329L25.3755 18.3791L26.4445 17.2666C27.1224 16.5696 27.9276 15.4035 27.9276 13.8308C27.9276 10.8685 25.0479 8.42905 21.3358 8.13863L21.3768 8.11183C21.3768 7.37462 21.2767 6.65975 21.0856 5.97616Z"/>
+                        </svg>
+                    </div>  
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="container profile-tabs">
+            <div class="justify-between w-full bg-white shadow rounded-xl">
+                <ul class="flex gap-2 px-2 pt-2 overflow-x-auto text-base font-semibold text-center text-gray-600 border-b border-gray-100 flex-nowrap md:px-5 md:pt-3">
+                    <li class="basis-auto shrink-0 grow-0 md:grow">
+                        <div class="flex items-center justify-center gap-1 px-3 py-5 bg-gray-100 border-b-2 border-gray-300 md:px-4">
+                            <div class="w-20 h-6 bg-gray-200 rounded-lg"></div>
+                        </div>
+                    </li>
+                    <li class="basis-auto shrink-0 grow-0 md:grow">
+                        <div class="flex items-center justify-center gap-1 px-3 py-5 bg-white md:px-4">
+                            <div class="w-24 h-6 bg-gray-200 rounded-lg"></div>
+                        </div>
+                    </li>
+                    <li class="basis-auto shrink-0 grow-0 md:grow">
+                        <div class="flex items-center justify-center gap-1 px-3 py-5 bg-white md:px-4">
+                            <div class="h-6 bg-gray-200 rounded-lg w-36"></div>
+                        </div>
+                    </li>
+                    <li class="basis-auto shrink-0 grow-0 md:grow">
+                        <div class="flex items-center justify-center gap-1 px-3 py-5 bg-white md:px-4">
+                            <div class="h-6 bg-gray-200 rounded-lg w-28"></div>
+                            <span class="flex items-center justify-center w-6 h-6 text-xs font-medium text-white bg-gray-200 rounded-2xl">
+                            </span>
+                        </div>
+                    </li>
+                    <li class="basis-auto shrink-0 grow-0 md:grow">
+                        <div class="flex items-center justify-center gap-1 px-3 py-5 bg-white md:px-4">
+                            <div class="h-6 bg-gray-200 rounded-lg w-36"></div>
+                            <span class="flex items-center justify-center w-6 h-6 text-xs font-medium text-white bg-gray-200 rounded-2xl">
+                            </span>
+                        </div>
+                    </li>
+                    <li class="basis-auto shrink-0 grow-0 md:grow">
+                        <div class="flex items-center justify-center gap-1 px-3 py-5 bg-white md:px-4">
+                            <div class="w-40 h-6 bg-gray-200 rounded-lg"></div>
+                            <span class="flex items-center justify-center w-6 h-6 text-xs font-medium text-white bg-gray-200 rounded-2xl">
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+                <div id="myTabContent">
+                    <div>
+                        <div class="grid w-full grid-cols-1 gap-5 p-2 md:grid-cols-3 md:p-5">
+                            <section class="flex flex-col items-start w-full gap-10 p-2 about md:col-span-2">
+                                    <!-- About -->
+                                    <div class="flex flex-col w-full gap-2">
+                                    <div class="w-24 h-5 bg-gray-200 rounded-lg"></div>
+                                <div role="status" class="p-3 text-sm font-medium text-gray-900 rounded-lg md:text-base bg-gray-50 md:p-5">
+                                    <div class="w-48 h-4 mb-4 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+                                    <div class="h-3 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+                                    <div class="h-3 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+                                    <div class="h-3 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+                                    <div class="h-3 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+                                    <div class="h-3 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                                    </div>
+                                <!-- Experience -->
+                                <div class="flex flex-col w-full gap-2">
+                                    <div class="h-5 bg-gray-200 rounded-lg w-28"></div>
+                                <div class="p-3 text-sm font-medium text-gray-900 rounded-lg md:text-base bg-gray-50 md:p-5">
+                                    <div class="w-20 h-4 bg-gray-200 rounded-lg"></div>
+                                </div>
+                                </div>
+                                <!-- Services -->
+                                <div class="flex flex-col w-full gap-2 main">
+                                    <div class="w-24 h-5 bg-gray-200 rounded-lg"></div>
+                                    <div class="p-3 text-sm font-medium text-gray-900 rounded-lg md:text-base bg-gray-50 md:p-5">
+                                        <div class="h-4 bg-gray-200 rounded-lg w-36"></div>
+                                    </div>
+                                </div>
+                                <!-- Address & Location -->
+                                <div class="flex flex-col w-full gap-2 main">
+                                    <div class="w-48 h-5 bg-gray-200 rounded-lg"></div>
+                                    <div class="flex-col gap-5 p-3 text-base font-medium text-gray-700 rounded-lg bg-gray-50 md:p-5">
+                                        <div class="pb-3 border-b address-1">
+                                            <div class="w-40 h-4 mb-3 bg-gray-200 rounded-lg"></div>
+                                            <div class="w-full h-4 bg-gray-200 rounded-lg"></div>
+                                        </div>
+                                        <div class="pt-3 address-2">
+                                            <div class="h-4 mb-3 bg-gray-200 rounded-lg w-44"></div>
+                                            <div class="w-3/4 h-4 bg-gray-200 rounded-lg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Courts -->
+                                <div class="flex flex-col w-full gap-2 main">
+                                    <div class="w-24 h-5 bg-gray-200 rounded-lg"></div>
+                                    <div class="p-3 text-sm font-medium text-gray-900 rounded-lg md:text-base bg-gray-50 md:p-5">
+                                        <div class="flex items-center w-full space-x-2">
+                                            <div class="w-32 h-4 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+                                            <div class="w-24 h-4 bg-gray-200 rounded-full dark:bg-gray-600"></div>
+                                            <div class="h-4 bg-gray-200 rounded-full w-28 dark:bg-gray-600"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Bar Council -->
+                                <div class="flex flex-col w-full gap-2 main">
+                                    <div class="w-24 h-5 bg-gray-200 rounded-lg"></div>
+                                    <div class="p-3 text-sm font-medium text-gray-900 rounded-lg md:text-base bg-gray-50 md:p-5">
+                                        <div class="h-4 bg-gray-200 rounded-lg w-36"></div>
+                                    </div>
+                                </div>
+                                <!-- Language -->
+                                <div class="flex flex-col w-full gap-2 main">
+                                    <div class="w-24 h-5 bg-gray-200 rounded-lg"></div>
+                                    <div class="p-3 text-sm font-medium text-gray-900 rounded-lg md:text-base bg-gray-50 md:p-5">
+                                        <div class="flex items-center w-full space-x-2">
+                                            <div class="w-32 h-4 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+                                            <div class="w-24 h-4 bg-gray-200 rounded-full dark:bg-gray-600"></div>
+                                            <div class="h-4 bg-gray-200 rounded-full w-28 dark:bg-gray-600"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Certificates -->
+                                <section class="flex flex-col w-full gap-2 certificates">
+                                    <div class="flex items-start">
+                                        <div class="w-24 h-5 bg-gray-200 rounded-lg"></div>
+                                    </div>
+                                    <!-- Swiper -->
+                                    <div class="flex p-5 rounded-lg swiper certificates-swiper bg-gray-50">
+                                        <div class="flex items-center swiper-wrapper">
+                                        <div class="flex items-center justify-center swiper-slide">
+                                            <div class="flex items-center justify-center w-full h-20 bg-gray-200 rounded sm:w-96">
+        <svg class="w-12 h-12 text-gray-300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" viewBox="0 0 640 512"><path d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"/></svg>
+    </div>
+                                        </div>
+                                        <div class="flex items-center justify-center swiper-slide">
+                                            <div class="flex items-center justify-center w-full h-20 bg-gray-200 rounded sm:w-96">
+        <svg class="w-12 h-12 text-gray-300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" viewBox="0 0 640 512"><path d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"/></svg>
+    </div>
+                                        </div>
+                                        <div class="flex items-center justify-center swiper-slide">
+                                            <div class="flex items-center justify-center w-full h-20 bg-gray-200 rounded sm:w-96">
+        <svg class="w-12 h-12 text-gray-300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" viewBox="0 0 640 512"><path d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"/></svg>
+    </div>
+                                        </div>
+                                        <div class="flex items-center justify-center swiper-slide">
+                                            <div class="flex items-center justify-center w-full h-20 bg-gray-200 rounded sm:w-96">
+        <svg class="w-12 h-12 text-gray-300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" viewBox="0 0 640 512"><path d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"/></svg>
+    </div>
+                                        </div>
+                                        </div>
+                                
+                                        <div class="swiper-button-next swiper-button-next-certificates"></div>
+                                        <div class="swiper-button-prev swiper-button-prev-certificates"></div>
+                                
+                                    </div>
+                                </section>
+                                <!-- Clients Logo -->
+                                <section class="flex flex-col w-full gap-2 clients-logo">
+                                    <div class="flex items-start">
+                                        <div class="w-24 h-5 bg-gray-200 rounded-lg"></div>
+                                    </div>
+                                    <!-- Swiper -->
+                                    <div class="flex p-5 rounded-lg swiper clients-swiper bg-gray-50">
+                                        <div class="flex items-center swiper-wrapper">
+                                        <div class="flex items-center justify-center swiper-slide">
+                                            <div class="flex items-center justify-center w-full h-20 bg-gray-200 rounded sm:w-96">
+        <svg class="w-12 h-12 text-gray-300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" viewBox="0 0 640 512"><path d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"/></svg>
+    </div>
+                                        </div>
+                                        <div class="flex items-center justify-center swiper-slide">
+                                            <div class="flex items-center justify-center w-full h-20 bg-gray-200 rounded sm:w-96">
+        <svg class="w-12 h-12 text-gray-300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" viewBox="0 0 640 512"><path d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"/></svg>
+    </div>
+                                        </div>
+                                        <div class="flex items-center justify-center swiper-slide">
+                                            <div class="flex items-center justify-center w-full h-20 bg-gray-200 rounded sm:w-96">
+        <svg class="w-12 h-12 text-gray-300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" viewBox="0 0 640 512"><path d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"/></svg>
+    </div>
+                                        </div>
+                                        <div class="flex items-center justify-center swiper-slide">
+                                            <div class="flex items-center justify-center w-full h-20 bg-gray-200 rounded sm:w-96">
+        <svg class="w-12 h-12 text-gray-300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" viewBox="0 0 640 512"><path d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"/></svg>
+    </div>
+                                        </div>
+                                        </div>
+                                
+                                        <div class="swiper-button-next swiper-button-next-clients"></div>
+                                        <div class="swiper-button-prev swiper-button-prev-clients"></div>
+                                
+                                    </div>
+                                </section>
+                            </section>
+                            <section class="view-contact flex flex-col md:col-span-1 items-start mt-3 md:mt-9 gap-2.5 w-full">
+                                            <!-- View Contact -->
+                                            <div class="w-full">
+                                                <div>
+                                                    <div class="container flex items-center justify-between gap-2 p-2 bg-gray-200 shadow-md md:px-5 md:py-3">
+                                                        <div class="flex flex-col items-start p-2">
+                                                            <div class="flex w-40 h-4 mb-2 bg-gray-300 rounded-lg"></div>
+                                                            <div class="flex h-4 bg-gray-300 rounded-lg w-52"></div>
+                                                        </div>
+                                                        <div class="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-md icon hover:bg-gray-100">
+                                                            <svg class="text-gray-400" width="42" height="42" viewBox="0 0 42 42" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M15.589 22.2851C16.2615 21.998 17.0407 22.1867 17.5041 22.7526L18.8656 24.4175C20.752 23.3226 22.3267 21.7479 23.4216 19.8615L21.7608 18.5041C21.1949 18.0407 21.0021 17.2615 21.2933 16.589L23.2617 11.996C23.5693 11.2743 24.3443 10.8724 25.1112 11.0364L29.7041 12.0207C30.4587 12.1806 31 12.849 31 13.6241C31 23.1053 23.8153 30.9092 14.5925 31.8934C14.1906 31.9344 13.7846 31.9672 13.3786 31.9836H13.3745C13.1244 31.9918 12.8783 32 12.6241 32C11.849 32 11.1806 31.4587 11.0207 30.7041L10.0364 26.1112C9.87241 25.3443 10.2743 24.5693 10.996 24.2617L15.589 22.2933V22.2851ZM12.8947 30.0275C21.7444 29.884 28.8881 22.7362 29.0316 13.8906L24.9635 13.0172L23.2002 17.1344L24.6683 18.3401C25.4146 18.9511 25.6074 20.0132 25.1235 20.8498C23.8563 23.0355 22.0355 24.8563 19.8498 26.1235C19.0132 26.6074 17.9511 26.4146 17.3401 25.6683L16.1344 24.1961L12.0172 25.9594L12.8947 30.0275Z"
+                                                                     />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Inquiry -->
+                                            <div class="flex flex-col w-full">
+                                                <!-- Header -->
+                                                <div class="flex items-center justify-between p-2 bg-gray-200 rounded-t-lg header md:p-5">
+                                                    <div class="title">
+                                                        <div class="flex w-40 h-4 bg-gray-300 rounded-lg"></div>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <div><div class="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-md icon hover:bg-gray-100">
+                                                            <svg class="text-gray-400" width="24" height="120" viewBox="0 0 23 17" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M2.875 2.125C2.47969 2.125 2.15625 2.44375 2.15625 2.83333V3.81172L9.90527 10.0805C10.8352 10.8331 12.1693 10.8331 13.0992 10.0805L20.8438 3.81172V2.83333C20.8438 2.44375 20.5203 2.125 20.125 2.125H2.875ZM2.15625 6.56094V14.1667C2.15625 14.5562 2.47969 14.875 2.875 14.875H20.125C20.5203 14.875 20.8438 14.5562 20.8438 14.1667V6.56094L14.4648 11.7229C12.7398 13.1174 10.2557 13.1174 8.53516 11.7229L2.15625 6.56094ZM0 2.83333C0 1.27057 1.28926 0 2.875 0H20.125C21.7107 0 23 1.27057 23 2.83333V14.1667C23 15.7294 21.7107 17 20.125 17H2.875C1.28926 17 0 15.7294 0 14.1667V2.83333Z"/>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                <!-- INQUIRY FORM  -->
+                                                <div class="justify-center w-full p-2 rounded-b-lg Inquiry-form md:p-5 bg-gray-50">
+                                                    <!-- ********CASE-DETAILS******** Portion-1 -->
+                                                    <div>
+                                                    <span>
+                                                    <div class="Details-Entery">
+                                                            <!-- Form 1 -->
+                                                        <form class="justify-center w-full inputs">
+                                                            <!-- INPUT _ 1 -->
+                                                            <div class="mt-5 mb-3">
+                                                                <div class="flex w-40 h-4 mb-2 bg-gray-300 rounded-lg"></div>
+                                                                <div class="flex w-32 h-4 mt-3 mb-2 bg-gray-300 rounded-lg"></div>
+                                                                <div type="email" id="subject"
+                                                                    class="inline-block w-full h-10 text-sm text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                                                                    placeholder="" required></div>
+                                                                    <div class="flex w-32 h-3 mb-2 bg-gray-300 rounded-lg"></div>
+                                                            </div>
+                                                            <!-- INPUT _ 2 -->
+                                                            <div class="mb-6">
+                                                                <div class="flex w-40 h-4 mb-2 bg-gray-300 rounded-lg"></div>
+                                                                <textarea id="message" rows="8"
+                                                                    class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                                                                    placeholder=""></textarea>
+                                                            </div>
+
+                                                            <!-- INPUT _ 4 -->
+                                                            <label for="subject" class="block mt-3 mb-2 text-xs text-gray-600 Label-2">
+                                                                <div class="flex w-40 h-3 mb-2 bg-gray-300 rounded-lg"></div>
+                                                            </label>
+                                                        </form>
+                                                        <!-- ************CONTACT-DETAILS**************Portion-2 -->
+                                                    <div class="flex mt-3 mb-5 border">
+                                                    </div>
+                                                    <div class="flex w-40 h-4 mb-2 bg-gray-300 rounded-lg"></div>
+                                                        <!-- Form 2 -->
+                                                        <form>
+                                                            <!--F2 Input_1 -->
+                                                            <div class="mb-6">
+                                                                <div class="flex w-40 h-4 mt-3 mb-2 bg-gray-300 rounded-lg"></div>
+                                                                <input type="text" id="text"
+                                                                    class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                                    placeholder="" required>
+                                                            </div>
+                                                            <!--F2 Input_2 -->
+                                                            <div class="mb-6">
+                                                                <div class="flex w-40 h-4 mb-2 bg-gray-300 rounded-lg"></div>
+                                                                <input type="tel" id="number"
+                                                                    class="shadow-sm bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                                    placeholder="" required>
+                                                            </div>
+                                                            <!--F2 Input_3 -->
+                                                            <div class="mb-6">
+                                                                <div class="flex w-40 h-4 mb-2 bg-gray-300 rounded-lg"></div>
+                                                                <input type="email" id="email"
+                                                                    class="shadow-sm bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                                    placeholder="" required>
+                                                            </div>
+                                                            <div class="flex justify-center mb-3 button">
+                                                                <div class="flex justify-center px-5 py-4 text-sm text-center text-white bg-gray-200 rounded-lg w-96 focus:ring-4 focus:outline-none">
+                                                                    <div class="flex w-40 h-4 bg-gray-300 rounded-lg"></div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </span>
+                                                   
+                                                </div>
+                                                </div>
+                                            </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </section>
+    </div>
+
+  <!-- Swiper JS -->
+  <script src="./js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".certificates-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+
+ // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next-certificates',
+        prevEl: '.swiper-button-prev-certificates',
+      },
+
+      breakpoints: {
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
+      },
+    });
+
+    var swiper2 = new Swiper(".clients-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+
+ // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next-clients',
+        prevEl: '.swiper-button-prev-clients',
+      },
+
+      breakpoints: {
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
+      },
+    });
+  </script>
+        
+</body>
+
+</html>
