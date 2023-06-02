@@ -5,6 +5,7 @@ import '../microuis/avatar.js';
 import '../microuis/button.js';
 import '../microuis/rating.js';
 import '../components/generic/modal.js';
+import '../components/generic/dialog.js';
 
 class Card extends LitElement {
     static get properties() {
@@ -118,6 +119,8 @@ class Card extends LitElement {
                   <div class="flex flex-row justify-between @xl:flex-col items-center @xl:items-start gap-2">
                      <arm-rating size="sm"></arm-rating>
                      <!-- $dispatch('show-modal') -->
+                     <!-- <arm-button x-data="modal" x-on:click="showModal('modal-createnew')" color="primary" textclass="font-normal text-sm text-white hidden @xl:block" customclass="icon flex w-fit items-center justify-center gap-2 rounded-full border bg-orange-500 hover:bg-orange-600 py-1 pr-1 @xl:pr-2 pl-1" text="Play Intro" svgleft='<svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 26C6.04462 26 0 20.1793 0 13C0 5.82075 6.04462 0 13.5 0C20.9554 0 27 5.82075 27 13C27 20.1793 20.9554 26 13.5 26ZM10.125 6.50975V19.4902L20.25 13L10.125 6.50975Z" fill="white"></path></svg>'> 
+                     </arm-button>  -->
                      <arm-button x-data="modal" x-on:click="showModal('modal-createnew')" color="primary" textclass="font-normal text-sm text-white hidden @xl:block" customclass="icon flex w-fit items-center justify-center gap-2 rounded-full border bg-orange-500 hover:bg-orange-600 py-1 pr-1 @xl:pr-2 pl-1" text="Play Intro" svgleft='<svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 26C6.04462 26 0 20.1793 0 13C0 5.82075 6.04462 0 13.5 0C20.9554 0 27 5.82075 27 13C27 20.1793 20.9554 26 13.5 26ZM10.125 6.50975V19.4902L20.25 13L10.125 6.50975Z" fill="white"></path></svg>'> 
                      </arm-button> 
                   </div>
@@ -190,10 +193,15 @@ class Card extends LitElement {
                </div>
             </div>
             <arm-modal title="Video" name="modal-createnew" size="xl">
+               <!-- <div>
+                  <p>fdfg</p>
+               </div> -->
+            </arm-modal>
+            <!-- <arm-dialog title="Video" id="video" size="xl">
                <div>
                   <p>fdfg</p>
                </div>
-            </arm-modal>
+            </arm-dialog> -->
         `;
     }
 

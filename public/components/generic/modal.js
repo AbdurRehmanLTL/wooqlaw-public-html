@@ -28,7 +28,7 @@ class Modal extends LitElement {
         };
         return html` 
             <div x-data="{ open: false }">
-                <button x-on:click="open = true" class="...">Open Modal</button>
+                <!-- <button x-on:click="open = true" class="...">Open Modal</button> -->
 
                 
                     <div x-dialog  x-model="open" class="fixed inset-0 overflow-y-auto z-20" 

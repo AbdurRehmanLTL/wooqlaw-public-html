@@ -6,6 +6,7 @@ import { classMap } from 'https://unpkg.com/lit-html@latest/directives/class-map
 export class Button extends LitElement {
     static get properties() {
         return {
+            click: {type: String},
             color: {type: String},
             customclass: {type: String},
             textclass: {type: String},
@@ -37,6 +38,11 @@ export class Button extends LitElement {
     //             </span>
     //             <span class="txt text-sm font-normal text-white hidden @xl:block">${this.text}</span>
     //         </button>
+
+    // handleClick(event) {
+    //     this.dispatchEvent(new CustomEvent("event-fired", { detail: 1 }));
+    //     console.log( event.detail);
+    // }
 
     render() {
         const classes = {
