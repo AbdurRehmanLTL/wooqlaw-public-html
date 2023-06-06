@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- AlpineJs Scripts -->
+    <!-- alpine/tooltip v1.0 --> 
+    <script defer src="./js/alpinetooltip.min.js"></script>
+    <!-- @alpinejs/ui v3.12 -->
+    <script defer src="./js/alpineui.min.js"></script>
+    <!-- @alpinejs/focus v3.12 -->
+    <script defer src="./js/alpinefocus.min.js"></script>
+    <!-- alpinejs v3.12 -->
+    <script defer src="./js/alpine.min.js"></script>
+
+    <meta name="description" content="wooqlaw Public Portal">
+    <title>wooqlaw Public Portal</title>
+</head>
+
+<body>
+    <div class="flex items-center justify-center w-full h-full bg-no-repeat md:h-screen" style="background-image: url(../public/images/bg-public.jpg);">
+        <div class="grid w-full max-w-5xl grid-cols-1 py-4 bg-left-bottom bg-no-repeat rounded-lg shadow md:grid-cols-2 bg-gray-50 md:py-0" style="background-image: url(../public/images/wooqlaw-svg-desktop.svg);">
+            <div class="grid justify-center grid-cols-1 gap-4 md:py-12">
+                <div class="flex-col items-center hidden gap-1 signup md:flex">
+                    <span class="text-2xl font-bold md:text-4xl">Sign up!</span>
+                    <span class="text-sm font-normal md:text-base">Kindly fill in your details</span>
+                </div>
+                <div class="flex flex-col items-center justify-between gap-4 md:gap-20">
+                    <div class="relative grid w-48 col-span-1 md:flex-row md:mt-12 md:w-full">
+                        <div class="absolute flex items-center justify-between w-48 h-32 md:w-full md:h-52 ">
+                            <svg class="w-48 h-32 md:w-full md:h-52" viewBox="0 0 330 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_d_182380_161297)">
+                                <path d="M164.715 137.947H164.502C152.363 137.947 142.497 128.045 142.497 115.884V67.9753C142.497 65.0465 140.117 62.6608 137.196 62.6608C134.275 62.6608 131.896 65.0465 131.896 67.9753V97.4867H115.182V67.9753C115.182 55.8042 125.057 45.9121 137.187 45.9121C149.316 45.9121 159.201 55.8139 159.201 67.9753V115.884C159.201 118.813 161.581 121.199 164.502 121.199H164.715C167.636 121.199 170.015 118.813 170.015 115.884V67.9753C170.015 55.8042 179.891 45.9121 192.02 45.9121H192.446C204.585 45.9121 214.451 55.8139 214.451 67.9753V114.39H197.737V67.9753C197.737 65.0465 195.357 62.6608 192.436 62.6608H192.011C189.09 62.6608 186.71 65.0465 186.71 67.9753V115.884C186.71 128.055 176.834 137.947 164.705 137.947H164.715Z" fill="url(#paint0_linear_182380_161297)"></path>
+                                <path d="M191.865 38.5319C199.723 38.5319 206.093 32.1448 206.093 24.2659C206.093 16.3871 199.723 10 191.865 10C184.007 10 177.637 16.3871 177.637 24.2659C177.637 32.1448 184.007 38.5319 191.865 38.5319Z" fill="#7413FF"></path>
+                                <path d="M136.761 38.5319C141.98 38.5319 146.211 34.2898 146.211 29.0568C146.211 23.8239 141.98 19.5818 136.761 19.5818C131.541 19.5818 127.311 23.8239 127.311 29.0568C127.311 34.2898 131.541 38.5319 136.761 38.5319Z" fill="#FF7244"></path>
+                                </g>
+                                <g filter="url(#filter1_d_182380_161297)">
+                                <path d="M308.789 150.062C309.982 148.917 311.428 148.344 313.118 148.344C314.808 148.344 316.254 148.917 317.447 150.062C318.64 151.208 319.237 152.596 319.237 154.219C319.237 155.842 318.64 157.23 317.447 158.376C316.254 159.521 314.808 160.094 313.118 160.094C311.428 160.094 309.982 159.521 308.789 158.376C307.596 157.23 307 155.842 307 154.219C307 152.596 307.596 151.208 308.789 150.062V150.062ZM313.118 159.608C314.646 159.608 315.965 159.087 317.05 158.037C318.134 156.987 318.676 155.711 318.676 154.219C318.676 152.726 318.134 151.451 317.05 150.4C315.965 149.35 314.646 148.83 313.118 148.83C311.591 148.83 310.253 149.35 309.169 150.4C308.084 151.451 307.533 152.726 307.533 154.219C307.533 155.711 308.075 156.987 309.169 158.037C310.253 159.087 311.573 159.608 313.118 159.608ZM315.604 153.16C315.604 154.002 315.251 154.592 314.537 154.93L315.839 157.221H314.42L313.317 155.191H312.404V157.221H311.103V151.216H313.218C313.95 151.216 314.528 151.407 314.962 151.78C315.396 152.153 315.604 152.613 315.604 153.169V153.16ZM312.404 152.379V154.054H313.218C313.552 154.054 313.823 153.976 314.013 153.828C314.203 153.672 314.302 153.473 314.302 153.23C314.302 152.665 313.941 152.388 313.218 152.388H312.404V152.379Z" fill="#6D28D9"></path>
+                                <path d="M102.93 195.174C99.0082 198.914 94.2093 200.788 88.5518 200.788C82.8943 200.788 78.1135 198.914 74.2183 195.174C70.3232 191.433 68.3711 186.843 68.3711 181.41C68.3711 175.978 70.3232 171.387 74.2183 167.647C78.1225 163.906 82.8943 162.032 88.5518 162.032C94.2093 162.032 98.9991 163.906 102.93 167.647C106.853 171.387 108.814 175.978 108.814 181.41C108.814 186.843 106.853 191.433 102.93 195.174ZM81.1772 188.674C83.1383 190.583 85.5965 191.538 88.5518 191.538C91.5071 191.538 93.9833 190.583 95.9716 188.674C97.9598 186.765 98.9539 184.343 98.9539 181.401C98.9539 178.46 97.9598 176.038 95.9716 174.129C93.9833 172.22 91.5071 171.265 88.5518 171.265C85.5965 171.265 83.1383 172.22 81.1772 174.129C79.2161 176.038 78.231 178.46 78.231 181.401C78.231 184.343 79.207 186.765 81.1772 188.674Z" fill="#6D28D9"></path>
+                                <path d="M144.819 195.174C140.897 198.914 136.107 200.788 130.44 200.788C124.774 200.788 120.002 198.914 116.107 195.174C112.212 191.433 110.26 186.843 110.26 181.41C110.26 175.978 112.212 171.387 116.107 167.647C120.002 163.906 124.783 162.032 130.44 162.032C136.098 162.032 140.888 163.906 144.819 167.647C148.741 171.387 150.703 175.978 150.703 181.41C150.703 186.843 148.741 191.433 144.819 195.174ZM123.066 188.674C125.027 190.583 127.485 191.538 130.44 191.538C133.396 191.538 135.872 190.583 137.86 188.674C139.848 186.765 140.843 184.343 140.843 181.401C140.843 178.46 139.848 176.038 137.86 174.129C135.872 172.22 133.396 171.265 130.44 171.265C127.485 171.265 125.027 172.22 123.066 174.129C121.105 176.038 120.12 178.46 120.12 181.401C120.12 184.343 121.105 186.765 123.066 188.674Z" fill="#6D28D9"></path>
+                                <path d="M195.889 199.764V147.947H206.327V199.764H195.889Z" fill="#6D28D9"></path>
+                                <path d="M183.317 163.056V164.687C180.254 162.926 176.792 162.032 172.915 162.032C167.258 162.032 162.477 163.906 158.582 167.647C154.686 171.387 152.734 175.978 152.734 181.41C152.734 186.843 154.686 191.433 158.582 195.174C162.477 198.914 167.258 200.788 172.915 200.788C176.792 200.788 180.254 199.886 183.317 198.133V214.344H193.177V163.056H183.317V163.056ZM180.335 188.682C178.347 190.592 175.87 191.546 172.915 191.546C169.96 191.546 167.502 190.592 165.54 188.682C163.579 186.773 162.594 184.352 162.594 181.41C162.594 178.468 163.579 176.047 165.54 174.138C167.502 172.229 169.96 171.274 172.915 171.274C175.87 171.274 178.347 172.229 180.335 174.138C182.323 176.047 183.317 178.468 183.317 181.41C183.317 184.352 182.323 186.773 180.335 188.682Z" fill="#6D28D9"></path>
+                                <path d="M238.889 162.848V164.696C235.826 162.934 232.364 162.041 228.487 162.041C222.83 162.041 218.049 163.915 214.154 167.655C210.259 171.396 208.307 175.986 208.307 181.419C208.307 186.851 210.259 191.442 214.154 195.182C218.049 198.923 222.83 200.797 228.487 200.797C232.364 200.797 235.826 199.895 238.889 198.142V199.99H248.93V162.848H238.889V162.848ZM235.907 188.691C233.919 190.6 231.443 191.555 228.487 191.555C225.532 191.555 223.074 190.6 221.113 188.691C219.152 186.782 218.167 184.361 218.167 181.419C218.167 178.477 219.152 176.056 221.113 174.147C223.074 172.237 225.532 171.283 228.487 171.283C231.443 171.283 233.919 172.237 235.907 174.147C237.895 176.056 238.889 178.477 238.889 181.419C238.889 184.361 237.895 186.782 235.907 188.691Z" fill="#6D28D9"></path>
+                                <path d="M54.8589 185.506C54.8589 188.578 52.2562 191.086 49.0569 191.086C45.8576 191.086 43.2548 188.587 43.2548 185.506V163.056H32.6358V185.515C32.6358 188.587 30.033 191.095 26.8247 191.095C23.6164 191.095 21.0226 188.596 21.0226 185.515V163.056H10.3945V185.515C10.3945 194.21 17.7601 201.292 26.8247 201.292C31.1175 201.292 35.0126 199.695 37.9408 197.1C40.8689 199.695 44.7641 201.292 49.0569 201.292C58.1124 201.292 65.487 194.219 65.487 185.515V163.056H54.868V185.515L54.8589 185.506Z" fill="#6D28D9"></path>
+                                <path d="M296.701 163.056V185.515C296.701 188.587 294.099 191.095 290.899 191.095C287.7 191.095 285.097 188.596 285.097 185.515V163.056H274.478V185.515C274.478 188.587 271.876 191.095 268.667 191.095C265.459 191.095 262.865 188.596 262.865 185.515V163.056H252.246V185.515C252.246 194.21 259.612 201.292 268.676 201.292C272.969 201.292 276.864 199.695 279.792 197.1C282.72 199.695 286.616 201.292 290.908 201.292C299.964 201.292 307.339 194.219 307.339 185.515V163.056H296.72H296.701Z" fill="#6D28D9"></path>
+                                </g>
+                                <defs>
+                                <filter id="filter0_d_182380_161297" x="105.182" y="0" width="119.27" height="147.947" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+                                <feOffset></feOffset>
+                                <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0.403922 0 0 0 0 0.227451 0 0 0 0 0.717647 0 0 0 0.35 0"></feColorMatrix>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_182380_161297"></feBlend>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_182380_161297" result="shape"></feBlend>
+                                </filter>
+                                <filter id="filter1_d_182380_161297" x="0.394531" y="137.947" width="328.842" height="86.3964" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+                                <feOffset></feOffset>
+                                <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0.403922 0 0 0 0 0.227451 0 0 0 0 0.717647 0 0 0 0.35 0"></feColorMatrix>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_182380_161297"></feBlend>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_182380_161297" result="shape"></feBlend>
+                                </filter>
+                                <linearGradient id="paint0_linear_182380_161297" x1="114.969" y1="95.0815" x2="216.138" y2="86.2541" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FDD62C"></stop>
+                                <stop offset="0.27" stop-color="#FF7244"></stop>
+                                <stop offset="0.63" stop-color="#CC38FF"></stop>
+                                <stop offset="1" stop-color="#7413FF"></stop>
+                                </linearGradient>
+                                </defs>
+                                </svg>         
+                        </div>
+                    </div>
+                    <div class="flex-col justify-center hidden text-sm font-normal text-center md:flex md:text-base w-72 md:w-96 ">
+                        <span>By clicking the button above, you agree to our <br>
+                            <a class="text-violet-700" href="#">Terms of Service</a>
+                            and
+                            <a class="text-violet-700" href="#"> Privacy Policy</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center gap-1 mt-32 signup md:hidden md:mt-0">
+                    <span class="text-2xl font-bold md:text-4xl">Sign up!</span>
+                    <span class="text-sm font-normal md:text-base">Kindly fill in your details</span>
+                </div>
+            </div>
+            <div class="grid justify-center gap-4 mt-4 md:mt-0 md:py-8">
+                <div class="flex flex-col justify-center gap-6">
+                    <div class="full-name flex flex-col gap-1.5">
+                        <label for="full-name" class="block mb-2 text-sm font-normal">Full Name</label>
+                        <input type="text" id="full-name" class="flex border border-gray-300 text-gray-900 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 w-72 md:w-96 p-2.5 h-10" placeholder="" required="">
+                    </div> 
+                    <div class="email-address flex flex-col gap-1.5">
+                       <label for="email-address" class="block mb-2 text-sm font-normal">Email Address</label>
+                    <input type="text" id="email-address" class="flex border border-gray-300 text-gray-900 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 w-72 md:w-96 p-2.5 h-10" placeholder="" required="">
+                    </div>
+                    <div class="mobile-num flex flex-col gap-1.5">
+                        <label for="mobile-number" class="block mb-2 text-sm font-normal">Mobile Number
+                            <span class="text-red-600">*</span>
+                        </label>
+                        <input type="text" id="mobile-number" class="border border-gray-300 text-gray-900 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-72 md:w-96 p-2.5 h-10" placeholder="" required="">
+                    </div>
+                    <div class="city flex flex-col gap-1.5">
+                        <label for="city" class="block mb-2 text-sm font-normal">City
+                            <span class="text-red-600">*</span>
+                        </label>                    
+                        <select id="city" class="flex flex-col items-start border border-gray-300 text-gray-900 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 w-72 md:w-96 p-2.5 h-10" placeholder="" required="">
+                            <option selected="" class="flex items-center text-xs font-normal text-gray-500 md:text-sm">Select
+                                City
+                            </option>
+                            <option value="isl">Islamabad</option>
+                            <option value="lhr">Lahore</option>
+                            <option value="khi">Karachi</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col gap-1.5 relative" x-data>
+                        <label for="password" class="block mb-2 text-sm font-normal">Password
+                            <span class="text-red-600">*</span>
+                        </label>
+                        <input type="password" id="password" class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-72 md:w-96 p-2.5 h-10 bg-white" required=""
+                            x-tooltip="{
+                                content: () => $refs.template.innerHTML,
+                                allowHTML: true,
+                                appendTo: $root,
+                                interactive: true
+                            }">
+                        <template x-ref="template" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72">
+                            <div class="p-3 space-y-2">
+                                <h3 class="font-semibold text-white">Must have at least 6 characters</h3>
+                                <div class="grid grid-cols-4 gap-2">
+                                    <div class="h-1 bg-orange-300 dark:bg-orange-400"></div>
+                                    <div class="h-1 bg-orange-300 dark:bg-orange-400"></div>
+                                    <div class="h-1 bg-gray-200 dark:bg-gray-600"></div>
+                                    <div class="h-1 bg-gray-200 dark:bg-gray-600"></div>
+                                </div>
+                                <p>It’s better to have:</p>
+                                <ul>
+                                    <li class="flex items-center mb-1">
+                                        <svg class="w-4 h-4 mr-2 text-green-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        Upper &amp; lower case letters
+                                    </li>
+                                    <li class="flex items-center mb-1">
+                                        <svg class="w-4 h-4 mr-2 text-gray-300" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                        A symbol (#$&amp;)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-4 h-4 mr-2 text-gray-300" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                        A longer password (min. 12 chars.)
+                                    </li>
+                                </ul>
+                            </div>
+                        </template>
+                    </div>                  
+                        <div class="email-address flex flex-col gap-1.5">
+                            <label for="confirm-password" class="block mb-2 text-sm font-normal">Confirm Password 
+                                <span class="text-red-600">
+                                    *
+                                </span>
+                            </label>
+                             <input type="text" id="confirm-password" class="border border-gray-300 text-gray-900 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-72 md:w-96 p-2.5 h-10" placeholder="" required="">
+                           </div>
+                    <button x-data="" x-on:click="location.href='verification.html';" class="flex items-center justify-center h-10 text-white rounded-lg bg-violet-700 w-72 md:w-96">
+                        <a class="flex items-center gap-2 text-xs font-normal md:text-sm" href="#">Continue
+                            <span>
+                                <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.3051 0.681488L15.7861 5.16245C15.8825 5.25892 15.9323 5.3865 15.9323 5.48608C15.9323 5.58565 15.8837 5.74087 15.7864 5.83802L11.3055 10.319C11.111 10.5135 10.7958 10.5135 10.6016 10.319C10.4074 10.1245 10.4071 9.80927 10.6016 9.6151L14.233 5.98365H0.497885C0.222679 5.98365 0 5.76097 0 5.51377C0 5.23857 0.222679 5.01589 0.497885 5.01589H14.2333L10.6018 1.38444C10.4073 1.18995 10.4073 0.87473 10.6018 0.680555C10.7963 0.48638 11.1122 0.486691 11.3051 0.681488Z" fill="white"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </button>
+                </div>
+                <div class="flex flex-col justify-center text-sm font-normal text-center md:hidden md:text-base w-72 md:w-96">
+                    <span>By clicking the button above, you agree to our <br>
+                        <a class="text-violet-700" href="#">Terms of Service</a>
+                        and
+                        <a class="text-violet-700" href="#"> Privacy Policy</a>
+                    </span>
+                </div>
+                <div class="flex flex-col items-center justify-center gap-4">
+                    <a x-data="" x-on:click="location.href='wooqlaw-signup-2.html';" class="flex text-sm font-medium text-violet-700" href="#">Back to Home</a>
+                    <div class="flex justify-center gap-1">
+                        <span class="text-sm font-medium md:text-base">
+                            Have an account?
+                        </span>
+                        <a class="text-sm font-medium md:text-base text-violet-700" href="#">Sign in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
