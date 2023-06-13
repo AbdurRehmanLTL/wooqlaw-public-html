@@ -20,7 +20,8 @@ export class Button extends LitElement {
         super();
         this.color = "gray";
         this.text = "button";
-        this.customclass = "flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-center rounded-lg focus:ring-4 focus:outline-none"
+        this.customclass = "flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-center rounded-lg focus:ring-4 focus:outline-none";
+        
     }
 
     // returnStringSvgLeft() {
@@ -48,10 +49,12 @@ export class Button extends LitElement {
         const classes = {
             "bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300": this.color == "gray",
             "bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 text-white": this.color == "primary",
+            "flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-center rounded-lg focus:ring-4 focus:outline-none": this.customclass = !null,
+            "w-full block": this.full == true
         };
 
         return html`
-            <button type="button" class="${classMap(classes) && this.customclass}" aria-label="${this.text}">
+            <button type="button" class="${classMap(classes)}" aria-label="${this.text}">
                 ${
                     unsafeHTML(this.svgleft) ?? nothing
                 }
