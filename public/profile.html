@@ -2043,77 +2043,162 @@
         </section>
         <section class="container faqs">
             <div class="w-full p-2 bg-white shadow md:p-5 rounded-xl">
-            <h2 class="text-lg font-medium text-gray-600">
-                FAQs
-            </h2>
-            <div id="faqs" x-data>
-                <div x-disclosure>
-                    <h2>
-                        <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 border-b border-gray-200" x-disclosure:button>
-                        <span>Can I use FlowBite in open-source projects?</span>
-                        <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </button>
+                <div class="flex items-center justify-between">
+                    <h2 class="text-lg font-medium text-gray-600">
+                        FAQs
                     </h2>
-                    <div x-disclosure:panel>
-                        <div class="py-5 border-b border-gray-200">
-                            <p class="mb-2 text-base font-normal text-gray-600">Generally, it is accepted to use FlowBite in open-source projects, as long as it is not a UI library, a theme, a template, a page-builder that would be considered as an alternative to FlowBite itself. With that being said, feel free to use this design kit for your open-source projects.</p>
-                            <p class="text-base font-normal text-gray-600">Find out more information by <a href="/docs/getting-started/introduction/" class="text-base font-medium text-blue-600 hover:underline">reading the license.</a></p>
+                    <button class="flex items-center justify-center px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 focus:outline-none">
+                        <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"></path></svg>
+                        Create New
+                    </button>
+                </div>
+                <div id="faqs" x-data>
+                    <!-- No Item to Display-->
+                    <div class="flex flex-col items-center justify-center h-[400px]">
+                        <svg width="264" height="168" viewBox="0 0 264 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="132" cy="122" rx="132" ry="46" fill="url(#paint0_radial_60_10557)"></ellipse>
+                            <path d="M199.5 117V116L131 143.5L100 132L93 146.5L39 124.5L93.5 148L101.5 134L131 146.5L199.5 117Z" fill="#EEEEEE"></path>
+                            <path d="M132.799 39.8771C132.799 39.8771 176.494 50.4428 199.244 56.7481L132.799 83.0772C132.527 82.8119 132.799 39.8771 132.799 39.8771Z" fill="url(#paint1_linear_60_10557)"></path>
+                            <path d="M131.249 143.915V82.3103C131.249 82.3103 175.898 65.2689 199.5 56.7481V116.052L131.249 143.915Z" fill="url(#paint2_linear_60_10557)"></path>
+                            <path d="M72.4558 59.0487L132.783 39.8771V83.8441L72.4558 59.0487Z" fill="url(#paint3_linear_60_10557)"></path>
+                            <path d="M81.1469 61.8606L131.249 82.3103V143.915L81.1469 124.744V61.8606Z" fill="url(#paint4_linear_60_10557)"></path>
+                            <path d="M83.6584 136.813L31.2559 115.597L39.6914 125.31L93.1164 147.038L83.6584 136.813Z" fill="url(#paint5_linear_60_10557)"></path>
+                            <path d="M31 115.597L72.1552 43L127.625 59.6154L83.6582 136.813L31 115.597Z" fill="url(#paint6_linear_60_10557)"></path>
+                            <path d="M135.55 71.1185L127.625 59.8711L83.6582 136.813L93.1162 147.038L135.55 71.1185Z" fill="url(#paint7_linear_60_10557)"></path>
+                            <path d="M115 138L129.5 81.5L101 132.5L115 138Z" fill="url(#paint8_linear_60_10557)"></path>
+                            <path d="M138.566 10.4768L137.512 42.781H129.843L128.757 10.4768H138.566ZM128.501 52.7822C128.501 51.4189 128.97 50.2899 129.907 49.3952C130.865 48.4793 132.122 48.0213 133.677 48.0213C135.254 48.0213 136.51 48.4793 137.448 49.3952C138.385 50.2899 138.854 51.4189 138.854 52.7822C138.854 54.1029 138.385 55.2213 137.448 56.1373C136.51 57.0533 135.254 57.5112 133.677 57.5112C132.122 57.5112 130.865 57.0533 129.907 56.1373C128.97 55.2213 128.501 54.1029 128.501 52.7822Z" fill="#B4B4B4"></path>
+                            <defs>
+                            <radialGradient id="paint0_radial_60_10557" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(139.816 122) rotate(180) scale(127.816 38.4873)">
+                            <stop stop-color="#EAEAEA"></stop>
+                            <stop offset="1" stop-color="white"></stop>
+                            </radialGradient>
+                            <linearGradient id="paint1_linear_60_10557" x1="197.199" y1="67.7399" x2="140.8" y2="86.0484" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FBFBFB"></stop>
+                            <stop offset="1" stop-color="#ECECEC"></stop>
+                            </linearGradient>
+                            <linearGradient id="paint2_linear_60_10557" x1="133.805" y1="110.94" x2="199.756" y2="88.9565" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FBFBFB"></stop>
+                            <stop offset="1" stop-color="#ECECEC"></stop>
+                            </linearGradient>
+                            <linearGradient id="paint3_linear_60_10557" x1="132.783" y1="64.1612" x2="97.3312" y2="67.2712" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FBFBFB"></stop>
+                            <stop offset="1" stop-color="#ECECEC"></stop>
+                            </linearGradient>
+                            <linearGradient id="paint4_linear_60_10557" x1="83.0234" y1="112.874" x2="133.411" y2="99.7763" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FBFBFB"></stop>
+                            <stop offset="1" stop-color="#ECECEC"></stop>
+                            </linearGradient>
+                            <linearGradient id="paint5_linear_60_10557" x1="33.5727" y1="135.144" x2="72.6058" y2="102.45" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FBFBFB"></stop>
+                            <stop offset="1" stop-color="#ECECEC"></stop>
+                            </linearGradient>
+                            <linearGradient id="paint6_linear_60_10557" x1="107.687" y1="66.5172" x2="41.2732" y2="128.193" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FBFBFB"></stop>
+                            <stop offset="1" stop-color="#ECECEC"></stop>
+                            </linearGradient>
+                            <linearGradient id="paint7_linear_60_10557" x1="85.6017" y1="114.063" x2="137.953" y2="100.796" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FBFBFB"></stop>
+                            <stop offset="1" stop-color="#ECECEC"></stop>
+                            </linearGradient>
+                            <linearGradient id="paint8_linear_60_10557" x1="99.3457" y1="118.226" x2="128.656" y2="111.756" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#F1F1F1"></stop>
+                            <stop offset="1" stop-color="#A6A6A6"></stop>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                        <p class="text-sm font-medium leading-tight text-gray-500">No Item to display</p>
+                    </div>
+                    <div x-disclosure>
+                        <h2 class="flex items-center justify-between gap-2">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 border-b border-gray-200" x-disclosure:button>
+                            <span>Can I use FlowBite in open-source projects?</span>
+                            <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                            <div class="flex items-center gap-1">
+                                <a href="#" class="inline-flex items-center justify-center p-2 bg-red-100 rounded-lg w-9 h-9 hover:bg-red-200">
+                                    <svg class="w-5 h-5 shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7471 3.00003H18.2557C18.5442 2.99984 18.7956 2.99968 19.033 3.03758C19.9707 3.18732 20.7822 3.7722 21.2207 4.61445C21.3318 4.82764 21.4111 5.06615 21.5022 5.33992L21.651 5.78646C21.6762 5.86204 21.6834 5.88344 21.6895 5.90029C21.923 6.54578 22.5283 6.98213 23.2145 6.99952C23.2326 6.99997 23.2547 7.00005 23.3347 7.00005H27.3347C27.887 7.00005 28.3347 7.44777 28.3347 8.00005C28.3347 8.55234 27.887 9.00005 27.3347 9.00005H4.66797C4.11568 9.00005 3.66797 8.55234 3.66797 8.00005C3.66797 7.44777 4.11568 7.00005 4.66797 7.00005H8.66808C8.74814 7.00005 8.77024 6.99997 8.78828 6.99952C9.47448 6.98213 10.0798 6.54581 10.3133 5.90032C10.3195 5.88335 10.3265 5.86241 10.3519 5.78646L10.5007 5.33995C10.5917 5.06619 10.6711 4.82764 10.7821 4.61445C11.2207 3.7722 12.0321 3.18732 12.9699 3.03758C13.2072 2.99968 13.4586 2.99984 13.7471 3.00003ZM12.0122 7.00005C12.0809 6.86535 12.1417 6.72539 12.1941 6.58064C12.21 6.53669 12.2256 6.4899 12.2456 6.42978L12.3787 6.03057C12.5002 5.66589 12.5282 5.5915 12.556 5.53819C12.7022 5.25743 12.9727 5.06248 13.2852 5.01256C13.3446 5.00308 13.424 5.00005 13.8084 5.00005H18.1944C18.5788 5.00005 18.6582 5.00308 18.7176 5.01256C19.0302 5.06248 19.3006 5.25743 19.4468 5.53818C19.4746 5.59151 19.5026 5.66587 19.6242 6.03057L19.7572 6.42954L19.8088 6.58067C19.8611 6.72541 19.922 6.86536 19.9907 7.00005H12.0122Z" fill="#E02424"></path>
+                                        <path d="M7.88809 11.2669C7.85135 10.7158 7.37485 10.2989 6.82378 10.3356C6.27272 10.3723 5.85578 10.8488 5.89252 11.3999L6.51045 20.6689C6.62444 22.3792 6.71652 23.7607 6.93249 24.8448C7.15702 25.9719 7.53891 26.9133 8.32771 27.6513C9.1165 28.3892 10.0812 28.7077 11.2208 28.8567C12.3168 29.0001 13.7014 29.0001 15.4154 29.0001H16.5873C18.3014 29.0001 19.686 29.0001 20.7821 28.8567C21.9216 28.7077 22.8863 28.3892 23.6751 27.6513C24.4639 26.9133 24.8458 25.9719 25.0703 24.8448C25.2863 23.7607 25.3784 22.3792 25.4924 20.6689L26.1103 11.3999C26.147 10.8488 25.7301 10.3723 25.179 10.3356C24.628 10.2989 24.1515 10.7158 24.1147 11.2669L23.5015 20.4657C23.3817 22.2628 23.2963 23.5133 23.1089 24.4541C22.9271 25.3667 22.6733 25.8497 22.3088 26.1908C21.9442 26.5318 21.4453 26.7529 20.5227 26.8736C19.5715 26.998 18.3181 27.0001 16.517 27.0001H15.4858C13.6847 27.0001 12.4314 26.998 11.4802 26.8736C10.5575 26.7529 10.0586 26.5318 9.69407 26.1908C9.32952 25.8497 9.07575 25.3667 8.89395 24.4541C8.70652 23.5132 8.62115 22.2628 8.50134 20.4657L7.88809 11.2669Z" fill="#E02424"></path>
+                                        <path d="M12.5686 13.6717C13.1181 13.6167 13.6082 14.0177 13.6631 14.5672L14.3298 21.2339C14.3848 21.7834 13.9838 22.2735 13.4343 22.3284C12.8847 22.3834 12.3947 21.9824 12.3397 21.4329L11.6731 14.7662C11.6181 14.2167 12.019 13.7266 12.5686 13.6717Z" fill="#E02424"></path>
+                                        <path d="M19.4343 13.6717C19.9838 13.7266 20.3847 14.2167 20.3298 14.7662L19.6631 21.4329C19.6082 21.9824 19.1181 22.3834 18.5686 22.3284C18.019 22.2735 17.6181 21.7834 17.6731 21.2339L18.3397 14.5672C18.3947 14.0177 18.8847 13.6167 19.4343 13.6717Z" fill="#E02424"></path>
+                                    </svg>                                                                                                                                                 
+                                </a>
+                                <a href="#" class="inline-flex items-center justify-center p-2 bg-gray-100 rounded-lg w-9 h-9 hover:bg-gray-200">
+                                    <svg class="w-5 h-5 shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9248 1.66699L18.0013 1.66699C18.5536 1.66699 19.0013 2.11471 19.0013 2.66699C19.0013 3.21928 18.5536 3.66699 18.0013 3.66699H16.0013C12.8303 3.66699 10.5527 3.66912 8.8194 3.90215C7.11487 4.13132 6.08724 4.56718 5.3277 5.32672C4.56816 6.08626 4.1323 7.11389 3.90313 8.81843C3.67009 10.5517 3.66797 12.8294 3.66797 16.0003C3.66797 19.1713 3.67009 21.4489 3.90313 23.1822C4.1323 24.8868 4.56816 25.9144 5.3277 26.6739C6.08724 27.4335 7.11487 27.8693 8.8194 28.0985C10.5527 28.3315 12.8303 28.3337 16.0013 28.3337C19.1723 28.3337 21.4499 28.3315 23.1832 28.0985C24.8877 27.8693 25.9154 27.4335 26.6749 26.6739C27.4344 25.9144 27.8703 24.8868 28.0995 23.1822C28.3325 21.4489 28.3346 19.1713 28.3346 16.0003V14.0003C28.3346 13.448 28.7824 13.0003 29.3346 13.0003C29.8869 13.0003 30.3346 13.448 30.3346 14.0003V16.0768C30.3347 19.1547 30.3347 21.5667 30.0816 23.4487C29.8227 25.375 29.2822 26.8951 28.0891 28.0881C26.896 29.2812 25.376 29.8217 23.4497 30.0807C21.5677 30.3337 19.1557 30.3337 16.0778 30.3337H15.9248C12.8469 30.3337 10.4349 30.3337 8.55291 30.0807C6.6266 29.8217 5.10656 29.2812 3.91348 28.0881C2.7204 26.8951 2.17995 25.375 1.92096 23.4487C1.66794 21.5667 1.66795 19.1547 1.66797 16.0768V15.9238C1.66795 12.846 1.66794 10.4339 1.92096 8.55193C2.17995 6.62562 2.7204 5.10559 3.91348 3.91251C5.10656 2.71943 6.6266 2.17897 8.55291 1.91999C10.4349 1.66696 12.8469 1.66698 15.9248 1.66699ZM22.362 3.03488C24.1859 1.21103 27.1429 1.21103 28.9668 3.03488C30.7906 4.85873 30.7906 7.81577 28.9668 9.63962L20.1026 18.5038C19.6076 18.9989 19.2975 19.309 18.9514 19.5789C18.5438 19.8968 18.1028 20.1694 17.6362 20.3918C17.24 20.5806 16.8239 20.7193 16.1597 20.9406L12.287 22.2315C11.572 22.4699 10.7837 22.2838 10.2508 21.7508C9.71786 21.2179 9.53177 20.4296 9.7701 19.7146L11.061 15.842C11.2824 15.1777 11.421 14.7616 11.6098 14.3655C11.8322 13.8988 12.1048 13.4578 12.4227 13.0502C12.6926 12.7041 13.0028 12.394 13.4979 11.899L22.362 3.03488ZM27.5525 4.44909C26.5097 3.40629 24.819 3.40629 23.7762 4.44909L23.2741 4.95125C23.3043 5.07907 23.3467 5.23135 23.4056 5.40121C23.5967 5.95195 23.9583 6.67728 24.6413 7.36032C25.3244 8.04335 26.0497 8.40494 26.6004 8.59602C26.7703 8.65495 26.9226 8.69729 27.0504 8.72756L27.5525 8.2254C28.5953 7.1826 28.5953 5.49189 27.5525 4.44909ZM25.4748 10.3031C24.7869 10.0073 23.9855 9.53294 23.2271 8.77453C22.4687 8.01612 21.9944 7.21475 21.6985 6.5268L14.958 13.2673C14.4026 13.8227 14.1848 14.0429 13.9997 14.2803C13.7711 14.5733 13.5752 14.8904 13.4153 15.2259C13.2858 15.4976 13.1862 15.7909 12.9378 16.536L12.362 18.2636L13.7381 19.6396L15.4656 19.0638C16.2107 18.8154 16.504 18.7158 16.7757 18.5863C17.1112 18.4265 17.4283 18.2305 17.7214 18.0019C17.9587 17.8168 18.1789 17.599 18.7343 17.0436L25.4748 10.3031Z" fill="#6B7280"></path>
+                                    </svg>                                                
+                                </a>
+                            </div>
+                            
+                        </h2>
+                        <div x-disclosure:panel>
+                            <div class="py-5 border-b border-gray-200">
+                                <p class="mb-2 text-base font-normal text-gray-600">Generally, it is accepted to use FlowBite in open-source projects, as long as it is not a UI library, a theme, a template, a page-builder that would be considered as an alternative to FlowBite itself. With that being said, feel free to use this design kit for your open-source projects.</p>
+                                <p class="text-base font-normal text-gray-600">Find out more information by <a href="/docs/getting-started/introduction/" class="text-base font-medium text-blue-600 hover:underline">reading the license.</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-disclosure>
+                        <h2 class="flex items-center justify-between gap-2">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 border-b border-gray-200" x-disclosure:button>
+                            <span>Can I use FlowBite in open-source projects?</span>
+                            <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                            <div class="flex items-center gap-1">
+                                <a href="#" class="inline-flex items-center justify-center p-2 bg-red-100 rounded-lg w-9 h-9 hover:bg-red-200">
+                                    <svg class="w-5 h-5 shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7471 3.00003H18.2557C18.5442 2.99984 18.7956 2.99968 19.033 3.03758C19.9707 3.18732 20.7822 3.7722 21.2207 4.61445C21.3318 4.82764 21.4111 5.06615 21.5022 5.33992L21.651 5.78646C21.6762 5.86204 21.6834 5.88344 21.6895 5.90029C21.923 6.54578 22.5283 6.98213 23.2145 6.99952C23.2326 6.99997 23.2547 7.00005 23.3347 7.00005H27.3347C27.887 7.00005 28.3347 7.44777 28.3347 8.00005C28.3347 8.55234 27.887 9.00005 27.3347 9.00005H4.66797C4.11568 9.00005 3.66797 8.55234 3.66797 8.00005C3.66797 7.44777 4.11568 7.00005 4.66797 7.00005H8.66808C8.74814 7.00005 8.77024 6.99997 8.78828 6.99952C9.47448 6.98213 10.0798 6.54581 10.3133 5.90032C10.3195 5.88335 10.3265 5.86241 10.3519 5.78646L10.5007 5.33995C10.5917 5.06619 10.6711 4.82764 10.7821 4.61445C11.2207 3.7722 12.0321 3.18732 12.9699 3.03758C13.2072 2.99968 13.4586 2.99984 13.7471 3.00003ZM12.0122 7.00005C12.0809 6.86535 12.1417 6.72539 12.1941 6.58064C12.21 6.53669 12.2256 6.4899 12.2456 6.42978L12.3787 6.03057C12.5002 5.66589 12.5282 5.5915 12.556 5.53819C12.7022 5.25743 12.9727 5.06248 13.2852 5.01256C13.3446 5.00308 13.424 5.00005 13.8084 5.00005H18.1944C18.5788 5.00005 18.6582 5.00308 18.7176 5.01256C19.0302 5.06248 19.3006 5.25743 19.4468 5.53818C19.4746 5.59151 19.5026 5.66587 19.6242 6.03057L19.7572 6.42954L19.8088 6.58067C19.8611 6.72541 19.922 6.86536 19.9907 7.00005H12.0122Z" fill="#E02424"></path>
+                                        <path d="M7.88809 11.2669C7.85135 10.7158 7.37485 10.2989 6.82378 10.3356C6.27272 10.3723 5.85578 10.8488 5.89252 11.3999L6.51045 20.6689C6.62444 22.3792 6.71652 23.7607 6.93249 24.8448C7.15702 25.9719 7.53891 26.9133 8.32771 27.6513C9.1165 28.3892 10.0812 28.7077 11.2208 28.8567C12.3168 29.0001 13.7014 29.0001 15.4154 29.0001H16.5873C18.3014 29.0001 19.686 29.0001 20.7821 28.8567C21.9216 28.7077 22.8863 28.3892 23.6751 27.6513C24.4639 26.9133 24.8458 25.9719 25.0703 24.8448C25.2863 23.7607 25.3784 22.3792 25.4924 20.6689L26.1103 11.3999C26.147 10.8488 25.7301 10.3723 25.179 10.3356C24.628 10.2989 24.1515 10.7158 24.1147 11.2669L23.5015 20.4657C23.3817 22.2628 23.2963 23.5133 23.1089 24.4541C22.9271 25.3667 22.6733 25.8497 22.3088 26.1908C21.9442 26.5318 21.4453 26.7529 20.5227 26.8736C19.5715 26.998 18.3181 27.0001 16.517 27.0001H15.4858C13.6847 27.0001 12.4314 26.998 11.4802 26.8736C10.5575 26.7529 10.0586 26.5318 9.69407 26.1908C9.32952 25.8497 9.07575 25.3667 8.89395 24.4541C8.70652 23.5132 8.62115 22.2628 8.50134 20.4657L7.88809 11.2669Z" fill="#E02424"></path>
+                                        <path d="M12.5686 13.6717C13.1181 13.6167 13.6082 14.0177 13.6631 14.5672L14.3298 21.2339C14.3848 21.7834 13.9838 22.2735 13.4343 22.3284C12.8847 22.3834 12.3947 21.9824 12.3397 21.4329L11.6731 14.7662C11.6181 14.2167 12.019 13.7266 12.5686 13.6717Z" fill="#E02424"></path>
+                                        <path d="M19.4343 13.6717C19.9838 13.7266 20.3847 14.2167 20.3298 14.7662L19.6631 21.4329C19.6082 21.9824 19.1181 22.3834 18.5686 22.3284C18.019 22.2735 17.6181 21.7834 17.6731 21.2339L18.3397 14.5672C18.3947 14.0177 18.8847 13.6167 19.4343 13.6717Z" fill="#E02424"></path>
+                                    </svg>                                                                                                                                                 
+                                </a>
+                                <a href="#" class="inline-flex items-center justify-center p-2 bg-gray-100 rounded-lg w-9 h-9 hover:bg-gray-200">
+                                    <svg class="w-5 h-5 shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9248 1.66699L18.0013 1.66699C18.5536 1.66699 19.0013 2.11471 19.0013 2.66699C19.0013 3.21928 18.5536 3.66699 18.0013 3.66699H16.0013C12.8303 3.66699 10.5527 3.66912 8.8194 3.90215C7.11487 4.13132 6.08724 4.56718 5.3277 5.32672C4.56816 6.08626 4.1323 7.11389 3.90313 8.81843C3.67009 10.5517 3.66797 12.8294 3.66797 16.0003C3.66797 19.1713 3.67009 21.4489 3.90313 23.1822C4.1323 24.8868 4.56816 25.9144 5.3277 26.6739C6.08724 27.4335 7.11487 27.8693 8.8194 28.0985C10.5527 28.3315 12.8303 28.3337 16.0013 28.3337C19.1723 28.3337 21.4499 28.3315 23.1832 28.0985C24.8877 27.8693 25.9154 27.4335 26.6749 26.6739C27.4344 25.9144 27.8703 24.8868 28.0995 23.1822C28.3325 21.4489 28.3346 19.1713 28.3346 16.0003V14.0003C28.3346 13.448 28.7824 13.0003 29.3346 13.0003C29.8869 13.0003 30.3346 13.448 30.3346 14.0003V16.0768C30.3347 19.1547 30.3347 21.5667 30.0816 23.4487C29.8227 25.375 29.2822 26.8951 28.0891 28.0881C26.896 29.2812 25.376 29.8217 23.4497 30.0807C21.5677 30.3337 19.1557 30.3337 16.0778 30.3337H15.9248C12.8469 30.3337 10.4349 30.3337 8.55291 30.0807C6.6266 29.8217 5.10656 29.2812 3.91348 28.0881C2.7204 26.8951 2.17995 25.375 1.92096 23.4487C1.66794 21.5667 1.66795 19.1547 1.66797 16.0768V15.9238C1.66795 12.846 1.66794 10.4339 1.92096 8.55193C2.17995 6.62562 2.7204 5.10559 3.91348 3.91251C5.10656 2.71943 6.6266 2.17897 8.55291 1.91999C10.4349 1.66696 12.8469 1.66698 15.9248 1.66699ZM22.362 3.03488C24.1859 1.21103 27.1429 1.21103 28.9668 3.03488C30.7906 4.85873 30.7906 7.81577 28.9668 9.63962L20.1026 18.5038C19.6076 18.9989 19.2975 19.309 18.9514 19.5789C18.5438 19.8968 18.1028 20.1694 17.6362 20.3918C17.24 20.5806 16.8239 20.7193 16.1597 20.9406L12.287 22.2315C11.572 22.4699 10.7837 22.2838 10.2508 21.7508C9.71786 21.2179 9.53177 20.4296 9.7701 19.7146L11.061 15.842C11.2824 15.1777 11.421 14.7616 11.6098 14.3655C11.8322 13.8988 12.1048 13.4578 12.4227 13.0502C12.6926 12.7041 13.0028 12.394 13.4979 11.899L22.362 3.03488ZM27.5525 4.44909C26.5097 3.40629 24.819 3.40629 23.7762 4.44909L23.2741 4.95125C23.3043 5.07907 23.3467 5.23135 23.4056 5.40121C23.5967 5.95195 23.9583 6.67728 24.6413 7.36032C25.3244 8.04335 26.0497 8.40494 26.6004 8.59602C26.7703 8.65495 26.9226 8.69729 27.0504 8.72756L27.5525 8.2254C28.5953 7.1826 28.5953 5.49189 27.5525 4.44909ZM25.4748 10.3031C24.7869 10.0073 23.9855 9.53294 23.2271 8.77453C22.4687 8.01612 21.9944 7.21475 21.6985 6.5268L14.958 13.2673C14.4026 13.8227 14.1848 14.0429 13.9997 14.2803C13.7711 14.5733 13.5752 14.8904 13.4153 15.2259C13.2858 15.4976 13.1862 15.7909 12.9378 16.536L12.362 18.2636L13.7381 19.6396L15.4656 19.0638C16.2107 18.8154 16.504 18.7158 16.7757 18.5863C17.1112 18.4265 17.4283 18.2305 17.7214 18.0019C17.9587 17.8168 18.1789 17.599 18.7343 17.0436L25.4748 10.3031Z" fill="#6B7280"></path>
+                                    </svg>                                                
+                                </a>
+                            </div>
+                            
+                        </h2>
+                        <div x-disclosure:panel>
+                            <div class="py-5 border-b border-gray-200">
+                                <p class="mb-2 text-base font-normal text-gray-600">Generally, it is accepted to use FlowBite in open-source projects, as long as it is not a UI library, a theme, a template, a page-builder that would be considered as an alternative to FlowBite itself. With that being said, feel free to use this design kit for your open-source projects.</p>
+                                <p class="text-base font-normal text-gray-600">Find out more information by <a href="/docs/getting-started/introduction/" class="text-base font-medium text-blue-600 hover:underline">reading the license.</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-disclosure>
+                        <h2 class="flex items-center justify-between gap-2">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 border-b border-gray-200" x-disclosure:button>
+                            <span>Can I use FlowBite in open-source projects?</span>
+                            <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                            <div class="flex items-center gap-1">
+                                <a href="#" class="inline-flex items-center justify-center p-2 bg-red-100 rounded-lg w-9 h-9 hover:bg-red-200">
+                                    <svg class="w-5 h-5 shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7471 3.00003H18.2557C18.5442 2.99984 18.7956 2.99968 19.033 3.03758C19.9707 3.18732 20.7822 3.7722 21.2207 4.61445C21.3318 4.82764 21.4111 5.06615 21.5022 5.33992L21.651 5.78646C21.6762 5.86204 21.6834 5.88344 21.6895 5.90029C21.923 6.54578 22.5283 6.98213 23.2145 6.99952C23.2326 6.99997 23.2547 7.00005 23.3347 7.00005H27.3347C27.887 7.00005 28.3347 7.44777 28.3347 8.00005C28.3347 8.55234 27.887 9.00005 27.3347 9.00005H4.66797C4.11568 9.00005 3.66797 8.55234 3.66797 8.00005C3.66797 7.44777 4.11568 7.00005 4.66797 7.00005H8.66808C8.74814 7.00005 8.77024 6.99997 8.78828 6.99952C9.47448 6.98213 10.0798 6.54581 10.3133 5.90032C10.3195 5.88335 10.3265 5.86241 10.3519 5.78646L10.5007 5.33995C10.5917 5.06619 10.6711 4.82764 10.7821 4.61445C11.2207 3.7722 12.0321 3.18732 12.9699 3.03758C13.2072 2.99968 13.4586 2.99984 13.7471 3.00003ZM12.0122 7.00005C12.0809 6.86535 12.1417 6.72539 12.1941 6.58064C12.21 6.53669 12.2256 6.4899 12.2456 6.42978L12.3787 6.03057C12.5002 5.66589 12.5282 5.5915 12.556 5.53819C12.7022 5.25743 12.9727 5.06248 13.2852 5.01256C13.3446 5.00308 13.424 5.00005 13.8084 5.00005H18.1944C18.5788 5.00005 18.6582 5.00308 18.7176 5.01256C19.0302 5.06248 19.3006 5.25743 19.4468 5.53818C19.4746 5.59151 19.5026 5.66587 19.6242 6.03057L19.7572 6.42954L19.8088 6.58067C19.8611 6.72541 19.922 6.86536 19.9907 7.00005H12.0122Z" fill="#E02424"></path>
+                                        <path d="M7.88809 11.2669C7.85135 10.7158 7.37485 10.2989 6.82378 10.3356C6.27272 10.3723 5.85578 10.8488 5.89252 11.3999L6.51045 20.6689C6.62444 22.3792 6.71652 23.7607 6.93249 24.8448C7.15702 25.9719 7.53891 26.9133 8.32771 27.6513C9.1165 28.3892 10.0812 28.7077 11.2208 28.8567C12.3168 29.0001 13.7014 29.0001 15.4154 29.0001H16.5873C18.3014 29.0001 19.686 29.0001 20.7821 28.8567C21.9216 28.7077 22.8863 28.3892 23.6751 27.6513C24.4639 26.9133 24.8458 25.9719 25.0703 24.8448C25.2863 23.7607 25.3784 22.3792 25.4924 20.6689L26.1103 11.3999C26.147 10.8488 25.7301 10.3723 25.179 10.3356C24.628 10.2989 24.1515 10.7158 24.1147 11.2669L23.5015 20.4657C23.3817 22.2628 23.2963 23.5133 23.1089 24.4541C22.9271 25.3667 22.6733 25.8497 22.3088 26.1908C21.9442 26.5318 21.4453 26.7529 20.5227 26.8736C19.5715 26.998 18.3181 27.0001 16.517 27.0001H15.4858C13.6847 27.0001 12.4314 26.998 11.4802 26.8736C10.5575 26.7529 10.0586 26.5318 9.69407 26.1908C9.32952 25.8497 9.07575 25.3667 8.89395 24.4541C8.70652 23.5132 8.62115 22.2628 8.50134 20.4657L7.88809 11.2669Z" fill="#E02424"></path>
+                                        <path d="M12.5686 13.6717C13.1181 13.6167 13.6082 14.0177 13.6631 14.5672L14.3298 21.2339C14.3848 21.7834 13.9838 22.2735 13.4343 22.3284C12.8847 22.3834 12.3947 21.9824 12.3397 21.4329L11.6731 14.7662C11.6181 14.2167 12.019 13.7266 12.5686 13.6717Z" fill="#E02424"></path>
+                                        <path d="M19.4343 13.6717C19.9838 13.7266 20.3847 14.2167 20.3298 14.7662L19.6631 21.4329C19.6082 21.9824 19.1181 22.3834 18.5686 22.3284C18.019 22.2735 17.6181 21.7834 17.6731 21.2339L18.3397 14.5672C18.3947 14.0177 18.8847 13.6167 19.4343 13.6717Z" fill="#E02424"></path>
+                                    </svg>                                                                                                                                                 
+                                </a>
+                                <a href="#" class="inline-flex items-center justify-center p-2 bg-gray-100 rounded-lg w-9 h-9 hover:bg-gray-200">
+                                    <svg class="w-5 h-5 shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9248 1.66699L18.0013 1.66699C18.5536 1.66699 19.0013 2.11471 19.0013 2.66699C19.0013 3.21928 18.5536 3.66699 18.0013 3.66699H16.0013C12.8303 3.66699 10.5527 3.66912 8.8194 3.90215C7.11487 4.13132 6.08724 4.56718 5.3277 5.32672C4.56816 6.08626 4.1323 7.11389 3.90313 8.81843C3.67009 10.5517 3.66797 12.8294 3.66797 16.0003C3.66797 19.1713 3.67009 21.4489 3.90313 23.1822C4.1323 24.8868 4.56816 25.9144 5.3277 26.6739C6.08724 27.4335 7.11487 27.8693 8.8194 28.0985C10.5527 28.3315 12.8303 28.3337 16.0013 28.3337C19.1723 28.3337 21.4499 28.3315 23.1832 28.0985C24.8877 27.8693 25.9154 27.4335 26.6749 26.6739C27.4344 25.9144 27.8703 24.8868 28.0995 23.1822C28.3325 21.4489 28.3346 19.1713 28.3346 16.0003V14.0003C28.3346 13.448 28.7824 13.0003 29.3346 13.0003C29.8869 13.0003 30.3346 13.448 30.3346 14.0003V16.0768C30.3347 19.1547 30.3347 21.5667 30.0816 23.4487C29.8227 25.375 29.2822 26.8951 28.0891 28.0881C26.896 29.2812 25.376 29.8217 23.4497 30.0807C21.5677 30.3337 19.1557 30.3337 16.0778 30.3337H15.9248C12.8469 30.3337 10.4349 30.3337 8.55291 30.0807C6.6266 29.8217 5.10656 29.2812 3.91348 28.0881C2.7204 26.8951 2.17995 25.375 1.92096 23.4487C1.66794 21.5667 1.66795 19.1547 1.66797 16.0768V15.9238C1.66795 12.846 1.66794 10.4339 1.92096 8.55193C2.17995 6.62562 2.7204 5.10559 3.91348 3.91251C5.10656 2.71943 6.6266 2.17897 8.55291 1.91999C10.4349 1.66696 12.8469 1.66698 15.9248 1.66699ZM22.362 3.03488C24.1859 1.21103 27.1429 1.21103 28.9668 3.03488C30.7906 4.85873 30.7906 7.81577 28.9668 9.63962L20.1026 18.5038C19.6076 18.9989 19.2975 19.309 18.9514 19.5789C18.5438 19.8968 18.1028 20.1694 17.6362 20.3918C17.24 20.5806 16.8239 20.7193 16.1597 20.9406L12.287 22.2315C11.572 22.4699 10.7837 22.2838 10.2508 21.7508C9.71786 21.2179 9.53177 20.4296 9.7701 19.7146L11.061 15.842C11.2824 15.1777 11.421 14.7616 11.6098 14.3655C11.8322 13.8988 12.1048 13.4578 12.4227 13.0502C12.6926 12.7041 13.0028 12.394 13.4979 11.899L22.362 3.03488ZM27.5525 4.44909C26.5097 3.40629 24.819 3.40629 23.7762 4.44909L23.2741 4.95125C23.3043 5.07907 23.3467 5.23135 23.4056 5.40121C23.5967 5.95195 23.9583 6.67728 24.6413 7.36032C25.3244 8.04335 26.0497 8.40494 26.6004 8.59602C26.7703 8.65495 26.9226 8.69729 27.0504 8.72756L27.5525 8.2254C28.5953 7.1826 28.5953 5.49189 27.5525 4.44909ZM25.4748 10.3031C24.7869 10.0073 23.9855 9.53294 23.2271 8.77453C22.4687 8.01612 21.9944 7.21475 21.6985 6.5268L14.958 13.2673C14.4026 13.8227 14.1848 14.0429 13.9997 14.2803C13.7711 14.5733 13.5752 14.8904 13.4153 15.2259C13.2858 15.4976 13.1862 15.7909 12.9378 16.536L12.362 18.2636L13.7381 19.6396L15.4656 19.0638C16.2107 18.8154 16.504 18.7158 16.7757 18.5863C17.1112 18.4265 17.4283 18.2305 17.7214 18.0019C17.9587 17.8168 18.1789 17.599 18.7343 17.0436L25.4748 10.3031Z" fill="#6B7280"></path>
+                                    </svg>                                                
+                                </a>
+                            </div>
+                            
+                        </h2>
+                        <div x-disclosure:panel>
+                            <div class="py-5 border-b border-gray-200">
+                                <p class="mb-2 text-base font-normal text-gray-600">Generally, it is accepted to use FlowBite in open-source projects, as long as it is not a UI library, a theme, a template, a page-builder that would be considered as an alternative to FlowBite itself. With that being said, feel free to use this design kit for your open-source projects.</p>
+                                <p class="text-base font-normal text-gray-600">Find out more information by <a href="/docs/getting-started/introduction/" class="text-base font-medium text-blue-600 hover:underline">reading the license.</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div x-disclosure>
-                    <h2>
-                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 border-b border-gray-200" x-disclosure:button>
-                        <span>Where can I access my download files?</span>
-                        <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                    </h2>
-                    <div x-disclosure:panel>
-                    <div class="py-5 border-b border-gray-200">
-                        <p class="mb-2 text-gray-600">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-                        <p class="text-gray-600">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
-                    </div>
-                    </div>
-                </div>
-                <div x-disclosure>
-                    <h2>
-                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 border-b border-gray-200" x-disclosure:button>
-                        <span>Can I use FlowBite for commercial purposes?</span>
-                        <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                    </h2>
-                    <div x-disclosure:panel>
-                    <div class="py-5 border-b border-gray-200">
-                        <p class="mb-2 text-gray-600">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
-                        <p class="mb-2 text-gray-600">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
-                        <p class="mb-2 text-gray-600">Learn more about these technologies:</p>
-                        <ul class="pl-5 text-gray-600 list-disc">
-                        <li><a href="https://flowbite.com/pro/" class="text-blue-600 hover:underline">Flowbite Pro</a></li>
-                        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 hover:underline">Tailwind UI</a></li>
-                        </ul>
-                    </div>
-                    </div>
-                </div>
-                <div x-disclosure>
-                    <h2>
-                        <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600" x-disclosure:button>
-                        <span>What about browser support?</span>
-                        <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </button>
-                    </h2>
-                    <div x-disclosure:panel>
-                    <div class="py-5 border-b border-gray-200">
-                        <p class="mb-2 text-gray-600">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
-                        <p class="mb-2 text-gray-600">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
-                        <p class="mb-2 text-gray-600">Learn more about these technologies:</p>
-                        <ul class="pl-5 text-gray-600 list-disc">
-                        <li><a href="https://flowbite.com/pro/" class="text-blue-600 hover:underline">Flowbite Pro</a></li>
-                        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 hover:underline">Tailwind UI</a></li>
-                        </ul>
-                    </div>
-                    </div>
-                </div>
-            </div>
             </div>
         </section>
         <section class="container recommendations">
