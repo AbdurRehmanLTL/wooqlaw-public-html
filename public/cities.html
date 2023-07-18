@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- AlpineJs Scripts -->
+    <!-- alpine/tooltip v1.0 --> 
+    <script defer src="./js/alpinetooltip.min.js"></script>
+    <!-- @alpinejs/ui v3.12 -->
+    <script defer src="./js/alpineui.min.js"></script>
+    <!-- @alpinejs/focus v3.12 -->
+    <script defer src="./js/alpinefocus.min.js"></script>
+    <!-- alpinejs v3.12 -->
+    <script defer src="./js/alpine.min.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <meta name="description" content="wooqlaw Public Portal">
+    <title>wooqlaw Public Portal</title>
+</head>
+
+<body x-data="{scrolAtTop: false}" class="bg-gray-50">
+    <arm-header></arm-header>
+    <div class="absolute top-0 flex w-full -z-10">
+        <picture class="w-full">
+            <!-- load avif if supported -->
+            <source srcset="./images/hero-bg-gradient.avif" type="image/avif">
+            <!-- load webp if supported -->
+            <source srcset="./images/hero-bg-gradient.webp" type="image/webp">
+            <!-- load in case no `source` format applies 
+                  and use attributes for presentation -->
+            <img class="w-full h-[250px] md:h-[360px] object-cover md:object-none" loading="lazy" decoding="async" src="./images/hero-bg-gradient.png" alt="image" style="border-bottom-left-radius: 450px; border-bottom-right-radius: 450px;">
+        </picture>
+    </div>
+
+    <div class="z-0 flex flex-col items-center w-full gap-5 pt-10 pb-10 mt-1 md:w-full rounded-b-3xl">
+        <div class="font-semibold text-center text-lgf md:text-4xl title font-display">Find lawyers by city</div>
+        <div class="relative px-4 mt-4 searchbar md:w-96">
+            <input type="text" placeholder="Search" class="block w-full px-5 py-2 text-gray-700 placeholder-gray-400 bg-gray-100 border rounded-full border-violet-900 focus:outline-none focus:bg-white focus:border-violet-900 ">
+
+            <div class="absolute inset-y-0 right-0 flex items-center px-6">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_180853_147673)">
+                        <path d="M23.7797 22.7203L17.1469 16.0875C18.6094 14.3813 19.4578 12.1734 19.4578 9.75C19.4578 4.36406 15.0924 0 9.70782 0C4.32329 0 0 4.36547 0 9.75C0 15.1345 4.36501 19.5 9.70782 19.5C12.1303 19.5 14.3414 18.6113 16.0453 17.1492L22.6781 23.782C22.8656 23.925 23.0578 24 23.25 24C23.4422 24 23.6338 23.9268 23.7802 23.7803C24.075 23.4891 24.075 23.0109 23.7797 22.7203ZM9.75001 18C5.16095 18 1.50001 14.2969 1.50001 9.75C1.50001 5.20312 5.16095 1.5 9.75001 1.5C14.3391 1.5 18 5.16094 18 9.75C18 14.3391 14.2969 18 9.75001 18Z" fill="#6D28D9"></path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_180853_147673">
+                            <rect width="24" height="24" fill="white"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+
+            </div>
+        </div>
+        <div class="flex flex-wrap justify-center gap-3 p-5 alphabets">
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                A
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                B
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                C
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                D
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                E
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                F
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                G
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:text-white">
+
+                H
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                I
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                J
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                K
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                L
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                M
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                N
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                O
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                P
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                Q
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                R
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                S
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                T
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                U
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                V
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                W
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                X
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                Y
+            </a>
+            <a href="#" class="flex items-center justify-center w-8 h-8 px-2 text-base font-medium bg-white rounded-lg focus:bg-violet-900 focus:text-white hover:bg-violet-900 hover:text-white">
+
+                Z
+            </a>
+
+        </div>
+    </div>
+
+
+    <div class="flex flex-col items-center gap-4 px-3 mb-3 portion-2 pt-9">
+        <div class="flex flex-col gap-4 A-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">A</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 B-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">B</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 C-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">C</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 D-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">D</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 E-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">E</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 F-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">F</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 G-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">G</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 H-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">H</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 I-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">I</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 J-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">J</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 K-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">K</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 L-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">L</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 M-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">M</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 N-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">N</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 O-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">O</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 P-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">P</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 Q-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">Q</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 R-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">R</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 S-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">S</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 T-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">T</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 U-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">U</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 V-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">V</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 W-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">W</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 X-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">X</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 Y-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">Y</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 Z-portion ">
+            <div class="pl-2 heading">
+                <p class="text-4xl font-medium text-violet-700">Z</p>
+            </div>
+            <div class="flex flex-wrap gap-10 lawyers-in-citys">
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbaspur </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium ">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abbottabad
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">05</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Abdul Hakim
+                    </div>
+                    <div class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">04</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="flex items-center gap-3 px-3 pb-1 text-gray-600 sub-div group ">
+                    <div class="text-sm font-medium group-hover:text-violet-700">Lawyer in Attock
+                    </div>
+                    <di v="" class="flex items-center justify-center w-6 h-6 text-white bg-gray-600 rounded-full lawyers-count group-hover:bg-violet-700">
+                        <span class="text-xs font-medium">12</span>
+                </di></a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- CTA -->
+    <arm-cta></arm-cta>
+    <!-- Quick Links -->
+    <arm-quicklinks></arm-quicklinks>
+    <!-- Quick Links -->
+    <arm-footer></arm-footer>
+
+    <!-- Link Swiper's JS -->
+    <script src="./js/swiper.min.js"></script>
+    
+    <script>
+        var swipercities = new Swiper(".swiper-cities", {
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next-city",
+                prevEl: ".swiper-button-prev-city",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2
+                },
+                500: {
+                    slidesPerView: 3
+                },
+                700: {
+                    slidesPerView: 4
+                },
+                900: {
+                    slidesPerView: 5
+                }
+            }
+        });
+        
+        var swipercountries = new Swiper(".swiper-countries", {
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next-country",
+                prevEl: ".swiper-button-prev-country",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2
+                },
+                500: {
+                    slidesPerView: 3
+                },
+                700: {
+                    slidesPerView: 4
+                },
+                900: {
+                    slidesPerView: 5
+                }
+            }
+        });
+
+        var swiperlawyers = new Swiper(".swiper-featured-lawyers", {
+            slidesPerView: 1,
+            spaceBetween: 12,
+            navigation: {
+                nextEl: ".swiper-button-next-featured-lawyer",
+                prevEl: ".swiper-button-prev-featured-lawyer",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: "auto"
+                }
+            }
+        });
+        
+        var swipertestimonials = new Swiper(".swiper-testimonials", {
+            slidesPerView: 1,
+            spaceBetween: 250,
+            pagination: {
+                el: ".swiper-pagination-testimonials",
+                clickable: true,
+            },
+        });
+    
+    </script>
+    
+    
+    <script type="module" src="./components/header.js"></script>
+    <script type="module" src="./components/card.js"></script>
+    <script type="module" src="./components/cta.js"></script>
+    <script type="module" src="./components/quicklinks.js"></script>
+    <script type="module" src="./components/footer.js"></script>
+</body>
+
+</html>
