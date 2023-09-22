@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- AlpineJs Scripts -->
+    <!-- alpine/tooltip v1.0 --> 
+    <script defer src="./js/alpinetooltip.min.js"></script>
+    <!-- @alpinejs/ui v3.12 -->
+    <script defer src="./js/alpineui.min.js"></script>
+    <!-- @alpinejs/focus v3.12 -->
+    <script defer src="./js/alpinefocus.min.js"></script>
+    <!-- alpinejs v3.12 -->
+    <script defer src="./js/alpine.min.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <meta name="description" content="wooqlaw Public Portal">
+    <title>Help Center</title>
+
+</head>
+
+<body x-data="{scrolAtTop: false}">
+    <arm-header></arm-header>
+    <section class="help-center container pb-5">
+        <div class="flex flex-col gap-2 md:gap-5">
+            <div class="flex flex-col md:flex-row items-center md:justify-center">
+                <div class="flex">
+                    <!-- Backgroun Image -->
+                    <img class="relative" src="images/Help Bitmap.png" alt="Help Bitmap">
+                    <!-- Home -->
+                    <nav class="flex absolute items-center w-full p-3 space-x-2 sm:p-4 sm:space-x-4" aria-label="Breadcrumb">
+                        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary-800">
+                            <svg class="w-3 h-3 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+                            </svg>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                            <svg class="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                            </svg>
+                            <a href="#" class="ml-1 text-sm font-medium text-gray-700 hover:text-primary-800 md:ml-2">
+                                Help Center
+                            </a>
+                            </div>
+                        </li>
+                        </ol>
+                    </nav>
+                </div>
+                <!-- Help Center -->
+                <div class="flex md:absolute flex-col gap-2 pt-9 items-center">
+                    <span class="text-xl md:text-3xl font-semibold text-gray-900">
+                        Help Center
+                    </span>
+                    <span class="text-xs md:text-sm font-medium text-gray-900">
+                        Your Questions, Our Priority
+                    </span>
+                    <button type="button" class="text-sm font-medium text-white rounded-lg w-14 py-2 bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300">
+                        FAQs
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-2 md:gap-6">
+                <!-- Contact us now -->
+                <div class="flex flex-col col-span-2 px-2 md:px-6 py-2 md:py-4 gap-2 md:gap-3 bg-white rounded-lg shadow">
+                    <div class="text-sm md:text-base font-medium text-gray-900">
+                        Contact us now
+                    </div>
+                    <hr>
+                    <div class="flex flex-col gap-2 md:gap-3">
+                        <div class="flex flex-col gap-2 md:gap-4">
+                            <!-- Call on the number below to speak to a wooqlaw® representative. -->
+                            <div class="text-sm md:text-base font-medium text-gray-900">
+                                Call on the number below to speak to a wooqlaw® representative.
+                            </div>
+                            <!-- Phone, Email, Address -->
+                            <div class="flex flex-col gap-2">
+                                <span class="flex text-sm md:text-base font-medium text-gray-900 gap-2 p-2 md:p-5 rounded-lg bg-gray-100">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.5562 14.2773L15.1007 14.7301C15.1007 14.7301 14.0181 15.8066 11.0631 12.8683C8.10812 9.93011 9.1907 8.85366 9.1907 8.85366L9.47752 8.56848C10.1841 7.86593 10.2507 6.73801 9.63424 5.91458L8.37326 4.23017C7.61028 3.21101 6.13596 3.07638 5.26145 3.94592L3.69185 5.50661C3.25823 5.93777 2.96765 6.49669 3.00289 7.1167C3.09304 8.70291 3.81071 12.1158 7.81536 16.0977C12.0621 20.3203 16.0468 20.4881 17.6763 20.3362C18.1917 20.2882 18.6399 20.0257 19.0011 19.6665L20.4217 18.2541C21.3806 17.3006 21.1102 15.666 19.8833 14.9991L17.9728 13.9605C17.1672 13.5226 16.1858 13.6512 15.5562 14.2773Z" fill="#1C274C"/>
+                                    </svg>
+                                    +923667439877
+                                </span>
+                                <span class="flex text-sm md:text-base font-medium text-gray-900 gap-2 p-2 md:p-5 rounded-lg bg-gray-100">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_685_8355)">
+                                        <path d="M20.5 4.37109H4.5C3.4 4.37109 2.51 5.27109 2.51 6.37109L2.5 18.3711C2.5 19.4711 3.4 20.3711 4.5 20.3711H20.5C21.6 20.3711 22.5 19.4711 22.5 18.3711V6.37109C22.5 5.27109 21.6 4.37109 20.5 4.37109ZM20.5 8.37109L12.5 13.3711L4.5 8.37109V6.37109L12.5 11.3711L20.5 6.37109V8.37109Z" fill="#323232"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_685_8355">
+                                        <rect width="24" height="24" fill="white" transform="translate(0.5 0.371094)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    Help@Wooqlaw.com
+                                </span>
+                                <span class="flex text-sm md:text-base font-medium text-gray-900 gap-2 p-2 md:p-5 rounded-lg bg-gray-100">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 2.37109C8.08172 2.37109 4.5 6.37368 4.5 10.8711C4.5 15.3333 7.05332 20.1835 11.0371 22.0455C11.9657 22.4796 13.0343 22.4796 13.9629 22.0455C17.9467 20.1835 20.5 15.3333 20.5 10.8711C20.5 6.37368 16.9183 2.37109 12.5 2.37109ZM12.5 12.3711C13.6046 12.3711 14.5 11.4757 14.5 10.3711C14.5 9.26652 13.6046 8.37109 12.5 8.37109C11.3954 8.37109 10.5 9.26652 10.5 10.3711C10.5 11.4757 11.3954 12.3711 12.5 12.3711Z" fill="#1C274C"/>
+                                    </svg>
+                                    Street no. 5, Plot no. 360 lower ground, 
+                                    Sector, I-9/3 Islamabad, Islamabad Capital 
+                                    Territory 44000
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Map -->
+                        <img src="images/Map.png" alt="Map">
+                    </div>
+                </div>
+                <!-- Contact Us -->
+                <div class="flex flex-col col-span-3 px-2 md:px-6 py-2 md:py-4 gap-2 md:gap-3 bg-white rounded-lg shadow">
+                    <div class="text-base md:text-2xl font-medium text-gray-900">
+                        Contact Us
+                    </div>
+                    <hr>
+                    <div class="flex flex-col gap-2 md:gap-5">
+                        <!-- Full Name, Phone Number, Email, Title, Your Message -->
+                        <div class="flex flex-col gap-2 md:gap-5 bg-white rounded-lg">
+                            <div class="flex flex-col gap-2">
+                                <label for="full-name" class="block text-xs md:text-sm font-medium text-gray-900">
+                                    Full Name *
+                                </label>
+                                <input type="tel" id="full-name" class="block w-full px-4 py-3 bg-gray-50 border border-gray-300 text-sm font-normal text-gray-500 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Enter Name">
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div class="flex flex-col gap-2">
+                                    <label for="phone-number" class="block text-xs md:text-sm font-medium text-gray-900">
+                                        Phone Number  **
+                                    </label>
+                                    <input type="number" id="phone-number" class="block w-full px-4 py-3 bg-gray-50 border border-gray-300 text-sm font-normal text-gray-500 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="+92-12345678">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label for="email" class="block text-xs md:text-sm font-medium text-gray-900">
+                                        Email **
+                                    </label>
+                                    <input type="tel" id="email" class="block w-full px-4 py-3 bg-gray-50 border border-gray-300 text-sm font-normal text-gray-500 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Enter Email">
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label for="title" class="block text-xs md:text-sm font-medium text-gray-900">
+                                    Title *
+                                </label>
+                                <input type="tel" id="title" class="block w-full px-4 py-3 bg-gray-50 border border-gray-300 text-sm font-normal text-gray-500 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Enter Name">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="your-message" class="block text-xs md:text-sm font-medium text-gray-900">
+                                Your Message *
+                            </label>
+                            <textarea id="your-message" rows="4" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Write text here ..."></textarea>
+                        </div>
+                        <div class="flex justify-between">
+                            <div>
+
+                            </div>
+                            <button type="button" class="text-sm font-medium text-white rounded-lg w-28 py-2 bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300">
+                                Send Message
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA -->
+    <arm-cta></arm-cta>
+    <!-- Quick Links -->
+    <arm-quicklinks></arm-quicklinks>
+    <!-- Quick Links -->
+    <arm-footer></arm-footer>
+
+    <!-- Link Swiper's JS -->
+    <script src="./js/swiper.min.js"></script>
+    
+    <script>
+        var swipercities = new Swiper(".swiper-cities", {
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next-city",
+                prevEl: ".swiper-button-prev-city",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2
+                },
+                500: {
+                    slidesPerView: 3
+                },
+                700: {
+                    slidesPerView: 4
+                },
+                900: {
+                    slidesPerView: 5
+                }
+            }
+        });
+        
+        var swipercountries = new Swiper(".swiper-countries", {
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next-country",
+                prevEl: ".swiper-button-prev-country",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2
+                },
+                500: {
+                    slidesPerView: 3
+                },
+                700: {
+                    slidesPerView: 4
+                },
+                900: {
+                    slidesPerView: 5
+                }
+            }
+        });
+
+        var swiperlawyers = new Swiper(".swiper-featured-lawyers", {
+            slidesPerView: 1,
+            spaceBetween: 12,
+            navigation: {
+                nextEl: ".swiper-button-next-featured-lawyer",
+                prevEl: ".swiper-button-prev-featured-lawyer",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: "auto"
+                }
+            }
+        });
+        
+        var swipertestimonials = new Swiper(".swiper-testimonials", {
+            slidesPerView: 1,
+            spaceBetween: 250,
+            pagination: {
+                el: ".swiper-pagination-testimonials",
+                clickable: true,
+            },
+        });
+    
+    </script>
+    
+    <script type="module" src="./components/header.js"></script>
+    <script type="module" src="./components/card.js"></script>
+    <script type="module" src="./components/cta.js"></script>
+    <script type="module" src="./components/quicklinks.js"></script>
+    <script type="module" src="./components/footer.js"></script>
+
+</body>
+</html>

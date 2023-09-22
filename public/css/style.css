@@ -845,6 +845,9 @@ select {
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
 .m-0 {
   margin: 0px;
 }
@@ -951,6 +954,9 @@ select {
 }
 .mr-2 {
   margin-right: 0.5rem;
+}
+.mr-2\.5 {
+  margin-right: 0.625rem;
 }
 .mr-3 {
   margin-right: 0.75rem;
@@ -2810,6 +2816,9 @@ select {
 }.hover\:text-primary-700:hover {
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
+}.hover\:text-primary-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
 }.hover\:text-violet-700:hover {
   --tw-text-opacity: 1;
   color: rgb(109 40 217 / var(--tw-text-opacity));
@@ -2908,6 +2917,9 @@ select {
 }.focus\:ring-purple-900:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(88 28 135 / var(--tw-ring-opacity));
+}.focus\:ring-violet-300:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(196 181 253 / var(--tw-ring-opacity));
 }.focus\:ring-opacity-50:focus {
   --tw-ring-opacity: 0.5;
 }.focus\:valid\:ring-green-500:valid:focus {
@@ -3141,6 +3153,16 @@ select {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .sm\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .sm\:p-4 {
+    padding: 1rem;
+  }
+
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -3204,6 +3226,10 @@ select {
 
   .md\:mb-5 {
     margin-bottom: 1.25rem;
+  }
+
+  .md\:ml-2 {
+    margin-left: 0.5rem;
   }
 
   .md\:mr-4 {
