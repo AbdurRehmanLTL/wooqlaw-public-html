@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- AlpineJs Scripts -->
+    <!-- alpine/tooltip v1.0 --> 
+    <script defer src="./js/alpinetooltip.min.js"></script>
+    <!-- @alpinejs/ui v3.12 -->
+    <script defer src="./js/alpineui.min.js"></script>
+    <!-- @alpinejs/focus v3.12 -->
+    <script defer src="./js/alpinefocus.min.js"></script>
+    <!-- alpinejs v3.12 -->
+    <script defer src="./js/alpine.min.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <meta name="description" content="wooqlaw Public Portal">
+    <title>wooqlaw Public Portal</title>
+</head>
+
+<body x-data="{scrolAtTop: false}">
+    <arm-header></arm-header>
+   
+   <!-- Faqs -->
+    <section class="container faqs">
+       
+        <div class="flex flex-col max-w-6xl mx-auto gap-3 bg-gray-100 shadow"> 
+            <div id="faqs" x-data="" class="bg-white p-2">
+                <div x-disclosure="">
+                    <h2 class="flex gap-2">
+                        <button type="button" class="flex items-center justify-between w-full px-1 md:px-5 py-2 md:py-6 font-medium text-sm md:text-lg" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-3">
+                        <span>Generic FAQs</span>
+                        <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </h2>
+                    <div x-disclosure:panel="" id="alpine-disclosure-panel-3" style="display: none;" class="flex bg-white  w-full">
+                        <div id="faqs" x-data="" class="flex flex-col bg-white gap-2 w-full">
+                            <div x-disclosure="" class="flex flex-col w-full bg-gray-50 rounded-xl">
+                                <h2 class="flex gap-2 justify-center items-center">
+                                    <button type="button" class="flex items-center justify-between w-full px-1 md:px-5 py-2 md:py-6 font-medium text-sm md:text-lg" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-3">
+                                    <span>What is Wooqlaw</span>
+                                    <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    </button>
+                                </h2>
+                                <div x-disclosure:panel="" id="alpine-disclosure-panel-3" style="display: none;" class="flex font-normal text-xs md:text-base px-1 md:px-5 py-2 md:py-6 text-gray-600 bg-white">
+                                    wooqlaw.com is an online legal platform that provides comprehensive legal solutions, resources, and guidance to individuals and businesses. Our platform connects users with experienced lawyers, allowing them to access legal advice, documentation services, and much more, all conveniently online.
+                                </div>
+                            </div>
+                            <div x-disclosure="" class="flex flex-col w-full bg-gray-50 rounded-xl">
+                                <h2 class="flex gap-2">
+                                    <button type="button" class="flex items-start justify-between text-left w-full px-1 md:px-5 py-2 md:py-6 font-medium text-sm md:text-lg" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-3">
+                                    <span>How can I find a lawyer on wooqlaw.com?</span>
+                                    <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    </button>
+                                </h2>
+                                <div x-disclosure:panel="" id="alpine-disclosure-panel-3" style="display: none;" class="flex font-normal text-xs md:text-base px-1 md:px-5 py-2 md:py-6 text-gray-600 bg-white">
+                                    Finding a lawyer on wooqlaw.com is simple. Just visit our website and use the search feature to specify your legal needs, location, and preferred expertise. We'll present you with a list of qualified lawyers matching your criteria, from which you can choose the one that best suits your requirements.
+                                </div>
+                            </div>
+                            <div x-disclosure="" class="flex flex-col w-full bg-gray-50 rounded-xl">
+                                <h2 class="flex gap-2">
+                                    <button type="button" class="flex items-start justify-between text-left w-full px-1 md:px-5 py-2 md:py-6 font-medium text-sm md:text-lg" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-3">
+                                    <span>Are the lawyers on wooqlaw.com qualified and experienced?</span>
+                                    <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    </button>
+                                </h2>
+                                <div x-disclosure:panel="" id="alpine-disclosure-panel-3" style="display: none;" class="flex font-normal text-xs md:text-base px-1 md:px-5 py-2 md:py-6 text-gray-600 bg-white">
+                                    Yes, we have a stringent vetting process to ensure that all lawyers on our platform are qualified professionals with the necessary experience and expertise in their respective fields. We verify their credentials and track records to provide users with reliable legal assistance.
+                                </div>
+                            </div>
+                            <div x-disclosure="" class="flex flex-col w-full bg-gray-50 rounded-xl">
+                                <h2 class="flex gap-2">
+                                    <button type="button" class="flex items-start justify-between text-left w-full px-1 md:px-5 py-2 md:py-6 font-medium text-sm md:text-lg" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-3">
+                                    <span>What types of legal services does wooqlaw.com offer?</span>
+                                    <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    </button>
+                                </h2>
+                                <div x-disclosure:panel="" id="alpine-disclosure-panel-3" style="display: none;" class="flex font-normal text-xs md:text-base px-1 md:px-5 py-2 md:py-6 text-gray-600 bg-white">
+                                    wooqlaw.com offers a wide range of legal services, including legal consultations, contract drafting, company registration, property matters, family law, and much more. Our platform caters to diverse legal needs, making it a one-stop destination for all your legal requirements.
+                                </div>
+                            </div>
+                            <div x-disclosure="" class="flex flex-col w-full bg-gray-50 rounded-xl">
+                                <h2 class="flex gap-2">
+                                    <button type="button" class="flex items-start justify-between text-left w-full px-1 md:px-5 py-2 md:py-6 font-medium text-sm md:text-lg" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-3">
+                                    <span>How do I schedule a legal consultation on wooqlaw.com</span>
+                                    <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    </button>
+                                </h2>
+                                <div x-disclosure:panel="" id="alpine-disclosure-panel-3" style="display: none;" class="flex font-normal text-xs md:text-base px-1 md:px-5 py-2 md:py-6 text-gray-600 bg-white">
+                                    To schedule a legal consultation, simply browse through the available lawyers on our platform, select the one you want to consult and choose a suitable date and time for the meeting. You can have a virtual consultation through video conferencing, ensuring flexibility and convenience.
+                                </div>
+                            </div>
+                            <div x-disclosure="" class="flex flex-col w-full bg-gray-50 rounded-xl">
+                                <h2 class="flex gap-2">
+                                    <button type="button" class="flex items-start justify-between text-left w-full px-1 md:px-5 py-2 md:py-6 font-medium text-sm md:text-lg" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-3">
+                                    <span>Can I get legal advice without hiring a lawyer on wooqlaw.com?</span>
+                                    <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    </button>
+                                </h2>
+                                <div x-disclosure:panel="" id="alpine-disclosure-panel-3" style="display: none;" class="flex font-normal text-xs md:text-base px-1 md:px-5 py-2 md:py-6 text-gray-600 bg-white">
+                                    Yes, wooqlaw.com offers an "Ask a Lawyer" feature, where you can submit your legal questions and get answers from qualified lawyers. It's a great option for quick legal guidance without committing to a full consultation.
+                                </div>
+                            </div>
+                            <div x-disclosure="" class="flex flex-col w-full bg-gray-50 rounded-xl">
+                                <h2 class="flex gap-2">
+                                    <button type="button" class="flex items-start justify-between text-left w-full px-1 md:px-5 py-2 md:py-6 font-medium text-sm md:text-lg" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-3">
+                                    <span>Is wooqlaw.com available nationwide?</span>
+                                    <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    </button>
+                                </h2>
+                                <div x-disclosure:panel="" id="alpine-disclosure-panel-3" style="display: none;" class="flex font-normal text-xs md:text-base px-1 md:px-5 py-2 md:py-6 text-gray-600 bg-white">
+                                    Yes, wooqlaw.com is accessible throughout the country. We have a network of lawyers from different regions, ensuring that users can find legal assistance regardless of their location.
+                                </div>
+                            </div>
+                            <div x-disclosure="" class="flex flex-col w-full bg-gray-50 rounded-xl">
+                                <h2 class="flex gap-2">
+                                    <button type="button" class="flex items-start justify-between text-left w-full px-1 md:px-5 py-2 md:py-6 font-medium text-sm md:text-lg" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-3">
+                                    <span>How does payment work for legal services on wooqlaw.com?
+                                    </span>
+                                    <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    </button>
+                                </h2>
+                                <div x-disclosure:panel="" id="alpine-disclosure-panel-3" style="display: none;" class="flex font-normal text-xs md:text-base px-1 md:px-5 py-2 md:py-6 text-gray-600 bg-white">
+                                    Our platform provides transparent pricing for various legal services. Once you select a lawyer and the service you require, you will be provided with the applicable fees. Payments can be made securely through our website, ensuring a seamless transaction process.
+                                </div>
+                            </div>
+                            <div x-disclosure="" class="flex flex-col w-full bg-gray-50 rounded-xl">
+                                <h2 class="flex gap-2">
+                                    <button type="button" class="flex items-start justify-between text-left w-full px-1 md:px-5 py-2 md:py-6 font-medium text-sm md:text-lg" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-3">
+                                    <span>Can I give feedback on the services provided by a lawyer?</span>
+                                    <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    </button>
+                                </h2>
+                                <div x-disclosure:panel="" id="alpine-disclosure-panel-3" style="display: none;" class="flex font-normal text-xs md:text-base px-1 md:px-5 py-2 md:py-6 text-gray-600 bg-white">
+                                    Yes, we value user feedback. After receiving a service from a lawyer on wooqlaw.com, you will have the opportunity to rate and review their services, helping us maintain the highest standards of legal assistance.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div id="faqs" x-data="" class="bg-white p-2">
+                <div x-disclosure="">
+                    <h2 class="flex gap-2">
+                        <button type="button" class="flex items-center justify-between text-left w-full px-1 md:px-5 py-2 md:py-6 font-medium text-sm md:text-lg" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-3">
+                        <span>Frequently Asked Questions about wooqlaw® Legal Research Engine</span>
+                        <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </h2>
+                    <div x-disclosure:panel="" id="alpine-disclosure-panel-3" style="display: none;" class="flex bg-white  w-full">
+                        <div id="faqs" x-data="" class="flex flex-col bg-white gap-2 w-full">
+                           
+        
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div id="faqs" x-data="" class="bg-white p-2">
+                <div x-disclosure="">
+                    <h2 class="flex gap-2">
+                        <button type="button" class="flex items-center justify-between text-left w-full px-1 md:px-5 py-2 md:py-6 font-medium text-sm md:text-lg" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-3">
+                        <span>Frequently Asked Questions about wooqlaw® CMS Portal for Lawyers</span>
+                        <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </h2>
+                    <div x-disclosure:panel="" id="alpine-disclosure-panel-3" style="display: none;" class="flex bg-white  w-full">
+                        <div id="faqs" x-data="" class="flex flex-col bg-white gap-2 w-full">
+                           
+        
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div id="faqs" x-data="" class="bg-white p-2">
+                <div x-disclosure="">
+                    <h2 class="flex gap-2">
+                        <button type="button" class="flex items-center justify-between text-left w-full px-1 md:px-5 py-2 md:py-6 font-medium text-sm md:text-lg" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-3">
+                        <span>Frequently Asked Questions about wooqlaw® Client-side Features</span>
+                        <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </h2>
+                    <div x-disclosure:panel="" id="alpine-disclosure-panel-3" style="display: none;" class="flex bg-white  w-full">
+                        <div id="faqs" x-data="" class="flex flex-col bg-white gap-2 w-full">
+                           
+        
+                        </div>
+                    </div>
+                </div>  
+            </div>
+
+        </div>
+    </section>
+
+    <!-- <div x-disclosure="">
+        <h2 class="flex items-center justify-between gap-2 bg-gray-100">
+            <button type="button" class="flex items-center justify-between w-full font-medium text-left text-gray-600" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-4">
+            <span>Can I use FlowBite in open-source projects?</span>
+            <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+        </h2>
+        <div x-disclosure:panel="" id="alpine-disclosure-panel-4" style="display: none;">
+            <div class="py-5 border-b border-gray-200">
+                <p class="mb-2 text-base font-normal text-gray-600">Generally, it is accepted to use FlowBite in open-source projects, as long as it is not a UI library, a theme, a template, a page-builder that would be considered as an alternative to FlowBite itself. With that being said, feel free to use this design kit for your open-source projects.</p>
+                <p class="text-base font-normal text-gray-600">Find out more information by <a href="/docs/getting-started/introduction/" class="text-base font-medium text-blue-600 hover:underline">reading the license.</a></p>
+            </div>
+        </div>
+    </div> -->
+    <!-- CTA -->
+    <arm-cta></arm-cta>
+    <!-- Quick Links -->
+    <arm-quicklinks></arm-quicklinks>
+    <!-- Quick Links -->
+    <arm-footer></arm-footer>
+
+    <!-- Link Swiper's JS -->
+    <script src="./js/swiper.min.js"></script>
+    
+    <script>
+        var swipercities = new Swiper(".swiper-cities", {
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next-city",
+                prevEl: ".swiper-button-prev-city",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2
+                },
+                500: {
+                    slidesPerView: 3
+                },
+                700: {
+                    slidesPerView: 4
+                },
+                900: {
+                    slidesPerView: 5
+                }
+            }
+        });
+        
+        var swipercountries = new Swiper(".swiper-countries", {
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next-country",
+                prevEl: ".swiper-button-prev-country",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2
+                },
+                500: {
+                    slidesPerView: 3
+                },
+                700: {
+                    slidesPerView: 4
+                },
+                900: {
+                    slidesPerView: 5
+                }
+            }
+        });
+
+        var swiperlawyers = new Swiper(".swiper-featured-lawyers", {
+            slidesPerView: 1,
+            spaceBetween: 12,
+            navigation: {
+                nextEl: ".swiper-button-next-featured-lawyer",
+                prevEl: ".swiper-button-prev-featured-lawyer",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: "auto"
+                }
+            }
+        });
+        
+        var swipertestimonials = new Swiper(".swiper-testimonials", {
+            slidesPerView: 1,
+            spaceBetween: 250,
+            pagination: {
+                el: ".swiper-pagination-testimonials",
+                clickable: true,
+            },
+        });
+    
+    </script>
+    
+    
+    <script type="module" src="./components/header.js"></script>
+    <script type="module" src="./components/card.js"></script>
+    <script type="module" src="./components/cta.js"></script>
+    <script type="module" src="./components/quicklinks.js"></script>
+    <script type="module" src="./components/footer.js"></script>
+</body>
+
+</html>
