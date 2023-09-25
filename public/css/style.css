@@ -1917,6 +1917,13 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
+.bg-\[images\/help-center\.png\] {
+  background-color: images/help-center.png;
+}
+.bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1928,6 +1935,9 @@ select {
 }
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+.bg-\[url\(\'https\:\/\/flowbite\.s3\.amazonaws\.com\/docs\/jumbotron\/conference\.jpg\'\)\] {
+  background-image: url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg');
 }
 .from-blue-100 {
   --tw-gradient-from: #dbeafe var(--tw-gradient-from-position);
@@ -1965,6 +1975,9 @@ select {
 }
 .bg-left-bottom {
   background-position: left bottom;
+}
+.bg-center {
+  background-position: center;
 }
 .bg-no-repeat {
   background-repeat: no-repeat;
@@ -2459,6 +2472,9 @@ select {
 }
 .opacity-100 {
   opacity: 1;
+}
+.bg-blend-multiply {
+  background-blend-mode: multiply;
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -3480,6 +3496,10 @@ select {
 
   .md\:items-center {
     align-items: center;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
   }
 
   .md\:justify-end {
