@@ -2187,6 +2187,12 @@ select {
 .pt-9 {
   padding-top: 2.25rem;
 }
+.pb-7 {
+  padding-bottom: 1.75rem;
+}
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
 .text-left {
   text-align: left;
 }
@@ -3159,10 +3165,6 @@ select {
     margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .sm\:p-4 {
-    padding: 1rem;
-  }
-
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -3815,6 +3817,10 @@ select {
 
   .md\:pt-5 {
     padding-top: 1.25rem;
+  }
+
+  .md\:pb-6 {
+    padding-bottom: 1.5rem;
   }
 
   .md\:text-start {
