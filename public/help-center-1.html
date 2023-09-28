@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- AlpineJs Scripts -->
+    <!-- alpine/tooltip v1.0 --> 
+    <script defer src="./js/alpinetooltip.min.js"></script>
+    <!-- @alpinejs/ui v3.12 -->
+    <script defer src="./js/alpineui.min.js"></script>
+    <!-- @alpinejs/focus v3.12 -->
+    <script defer src="./js/alpinefocus.min.js"></script>
+    <!-- alpinejs v3.12 -->
+    <script defer src="./js/alpine.min.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <meta name="description" content="wooqlaw Public Portal">
+    <title>Help Center 1</title>
+
+</head>
+
+<body x-data="{scrolAtTop: false}">
+    <arm-header></arm-header>
+    <section class="help-center-1 container pb-5">
+        <div class="flex flex-col gap-2 md:gap-5">
+            <!-- Background Image -->
+            <div class="flex flex-col p-2 md:p-4 items-center md:items-start" style="background-image: url(images/help-center.png);">
+                <!-- Home -->
+                <div class="">
+                    <nav class="flex items-center w-full space-x-2 sm:space-x-4" aria-label="Breadcrumb">
+                        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary-800">
+                            <svg class="w-3 h-3 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+                            </svg>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                            <svg class="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                            </svg>
+                            <a href="#" class="ml-1 text-sm font-medium text-gray-700 hover:text-primary-800 md:ml-2">
+                                Help Center
+                            </a>
+                            </div>
+                        </li>
+                        </ol>
+                    </nav>
+                </div>
+                <!-- Help Center -->
+                <div class="flex flex-col w-full gap-2 pt-2 pb-3 md:pb-6 items-center justify-center">
+                    <span class="text-xl md:text-3xl font-semibold text-gray-900">
+                        Help Center
+                    </span>
+                </div>
+            </div>
+            <!-- Contact Us -->
+            <div class="flex flex-col col-span-3 px-2 md:px-6 py-2 md:py-4 gap-2 md:gap-3 bg-white rounded-lg shadow">
+                <div class="text-base md:text-2xl font-medium text-gray-900">
+                    Contact Us
+                </div>
+                <hr>
+                <!-- Full Name, Phone Number, Email, Title, Your Message, Send Message -->
+                <div class="flex flex-col gap-2 md:gap-5">
+                    <div class="flex flex-col gap-2 md:gap-5 bg-white rounded-lg">
+                        <div class="flex flex-col gap-2">
+                            <label for="full-name" class="block text-xs md:text-sm font-medium text-gray-900">
+                                Full Name *
+                            </label>
+                            <input type="tel" id="full-name" class="block w-full px-4 py-3 bg-gray-50 border border-gray-300 text-sm font-normal text-gray-500 rounded-lg focus:ring-violet-500 focus:border-violet-500" placeholder="Enter Name">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-5">
+                            <div class="flex flex-col gap-2">
+                                <label for="phone-number" class="block text-xs md:text-sm font-medium text-gray-900">
+                                    Phone Number  **
+                                </label>
+                                <input type="number" id="phone-number" class="block w-full px-4 py-3 bg-gray-50 border border-gray-300 text-sm font-normal text-gray-500 rounded-lg focus:ring-violet-500 focus:border-violet-500" placeholder="+92-12345678">
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label for="email" class="block text-xs md:text-sm font-medium text-gray-900">
+                                    Email **
+                                </label>
+                                <input type="tel" id="email" class="block w-full px-4 py-3 bg-gray-50 border border-gray-300 text-sm font-normal text-gray-500 rounded-lg focus:ring-violet-500 focus:border-violet-500" placeholder="Enter Email">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="title" class="block text-xs md:text-sm font-medium text-gray-900">
+                                Title *
+                            </label>
+                            <input type="tel" id="title" class="block w-full px-4 py-3 bg-gray-50 border border-gray-300 text-sm font-normal text-gray-500 rounded-lg focus:ring-violet-500 focus:border-violet-500" placeholder="Enter Name">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="your-message" class="block text-xs md:text-sm font-medium text-gray-900">
+                            Your Message *
+                        </label>
+                        <textarea id="your-message" rows="4" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-violet-500 focus:border-violet-500" placeholder="Write text here ..."></textarea>
+                    </div>
+                    <div class="flex py-2 md:py-6 justify-between">
+                        <div>
+
+                        </div>
+                        <button type="button" class="text-sm font-medium text-white rounded-lg w-28 py-2 bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300">
+                            Send Message
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA -->
+    <arm-cta></arm-cta>
+    <!-- Quick Links -->
+    <arm-quicklinks></arm-quicklinks>
+    <!-- Quick Links -->
+    <arm-footer></arm-footer>
+
+    <!-- Link Swiper's JS -->
+    <script src="./js/swiper.min.js"></script>
+    
+    <script>
+        var swipercities = new Swiper(".swiper-cities", {
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next-city",
+                prevEl: ".swiper-button-prev-city",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2
+                },
+                500: {
+                    slidesPerView: 3
+                },
+                700: {
+                    slidesPerView: 4
+                },
+                900: {
+                    slidesPerView: 5
+                }
+            }
+        });
+        
+        var swipercountries = new Swiper(".swiper-countries", {
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next-country",
+                prevEl: ".swiper-button-prev-country",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2
+                },
+                500: {
+                    slidesPerView: 3
+                },
+                700: {
+                    slidesPerView: 4
+                },
+                900: {
+                    slidesPerView: 5
+                }
+            }
+        });
+
+        var swiperlawyers = new Swiper(".swiper-featured-lawyers", {
+            slidesPerView: 1,
+            spaceBetween: 12,
+            navigation: {
+                nextEl: ".swiper-button-next-featured-lawyer",
+                prevEl: ".swiper-button-prev-featured-lawyer",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: "auto"
+                }
+            }
+        });
+        
+        var swipertestimonials = new Swiper(".swiper-testimonials", {
+            slidesPerView: 1,
+            spaceBetween: 250,
+            pagination: {
+                el: ".swiper-pagination-testimonials",
+                clickable: true,
+            },
+        });
+    
+    </script>
+    
+    <script type="module" src="./components/header.js"></script>
+    <script type="module" src="./components/card.js"></script>
+    <script type="module" src="./components/cta.js"></script>
+    <script type="module" src="./components/quicklinks.js"></script>
+    <script type="module" src="./components/footer.js"></script>
+
+</body>
+</html>
