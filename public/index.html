@@ -57,360 +57,242 @@
             </span>
         </div>
         <!-- Search by Law area -->
-        <div class="relative w-full max-w-3xl" x-data="{ open: false }">
-            <div class="relative flex items-center w-full mb-4">
-                <div class="absolute inset-y-0 flex items-center justify-center my-auto bg-gray-100 rounded-full pointer-events-none w-9 h-9 left-3">
-                    <svg aria-hidden="true" class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
+        <div class="relative flex-wrap items-center justify-between hidden w-full gap-5 px-12 py-4 bg-white md:flex drop-shadow-2xl md:gap-10 rounded-2xl" x-data="{ lawarea: false, city: false, lawyer: false }">
+            <div class="flex flex-wrap items-center justify-between gap-4 md:gap-0 md:divide-x divide-zinc-400">
+                <div class="relative md:pr-10 ">
+                    <div class="cursor-pointer" x-on:click="lawarea = true">
+                        <p class="text-sm font-bold text-gray-700 md:text-xl">Law Area</p>
+                        <div class="flex items-center justify-between gap-2">
+                            <p class="text-sm font-medium md:text-xl text-zinc-500">Select Law Area</p>
+                            <svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                <path d="M7.83187 12.1361L0.923642 5.22785C0.0822557 4.38647 -0.105506 3.42374 0.360356 2.33968C0.826218 1.25562 1.65609 0.712709 2.84997 0.710938H16.5336C17.7292 0.710938 18.56 1.25385 19.0258 2.33968C19.4917 3.42551 19.3031 4.38824 18.4599 5.22785L11.5517 12.1361C11.286 12.4018 10.9981 12.6011 10.6882 12.7339C10.3782 12.8668 10.046 12.9332 9.69177 12.9332C9.3375 12.9332 9.00538 12.8668 8.69539 12.7339C8.38541 12.6011 8.09757 12.4018 7.83187 12.1361Z" fill="#888888"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div x-show="lawarea" x-on:click.outside="lawarea = false" id="dropdownSearch" class="absolute z-10 bg-white rounded-lg shadow w-60">
+                        <div class="p-3">
+                          <label for="input-group-search" class="sr-only">Search</label>
+                          <div class="relative">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                              </svg>
+                            </div>
+                            <input type="text" id="input-group-search" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-500 focus:border-primary-500" placeholder="Search user">
+                          </div>
+                        </div>
+                        <ul class="h-48 px-3 pb-3 overflow-y-auto text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownSearchButton">
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-11" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-11" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Bonnie Green</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                                <input checked id="checkbox-item-12" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                                <label for="checkbox-item-12" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Jese Leos</label>
+                              </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-13" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-13" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Michael Gough</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-14" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-14" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Robert Wall</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-15" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-15" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Joseph Mcfall</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-16" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-16" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Leslie Livingston</label>
+                            </div>
+                          </li>
+                                <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-17" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-17" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Roberta Casas</label>
+                            </div>
+                          </li>
+                        </ul>
+                    </div>
                 </div>
-                <input autocomplete="off" class="block w-full py-4 pr-3 pl-14 text-sm text-gray-900 border border-gray-300 bg-white focus:!ring-violet-500 focus:!border-violet-500 focus-visible:!border-violet-500 focus-visible:!outline-none rounded-full" id="search" x-on:click="open = true; $nextTick(() => $refs.dropdown1.scrollIntoView({ behavior: 'smooth', block: 'center' }))" placeholder="Search by practice area, city, court, lawyer or law firm">
+                <div class="relative md:px-10 0">
+                    <div class="cursor-pointer" x-on:click="city = true">
+                        <p class="text-sm font-bold text-gray-700 md:text-xl">City</p>
+                        <div class="flex items-center justify-between gap-2">
+                            <p class="text-sm font-medium text-black md:text-xl">Rawalpindi</p>
+                            <span class="bg-violet-200 text-black text-sm md:text-xl font-medium mr-2 py-0.5 rounded-full px-3">+1</span>
+                            <svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                <path d="M7.83187 12.1361L0.923642 5.22785C0.0822557 4.38647 -0.105506 3.42374 0.360356 2.33968C0.826218 1.25562 1.65609 0.712709 2.84997 0.710938H16.5336C17.7292 0.710938 18.56 1.25385 19.0258 2.33968C19.4917 3.42551 19.3031 4.38824 18.4599 5.22785L11.5517 12.1361C11.286 12.4018 10.9981 12.6011 10.6882 12.7339C10.3782 12.8668 10.046 12.9332 9.69177 12.9332C9.3375 12.9332 9.00538 12.8668 8.69539 12.7339C8.38541 12.6011 8.09757 12.4018 7.83187 12.1361Z" fill="#888888"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div x-show="city" x-on:click.outside="city = false" id="dropdownSearch" class="absolute z-10 bg-white rounded-lg shadow w-60">
+                        <div class="p-3">
+                          <label for="input-group-search" class="sr-only">Search</label>
+                          <div class="relative">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                              </svg>
+                            </div>
+                            <input type="text" id="input-group-search" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-500 focus:border-primary-500" placeholder="Search user">
+                          </div>
+                        </div>
+                        <ul class="h-48 px-3 pb-3 overflow-y-auto text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownSearchButton">
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-11" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-11" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Karachi</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                                <input checked id="checkbox-item-12" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                                <label for="checkbox-item-12" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Rawalpindi</label>
+                              </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-13" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-13" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Lahore</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-14" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-14" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Robert Wall</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-15" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-15" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Joseph Mcfall</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-16" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-16" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Leslie Livingston</label>
+                            </div>
+                          </li>
+                                <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-17" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-17" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Roberta Casas</label>
+                            </div>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative md:pl-10 ">
+                    <div class="cursor-pointer" x-on:click="lawyer = true">
+                        <p class="text-sm font-bold text-gray-700 md:text-xl">Lawyer</p>
+                        <div class="flex items-center justify-between gap-2">
+                            <p class="text-sm font-medium md:text-xl text-zinc-500">Search by Lawyer’s Name</p>
+                            <svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                <path d="M7.83187 12.1361L0.923642 5.22785C0.0822557 4.38647 -0.105506 3.42374 0.360356 2.33968C0.826218 1.25562 1.65609 0.712709 2.84997 0.710938H16.5336C17.7292 0.710938 18.56 1.25385 19.0258 2.33968C19.4917 3.42551 19.3031 4.38824 18.4599 5.22785L11.5517 12.1361C11.286 12.4018 10.9981 12.6011 10.6882 12.7339C10.3782 12.8668 10.046 12.9332 9.69177 12.9332C9.3375 12.9332 9.00538 12.8668 8.69539 12.7339C8.38541 12.6011 8.09757 12.4018 7.83187 12.1361Z" fill="#888888"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div x-show="lawyer" x-on:click.outside="lawyer = false" id="dropdownSearch" class="absolute z-10 bg-white rounded-lg shadow w-60">
+                        <div class="p-3">
+                          <label for="input-group-search" class="sr-only">Search</label>
+                          <div class="relative">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                              </svg>
+                            </div>
+                            <input type="text" id="input-group-search" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-500 focus:border-primary-500" placeholder="Search user">
+                          </div>
+                        </div>
+                        <ul class="h-48 px-3 pb-3 overflow-y-auto text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownSearchButton">
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-11" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-11" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Bonnie Green</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                                <input checked id="checkbox-item-12" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                                <label for="checkbox-item-12" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Jese Leos</label>
+                              </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-13" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-13" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Michael Gough</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-14" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-14" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Robert Wall</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-15" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-15" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Joseph Mcfall</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-16" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-16" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Leslie Livingston</label>
+                            </div>
+                          </li>
+                                <li>
+                            <div class="flex items-center pl-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                              <input id="checkbox-item-17" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                              <label for="checkbox-item-17" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Roberta Casas</label>
+                            </div>
+                          </li>
+                        </ul>
+                    </div>
+                </div>                                
             </div>
-            <div x-show="open" x-ref="dropdown1" class="absolute z-20 flex flex-col w-full overflow-hidden bg-white shadow rounded-3xl" x-on:click.outside="open = false" style="">
-                <div class="h-[52dvh] overflow-y-auto p-5">
-                    
-                    <div class="mb-6">
-                        <div class="flex items-center justify-between gap-2 mb-2">
-                            
-                            <h2 class="mb-0 text-sm font-medium text-black">Law Area</h2><a class="flex items-center text-sm font-medium text-blue-500" href="javascript:;">See All</a>
-                        </div>
-                        
-        
-                        <div class="flex flex-wrap items-center gap-2 grow">
-                            <div class="item"><a href="/findlawyer?areaoflaw=" class="inline-flex items-center justify-between w-full py-1 pl-1 pr-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <div class="flex items-center gap-1">
-                                        
-                                        <div class="flex items-center justify-center bg-gray-100 rounded-full h-7 w-7 group-hover:bg-white"><svg class="shrink-0" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.99157 0.647461C8.5741 0.647461 9.04673 1.12861 9.04673 1.72216V8.88233C8.207 9.36146 7.63985 10.275 7.63985 11.325C7.63985 11.6139 7.71899 11.8825 7.85748 12.1109H5.88126V10.3197C5.88126 9.72641 5.40863 9.24504 4.8261 9.24504C4.24356 9.24504 3.77094 9.72641 3.77094 10.3197V12.1109H1.66063C1.07787 12.1109 0.605469 11.6295 0.605469 11.0362V1.72216C0.605469 1.12861 1.07787 0.647461 1.66063 0.647461H7.99157ZM2.01235 6.73741C2.01235 6.93444 2.16974 7.09564 2.36406 7.09564H3.0675C3.26095 7.09564 3.41922 6.93444 3.41922 6.73741V6.02095C3.41922 5.82392 3.26095 5.66271 3.0675 5.66271H2.36406C2.16974 5.66271 2.01235 5.82392 2.01235 6.02095V6.73741ZM4.47438 5.66271C4.28093 5.66271 4.12266 5.82392 4.12266 6.02095V6.73741C4.12266 6.93444 4.28093 7.09564 4.47438 7.09564H5.17782C5.37126 7.09564 5.52954 6.93444 5.52954 6.73741V6.02095C5.52954 5.82392 5.37126 5.66271 5.17782 5.66271H4.47438ZM6.23297 6.73741C6.23297 6.93444 6.39125 7.09564 6.58469 7.09564H7.28813C7.48158 7.09564 7.63985 6.93444 7.63985 6.73741V6.02095C7.63985 5.82392 7.48158 5.66271 7.28813 5.66271H6.58469C6.39125 5.66271 6.23297 5.82392 6.23297 6.02095V6.73741ZM2.36406 2.79686C2.16974 2.79686 2.01235 2.95806 2.01235 3.15509V3.87155C2.01235 4.06858 2.16974 4.22978 2.36406 4.22978H3.0675C3.26095 4.22978 3.41922 4.06858 3.41922 3.87155V3.15509C3.41922 2.95806 3.26095 2.79686 3.0675 2.79686H2.36406ZM4.12266 3.87155C4.12266 4.06858 4.28093 4.22978 4.47438 4.22978H5.17782C5.37126 4.22978 5.52954 4.06858 5.52954 3.87155V3.15509C5.52954 2.95806 5.37126 2.79686 5.17782 2.79686H4.47438C4.28093 2.79686 4.12266 2.95806 4.12266 3.15509V3.87155ZM6.58469 2.79686C6.39125 2.79686 6.23297 2.95806 6.23297 3.15509V3.87155C6.23297 4.06858 6.39125 4.22978 6.58469 4.22978H7.28813C7.48158 4.22978 7.63985 4.06858 7.63985 3.87155V3.15509C7.63985 2.95806 7.48158 2.79686 7.28813 2.79686H6.58469ZM13.2674 6.73741C13.2674 7.72703 12.4804 8.52857 11.5088 8.52857C10.5371 8.52857 9.75016 7.72703 9.75016 6.73741C9.75016 5.74779 10.5371 4.94625 11.5088 4.94625C12.4804 4.94625 13.2674 5.74779 13.2674 6.73741ZM8.34329 11.3295C8.34329 10.1787 9.25996 9.24504 10.3899 9.24504H12.6277C13.7576 9.24504 14.6742 10.1787 14.6742 11.3295C14.6742 11.7616 14.3313 12.1109 13.907 12.1109H9.11048C8.68621 12.1109 8.34329 11.7616 8.34329 11.3295Z" fill="#52525B"></path>
-                                            </svg></div>
-                                        <div class="grow">
-                                            <h3 class="mb-0 text-xs font-medium text-gray-600"></h3>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?areaoflaw=admiralty+and+maritime+laws" class="inline-flex items-center justify-between w-full py-1 pl-1 pr-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <div class="flex items-center gap-1">
-                                        
-                                        <div class="flex items-center justify-center bg-gray-100 rounded-full h-7 w-7 group-hover:bg-white"><svg class="shrink-0" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.99157 0.647461C8.5741 0.647461 9.04673 1.12861 9.04673 1.72216V8.88233C8.207 9.36146 7.63985 10.275 7.63985 11.325C7.63985 11.6139 7.71899 11.8825 7.85748 12.1109H5.88126V10.3197C5.88126 9.72641 5.40863 9.24504 4.8261 9.24504C4.24356 9.24504 3.77094 9.72641 3.77094 10.3197V12.1109H1.66063C1.07787 12.1109 0.605469 11.6295 0.605469 11.0362V1.72216C0.605469 1.12861 1.07787 0.647461 1.66063 0.647461H7.99157ZM2.01235 6.73741C2.01235 6.93444 2.16974 7.09564 2.36406 7.09564H3.0675C3.26095 7.09564 3.41922 6.93444 3.41922 6.73741V6.02095C3.41922 5.82392 3.26095 5.66271 3.0675 5.66271H2.36406C2.16974 5.66271 2.01235 5.82392 2.01235 6.02095V6.73741ZM4.47438 5.66271C4.28093 5.66271 4.12266 5.82392 4.12266 6.02095V6.73741C4.12266 6.93444 4.28093 7.09564 4.47438 7.09564H5.17782C5.37126 7.09564 5.52954 6.93444 5.52954 6.73741V6.02095C5.52954 5.82392 5.37126 5.66271 5.17782 5.66271H4.47438ZM6.23297 6.73741C6.23297 6.93444 6.39125 7.09564 6.58469 7.09564H7.28813C7.48158 7.09564 7.63985 6.93444 7.63985 6.73741V6.02095C7.63985 5.82392 7.48158 5.66271 7.28813 5.66271H6.58469C6.39125 5.66271 6.23297 5.82392 6.23297 6.02095V6.73741ZM2.36406 2.79686C2.16974 2.79686 2.01235 2.95806 2.01235 3.15509V3.87155C2.01235 4.06858 2.16974 4.22978 2.36406 4.22978H3.0675C3.26095 4.22978 3.41922 4.06858 3.41922 3.87155V3.15509C3.41922 2.95806 3.26095 2.79686 3.0675 2.79686H2.36406ZM4.12266 3.87155C4.12266 4.06858 4.28093 4.22978 4.47438 4.22978H5.17782C5.37126 4.22978 5.52954 4.06858 5.52954 3.87155V3.15509C5.52954 2.95806 5.37126 2.79686 5.17782 2.79686H4.47438C4.28093 2.79686 4.12266 2.95806 4.12266 3.15509V3.87155ZM6.58469 2.79686C6.39125 2.79686 6.23297 2.95806 6.23297 3.15509V3.87155C6.23297 4.06858 6.39125 4.22978 6.58469 4.22978H7.28813C7.48158 4.22978 7.63985 4.06858 7.63985 3.87155V3.15509C7.63985 2.95806 7.48158 2.79686 7.28813 2.79686H6.58469ZM13.2674 6.73741C13.2674 7.72703 12.4804 8.52857 11.5088 8.52857C10.5371 8.52857 9.75016 7.72703 9.75016 6.73741C9.75016 5.74779 10.5371 4.94625 11.5088 4.94625C12.4804 4.94625 13.2674 5.74779 13.2674 6.73741ZM8.34329 11.3295C8.34329 10.1787 9.25996 9.24504 10.3899 9.24504H12.6277C13.7576 9.24504 14.6742 10.1787 14.6742 11.3295C14.6742 11.7616 14.3313 12.1109 13.907 12.1109H9.11048C8.68621 12.1109 8.34329 11.7616 8.34329 11.3295Z" fill="#52525B"></path>
-                                            </svg></div>
-                                        <div class="grow">
-                                            <h3 class="mb-0 text-xs font-medium text-gray-600">Admiralty and Maritime Laws</h3>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?areaoflaw=against+acquittal" class="inline-flex items-center justify-between w-full py-1 pl-1 pr-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <div class="flex items-center gap-1">
-                                        
-                                        <div class="flex items-center justify-center bg-gray-100 rounded-full h-7 w-7 group-hover:bg-white"><svg class="shrink-0" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.99157 0.647461C8.5741 0.647461 9.04673 1.12861 9.04673 1.72216V8.88233C8.207 9.36146 7.63985 10.275 7.63985 11.325C7.63985 11.6139 7.71899 11.8825 7.85748 12.1109H5.88126V10.3197C5.88126 9.72641 5.40863 9.24504 4.8261 9.24504C4.24356 9.24504 3.77094 9.72641 3.77094 10.3197V12.1109H1.66063C1.07787 12.1109 0.605469 11.6295 0.605469 11.0362V1.72216C0.605469 1.12861 1.07787 0.647461 1.66063 0.647461H7.99157ZM2.01235 6.73741C2.01235 6.93444 2.16974 7.09564 2.36406 7.09564H3.0675C3.26095 7.09564 3.41922 6.93444 3.41922 6.73741V6.02095C3.41922 5.82392 3.26095 5.66271 3.0675 5.66271H2.36406C2.16974 5.66271 2.01235 5.82392 2.01235 6.02095V6.73741ZM4.47438 5.66271C4.28093 5.66271 4.12266 5.82392 4.12266 6.02095V6.73741C4.12266 6.93444 4.28093 7.09564 4.47438 7.09564H5.17782C5.37126 7.09564 5.52954 6.93444 5.52954 6.73741V6.02095C5.52954 5.82392 5.37126 5.66271 5.17782 5.66271H4.47438ZM6.23297 6.73741C6.23297 6.93444 6.39125 7.09564 6.58469 7.09564H7.28813C7.48158 7.09564 7.63985 6.93444 7.63985 6.73741V6.02095C7.63985 5.82392 7.48158 5.66271 7.28813 5.66271H6.58469C6.39125 5.66271 6.23297 5.82392 6.23297 6.02095V6.73741ZM2.36406 2.79686C2.16974 2.79686 2.01235 2.95806 2.01235 3.15509V3.87155C2.01235 4.06858 2.16974 4.22978 2.36406 4.22978H3.0675C3.26095 4.22978 3.41922 4.06858 3.41922 3.87155V3.15509C3.41922 2.95806 3.26095 2.79686 3.0675 2.79686H2.36406ZM4.12266 3.87155C4.12266 4.06858 4.28093 4.22978 4.47438 4.22978H5.17782C5.37126 4.22978 5.52954 4.06858 5.52954 3.87155V3.15509C5.52954 2.95806 5.37126 2.79686 5.17782 2.79686H4.47438C4.28093 2.79686 4.12266 2.95806 4.12266 3.15509V3.87155ZM6.58469 2.79686C6.39125 2.79686 6.23297 2.95806 6.23297 3.15509V3.87155C6.23297 4.06858 6.39125 4.22978 6.58469 4.22978H7.28813C7.48158 4.22978 7.63985 4.06858 7.63985 3.87155V3.15509C7.63985 2.95806 7.48158 2.79686 7.28813 2.79686H6.58469ZM13.2674 6.73741C13.2674 7.72703 12.4804 8.52857 11.5088 8.52857C10.5371 8.52857 9.75016 7.72703 9.75016 6.73741C9.75016 5.74779 10.5371 4.94625 11.5088 4.94625C12.4804 4.94625 13.2674 5.74779 13.2674 6.73741ZM8.34329 11.3295C8.34329 10.1787 9.25996 9.24504 10.3899 9.24504H12.6277C13.7576 9.24504 14.6742 10.1787 14.6742 11.3295C14.6742 11.7616 14.3313 12.1109 13.907 12.1109H9.11048C8.68621 12.1109 8.34329 11.7616 8.34329 11.3295Z" fill="#52525B"></path>
-                                            </svg></div>
-                                        <div class="grow">
-                                            <h3 class="mb-0 text-xs font-medium text-gray-600">Against Acquittal</h3>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?areaoflaw=against+acquittalantiterrorism+act" class="inline-flex items-center justify-between w-full py-1 pl-1 pr-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <div class="flex items-center gap-1">
-                                        
-                                        <div class="flex items-center justify-center bg-gray-100 rounded-full h-7 w-7 group-hover:bg-white"><svg class="shrink-0" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.99157 0.647461C8.5741 0.647461 9.04673 1.12861 9.04673 1.72216V8.88233C8.207 9.36146 7.63985 10.275 7.63985 11.325C7.63985 11.6139 7.71899 11.8825 7.85748 12.1109H5.88126V10.3197C5.88126 9.72641 5.40863 9.24504 4.8261 9.24504C4.24356 9.24504 3.77094 9.72641 3.77094 10.3197V12.1109H1.66063C1.07787 12.1109 0.605469 11.6295 0.605469 11.0362V1.72216C0.605469 1.12861 1.07787 0.647461 1.66063 0.647461H7.99157ZM2.01235 6.73741C2.01235 6.93444 2.16974 7.09564 2.36406 7.09564H3.0675C3.26095 7.09564 3.41922 6.93444 3.41922 6.73741V6.02095C3.41922 5.82392 3.26095 5.66271 3.0675 5.66271H2.36406C2.16974 5.66271 2.01235 5.82392 2.01235 6.02095V6.73741ZM4.47438 5.66271C4.28093 5.66271 4.12266 5.82392 4.12266 6.02095V6.73741C4.12266 6.93444 4.28093 7.09564 4.47438 7.09564H5.17782C5.37126 7.09564 5.52954 6.93444 5.52954 6.73741V6.02095C5.52954 5.82392 5.37126 5.66271 5.17782 5.66271H4.47438ZM6.23297 6.73741C6.23297 6.93444 6.39125 7.09564 6.58469 7.09564H7.28813C7.48158 7.09564 7.63985 6.93444 7.63985 6.73741V6.02095C7.63985 5.82392 7.48158 5.66271 7.28813 5.66271H6.58469C6.39125 5.66271 6.23297 5.82392 6.23297 6.02095V6.73741ZM2.36406 2.79686C2.16974 2.79686 2.01235 2.95806 2.01235 3.15509V3.87155C2.01235 4.06858 2.16974 4.22978 2.36406 4.22978H3.0675C3.26095 4.22978 3.41922 4.06858 3.41922 3.87155V3.15509C3.41922 2.95806 3.26095 2.79686 3.0675 2.79686H2.36406ZM4.12266 3.87155C4.12266 4.06858 4.28093 4.22978 4.47438 4.22978H5.17782C5.37126 4.22978 5.52954 4.06858 5.52954 3.87155V3.15509C5.52954 2.95806 5.37126 2.79686 5.17782 2.79686H4.47438C4.28093 2.79686 4.12266 2.95806 4.12266 3.15509V3.87155ZM6.58469 2.79686C6.39125 2.79686 6.23297 2.95806 6.23297 3.15509V3.87155C6.23297 4.06858 6.39125 4.22978 6.58469 4.22978H7.28813C7.48158 4.22978 7.63985 4.06858 7.63985 3.87155V3.15509C7.63985 2.95806 7.48158 2.79686 7.28813 2.79686H6.58469ZM13.2674 6.73741C13.2674 7.72703 12.4804 8.52857 11.5088 8.52857C10.5371 8.52857 9.75016 7.72703 9.75016 6.73741C9.75016 5.74779 10.5371 4.94625 11.5088 4.94625C12.4804 4.94625 13.2674 5.74779 13.2674 6.73741ZM8.34329 11.3295C8.34329 10.1787 9.25996 9.24504 10.3899 9.24504H12.6277C13.7576 9.24504 14.6742 10.1787 14.6742 11.3295C14.6742 11.7616 14.3313 12.1109 13.907 12.1109H9.11048C8.68621 12.1109 8.34329 11.7616 8.34329 11.3295Z" fill="#52525B"></path>
-                                            </svg></div>
-                                        <div class="grow">
-                                            <h3 class="mb-0 text-xs font-medium text-gray-600">Against AcquittalAntiTerrorism Act</h3>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?areaoflaw=against+acquittalcontrol+of+narchotics+substance" class="inline-flex items-center justify-between w-full py-1 pl-1 pr-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <div class="flex items-center gap-1">
-                                        
-                                        <div class="flex items-center justify-center bg-gray-100 rounded-full h-7 w-7 group-hover:bg-white"><svg class="shrink-0" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.99157 0.647461C8.5741 0.647461 9.04673 1.12861 9.04673 1.72216V8.88233C8.207 9.36146 7.63985 10.275 7.63985 11.325C7.63985 11.6139 7.71899 11.8825 7.85748 12.1109H5.88126V10.3197C5.88126 9.72641 5.40863 9.24504 4.8261 9.24504C4.24356 9.24504 3.77094 9.72641 3.77094 10.3197V12.1109H1.66063C1.07787 12.1109 0.605469 11.6295 0.605469 11.0362V1.72216C0.605469 1.12861 1.07787 0.647461 1.66063 0.647461H7.99157ZM2.01235 6.73741C2.01235 6.93444 2.16974 7.09564 2.36406 7.09564H3.0675C3.26095 7.09564 3.41922 6.93444 3.41922 6.73741V6.02095C3.41922 5.82392 3.26095 5.66271 3.0675 5.66271H2.36406C2.16974 5.66271 2.01235 5.82392 2.01235 6.02095V6.73741ZM4.47438 5.66271C4.28093 5.66271 4.12266 5.82392 4.12266 6.02095V6.73741C4.12266 6.93444 4.28093 7.09564 4.47438 7.09564H5.17782C5.37126 7.09564 5.52954 6.93444 5.52954 6.73741V6.02095C5.52954 5.82392 5.37126 5.66271 5.17782 5.66271H4.47438ZM6.23297 6.73741C6.23297 6.93444 6.39125 7.09564 6.58469 7.09564H7.28813C7.48158 7.09564 7.63985 6.93444 7.63985 6.73741V6.02095C7.63985 5.82392 7.48158 5.66271 7.28813 5.66271H6.58469C6.39125 5.66271 6.23297 5.82392 6.23297 6.02095V6.73741ZM2.36406 2.79686C2.16974 2.79686 2.01235 2.95806 2.01235 3.15509V3.87155C2.01235 4.06858 2.16974 4.22978 2.36406 4.22978H3.0675C3.26095 4.22978 3.41922 4.06858 3.41922 3.87155V3.15509C3.41922 2.95806 3.26095 2.79686 3.0675 2.79686H2.36406ZM4.12266 3.87155C4.12266 4.06858 4.28093 4.22978 4.47438 4.22978H5.17782C5.37126 4.22978 5.52954 4.06858 5.52954 3.87155V3.15509C5.52954 2.95806 5.37126 2.79686 5.17782 2.79686H4.47438C4.28093 2.79686 4.12266 2.95806 4.12266 3.15509V3.87155ZM6.58469 2.79686C6.39125 2.79686 6.23297 2.95806 6.23297 3.15509V3.87155C6.23297 4.06858 6.39125 4.22978 6.58469 4.22978H7.28813C7.48158 4.22978 7.63985 4.06858 7.63985 3.87155V3.15509C7.63985 2.95806 7.48158 2.79686 7.28813 2.79686H6.58469ZM13.2674 6.73741C13.2674 7.72703 12.4804 8.52857 11.5088 8.52857C10.5371 8.52857 9.75016 7.72703 9.75016 6.73741C9.75016 5.74779 10.5371 4.94625 11.5088 4.94625C12.4804 4.94625 13.2674 5.74779 13.2674 6.73741ZM8.34329 11.3295C8.34329 10.1787 9.25996 9.24504 10.3899 9.24504H12.6277C13.7576 9.24504 14.6742 10.1787 14.6742 11.3295C14.6742 11.7616 14.3313 12.1109 13.907 12.1109H9.11048C8.68621 12.1109 8.34329 11.7616 8.34329 11.3295Z" fill="#52525B"></path>
-                                            </svg></div>
-                                        <div class="grow">
-                                            <h3 class="mb-0 text-xs font-medium text-gray-600">Against AcquittalControl of Narchotics Substance</h3>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?areaoflaw=against+acquittalnab" class="inline-flex items-center justify-between w-full py-1 pl-1 pr-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <div class="flex items-center gap-1">
-                                        
-                                        <div class="flex items-center justify-center bg-gray-100 rounded-full h-7 w-7 group-hover:bg-white"><svg class="shrink-0" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.99157 0.647461C8.5741 0.647461 9.04673 1.12861 9.04673 1.72216V8.88233C8.207 9.36146 7.63985 10.275 7.63985 11.325C7.63985 11.6139 7.71899 11.8825 7.85748 12.1109H5.88126V10.3197C5.88126 9.72641 5.40863 9.24504 4.8261 9.24504C4.24356 9.24504 3.77094 9.72641 3.77094 10.3197V12.1109H1.66063C1.07787 12.1109 0.605469 11.6295 0.605469 11.0362V1.72216C0.605469 1.12861 1.07787 0.647461 1.66063 0.647461H7.99157ZM2.01235 6.73741C2.01235 6.93444 2.16974 7.09564 2.36406 7.09564H3.0675C3.26095 7.09564 3.41922 6.93444 3.41922 6.73741V6.02095C3.41922 5.82392 3.26095 5.66271 3.0675 5.66271H2.36406C2.16974 5.66271 2.01235 5.82392 2.01235 6.02095V6.73741ZM4.47438 5.66271C4.28093 5.66271 4.12266 5.82392 4.12266 6.02095V6.73741C4.12266 6.93444 4.28093 7.09564 4.47438 7.09564H5.17782C5.37126 7.09564 5.52954 6.93444 5.52954 6.73741V6.02095C5.52954 5.82392 5.37126 5.66271 5.17782 5.66271H4.47438ZM6.23297 6.73741C6.23297 6.93444 6.39125 7.09564 6.58469 7.09564H7.28813C7.48158 7.09564 7.63985 6.93444 7.63985 6.73741V6.02095C7.63985 5.82392 7.48158 5.66271 7.28813 5.66271H6.58469C6.39125 5.66271 6.23297 5.82392 6.23297 6.02095V6.73741ZM2.36406 2.79686C2.16974 2.79686 2.01235 2.95806 2.01235 3.15509V3.87155C2.01235 4.06858 2.16974 4.22978 2.36406 4.22978H3.0675C3.26095 4.22978 3.41922 4.06858 3.41922 3.87155V3.15509C3.41922 2.95806 3.26095 2.79686 3.0675 2.79686H2.36406ZM4.12266 3.87155C4.12266 4.06858 4.28093 4.22978 4.47438 4.22978H5.17782C5.37126 4.22978 5.52954 4.06858 5.52954 3.87155V3.15509C5.52954 2.95806 5.37126 2.79686 5.17782 2.79686H4.47438C4.28093 2.79686 4.12266 2.95806 4.12266 3.15509V3.87155ZM6.58469 2.79686C6.39125 2.79686 6.23297 2.95806 6.23297 3.15509V3.87155C6.23297 4.06858 6.39125 4.22978 6.58469 4.22978H7.28813C7.48158 4.22978 7.63985 4.06858 7.63985 3.87155V3.15509C7.63985 2.95806 7.48158 2.79686 7.28813 2.79686H6.58469ZM13.2674 6.73741C13.2674 7.72703 12.4804 8.52857 11.5088 8.52857C10.5371 8.52857 9.75016 7.72703 9.75016 6.73741C9.75016 5.74779 10.5371 4.94625 11.5088 4.94625C12.4804 4.94625 13.2674 5.74779 13.2674 6.73741ZM8.34329 11.3295C8.34329 10.1787 9.25996 9.24504 10.3899 9.24504H12.6277C13.7576 9.24504 14.6742 10.1787 14.6742 11.3295C14.6742 11.7616 14.3313 12.1109 13.907 12.1109H9.11048C8.68621 12.1109 8.34329 11.7616 8.34329 11.3295Z" fill="#52525B"></path>
-                                            </svg></div>
-                                        <div class="grow">
-                                            <h3 class="mb-0 text-xs font-medium text-gray-600">Against AcquittalNAB</h3>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?areaoflaw=against+acquittalsessions" class="inline-flex items-center justify-between w-full py-1 pl-1 pr-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <div class="flex items-center gap-1">
-                                        
-                                        <div class="flex items-center justify-center bg-gray-100 rounded-full h-7 w-7 group-hover:bg-white"><svg class="shrink-0" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.99157 0.647461C8.5741 0.647461 9.04673 1.12861 9.04673 1.72216V8.88233C8.207 9.36146 7.63985 10.275 7.63985 11.325C7.63985 11.6139 7.71899 11.8825 7.85748 12.1109H5.88126V10.3197C5.88126 9.72641 5.40863 9.24504 4.8261 9.24504C4.24356 9.24504 3.77094 9.72641 3.77094 10.3197V12.1109H1.66063C1.07787 12.1109 0.605469 11.6295 0.605469 11.0362V1.72216C0.605469 1.12861 1.07787 0.647461 1.66063 0.647461H7.99157ZM2.01235 6.73741C2.01235 6.93444 2.16974 7.09564 2.36406 7.09564H3.0675C3.26095 7.09564 3.41922 6.93444 3.41922 6.73741V6.02095C3.41922 5.82392 3.26095 5.66271 3.0675 5.66271H2.36406C2.16974 5.66271 2.01235 5.82392 2.01235 6.02095V6.73741ZM4.47438 5.66271C4.28093 5.66271 4.12266 5.82392 4.12266 6.02095V6.73741C4.12266 6.93444 4.28093 7.09564 4.47438 7.09564H5.17782C5.37126 7.09564 5.52954 6.93444 5.52954 6.73741V6.02095C5.52954 5.82392 5.37126 5.66271 5.17782 5.66271H4.47438ZM6.23297 6.73741C6.23297 6.93444 6.39125 7.09564 6.58469 7.09564H7.28813C7.48158 7.09564 7.63985 6.93444 7.63985 6.73741V6.02095C7.63985 5.82392 7.48158 5.66271 7.28813 5.66271H6.58469C6.39125 5.66271 6.23297 5.82392 6.23297 6.02095V6.73741ZM2.36406 2.79686C2.16974 2.79686 2.01235 2.95806 2.01235 3.15509V3.87155C2.01235 4.06858 2.16974 4.22978 2.36406 4.22978H3.0675C3.26095 4.22978 3.41922 4.06858 3.41922 3.87155V3.15509C3.41922 2.95806 3.26095 2.79686 3.0675 2.79686H2.36406ZM4.12266 3.87155C4.12266 4.06858 4.28093 4.22978 4.47438 4.22978H5.17782C5.37126 4.22978 5.52954 4.06858 5.52954 3.87155V3.15509C5.52954 2.95806 5.37126 2.79686 5.17782 2.79686H4.47438C4.28093 2.79686 4.12266 2.95806 4.12266 3.15509V3.87155ZM6.58469 2.79686C6.39125 2.79686 6.23297 2.95806 6.23297 3.15509V3.87155C6.23297 4.06858 6.39125 4.22978 6.58469 4.22978H7.28813C7.48158 4.22978 7.63985 4.06858 7.63985 3.87155V3.15509C7.63985 2.95806 7.48158 2.79686 7.28813 2.79686H6.58469ZM13.2674 6.73741C13.2674 7.72703 12.4804 8.52857 11.5088 8.52857C10.5371 8.52857 9.75016 7.72703 9.75016 6.73741C9.75016 5.74779 10.5371 4.94625 11.5088 4.94625C12.4804 4.94625 13.2674 5.74779 13.2674 6.73741ZM8.34329 11.3295C8.34329 10.1787 9.25996 9.24504 10.3899 9.24504H12.6277C13.7576 9.24504 14.6742 10.1787 14.6742 11.3295C14.6742 11.7616 14.3313 12.1109 13.907 12.1109H9.11048C8.68621 12.1109 8.34329 11.7616 8.34329 11.3295Z" fill="#52525B"></path>
-                                            </svg></div>
-                                        <div class="grow">
-                                            <h3 class="mb-0 text-xs font-medium text-gray-600">Against AcquittalSessions</h3>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?areaoflaw=against+interim+order" class="inline-flex items-center justify-between w-full py-1 pl-1 pr-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <div class="flex items-center gap-1">
-                                        
-                                        <div class="flex items-center justify-center bg-gray-100 rounded-full h-7 w-7 group-hover:bg-white"><svg class="shrink-0" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.99157 0.647461C8.5741 0.647461 9.04673 1.12861 9.04673 1.72216V8.88233C8.207 9.36146 7.63985 10.275 7.63985 11.325C7.63985 11.6139 7.71899 11.8825 7.85748 12.1109H5.88126V10.3197C5.88126 9.72641 5.40863 9.24504 4.8261 9.24504C4.24356 9.24504 3.77094 9.72641 3.77094 10.3197V12.1109H1.66063C1.07787 12.1109 0.605469 11.6295 0.605469 11.0362V1.72216C0.605469 1.12861 1.07787 0.647461 1.66063 0.647461H7.99157ZM2.01235 6.73741C2.01235 6.93444 2.16974 7.09564 2.36406 7.09564H3.0675C3.26095 7.09564 3.41922 6.93444 3.41922 6.73741V6.02095C3.41922 5.82392 3.26095 5.66271 3.0675 5.66271H2.36406C2.16974 5.66271 2.01235 5.82392 2.01235 6.02095V6.73741ZM4.47438 5.66271C4.28093 5.66271 4.12266 5.82392 4.12266 6.02095V6.73741C4.12266 6.93444 4.28093 7.09564 4.47438 7.09564H5.17782C5.37126 7.09564 5.52954 6.93444 5.52954 6.73741V6.02095C5.52954 5.82392 5.37126 5.66271 5.17782 5.66271H4.47438ZM6.23297 6.73741C6.23297 6.93444 6.39125 7.09564 6.58469 7.09564H7.28813C7.48158 7.09564 7.63985 6.93444 7.63985 6.73741V6.02095C7.63985 5.82392 7.48158 5.66271 7.28813 5.66271H6.58469C6.39125 5.66271 6.23297 5.82392 6.23297 6.02095V6.73741ZM2.36406 2.79686C2.16974 2.79686 2.01235 2.95806 2.01235 3.15509V3.87155C2.01235 4.06858 2.16974 4.22978 2.36406 4.22978H3.0675C3.26095 4.22978 3.41922 4.06858 3.41922 3.87155V3.15509C3.41922 2.95806 3.26095 2.79686 3.0675 2.79686H2.36406ZM4.12266 3.87155C4.12266 4.06858 4.28093 4.22978 4.47438 4.22978H5.17782C5.37126 4.22978 5.52954 4.06858 5.52954 3.87155V3.15509C5.52954 2.95806 5.37126 2.79686 5.17782 2.79686H4.47438C4.28093 2.79686 4.12266 2.95806 4.12266 3.15509V3.87155ZM6.58469 2.79686C6.39125 2.79686 6.23297 2.95806 6.23297 3.15509V3.87155C6.23297 4.06858 6.39125 4.22978 6.58469 4.22978H7.28813C7.48158 4.22978 7.63985 4.06858 7.63985 3.87155V3.15509C7.63985 2.95806 7.48158 2.79686 7.28813 2.79686H6.58469ZM13.2674 6.73741C13.2674 7.72703 12.4804 8.52857 11.5088 8.52857C10.5371 8.52857 9.75016 7.72703 9.75016 6.73741C9.75016 5.74779 10.5371 4.94625 11.5088 4.94625C12.4804 4.94625 13.2674 5.74779 13.2674 6.73741ZM8.34329 11.3295C8.34329 10.1787 9.25996 9.24504 10.3899 9.24504H12.6277C13.7576 9.24504 14.6742 10.1787 14.6742 11.3295C14.6742 11.7616 14.3313 12.1109 13.907 12.1109H9.11048C8.68621 12.1109 8.34329 11.7616 8.34329 11.3295Z" fill="#52525B"></path>
-                                            </svg></div>
-                                        <div class="grow">
-                                            <h3 class="mb-0 text-xs font-medium text-gray-600">Against Interim Order</h3>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?areaoflaw=against+remand+order" class="inline-flex items-center justify-between w-full py-1 pl-1 pr-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <div class="flex items-center gap-1">
-                                        
-                                        <div class="flex items-center justify-center bg-gray-100 rounded-full h-7 w-7 group-hover:bg-white"><svg class="shrink-0" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.99157 0.647461C8.5741 0.647461 9.04673 1.12861 9.04673 1.72216V8.88233C8.207 9.36146 7.63985 10.275 7.63985 11.325C7.63985 11.6139 7.71899 11.8825 7.85748 12.1109H5.88126V10.3197C5.88126 9.72641 5.40863 9.24504 4.8261 9.24504C4.24356 9.24504 3.77094 9.72641 3.77094 10.3197V12.1109H1.66063C1.07787 12.1109 0.605469 11.6295 0.605469 11.0362V1.72216C0.605469 1.12861 1.07787 0.647461 1.66063 0.647461H7.99157ZM2.01235 6.73741C2.01235 6.93444 2.16974 7.09564 2.36406 7.09564H3.0675C3.26095 7.09564 3.41922 6.93444 3.41922 6.73741V6.02095C3.41922 5.82392 3.26095 5.66271 3.0675 5.66271H2.36406C2.16974 5.66271 2.01235 5.82392 2.01235 6.02095V6.73741ZM4.47438 5.66271C4.28093 5.66271 4.12266 5.82392 4.12266 6.02095V6.73741C4.12266 6.93444 4.28093 7.09564 4.47438 7.09564H5.17782C5.37126 7.09564 5.52954 6.93444 5.52954 6.73741V6.02095C5.52954 5.82392 5.37126 5.66271 5.17782 5.66271H4.47438ZM6.23297 6.73741C6.23297 6.93444 6.39125 7.09564 6.58469 7.09564H7.28813C7.48158 7.09564 7.63985 6.93444 7.63985 6.73741V6.02095C7.63985 5.82392 7.48158 5.66271 7.28813 5.66271H6.58469C6.39125 5.66271 6.23297 5.82392 6.23297 6.02095V6.73741ZM2.36406 2.79686C2.16974 2.79686 2.01235 2.95806 2.01235 3.15509V3.87155C2.01235 4.06858 2.16974 4.22978 2.36406 4.22978H3.0675C3.26095 4.22978 3.41922 4.06858 3.41922 3.87155V3.15509C3.41922 2.95806 3.26095 2.79686 3.0675 2.79686H2.36406ZM4.12266 3.87155C4.12266 4.06858 4.28093 4.22978 4.47438 4.22978H5.17782C5.37126 4.22978 5.52954 4.06858 5.52954 3.87155V3.15509C5.52954 2.95806 5.37126 2.79686 5.17782 2.79686H4.47438C4.28093 2.79686 4.12266 2.95806 4.12266 3.15509V3.87155ZM6.58469 2.79686C6.39125 2.79686 6.23297 2.95806 6.23297 3.15509V3.87155C6.23297 4.06858 6.39125 4.22978 6.58469 4.22978H7.28813C7.48158 4.22978 7.63985 4.06858 7.63985 3.87155V3.15509C7.63985 2.95806 7.48158 2.79686 7.28813 2.79686H6.58469ZM13.2674 6.73741C13.2674 7.72703 12.4804 8.52857 11.5088 8.52857C10.5371 8.52857 9.75016 7.72703 9.75016 6.73741C9.75016 5.74779 10.5371 4.94625 11.5088 4.94625C12.4804 4.94625 13.2674 5.74779 13.2674 6.73741ZM8.34329 11.3295C8.34329 10.1787 9.25996 9.24504 10.3899 9.24504H12.6277C13.7576 9.24504 14.6742 10.1787 14.6742 11.3295C14.6742 11.7616 14.3313 12.1109 13.907 12.1109H9.11048C8.68621 12.1109 8.34329 11.7616 8.34329 11.3295Z" fill="#52525B"></path>
-                                            </svg></div>
-                                        <div class="grow">
-                                            <h3 class="mb-0 text-xs font-medium text-gray-600">Against Remand Order</h3>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?areaoflaw=against+suspension+of+sentence" class="inline-flex items-center justify-between w-full py-1 pl-1 pr-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <div class="flex items-center gap-1">
-                                        
-                                        <div class="flex items-center justify-center bg-gray-100 rounded-full h-7 w-7 group-hover:bg-white"><svg class="shrink-0" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.99157 0.647461C8.5741 0.647461 9.04673 1.12861 9.04673 1.72216V8.88233C8.207 9.36146 7.63985 10.275 7.63985 11.325C7.63985 11.6139 7.71899 11.8825 7.85748 12.1109H5.88126V10.3197C5.88126 9.72641 5.40863 9.24504 4.8261 9.24504C4.24356 9.24504 3.77094 9.72641 3.77094 10.3197V12.1109H1.66063C1.07787 12.1109 0.605469 11.6295 0.605469 11.0362V1.72216C0.605469 1.12861 1.07787 0.647461 1.66063 0.647461H7.99157ZM2.01235 6.73741C2.01235 6.93444 2.16974 7.09564 2.36406 7.09564H3.0675C3.26095 7.09564 3.41922 6.93444 3.41922 6.73741V6.02095C3.41922 5.82392 3.26095 5.66271 3.0675 5.66271H2.36406C2.16974 5.66271 2.01235 5.82392 2.01235 6.02095V6.73741ZM4.47438 5.66271C4.28093 5.66271 4.12266 5.82392 4.12266 6.02095V6.73741C4.12266 6.93444 4.28093 7.09564 4.47438 7.09564H5.17782C5.37126 7.09564 5.52954 6.93444 5.52954 6.73741V6.02095C5.52954 5.82392 5.37126 5.66271 5.17782 5.66271H4.47438ZM6.23297 6.73741C6.23297 6.93444 6.39125 7.09564 6.58469 7.09564H7.28813C7.48158 7.09564 7.63985 6.93444 7.63985 6.73741V6.02095C7.63985 5.82392 7.48158 5.66271 7.28813 5.66271H6.58469C6.39125 5.66271 6.23297 5.82392 6.23297 6.02095V6.73741ZM2.36406 2.79686C2.16974 2.79686 2.01235 2.95806 2.01235 3.15509V3.87155C2.01235 4.06858 2.16974 4.22978 2.36406 4.22978H3.0675C3.26095 4.22978 3.41922 4.06858 3.41922 3.87155V3.15509C3.41922 2.95806 3.26095 2.79686 3.0675 2.79686H2.36406ZM4.12266 3.87155C4.12266 4.06858 4.28093 4.22978 4.47438 4.22978H5.17782C5.37126 4.22978 5.52954 4.06858 5.52954 3.87155V3.15509C5.52954 2.95806 5.37126 2.79686 5.17782 2.79686H4.47438C4.28093 2.79686 4.12266 2.95806 4.12266 3.15509V3.87155ZM6.58469 2.79686C6.39125 2.79686 6.23297 2.95806 6.23297 3.15509V3.87155C6.23297 4.06858 6.39125 4.22978 6.58469 4.22978H7.28813C7.48158 4.22978 7.63985 4.06858 7.63985 3.87155V3.15509C7.63985 2.95806 7.48158 2.79686 7.28813 2.79686H6.58469ZM13.2674 6.73741C13.2674 7.72703 12.4804 8.52857 11.5088 8.52857C10.5371 8.52857 9.75016 7.72703 9.75016 6.73741C9.75016 5.74779 10.5371 4.94625 11.5088 4.94625C12.4804 4.94625 13.2674 5.74779 13.2674 6.73741ZM8.34329 11.3295C8.34329 10.1787 9.25996 9.24504 10.3899 9.24504H12.6277C13.7576 9.24504 14.6742 10.1787 14.6742 11.3295C14.6742 11.7616 14.3313 12.1109 13.907 12.1109H9.11048C8.68621 12.1109 8.34329 11.7616 8.34329 11.3295Z" fill="#52525B"></path>
-                                            </svg></div>
-                                        <div class="grow">
-                                            <h3 class="mb-0 text-xs font-medium text-gray-600">Against Suspension of Sentence</h3>
-                                        </div>
-                                    </div>
-                                </a></div>
-                        </div>
-                    </div>
-                    
-        
-                    
-                    <div class="mb-6">
-                        
-                        <div class="flex items-center justify-between gap-2 mb-2">
-                            <h2 class="mb-0 text-sm font-medium text-black">Lawyers &amp; Law Firms</h2>
-                            <a class="flex items-center text-sm font-medium text-blue-500" href="/findlawyer">See All</a>
-                        </div>
-                        <div class="flex flex-wrap items-center gap-2 grow">
-                            <div class="item"><a href="profile?id=94ab81b6-ce23-4979-4e25-08daf5810fb4&amp;tab=overview" class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200">
-                                    <div class="flex items-center gap-2">
-                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white">
-                                            <picture class="w-full">
-                                                <source srcset="./images/profile.avif" type="image/avif">
-                                                <source srcset="./images/profile.webp" type="image/webp">
-                                                <img class="object-cover w-10 h-10 rounded-full" src="./images/profile.jpg">
-                                            </picture>
-                                            <span class="absolute -right-0.5 bottom-1 h-2 w-2 rounded-full bg-green-500 outline outline-white"></span>
-                                        </div>
-                                        
-                                        <div class="flex flex-col grow">
-                                            <h3 class="mb-0 text-xs font-medium text-balck">Arshid Mehmood Kiani</h3><span class="font-medium text-2xs text-violet-500">Advocate High Court </span><span class="text-2xs text-gray-500 truncate max-w-[200px]">Islamabad</span>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div class="item"><a href="profile?id=a858a2bd-ba68-4f01-14a5-08daf84f4e5c&amp;tab=overview" class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200">
-                                    <div class="flex items-center gap-2">
-                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white">
-                                             <picture class="w-full">
-                                                <source srcset="./images/profile.avif" type="image/avif">
-                                                <source srcset="./images/profile.webp" type="image/webp">
-                                                <img class="object-cover w-10 h-10 rounded-full" src="./images/profile.jpg">
-                                            </picture>
-                                            <span class="absolute -right-0.5 bottom-1 h-2 w-2 rounded-full bg-green-500 outline outline-white"></span>
-                                        </div>
-                                        
-                                        <div class="flex flex-col grow">
-                                            <h3 class="mb-0 text-xs font-medium text-balck">Tanveer Iqbal Khan</h3><span class="font-medium text-2xs text-violet-500">Advocate Supreme Court of Pakistan</span><span class="text-2xs text-gray-500 truncate max-w-[200px]">Rawalpindi</span>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div class="item"><a href="profile?id=8de0a916-6d9b-49fc-14a7-08daf84f4e5c&amp;tab=overview" class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200">
-                                    <div class="flex items-center gap-2">
-                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white">
-                                             <picture class="w-full">
-                                                <source srcset="./images/profile.avif" type="image/avif">
-                                                <source srcset="./images/profile.webp" type="image/webp">
-                                                <img class="object-cover w-10 h-10 rounded-full" src="./images/profile.jpg">
-                                            </picture>
-                                            <span class="absolute -right-0.5 bottom-1 h-2 w-2 rounded-full bg-green-500 outline outline-white"></span>
-                                        </div>
-                                        
-                                        <div class="flex flex-col grow">
-                                            <h3 class="mb-0 text-xs font-medium text-balck">Tayyba Abbasi</h3><span class="font-medium text-2xs text-violet-500">Advocate High Court</span><span class="text-2xs text-gray-500 truncate max-w-[200px]">Rawalpindi</span>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div class="item"><a href="profile?id=91282117-8183-4cfd-3080-08daefdcc721&amp;tab=overview" class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200">
-                                    <div class="flex items-center gap-2">
-                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white">
-                                             <picture class="w-full">
-                                                <source srcset="./images/profile.avif" type="image/avif">
-                                                <source srcset="./images/profile.webp" type="image/webp">
-                                                <img class="object-cover w-10 h-10 rounded-full" src="./images/profile.jpg">
-                                            </picture>
-                                            <span class="absolute -right-0.5 bottom-1 h-2 w-2 rounded-full bg-green-500 outline outline-white"></span>
-                                        </div>
-                                        
-                                        <div class="flex flex-col grow">
-                                            <h3 class="mb-0 text-xs font-medium text-balck">Muhammad Salman Ajaib </h3><span class="font-medium text-2xs text-violet-500">Advocate High Court </span><span class="text-2xs text-gray-500 truncate max-w-[200px]">Rawalpindi</span>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div class="item"><a href="profile?id=da9d6624-c142-4a30-3081-08daefdcc721&amp;tab=overview" class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200">
-                                    <div class="flex items-center gap-2">
-                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white">
-                                             <picture class="w-full">
-                                                <source srcset="./images/profile.avif" type="image/avif">
-                                                <source srcset="./images/profile.webp" type="image/webp">
-                                                <img class="object-cover w-10 h-10 rounded-full" src="./images/profile.jpg">
-                                            </picture>
-                                            <span class="absolute -right-0.5 bottom-1 h-2 w-2 rounded-full bg-green-500 outline outline-white"></span>
-                                        </div>
-                                        
-                                        <div class="flex flex-col grow">
-                                            <h3 class="mb-0 text-xs font-medium text-balck">Qamar Rehman </h3><span class="font-medium text-2xs text-violet-500">Advocate High Court</span><span class="text-2xs text-gray-500 truncate max-w-[200px]">Islamabad</span>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div class="item"><a href="profile?id=d55da866-eaa4-4976-14a6-08daf84f4e5c&amp;tab=overview" class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200">
-                                    <div class="flex items-center gap-2">
-                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white">
-                                             <picture class="w-full">
-                                                <source srcset="./images/profile.avif" type="image/avif">
-                                                <source srcset="./images/profile.webp" type="image/webp">
-                                                <img class="object-cover w-10 h-10 rounded-full" src="./images/profile.jpg">
-                                            </picture>
-                                            <span class="absolute -right-0.5 bottom-1 h-2 w-2 rounded-full bg-green-500 outline outline-white"></span>
-                                        </div>
-                                        
-                                        <div class="flex flex-col grow">
-                                            <h3 class="mb-0 text-xs font-medium text-balck">Shaiza Haider Shah</h3><span class="font-medium text-2xs text-violet-500">Advocate High Court</span><span class="text-2xs text-gray-500 truncate max-w-[200px]">Rawalpindi</span>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div class="item"><a href="profile?id=f08f6fca-799d-4c60-ab1c-4dc1be648b0c&amp;firmonly=true&amp;tab=overview" class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200">
-                                    <div class="flex items-center gap-2">
-                                        <div class="relative flex items-center justify-center w-10 h-10 text-xs bg-gray-300 rounded-full group-hover:bg-white">UL
-                                            <span class="absolute -right-0.5 bottom-1 h-2 w-2 rounded-full bg-green-500 outline outline-white"></span>
-                                        </div>
-                                        
-                                        <div class="flex flex-col grow">
-                                            <h3 class="mb-0 text-xs font-medium text-balck">United Law Chamber</h3><span class="font-medium text-2xs text-violet-500">Advocate High Court</span><span class="text-2xs text-gray-500 truncate max-w-[200px]">Rawalpindi</span>
-                                        </div>
-                                    </div>
-                                </a></div>
-                        </div>
-                    </div>
-                    
-        
-                    
-                    <div class="mb-6">
-                        <div class="flex items-center justify-between gap-2 mb-2">
-                            
-                            <h2 class="mb-0 text-sm font-medium text-black">City</h2><a class="flex items-center text-sm font-medium text-blue-500" href="javascript:;">See All</a>
-                        </div>
-                        
-        
-                        <div class="flex flex-wrap items-center gap-2 grow">
-                            <div class="item"><a href="/findlawyer?city=islamabad" class="inline-flex items-center justify-between w-full p-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Islamabad</h3>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?city=lahore" class="inline-flex items-center justify-between w-full p-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Lahore</h3>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?city=karachi" class="inline-flex items-center justify-between w-full p-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Karachi</h3>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?city=quetta" class="inline-flex items-center justify-between w-full p-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Quetta</h3>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?city=peshawar" class="inline-flex items-center justify-between w-full p-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Peshawar</h3>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?city=rawalpindi" class="inline-flex items-center justify-between w-full p-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Rawalpindi</h3>
-                                </a></div>
-                        </div>
-                    </div>
-                    
-        
-                    
-                    <div class="mb-4">
-                        <div class="flex items-center justify-between gap-2 mb-2">
-                            
-                            <h2 class="mb-0 text-sm font-medium text-black">Courts</h2><a class="flex items-center text-sm font-medium text-blue-500" href="javascript:;">See All</a>
-                        </div>
-                        
-        
-                        <div class="flex flex-wrap items-center gap-2 grow">
-                            <div class="item"><a href="/findlawyer?court=control+of+narcotic+substance" class="inline-flex items-center justify-between w-full p-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Control of Narcotic Substance</h3>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?court=judicial+magistrate" class="inline-flex items-center justify-between w-full p-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Judicial Magistrate</h3>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?court=punjab+bar+council+(provincial)" class="inline-flex items-center justify-between w-full p-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Punjab Bar Council (Provincial)</h3>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?court=anti-corruption+court" class="inline-flex items-center justify-between w-full p-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Anti-Corruption Court</h3>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?court=azad+jammu+and+kashmir+bar+council+(territorial)" class="inline-flex items-center justify-between w-full p-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Azad Jammu and Kashmir Bar Council (Territorial)</h3>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?court=national+industrial+relations+commision" class="inline-flex items-center justify-between w-full p-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <h3 class="mb-0 text-xs font-medium text-gray-600">National Industrial Relations Commision</h3>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?court=foreign+exchange+appellate+board" class="inline-flex items-center justify-between w-full p-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Foreign Exchange Appellate Board</h3>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?court=lahore+high+court,+rawalpindi+bench" class="inline-flex items-center justify-between w-full p-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Lahore High Court, Rawalpindi Bench</h3>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?court=sindh+bar+council+(provincial)" class="inline-flex items-center justify-between w-full p-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Sindh Bar Council (Provincial)</h3>
-                                </a></div>
-                            <div class="item"><a href="/findlawyer?court=khyber+pakhtunkhwa+bar+council+(provincial)" class="inline-flex items-center justify-between w-full p-2 border border-gray-300 rounded-full cursor-pointer group hover:bg-gray-200">
-                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Khyber Pakhtunkhwa Bar Council (Provincial)</h3>
-                                </a></div>
-                        </div>
-                    </div>
-                    
-                    <div class="flex justify-center"><svg width="116" height="30" viewBox="0 0 116 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_5844_91678)">
-                                <path d="M11.4999 29.7054H11.4505C8.63226 29.7054 6.3417 27.4065 6.3417 24.583V13.4602C6.3417 12.7803 5.78927 12.2264 5.11109 12.2264C4.4329 12.2264 3.88047 12.7803 3.88047 13.4602V20.3118H0V13.4602C0 10.6345 2.2928 8.33789 5.10884 8.33789C7.92488 8.33789 10.2199 10.6368 10.2199 13.4602V24.583C10.2199 25.263 10.7724 25.8169 11.4505 25.8169H11.4999C12.1781 25.8169 12.7306 25.263 12.7306 24.583V13.4602C12.7306 10.6345 15.0234 8.33789 17.8394 8.33789H17.9382C20.7565 8.33789 23.047 10.6368 23.047 13.4602V24.2363H19.1666V13.4602C19.1666 12.7803 18.6141 12.2264 17.936 12.2264H17.8371C17.159 12.2264 16.6065 12.7803 16.6065 13.4602V24.583C16.6065 27.4088 14.3137 29.7054 11.4977 29.7054H11.4999Z" fill="url(#paint0_linear_5844_91678)"></path>
-                                <path d="M17.8033 6.62415C19.6277 6.62415 21.1067 5.14128 21.1067 3.31207C21.1067 1.48287 19.6277 0 17.8033 0C15.979 0 14.5 1.48287 14.5 3.31207C14.5 5.14128 15.979 6.62415 17.8033 6.62415Z" fill="#6D28D9"></path>
-                                <path d="M5.0104 6.6242C6.22211 6.6242 7.20439 5.63931 7.20439 4.4244C7.20439 3.20949 6.22211 2.22461 5.0104 2.22461C3.79869 2.22461 2.81641 3.20949 2.81641 4.4244C2.81641 5.63931 3.79869 6.6242 5.0104 6.6242Z" fill="#EF5D0B"></path>
-                            </g>
-                            <path d="M112.255 7.35806C112.621 6.99175 113.065 6.80859 113.584 6.80859C114.103 6.80859 114.547 6.99175 114.913 7.35806C115.279 7.72438 115.463 8.1684 115.463 8.68734C115.463 9.20628 115.279 9.6503 114.913 10.0166C114.547 10.3829 114.103 10.5661 113.584 10.5661C113.065 10.5661 112.621 10.3829 112.255 10.0166C111.888 9.6503 111.705 9.20628 111.705 8.68734C111.705 8.1684 111.888 7.72438 112.255 7.35806ZM113.584 10.4107C114.053 10.4107 114.458 10.2442 114.791 9.90839C115.124 9.5726 115.291 9.16466 115.291 8.68734C115.291 8.21002 115.124 7.80208 114.791 7.46629C114.458 7.13051 114.053 6.964 113.584 6.964C113.115 6.964 112.704 7.13051 112.371 7.46629C112.038 7.80208 111.869 8.21002 111.869 8.68734C111.869 9.16466 112.035 9.5726 112.371 9.90839C112.704 10.2442 113.109 10.4107 113.584 10.4107ZM114.347 8.34878C114.347 8.61796 114.239 8.80667 114.02 8.9149L114.419 9.64753H113.983L113.645 8.99815H113.365V9.64753H112.965V7.72715H113.614C113.839 7.72715 114.017 7.78821 114.15 7.90754C114.283 8.02686 114.347 8.17395 114.347 8.35155V8.34878ZM113.365 8.09902V8.63461H113.614C113.717 8.63461 113.8 8.60964 113.859 8.56246C113.917 8.51251 113.947 8.44868 113.947 8.37098C113.947 8.1906 113.836 8.10179 113.614 8.10179H113.365V8.09902Z" fill="#6D28D9"></path>
-                            <path d="M54.13 20.3674C53.0129 21.434 51.6461 21.9686 50.0348 21.9686C48.4235 21.9686 47.0618 21.434 45.9525 20.3674C44.8431 19.3007 44.2871 17.9916 44.2871 16.4423C44.2871 14.8931 44.8431 13.5839 45.9525 12.5172C47.0644 11.4506 48.4235 10.916 50.0348 10.916C51.6461 10.916 53.0103 11.4506 54.13 12.5172C55.2471 13.5839 55.8056 14.8931 55.8056 16.4423C55.8056 17.9916 55.2471 19.3007 54.13 20.3674ZM47.9344 18.5137C48.493 19.0582 49.1931 19.3304 50.0348 19.3304C50.8765 19.3304 51.5817 19.0582 52.148 18.5137C52.7143 17.9693 52.9974 17.2788 52.9974 16.4398C52.9974 15.6009 52.7143 14.9104 52.148 14.3659C51.5817 13.8215 50.8765 13.5492 50.0348 13.5492C49.1931 13.5492 48.493 13.8215 47.9344 14.3659C47.3759 14.9104 47.0953 15.6009 47.0953 16.4398C47.0953 17.2788 47.3733 17.9693 47.9344 18.5137Z" fill="#6D28D9"></path>
-                            <path d="M66.0597 20.3674C64.9425 21.434 63.5783 21.9686 61.9645 21.9686C60.3506 21.9686 58.9915 21.434 57.8822 20.3674C56.7728 19.3007 56.2168 17.9916 56.2168 16.4423C56.2168 14.8931 56.7728 13.5839 57.8822 12.5172C58.9915 11.4506 60.3532 10.916 61.9645 10.916C63.5758 10.916 64.94 11.4506 66.0597 12.5172C67.1768 13.5839 67.7353 14.8931 67.7353 16.4423C67.7353 17.9916 67.1768 19.3007 66.0597 20.3674ZM59.8641 18.5137C60.4227 19.0582 61.1228 19.3304 61.9645 19.3304C62.8062 19.3304 63.5114 19.0582 64.0777 18.5137C64.644 17.9693 64.9271 17.2788 64.9271 16.4398C64.9271 15.6009 64.644 14.9104 64.0777 14.3659C63.5114 13.8215 62.8062 13.5492 61.9645 13.5492C61.1228 13.5492 60.4227 13.8215 59.8641 14.3659C59.3056 14.9104 59.025 15.6009 59.025 16.4398C59.025 17.2788 59.3056 17.9693 59.8641 18.5137Z" fill="#6D28D9"></path>
-                            <path d="M80.6074 22.1838V6.89844H83.5804V22.1838H80.6074Z" fill="#6D28D9"></path>
-                            <path d="M77.0209 11.208V11.6733C76.1483 11.1709 75.1624 10.916 74.0582 10.916C72.4469 10.916 71.0853 11.4506 69.9759 12.5172C68.8665 13.5839 68.3105 14.8931 68.3105 16.4423C68.3105 17.9916 68.8665 19.3007 69.9759 20.3674C71.0853 21.434 72.4469 21.9686 74.0582 21.9686C75.1624 21.9686 76.1483 21.7112 77.0209 21.2113V26.9922H79.8291V11.208H77.0209ZM76.1714 18.5162C75.6052 19.0607 74.8999 19.3329 74.0582 19.3329C73.2165 19.3329 72.5164 19.0607 71.9579 18.5162C71.3993 17.9718 71.1187 17.2813 71.1187 16.4423C71.1187 15.6033 71.3993 14.9129 71.9579 14.3684C72.5164 13.8239 73.2165 13.5517 74.0582 13.5517C74.8999 13.5517 75.6052 13.8239 76.1714 14.3684C76.7377 14.9129 77.0209 15.6033 77.0209 16.4423C77.0209 17.2813 76.7377 17.9718 76.1714 18.5162Z" fill="#6D28D9"></path>
-                            <path d="M92.8509 11.1481V11.6753C91.9784 11.1729 90.9925 10.918 89.8883 10.918C88.277 10.918 86.9154 11.4525 85.806 12.5192C84.6966 13.5858 84.1406 14.895 84.1406 16.4443C84.1406 17.9935 84.6966 19.3027 85.806 20.3693C86.9154 21.436 88.277 21.9706 89.8883 21.9706C90.9925 21.9706 91.9784 21.7132 92.8509 21.2133V21.7404H95.7106V11.1481H92.8509ZM92.0015 18.5182C91.4352 19.0626 90.73 19.3349 89.8883 19.3349C89.0466 19.3349 88.3465 19.0626 87.7879 18.5182C87.2294 17.9737 86.9488 17.2832 86.9488 16.4443C86.9488 15.6053 87.2294 14.9148 87.7879 14.3704C88.3465 13.8259 89.0466 13.5537 89.8883 13.5537C90.73 13.5537 91.4352 13.8259 92.0015 14.3704C92.5678 14.9148 92.8509 15.6053 92.8509 16.4443C92.8509 17.2832 92.5678 17.9737 92.0015 18.5182Z" fill="#6D28D9"></path>
-                            <path d="M40.4354 17.6094C40.4354 18.4855 39.6941 19.2007 38.7829 19.2007C37.8717 19.2007 37.1304 18.488 37.1304 17.6094V11.207H34.106V17.6119C34.106 18.488 33.3647 19.2032 32.451 19.2032C31.5372 19.2032 30.7985 18.4905 30.7985 17.6119V11.207H27.7715V17.6119C27.7715 20.0917 29.8693 22.1111 32.451 22.1111C33.6736 22.1111 34.783 21.6558 35.6169 20.9158C36.4509 21.6558 37.5603 22.1111 38.7829 22.1111C41.362 22.1111 43.4624 20.0941 43.4624 17.6119V11.207H40.438V17.6119L40.4354 17.6094Z" fill="#6D28D9"></path>
-                            <path d="M109.316 11.207V17.6119C109.316 18.488 108.574 19.2032 107.663 19.2032C106.752 19.2032 106.011 18.4905 106.011 17.6119V11.207H102.986V17.6119C102.986 18.488 102.245 19.2032 101.331 19.2032C100.417 19.2032 99.6787 18.4905 99.6787 17.6119V11.207H96.6543V17.6119C96.6543 20.0917 98.7521 22.1111 101.334 22.1111C102.556 22.1111 103.666 21.6558 104.5 20.9158C105.334 21.6558 106.443 22.1111 107.666 22.1111C110.245 22.1111 112.345 20.0941 112.345 17.6119V11.207H109.321H109.316Z" fill="#6D28D9"></path>
-                            <defs>
-                                <linearGradient id="paint0_linear_5844_91678" x1="-0.0494042" y1="19.7534" x2="23.4387" y2="17.704" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#9549F4"></stop>
-                                    <stop offset="0.510417" stop-color="#FF385C"></stop>
-                                    <stop offset="1" stop-color="#FFB23E"></stop>
-                                </linearGradient>
-                                <clipPath id="clip0_5844_91678">
-                                    <rect width="23.047" height="29.7051" fill="white"></rect>
-                                </clipPath>
-                            </defs>
-                        </svg></div>
+            <button type="submit" class="text-white shrink-0 flex items-center justify-center bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2.5 text-center">
+                <svg class="shrink-0" width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8281 4.48242C8.78751 4.48242 3.89062 9.70577 3.89062 16.1491C3.89062 22.5924 8.78751 27.8158 14.8281 27.8158C20.8687 27.8158 25.7656 22.5924 25.7656 16.1491C25.7656 9.70577 20.8687 4.48242 14.8281 4.48242ZM2.01562 16.1491C2.01562 8.6012 7.75198 2.48242 14.8281 2.48242C21.9043 2.48242 27.6406 8.6012 27.6406 16.1491C27.6406 19.5631 26.467 22.6847 24.5267 25.08L28.616 29.442C28.9822 29.8325 28.9822 30.4657 28.616 30.8562C28.2499 31.2467 27.6563 31.2467 27.2902 30.8562L23.2009 26.4942C20.9553 28.5639 18.0288 29.8158 14.8281 29.8158C7.75198 29.8158 2.01562 23.697 2.01562 16.1491Z" fill="white"/>
+                </svg>                    
+            </button>
+        </div>
+
+        <div class="justify-center hidden md:flex">
+            <a href="#" class="text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Advance Search</a>
+        </div>
+
+        <div class="relative flex flex-wrap items-center justify-center w-full gap-5 px-3 py-3 bg-white md:hidden drop-shadow-2xl md:gap-10 rounded-2xl" x-data="{ lawarea: false, city: false }">
+            <div class="flex flex-wrap items-center justify-center gap-3 divide-x md:gap-0 divide-zinc-400">
+                <div class="flex items-center gap-2.5">
+                    <p class="text-xs font-medium leading-none text-zinc-400">Search by Law area</p>
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.5466 17.6234L13.83 12.9067C14.87 11.6934 15.4733 10.1234 15.4733 8.40009C15.4733 4.57011 12.369 1.4668 8.54002 1.4668C4.71104 1.4668 1.63672 4.57111 1.63672 8.40009C1.63672 12.2291 4.74071 15.3334 8.54002 15.3334C10.2627 15.3334 11.835 14.7014 13.0467 13.6617L17.7633 18.3784C17.8966 18.48 18.0333 18.5334 18.17 18.5334C18.3066 18.5334 18.4429 18.4813 18.547 18.3771C18.7566 18.17 18.7566 17.83 18.5466 17.6234ZM8.57001 14.2667C5.3067 14.2667 2.70339 11.6334 2.70339 8.40009C2.70339 5.16677 5.3067 2.53346 8.57001 2.53346C11.8333 2.53346 14.4366 5.13677 14.4366 8.40009C14.4366 11.6634 11.8033 14.2667 8.57001 14.2667Z" fill="#6D28D9"/>
+                    </svg>                        
+                </div>
+                <div class="flex items-center gap-2.5 pl-3">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.17969 8.45209C3.17969 4.36958 6.43386 1.04102 10.4714 1.04102C14.5088 1.04102 17.763 4.36958 17.763 8.45209C17.763 10.423 17.2013 12.5393 16.2084 14.3676C15.2167 16.1936 13.7677 17.7804 11.9551 18.6276C11.0135 19.0677 9.92922 19.0677 8.9876 18.6276C7.175 17.7804 5.72604 16.1936 4.73432 14.3676C3.74138 12.5393 3.17969 10.423 3.17969 8.45209ZM10.4714 2.29102C7.14505 2.29102 4.42969 5.03892 4.42969 8.45209C4.42969 10.1997 4.93188 12.1122 5.83277 13.771C6.73489 15.4321 8.0097 16.7907 9.51689 17.4952C10.1231 17.7785 10.8196 17.7785 11.4258 17.4952C12.933 16.7907 14.2078 15.4321 15.1099 13.771C16.0108 12.1122 16.513 10.1997 16.513 8.45209C16.513 5.03892 13.7977 2.29102 10.4714 2.29102ZM10.4714 6.45768C9.43582 6.45768 8.59635 7.29715 8.59635 8.33268C8.59635 9.36822 9.43582 10.2077 10.4714 10.2077C11.5069 10.2077 12.3464 9.36822 12.3464 8.33268C12.3464 7.29715 11.5069 6.45768 10.4714 6.45768ZM7.34635 8.33268C7.34635 6.60679 8.74546 5.20768 10.4714 5.20768C12.1972 5.20768 13.5964 6.60679 13.5964 8.33268C13.5964 10.0586 12.1972 11.4577 10.4714 11.4577C8.74546 11.4577 7.34635 10.0586 7.34635 8.33268Z" fill="#A1A1AA"/>
+                    </svg>                        
+                    <div class="text-xs font-medium leading-none text-zinc-400">Islamabad</div>
                 </div>
             </div>
         </div>
+        
     </section>
     <!-- cities -->
     <section class="container flex flex-col flex-wrap items-center justify-center w-full mb-28">
@@ -3548,7 +3430,7 @@
     </section>
     <!-- testimonials -->
     <section class="container w-full mb-28">
-        <div class="px-5 py-12 rounded-3xl bg-gradient-to-b from-blue-100 to-yellow-100 md:bg-transparent md:bg-none md:rounded-none md:py-0 md:px-0">
+        <div class="px-5 py-12 rounded-3xl bg-gradient-to-b from-primary-100 to-yellow-100 md:bg-transparent md:bg-none md:rounded-none md:py-0 md:px-0">
             <div class="flex flex-col-reverse items-center justify-center w-full gap-2 mb-8 md:flex-row">
                 <h2 class="relative flex gap-2 text-sm font-semibold text-gray-600 md:text-3xl">
                 Wooqlaw client
@@ -3568,7 +3450,7 @@
                     </picture>
                 </div>
             </div>
-            <div class="w-full md:px-5 md:py-12 rounded-3xl md:rounded-full md:bg-gradient-to-b md:from-blue-100 md:to-yellow-100">
+            <div class="w-full md:px-5 md:py-12 rounded-3xl md:rounded-full md:bg-gradient-to-b md:from-primary-100 md:to-yellow-100">
                 <div class="swiper swiper-testimonials">
                     <div class="mb-6 swiper-wrapper">
                         <div class="flex flex-col justify-center w-full swiper-slide">
@@ -3615,7 +3497,7 @@
             </div>
             <div class="flex flex-col items-center justify-center w-full md:items-start">
                 <div class="flex flex-col items-center w-full gap-4 md:items-start">
-                    <p class="w-full font-semibold text-center text-2xs md:text-xl text-violet-700 lg:text-left">
+                    <p class="w-full font-semibold text-center text-2xs md:text-sm md:text-xl text-violet-700 lg:text-left">
                         Coming Soon!
                     </p>
                     <p class="w-full mb-3 text-base font-normal text-center text-gray-600 lg:text-left sm:text-2xl lg:text-3xl font-urdu" dir="rtl">
