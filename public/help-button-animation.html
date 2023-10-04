@@ -37,9 +37,21 @@
 
 <body x-data="{scrolAtTop: false}">
     <arm-header></arm-header>
-    <section class="help-button-animation container pb-5">
+    <section class="help-button-animation md:container pb-5">
+        <!-- Help Center -->
+        <div class="flex p-2 gap-3 w-full md:hidden bg-white mb-1 top-0 h-12 items-center z-[100] profile-details">
+            <a href="javascript:;" class="w-5 h-5 hover:bg-red-50">
+                <svg class="w-5 h-5 shrink-0" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.77544 4.55806C9.01952 4.80214 9.01952 5.19786 8.77544 5.44194L4.84238 9.375H16.6668C17.012 9.375 17.2918 9.65482 17.2918 10C17.2918 10.3452 17.012 10.625 16.6668 10.625H4.84238L8.77544 14.5581C9.01952 14.8021 9.01952 15.1979 8.77544 15.4419C8.53136 15.686 8.13563 15.686 7.89155 15.4419L2.89155 10.4419C2.64748 10.1979 2.64748 9.80214 2.89155 9.55806L7.89155 4.55806C8.13563 4.31398 8.53136 4.31398 8.77544 4.55806Z" fill="#111827"></path>
+                </svg>
+            </a>
+            <div class="flex gap-1 items-center">
+                <span class="text-sm font-medium text-gray-900">
+                    Help Center
+                </span>
+            </div>
+        </div>
         <div class="flex flex-col gap-2 md:gap-5">
-            <div class="flex flex-col p-2 md:p-4 items-center md:items-start">
+            <div class="hidden md:flex flex-col p-2 md:p-4 items-center md:items-start">
                 <!-- Home -->
                 <div class="">
                     <nav class="flex items-center w-full space-x-2 sm:space-x-4" aria-label="Breadcrumb">
@@ -75,7 +87,7 @@
                     </span>
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6">
+            <div class="hidden md:grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6">
                 <!-- UAN -->
                 <div class="flex flex-col md:flex-row relative p-2 md:p-6 gap-5 md:gap-0 border border-gray-500 rounded-lg shadow-md items-center">
                     <div class="flex flex-col gap-5 md:gap-7">
@@ -173,14 +185,14 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col bg-white rounded-lg shadow">
+            <div class="flex flex-col bg-white md:rounded-lg shadow">
                 <!-- Contact Us -->
-                <div class="flex px-2 md:px-6 py-2 md:py-4 rounded-t-lg bg-indigo-50 items-center justify-between">
-                    <span class="text-base md:text-2xl font-semibold text-gray-900">
+                <div class="flex px-2 md:px-6 py-2 md:py-4 md:rounded-t-lg bg-indigo-50 items-center justify-between">
+                    <span class="text-sm md:text-2xl font-semibold text-gray-900">
                         Contact Us
                     </span>
-                    <span class="">
-                        <svg width="113" height="99" viewBox="0 0 113 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <span class="w-14 h-12 md:w-28 md:h-24">
+                        <svg class="w-14 h-12 md:w-28 md:h-24" viewBox="0 0 113 99" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M111.353 96.9171C111.158 97.1895 110.961 97.46 110.766 97.7285C110.206 98.1144 109.542 98.3204 108.861 98.3191H4.0582C3.40822 98.3196 2.77202 98.1318 2.22663 97.7782C2.04563 97.5395 1.86667 97.2989 1.68567 97.0583L1.86667 96.9588L54.9225 67.5503C55.3933 67.29 55.9223 67.153 56.4602 67.1523C56.9982 67.1517 57.5276 67.2872 57.999 67.5464L111.174 96.8176L111.353 96.9171Z" fill="#3F3D56"/>
                             <path d="M108.861 35.0778L62.8794 8.52294C60.9454 7.40604 58.7517 6.81751 56.5184 6.81641C54.285 6.81531 52.0907 7.40168 50.1556 8.51667L4.05811 35.0778C3.16187 35.079 2.30271 35.4356 1.66897 36.0694C1.03523 36.7031 0.678636 37.5623 0.677368 38.4585V94.9369C0.678412 95.8332 1.03493 96.6925 1.66872 97.3262C2.30251 97.96 3.1618 98.3166 4.05811 98.3176H108.861C109.757 98.3161 110.616 97.9594 111.25 97.3257C111.884 96.692 112.24 95.833 112.242 94.9369V38.4585C112.241 37.5623 111.884 36.7031 111.25 36.0694C110.617 35.4356 109.757 35.079 108.861 35.0778ZM111.844 94.9369C111.842 95.7274 111.527 96.485 110.968 97.044C110.409 97.6031 109.652 97.9179 108.861 97.9199H4.05811C3.26741 97.9184 2.50949 97.6037 1.95038 97.0446C1.39126 96.4855 1.07653 95.7276 1.0751 94.9369V38.4585C1.07606 37.6677 1.39065 36.9095 1.94987 36.3503C2.50908 35.7911 3.26727 35.4765 4.05811 35.4755L50.1556 8.9144C52.0907 7.79941 54.285 7.21304 56.5184 7.21414C58.7517 7.21524 60.9454 7.80378 62.8794 8.92067L108.861 35.4755C109.652 35.4765 110.41 35.7911 110.969 36.3503C111.529 36.9095 111.843 37.6677 111.844 38.4585V94.9369Z" fill="#3F3D56"/>
                             <path d="M56.5192 67.0353C56.1729 67.0365 55.8288 66.9788 55.5018 66.8646L55.4417 66.8433L55.4295 66.7096C55.392 66.7281 55.3542 66.7457 55.3163 66.7624L55.2763 66.78L55.2362 66.7623C55.1524 66.7255 55.0692 66.6839 54.9889 66.6386L18.3765 46.0652V4.05795C18.3776 3.08254 18.7656 2.1474 19.4553 1.45768C20.145 0.767966 21.0801 0.380001 22.0555 0.378906H90.8636C91.8391 0.380001 92.7742 0.767966 93.4639 1.45768C94.1536 2.1474 94.5416 3.08254 94.5427 4.05795V46.1189L94.492 46.1474L58.0496 66.6387C57.5817 66.8995 57.0548 67.0361 56.5192 67.0353Z" fill="white"/>
@@ -195,35 +207,35 @@
                     </span>
                 </div> 
                 <!-- Full Name, Phone Number, Email, Subject, Your Message, Upload, Submit -->
-                <div class="flex flex-col p-2 md:p-6 gap-2 md:gap-5">
-                    <div class="flex flex-col gap-2 md:gap-5 bg-white rounded-lg">
+                <div class="flex flex-col p-3 md:p-6 gap-5">
+                    <div class="flex flex-col gap-5 bg-white rounded-lg">
                         <div class="flex flex-col gap-2">
-                            <label for="full-name" class="block text-xs md:text-sm font-medium text-gray-900">
+                            <label for="full-name" class="block text-sm font-medium text-gray-900">
                                 Full Name <span class="text-red-600">*</span>
                             </label>
                             <input type="tel" id="full-name" class="block w-full px-4 py-3 bg-gray-50 border border-gray-300 text-sm font-normal text-gray-500 rounded-lg focus:ring-violet-500 focus:border-violet-500" placeholder="Enter Name">
                         </div>
                         <div class="flex flex-col gap-2">
-                            <label for="phone-number" class="block text-xs md:text-sm font-medium text-gray-900">
+                            <label for="phone-number" class="block text-sm font-medium text-gray-900">
                                 Phone Number <span class="text-red-600">*</span>
                             </label>
                             <input type="number" id="phone-number" class="block w-full px-4 py-3 bg-gray-50 border border-gray-300 text-sm font-normal text-gray-500 rounded-lg focus:ring-violet-500 focus:border-violet-500" placeholder="+923xxxxxxxxx">
                         </div>
                         <div class="flex flex-col gap-2">
-                            <label for="email" class="block text-xs md:text-sm font-medium text-gray-900">
+                            <label for="email" class="block text-sm font-medium text-gray-900">
                                 Email
                             </label>
                             <input type="tel" id="email" class="block w-full px-4 py-3 bg-gray-50 border border-gray-300 text-sm font-normal text-gray-500 rounded-lg focus:ring-violet-500 focus:border-violet-500" placeholder="Enter Email">
                         </div>
                         <div class="flex flex-col gap-2">
-                            <label for="title" class="block text-xs md:text-sm font-medium text-gray-900">
+                            <label for="title" class="block text-sm font-medium text-gray-900">
                                 Subject <span class="text-red-600">*</span>
                             </label>
                             <input type="tel" id="title" class="block w-full px-4 py-3 bg-gray-50 border border-gray-300 text-sm font-normal text-gray-500 rounded-lg focus:ring-violet-500 focus:border-violet-500" placeholder="Enter Name">
                         </div>
                     </div>
                     <div class="flex flex-col gap-2">
-                        <label for="your-message" class="block text-xs md:text-sm font-medium text-gray-900">
+                        <label for="your-message" class="block text-sm font-medium text-gray-900">
                             Your Message <span class="text-red-600">*</span>
                         </label>
                         <textarea id="your-message" rows="4" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-violet-500 focus:border-violet-500" placeholder="Write text here ..."></textarea>
@@ -232,22 +244,22 @@
                         </span>
                     </div>
                     <div class="flex flex-col gap-2 items-start justify-center w-full">
-                        <div for="upload" class="block text-xs md:text-sm font-medium text-gray-900">
+                        <div for="upload" class="block text-sm font-medium text-gray-900">
                             Upload a File (Optional)
                         </div>
-                        <label for="upload" class="flex flex-col items-center justify-center w-full h-64 p-6 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                        <label for="upload" class="flex flex-col items-center justify-center w-full h-36 md:h-64 p-2 md:p-6 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
                             <div class="flex flex-col items-center justify-center">
                                 <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M20.7419 2.87891C21.1069 2.87891 21.4535 3.03836 21.691 3.31542L26.691 9.14875C27.1403 9.67291 27.0796 10.462 26.5554 10.9113C26.0313 11.3606 25.2422 11.2999 24.7929 10.7757L21.9919 7.50798L21.9919 25.7956C21.9919 26.4859 21.4323 27.0456 20.7419 27.0456C20.0516 27.0456 19.4919 26.4859 19.4919 25.7956L19.4919 7.50798L16.691 10.7757C16.2417 11.2999 15.4526 11.3606 14.9285 10.9113C14.4043 10.462 14.3436 9.67291 14.7929 9.14875L19.7929 3.31542C20.0304 3.03836 20.377 2.87891 20.7419 2.87891ZM12.4017 14.5488C13.092 14.545 13.6548 15.1015 13.6586 15.7919C13.6624 16.4822 13.1059 17.045 12.4156 17.0488C10.5931 17.059 9.30127 17.1063 8.32086 17.2864C7.37617 17.4599 6.82938 17.7385 6.42363 18.1443C5.96236 18.6056 5.66161 19.2532 5.49719 20.4761C5.32793 21.735 5.32528 23.4036 5.32528 25.7959V27.4626C5.32528 29.855 5.32793 31.5235 5.49719 32.7824C5.66161 34.0054 5.96236 34.653 6.42363 35.1143C6.8849 35.5755 7.53252 35.8763 8.75548 36.0407C10.0144 36.2099 11.6829 36.2126 14.0753 36.2126H27.4086C29.801 36.2126 31.4695 36.2099 32.7284 36.0407C33.9514 35.8763 34.599 35.5755 35.0603 35.1143C35.5215 34.653 35.8223 34.0054 35.9867 32.7824C36.156 31.5235 36.1586 29.855 36.1586 27.4626V25.7959C36.1586 23.4036 36.156 21.7351 35.9867 20.4761C35.8223 19.2532 35.5215 18.6056 35.0603 18.1443C34.6545 17.7385 34.1077 17.4599 33.163 17.2864C32.1826 17.1063 30.8908 17.059 29.0683 17.0488C28.378 17.045 27.8215 16.4822 27.8253 15.7919C27.8291 15.1015 28.3919 14.545 29.0822 14.5488C30.8848 14.5589 32.3871 14.602 33.6147 14.8275C34.878 15.0596 35.9532 15.5016 36.828 16.3765C37.8312 17.3797 38.2627 18.6428 38.4644 20.143C38.6587 21.588 38.6587 23.4252 38.6586 25.7045V27.554C38.6587 29.8334 38.6587 31.6706 38.4644 33.1155C38.2627 34.6157 37.8312 35.8788 36.828 36.882C35.8248 37.8852 34.5617 38.3167 33.0615 38.5184C31.6166 38.7127 29.7794 38.7126 27.5001 38.7126H13.9838C11.7045 38.7126 9.86731 38.7127 8.42236 38.5184C6.92218 38.3167 5.65905 37.8852 4.65586 36.882C3.65267 35.8788 3.22118 34.6157 3.01948 33.1155C2.82522 31.6706 2.82524 29.8334 2.82528 27.5541V25.7045C2.82524 23.4252 2.82522 21.588 3.01948 20.143C3.22118 18.6428 3.65267 17.3797 4.65586 16.3765C5.53074 15.5016 6.60587 15.0596 7.8692 14.8275C9.0968 14.602 10.5991 14.5589 12.4017 14.5488Z" fill="#71717A"/>
                                 </svg>
-                                <p class="mb-2 text-xs md:text-sm text-gray-500"><span class="text-violet-700 font-semibold">Click to upload</span> or drag and drop</p>
-                                <p class="text-xs md:text-sm text-gray-500 font-normal">PNG,JPG,PDF,JPEG (MAX. 5MB)</p>
+                                <p class="mb-2 text-sm text-gray-500"><span class="text-violet-700 font-semibold">Click to upload</span> or drag and drop</p>
+                                <p class="text-sm text-gray-500 font-normal">PNG,JPG,PDF,JPEG (MAX. 5MB)</p>
                             </div>
                             <input id="upload" type="file" class="hidden" />
                         </label>
                     </div>
-                    <div class="flex p-6 justify-center">
-                        <button type="button" class="flex text-sm font-medium text-white rounded-lg w-64 py-3 gap-2 bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300 justify-center">
+                    <div class="flex md:p-6 justify-center">
+                        <button type="button" class="flex text-sm font-medium text-white rounded-lg w-full md:w-64 py-3 gap-2 bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300 justify-center">
                             Submit
                             <span>
                                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
