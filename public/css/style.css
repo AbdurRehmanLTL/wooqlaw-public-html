@@ -770,9 +770,6 @@ select {
 .bottom-2 {
   bottom: 0.5rem;
 }
-.bottom-24 {
-  bottom: 6rem;
-}
 .bottom-3 {
   bottom: 0.75rem;
 }
@@ -817,9 +814,6 @@ select {
 }
 .top-3 {
   top: 0.75rem;
-}
-.bottom-\[3\.5rem\] {
-  bottom: 3.5rem;
 }
 .-z-10 {
   z-index: -10;
@@ -2567,10 +2561,6 @@ select {
   --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-.drop-shadow-md {
-  --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
 .invert {
   --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2620,9 +2610,6 @@ select {
 }
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .\@container {
   container-type: inline-size;
@@ -2901,9 +2888,6 @@ select {
 }.hover\:bg-violet-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(76 29 149 / var(--tw-bg-opacity));
-}.hover\:bg-red-50:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 242 242 / var(--tw-bg-opacity));
 }.hover\:bg-gradient-to-b:hover {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }.hover\:from-sky-100:hover {
@@ -3302,10 +3286,6 @@ select {
 
   .md\:top-5 {
     top: 1.25rem;
-  }
-
-  .md\:bottom-\[4\.5rem\] {
-    bottom: 4.5rem;
   }
 
   .md\:order-1 {
@@ -3746,6 +3726,11 @@ select {
 
   .md\:rounded-xl {
     border-radius: 0.75rem;
+  }
+
+  .md\:rounded-t-lg {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
   }
 
   .md\:bg-gray-200 {
