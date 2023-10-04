@@ -776,6 +776,9 @@ select {
 .bottom-5 {
   bottom: 1.25rem;
 }
+.bottom-\[3\.5rem\] {
+  bottom: 3.5rem;
+}
 .left-0 {
   left: 0px;
 }
@@ -812,6 +815,9 @@ select {
 .top-3 {
   top: 0.75rem;
 }
+.bottom-\[3\.5rem\] {
+  bottom: 3.5rem;
+}
 .-z-10 {
   z-index: -10;
 }
@@ -826,6 +832,9 @@ select {
 }
 .z-50 {
   z-index: 50;
+}
+.z-\[100\] {
+  z-index: 100;
 }
 .z-\[100\] {
   z-index: 100;
@@ -3285,6 +3294,10 @@ select {
     bottom: 1.25rem;
   }
 
+  .md\:bottom-\[4\.5rem\] {
+    bottom: 4.5rem;
+  }
+
   .md\:left-5 {
     left: 1.25rem;
   }
@@ -3295,6 +3308,10 @@ select {
 
   .md\:top-5 {
     top: 1.25rem;
+  }
+
+  .md\:bottom-\[4\.5rem\] {
+    bottom: 4.5rem;
   }
 
   .md\:order-1 {
@@ -3386,6 +3403,10 @@ select {
     height: 5rem;
   }
 
+  .md\:h-24 {
+    height: 6rem;
+  }
+
   .md\:h-36 {
     height: 9rem;
   }
@@ -3400,6 +3421,10 @@ select {
 
   .md\:h-6 {
     height: 1.5rem;
+  }
+
+  .md\:h-64 {
+    height: 16rem;
   }
 
   .md\:h-8 {
@@ -3420,6 +3445,14 @@ select {
 
   .md\:h-screen {
     height: 100vh;
+  }
+
+  .md\:h-24 {
+    height: 6rem;
+  }
+
+  .md\:h-64 {
+    height: 16rem;
   }
 
   .md\:min-h-\[41\.25rem\] {
@@ -3455,12 +3488,20 @@ select {
     width: 3rem;
   }
 
+  .md\:w-16 {
+    width: 4rem;
+  }
+
   .md\:w-2\/3 {
     width: 66.666667%;
   }
 
   .md\:w-20 {
     width: 5rem;
+  }
+
+  .md\:w-28 {
+    width: 7rem;
   }
 
   .md\:w-32 {
@@ -3499,6 +3540,10 @@ select {
     width: 15rem;
   }
 
+  .md\:w-64 {
+    width: 16rem;
+  }
+
   .md\:w-8 {
     width: 2rem;
   }
@@ -3522,6 +3567,18 @@ select {
 
   .md\:w-full {
     width: 100%;
+  }
+
+  .md\:w-16 {
+    width: 4rem;
+  }
+
+  .md\:w-28 {
+    width: 7rem;
+  }
+
+  .md\:w-64 {
+    width: 16rem;
   }
 
   .md\:max-w-3xl {
@@ -3711,16 +3768,16 @@ select {
     border-radius: 9999px;
   }
 
+  .md\:rounded-lg {
+    border-radius: 0.5rem;
+  }
+
   .md\:rounded-none {
     border-radius: 0px;
   }
 
   .md\:rounded-xl {
     border-radius: 0.75rem;
-  }
-
-  .md\:border-none {
-    border-style: none;
   }
 
   .md\:bg-gray-200 {
