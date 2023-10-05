@@ -116,9 +116,9 @@
     <!--!-->
     <div id="faqs" x-data="" class="flex flex-col bg-white w-full">
         <div id="faqs" x-data="" class="flex flex-col bg-white w-full">
-            <div x-data="{ active: 1 }" class="flex flex-col w-full space-y-1 md:space-y-2">
+            <div x-data="{ active: 1 }" class="flex flex-col w-full space-y-2">
                 <!-- 1 -->
-                 <div x-data="{
+                <div x-data="{
                     id: 2,
                     get expanded() {
                         return this.active === this.id
@@ -131,7 +131,7 @@
                         <button
                             x-on:click="expanded = !expanded"
                             :aria-expanded="expanded"
-                            class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-3 md:py-6">
+                            class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6">
                             <span>What is wooqlaw.com?</span>
                             <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
                             <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
@@ -158,7 +158,7 @@
                         <button
                             x-on:click="expanded = !expanded"
                             :aria-expanded="expanded"
-                            class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-3 md:py-6 text-left">
+                            class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
                             <span>How can I find a lawyer on wooqlaw.com?</span>
                             <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
                             <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
@@ -185,7 +185,7 @@
                         <button
                             x-on:click="expanded = !expanded"
                             :aria-expanded="expanded"
-                            class="flex w-full items-start md:items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-3 md:py-6 text-left"
+                            class="flex w-full items-start md:items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left"
                         >
                             <span>Are the lawyers on wooqlaw.com qualified and experienced?</span>
                             <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
@@ -213,7 +213,7 @@
                         <button
                             x-on:click="expanded = !expanded"
                             :aria-expanded="expanded"
-                            class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-3 md:py-6 text-left">
+                            class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
                             <span>What types of legal services does wooqlaw.com offer?</span>
                             <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
                             <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
@@ -240,7 +240,7 @@
                         <button
                             x-on:click="expanded = !expanded"
                             :aria-expanded="expanded"
-                            class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-3 md:py-6 text-left">
+                            class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
                             <span>Is my information secure on wooqlaw.com?</span>
                             <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
                             <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
@@ -267,7 +267,7 @@
                         <button
                             x-on:click="expanded = !expanded"
                             :aria-expanded="expanded"
-                            class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-3 md:py-6 text-left">
+                            class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
                             <span>How do I schedule a legal consultation on wooqlaw.com?</span>
                             <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
                             <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
@@ -294,7 +294,7 @@
                         <button
                             x-on:click="expanded = !expanded"
                             :aria-expanded="expanded"
-                            class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-3 md:py-6 text-left">
+                            class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
                             <span>Is wooqlaw.com available nationwide?</span>
                             <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
                             <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
@@ -321,7 +321,7 @@
                         <button
                             x-on:click="expanded = !expanded"
                             :aria-expanded="expanded"
-                            class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-3 md:py-6 text-left">
+                            class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
                             <span>How does payment work for legal services on wooqlaw.com?</span>
                             <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
                             <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
@@ -348,7 +348,7 @@
                         <button
                             x-on:click="expanded = !expanded"
                             :aria-expanded="expanded"
-                            class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-3 md:py-6 text-left">
+                            class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
                             <span>Can I give feedback on the services provided by a lawyer?</span>
                             <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
                             <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
@@ -369,13 +369,13 @@
         </div>
         <!--Legal Research Engine  -->
         <div x-disclosure="" default-close="">
-    <!--!-->    
-    <h2>
-        <button type="button" class="flex items-center text-primary-800 justify-between w-full px-1 md:px-5 py-5 md:py-6 font-medium text-base md:text-lg text-left" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-1">
-        <span >     
-            Frequently Asked Questions about wooqlaw® Legal Research Engine
-    </span>
-<svg class="w-5 md:w-6 h-5 md:h-6 shrink-0" :class="$disclosure.isClose &amp;&amp; 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button></h2>
+            <!--!-->
+            <h2>
+                <button type="button" class="flex items-center text-primary-800 justify-between w-full px-1 md:px-5 py-5 md:py-6 font-medium text-sm md:text-lg text-left" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-1">
+                <span >     
+                    Frequently Asked Questions about wooqlaw® Legal Research Engine
+        </span>
+<svg class="w-5 md:w-6 h-5 md:h-6 shrink-0" :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button></h2>
 
 <div class="" x-disclosure:panel="" id="alpine-disclosure-panel-1" style="display: none;"><div class="flex flex-col gap-3 mb-2">
 <!--!-->
@@ -633,13 +633,13 @@
 </div>
         </div>
         <!-- CMS Portal for Lawyers -->
-        <div x-disclosure="" default-Close="">
+        <div x-disclosure="" default-close="">
     <!--!-->
     <h2>
         <button type="button" class="flex items-center text-primary-800 justify-between w-full px-1 md:px-5 py-5 md:py-6 font-medium text-sm md:text-lg text-left" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-1">
         <span >     
             Frequently Asked Questions about wooqlaw® CMS Portal for Lawyers</span>
-<svg class="w-5 md:w-6 h-5 md:h-6 shrink-0" :class="$disclosure.isClose &amp;&amp; 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button></h2>
+<svg class="w-5 md:w-6 h-5 md:h-6 shrink-0" :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button></h2>
 
 <div class="" x-disclosure:panel="" id="alpine-disclosure-panel-1" style="display: none;"><div class="flex flex-col gap-3 mb-2">
 <!--!-->
@@ -897,265 +897,263 @@
 </div>
         </div>
         <!-- Client-side Features -->
-        <div x-disclosure="" default-Close="">
+        <div x-disclosure="" default-close="">
    
     <h2>
         <button type="button" class="flex items-center text-primary-800 justify-between w-full px-1 md:px-5 py-5 md:py-6 font-medium text-sm md:text-lg text-left" x-disclosure:button="" aria-expanded="false" aria-controls="alpine-disclosure-panel-1">
         <span >     
             Frequently Asked Questions about wooqlaw® Client-side Features</span>
-        <svg class="w-5 md:w-6 h-5 md:h-6 shrink-0" :class="$disclosure.isClose &amp;&amp; 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button></h2>
+        <svg class="w-5 md:w-6 h-5 md:h-6 shrink-0" :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button></h2>
 
 <div class="" x-disclosure:panel="" id="alpine-disclosure-panel-1" style="display: none;"><div class="flex flex-col gap-3 mb-2">
 <!--!-->
 <div id="faqs" x-data="" class="flex flex-col bg-white gap-2 w-full">
 <div id="faqs" x-data="" class="flex flex-col bg-white gap-2 w-full">
     <div x-data="{ active: 1 }" class="flex flex-col w-full space-y-2">
-      
-       <!-- 1 -->
-       <div x-data="{
-        id: 2,
-        get expanded() {
-            return this.active === this.id
-        },
-        set expanded(value) {
-            this.active = value ? this.id : null
-        },
-    }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
-        <h2>
-            <button
-                x-on:click="expanded = !expanded"
-                :aria-expanded="expanded"
-                class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6">
-                <span>What is wooqlaw.com?</span>
-                <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
-                <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
-            </button>
-        </h2>
- 
-        <div x-show="expanded" x-collapse>
-            <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
-                Wooqlaw.com is an online legal platform that provides comprehensive legal solutions, resources, and guidance to individuals and businesses. Our platform connects users with experienced lawyers, allowing them to access legal advice, documentation services, and much more, all conveniently online.
+        <!-- 1 -->
+        <div x-data="{
+            id: 2,
+            get expanded() {
+                return this.active === this.id
+            },
+            set expanded(value) {
+                this.active = value ? this.id : null
+            },
+        }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
+            <h2>
+                <button
+                    x-on:click="expanded = !expanded"
+                    :aria-expanded="expanded"
+                    class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6">
+                    <span>What is wooqlaw.com?</span>
+                    <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
+                    <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
+                </button>
+            </h2>
+     
+            <div x-show="expanded" x-collapse>
+                <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
+                    Wooqlaw.com is an online legal platform that provides comprehensive legal solutions, resources, and guidance to individuals and businesses. Our platform connects users with experienced lawyers, allowing them to access legal advice, documentation services, and much more, all conveniently online.
+                </div>
             </div>
         </div>
-    </div>
-    <!-- 2 -->
-    <div x-data="{
-        id: 3,
-        get expanded() {
-            return this.active === this.id
-        },
-        set expanded(value) {
-            this.active = value ? this.id : null
-        },
-    }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
-        <h2>
-            <button
-                x-on:click="expanded = !expanded"
-                :aria-expanded="expanded"
-                class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
-                <span>How can I find a lawyer on wooqlaw.com?</span>
-                <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
-                <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
-            </button>
-        </h2>
- 
-        <div x-show="expanded" x-collapse>
-            <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
-                Finding a lawyer on wooqlaw.com is simple. Just visit our website and use the search feature to specify your legal needs, location, and preferred expertise. We'll present you with a list of qualified lawyers matching your criteria, from which you can choose the one that best suits your requirements.
+        <!-- 2 -->
+        <div x-data="{
+            id: 3,
+            get expanded() {
+                return this.active === this.id
+            },
+            set expanded(value) {
+                this.active = value ? this.id : null
+            },
+        }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
+            <h2>
+                <button
+                    x-on:click="expanded = !expanded"
+                    :aria-expanded="expanded"
+                    class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
+                    <span>How can I find a lawyer on wooqlaw.com?</span>
+                    <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
+                    <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
+                </button>
+            </h2>
+     
+            <div x-show="expanded" x-collapse>
+                <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
+                    Finding a lawyer on wooqlaw.com is simple. Just visit our website and use the search feature to specify your legal needs, location, and preferred expertise. We'll present you with a list of qualified lawyers matching your criteria, from which you can choose the one that best suits your requirements.
+                </div>
             </div>
         </div>
-    </div>
-    <!-- 3 -->
-    <div x-data="{
-        id: 4,
-        get expanded() {
-            return this.active === this.id
-        },
-        set expanded(value) {
-            this.active = value ? this.id : null
-        },
-    }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
-        <h2>
-            <button
-                x-on:click="expanded = !expanded"
-                :aria-expanded="expanded"
-                class="flex w-full items-start md:items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left"
-            >
-                <span>Are the lawyers on wooqlaw.com qualified and experienced?</span>
-                <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
-                <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
-            </button>
-        </h2>
- 
-        <div x-show="expanded" x-collapse>
-            <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
-                Yes, we have a stringent vetting process to ensure that all lawyers on our platform are qualified professionals with the necessary experience and expertise in their respective fields. We verify their credentials and track records to provide users with reliable legal assistance.
+        <!-- 3 -->
+        <div x-data="{
+            id: 4,
+            get expanded() {
+                return this.active === this.id
+            },
+            set expanded(value) {
+                this.active = value ? this.id : null
+            },
+        }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
+            <h2>
+                <button
+                    x-on:click="expanded = !expanded"
+                    :aria-expanded="expanded"
+                    class="flex w-full items-start md:items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left"
+                >
+                    <span>Are the lawyers on wooqlaw.com qualified and experienced?</span>
+                    <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
+                    <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
+                </button>
+            </h2>
+     
+            <div x-show="expanded" x-collapse>
+                <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
+                    Yes, we have a stringent vetting process to ensure that all lawyers on our platform are qualified professionals with the necessary experience and expertise in their respective fields. We verify their credentials and track records to provide users with reliable legal assistance.
+                </div>
             </div>
         </div>
-    </div>
-    <!-- 4 -->
-    <div x-data="{
-        id: 5,
-        get expanded() {
-            return this.active === this.id
-        },
-        set expanded(value) {
-            this.active = value ? this.id : null
-        },
-    }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
-        <h2>
-            <button
-                x-on:click="expanded = !expanded"
-                :aria-expanded="expanded"
-                class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
-                <span>What types of legal services does wooqlaw.com offer?</span>
-                <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
-                <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
-            </button>
-        </h2>
- 
-        <div x-show="expanded" x-collapse>
-            <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
-                wooqlaw.com offers a wide range of legal services, including legal consultations, contract drafting, company registration, property matters, family law, and much more. Our platform caters to diverse legal needs, making it a one-stop destination for all your legal requirements.
+        <!-- 4 -->
+        <div x-data="{
+            id: 5,
+            get expanded() {
+                return this.active === this.id
+            },
+            set expanded(value) {
+                this.active = value ? this.id : null
+            },
+        }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
+            <h2>
+                <button
+                    x-on:click="expanded = !expanded"
+                    :aria-expanded="expanded"
+                    class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
+                    <span>What types of legal services does wooqlaw.com offer?</span>
+                    <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
+                    <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
+                </button>
+            </h2>
+     
+            <div x-show="expanded" x-collapse>
+                <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
+                    wooqlaw.com offers a wide range of legal services, including legal consultations, contract drafting, company registration, property matters, family law, and much more. Our platform caters to diverse legal needs, making it a one-stop destination for all your legal requirements.
+                </div>
             </div>
         </div>
-    </div>
-    <!-- 5 -->
-    <div x-data="{
-        id: 6,
-        get expanded() {
-            return this.active === this.id
-        },
-        set expanded(value) {
-            this.active = value ? this.id : null
-        },
-    }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
-        <h2>
-            <button
-                x-on:click="expanded = !expanded"
-                :aria-expanded="expanded"
-                class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
-                <span>Is my information secure on wooqlaw.com?</span>
-                <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
-                <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
-            </button>
-        </h2>
- 
-        <div x-show="expanded" x-collapse>
-            <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
-                Yes, we take data security and privacy seriously. wooqlaw.com follows strict protocols to protect your personal and sensitive information. We utilize advanced encryption and adhere to industry best practices to ensure a safe and secure user experience.
+        <!-- 5 -->
+        <div x-data="{
+            id: 6,
+            get expanded() {
+                return this.active === this.id
+            },
+            set expanded(value) {
+                this.active = value ? this.id : null
+            },
+        }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
+            <h2>
+                <button
+                    x-on:click="expanded = !expanded"
+                    :aria-expanded="expanded"
+                    class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
+                    <span>Is my information secure on wooqlaw.com?</span>
+                    <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
+                    <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
+                </button>
+            </h2>
+     
+            <div x-show="expanded" x-collapse>
+                <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
+                    Yes, we take data security and privacy seriously. wooqlaw.com follows strict protocols to protect your personal and sensitive information. We utilize advanced encryption and adhere to industry best practices to ensure a safe and secure user experience.
+                </div>
             </div>
         </div>
-    </div>
-    <!-- 6 -->
-    <div x-data="{
-        id: 7,
-        get expanded() {
-            return this.active === this.id
-        },
-        set expanded(value) {
-            this.active = value ? this.id : null
-        },
-    }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
-        <h2>
-            <button
-                x-on:click="expanded = !expanded"
-                :aria-expanded="expanded"
-                class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
-                <span>How do I schedule a legal consultation on wooqlaw.com?</span>
-                <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
-                <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
-            </button>
-        </h2>
- 
-        <div x-show="expanded" x-collapse>
-            <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
-                To schedule a legal consultation, simply browse through the available lawyers on our platform, select the one you want to consult and choose a suitable date and time for the meeting. You can have a virtual consultation through video conferencing, ensuring flexibility and convenience.
+        <!-- 6 -->
+        <div x-data="{
+            id: 7,
+            get expanded() {
+                return this.active === this.id
+            },
+            set expanded(value) {
+                this.active = value ? this.id : null
+            },
+        }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
+            <h2>
+                <button
+                    x-on:click="expanded = !expanded"
+                    :aria-expanded="expanded"
+                    class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
+                    <span>How do I schedule a legal consultation on wooqlaw.com?</span>
+                    <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
+                    <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
+                </button>
+            </h2>
+     
+            <div x-show="expanded" x-collapse>
+                <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
+                    To schedule a legal consultation, simply browse through the available lawyers on our platform, select the one you want to consult and choose a suitable date and time for the meeting. You can have a virtual consultation through video conferencing, ensuring flexibility and convenience.
+                </div>
             </div>
         </div>
-    </div>
-    <!-- 7 -->
-    <div x-data="{
-        id: 8,
-        get expanded() {
-            return this.active === this.id
-        },
-        set expanded(value) {
-            this.active = value ? this.id : null
-        },
-    }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
-        <h2>
-            <button
-                x-on:click="expanded = !expanded"
-                :aria-expanded="expanded"
-                class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
-                <span>Is wooqlaw.com available nationwide?</span>
-                <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
-                <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
-            </button>
-        </h2>
- 
-        <div x-show="expanded" x-collapse>
-            <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
-                Yes, wooqlaw.com is accessible throughout the country. We have a network of lawyers from different regions, ensuring that users can find legal assistance regardless of their location.
+        <!-- 7 -->
+        <div x-data="{
+            id: 8,
+            get expanded() {
+                return this.active === this.id
+            },
+            set expanded(value) {
+                this.active = value ? this.id : null
+            },
+        }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
+            <h2>
+                <button
+                    x-on:click="expanded = !expanded"
+                    :aria-expanded="expanded"
+                    class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
+                    <span>Is wooqlaw.com available nationwide?</span>
+                    <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
+                    <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
+                </button>
+            </h2>
+     
+            <div x-show="expanded" x-collapse>
+                <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
+                    Yes, wooqlaw.com is accessible throughout the country. We have a network of lawyers from different regions, ensuring that users can find legal assistance regardless of their location.
+                </div>
             </div>
         </div>
-    </div>
-    <!-- 8 -->
-    <div x-data="{
-        id: 9,
-        get expanded() {
-            return this.active === this.id
-        },
-        set expanded(value) {
-            this.active = value ? this.id : null
-        },
-    }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
-        <h2>
-            <button
-                x-on:click="expanded = !expanded"
-                :aria-expanded="expanded"
-                class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
-                <span>How does payment work for legal services on wooqlaw.com?</span>
-                <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
-                <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
-            </button>
-        </h2>
- 
-        <div x-show="expanded" x-collapse>
-            <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
-                Our platform provides transparent pricing for various legal services. Once you select a lawyer and the service you require, you will be provided with the applicable fees. Payments can be made securely through our website, ensuring a seamless transaction process.
+        <!-- 8 -->
+        <div x-data="{
+            id: 9,
+            get expanded() {
+                return this.active === this.id
+            },
+            set expanded(value) {
+                this.active = value ? this.id : null
+            },
+        }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
+            <h2>
+                <button
+                    x-on:click="expanded = !expanded"
+                    :aria-expanded="expanded"
+                    class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
+                    <span>How does payment work for legal services on wooqlaw.com?</span>
+                    <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
+                    <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
+                </button>
+            </h2>
+     
+            <div x-show="expanded" x-collapse>
+                <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
+                    Our platform provides transparent pricing for various legal services. Once you select a lawyer and the service you require, you will be provided with the applicable fees. Payments can be made securely through our website, ensuring a seamless transaction process.
+                </div>
             </div>
         </div>
-    </div>
-    <!-- 9 -->
-    <div x-data="{
-        id: 10,
-        get expanded() {
-            return this.active === this.id
-        },
-        set expanded(value) {
-            this.active = value ? this.id : null
-        },
-    }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
-        <h2>
-            <button
-                x-on:click="expanded = !expanded"
-                :aria-expanded="expanded"
-                class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
-                <span>Can I give feedback on the services provided by a lawyer?</span>
-                <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
-                <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
-            </button>
-        </h2>
- 
-        <div x-show="expanded" x-collapse>
-            <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
-                Yes, we value user feedback. After receiving a service from a lawyer on wooqlaw.com, you will have the opportunity to rate and review their services, helping us maintain the highest standards of legal assistance.
+        <!-- 9 -->
+        <div x-data="{
+            id: 10,
+            get expanded() {
+                return this.active === this.id
+            },
+            set expanded(value) {
+                this.active = value ? this.id : null
+            },
+        }" role="region" class="rounded-xl bg-white md:border-none border border-gray-200">
+            <h2>
+                <button
+                    x-on:click="expanded = !expanded"
+                    :aria-expanded="expanded"
+                    class="flex w-full items-center justify-between font-medium text-sm md:text-lg text-gray-900 rounded-xl bg-gray-50 px-2 md:px-5 py-4 md:py-6 text-left">
+                    <span>Can I give feedback on the services provided by a lawyer?</span>
+                    <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
+                    <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
+                </button>
+            </h2>
+     
+            <div x-show="expanded" x-collapse>
+                <div class="flex font-normal text-xs md:text-base px-2 md:px-5 py-4 md:py-6">
+                    Yes, we value user feedback. After receiving a service from a lawyer on wooqlaw.com, you will have the opportunity to rate and review their services, helping us maintain the highest standards of legal assistance.
+                </div>
             </div>
         </div>
-    </div>
-
     </div>
 </div>
 </div>
@@ -1179,8 +1177,8 @@
 
     <a class="flex justify-between sticky bottom-0 mb-5" href="">
         <div class=""></div>
-        <div class="flex w-16 h-16 items-center justify-center rounded-full bg-primary-700 hover:bg-primary-800">
-            <svg width="42" height="41" viewBox="0 0 42 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="flex w-12 md:w-16 h-12 md:h-16 items-center justify-center rounded-full bg-primary-700 hover:bg-primary-800">
+            <svg class="w-8 md:w-12 h-8 md:h-12" viewBox="0 0 42 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21.2695 37.306C30.7103 37.306 38.3635 29.8441 38.3635 20.6393C38.3635 11.4346 30.7103 3.97266 21.2695 3.97266C11.8287 3.97266 4.17549 11.4346 4.17549 20.6393C4.17549 23.3055 4.81757 25.8254 5.95918 28.0601C6.26256 28.654 6.36354 29.3328 6.18766 29.9737L5.16953 33.6837C4.72755 35.2943 6.23876 36.7677 7.89062 36.3368L11.6958 35.3441C12.3532 35.1726 13.0493 35.2711 13.6584 35.5669C15.9505 36.68 18.535 37.306 21.2695 37.306Z" fill="white"/>
                 <path d="M24.4353 29.3244C24.4353 30.4204 23.0179 31.309 21.2694 31.309C19.5209 31.309 18.1035 30.4204 18.1035 29.3244C18.1035 28.2284 19.5209 27.3398 21.2694 27.3398C23.0179 27.3398 24.4353 28.2284 24.4353 29.3244Z" fill="#7C3AED"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M21.2694 12.9534C19.3024 12.9534 17.7078 13.953 17.7078 15.186C17.7078 16.0081 16.6447 16.6744 15.3334 16.6744C14.022 16.6744 12.959 16.0081 12.959 15.186C12.959 12.3089 16.6797 9.97656 21.2694 9.97656C25.8591 9.97656 29.5798 12.3089 29.5798 15.186C29.5798 17.0978 27.9356 18.7673 25.4967 19.6718C24.8738 19.9029 24.3596 20.1551 24.0246 20.4026C23.6994 20.6428 23.6438 20.7995 23.6438 20.8916V23.3723C23.6438 24.1944 22.5808 24.8607 21.2694 24.8607C19.9581 24.8607 18.895 24.1944 18.895 23.3723V20.8916C18.895 19.8877 19.5962 19.073 20.4038 18.4764C21.2017 17.887 22.1967 17.4369 23.0786 17.1098C24.1327 16.7189 24.831 16.0028 24.831 15.186C24.831 13.953 23.2364 12.9534 21.2694 12.9534Z" fill="#7C3AED"/>
