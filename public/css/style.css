@@ -770,14 +770,14 @@ select {
 .bottom-2 {
   bottom: 0.5rem;
 }
-.bottom-24 {
-  bottom: 6rem;
-}
 .bottom-3 {
   bottom: 0.75rem;
 }
 .bottom-5 {
   bottom: 1.25rem;
+}
+.bottom-\[3\.5rem\] {
+  bottom: 3.5rem;
 }
 .left-0 {
   left: 0px;
@@ -814,9 +814,6 @@ select {
 }
 .top-3 {
   top: 0.75rem;
-}
-.bottom-\[3\.5rem\] {
-  bottom: 3.5rem;
 }
 .-z-10 {
   z-index: -10;
@@ -1947,6 +1944,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -2614,9 +2615,6 @@ select {
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 .\@container {
   container-type: inline-size;
 }
@@ -3275,6 +3273,10 @@ select {
     bottom: 1.25rem;
   }
 
+  .md\:bottom-\[4\.5rem\] {
+    bottom: 4.5rem;
+  }
+
   .md\:left-5 {
     left: 1.25rem;
   }
@@ -3287,8 +3289,8 @@ select {
     top: 1.25rem;
   }
 
-  .md\:bottom-\[4\.5rem\] {
-    bottom: 4.5rem;
+  .md\:left-0 {
+    left: 0px;
   }
 
   .md\:order-1 {
@@ -3416,6 +3418,10 @@ select {
     height: 100vh;
   }
 
+  .md\:h-9 {
+    height: 2.25rem;
+  }
+
   .md\:min-h-\[41\.25rem\] {
     min-height: 41.25rem;
   }
@@ -3447,6 +3453,10 @@ select {
 
   .md\:w-12 {
     width: 3rem;
+  }
+
+  .md\:w-16 {
+    width: 4rem;
   }
 
   .md\:w-2\/3 {
@@ -3518,10 +3528,6 @@ select {
     width: 100%;
   }
 
-  .md\:w-16 {
-    width: 4rem;
-  }
-
   .md\:max-w-3xl {
     max-width: 48rem;
   }
@@ -3564,6 +3570,10 @@ select {
 
   .md\:flex-col {
     flex-direction: column;
+  }
+
+  .md\:flex-wrap {
+    flex-wrap: wrap;
   }
 
   .md\:items-start {
@@ -3728,6 +3738,11 @@ select {
 
   .md\:bg-transparent {
     background-color: transparent;
+  }
+
+  .md\:bg-primary-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(29 78 216 / var(--tw-bg-opacity));
   }
 
   .md\:bg-gradient-to-b {
