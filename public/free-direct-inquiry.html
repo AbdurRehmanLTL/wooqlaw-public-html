@@ -2433,10 +2433,10 @@
                         <label for="your-message" class="block text-sm font-medium text-gray-900">
                             Your Inquiry <span class="text-red-600">*</span>
                         </label>
-                        <textarea id="your-message" rows="4" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-violet-500 focus:border-violet-500" placeholder="Write text here ..."></textarea>
+                        <textarea id="your-message" rows="3" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-violet-500 focus:border-violet-500" placeholder="Write text here ..."></textarea>
                         <!-- Voice Dictate -->
                         <div class="flex flex-col md:flex-row gap-2 justify-between">
-                            <span class="block text-2xs md:text-xs font-normal text-gray-500">
+                            <span class="block text-xs md:text-xs font-normal text-gray-500">
                                 Max 4000 characters 
                             </span>
                             <div class="flex gap-2 items-center">
@@ -2462,14 +2462,77 @@
                         </div>
                     </div>
                      <!-- Upload supporting documents -->
-                     <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2">
                         <label class="block text-sm font-medium text-gray-900" for="file_input">
                             Upload supporting documents
                         </label>
                         <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" id="file_input" type="file">
-                        <span class="block text-2xs md:text-xs font-normal text-gray-500">
+                        <span class="block text-xs md:text-xs font-normal text-gray-500">
                             Max size 5 MB
                         </span>
+                    </div>
+                    <!-- Property details documents.doc -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-5">
+                        <div class="flex p-2 md:p-5 gap-2 md:gap-5 bg-gray-50 rounded-lg items-center justify-between">
+                            <!-- pdf -->
+                            <div class="relative shrink-0 w-7 md:w-9">
+                                <svg class="shrink-0 w-7 md:w-9" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M20.9199 0.21582H2.05464C1.12161 0.21582 0.365234 0.972193 0.365234 1.90522V45.5264C0.365234 46.4594 1.12161 47.2158 2.05464 47.2158H35.6743C36.6073 47.2158 37.3637 46.4594 37.3637 45.5264V15.031L20.9199 0.21582Z" fill="#8B5CF6"/>
+                                  <path d="M20.9209 13.3416V0.21582L37.3647 15.031H22.6103C21.6773 15.031 20.9209 14.2747 20.9209 13.3416Z" fill="#5B21B6"/>
+                                  <path d="M37.365 21.1617L25.0322 15.0312H37.365V21.1617Z" fill="#7C3AED"/>
+                                </svg>
+                                <p class="absolute bottom-2 md:bottom-3 text-center left-0 right-0 z-20 mx-auto text-2xs md:text-xs font-medium leading-3 text-white">
+                                    pdf
+                                </p>
+                            </div>
+                            <!-- Property details documents.doc -->
+                            <div class="flex flex-col w-full grow-0 justify-between">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-900 truncate w-32 md:w-40">
+                                        Property details documents.doc
+                                    </span>
+                                    <span class="text-sm font-medium text-gray-900">
+                                        100%
+                                    </span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-green-500 h-2.5 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <button type="button" class="bg-gray-100 hover:bg-gray-200 rounded-lg p-1.5 ml-auto inline-flex items-center">
+                                <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                        </div>
+                        <div class="flex p-2 md:p-5 gap-2 md:gap-5 bg-gray-50 rounded-lg items-center justify-between">
+                            <!-- pdf -->
+                            <div class="relative shrink-0 w-7 md:w-9">
+                                <svg class="shrink-0 w-7 md:w-9" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M20.9199 0.21582H2.05464C1.12161 0.21582 0.365234 0.972193 0.365234 1.90522V45.5264C0.365234 46.4594 1.12161 47.2158 2.05464 47.2158H35.6743C36.6073 47.2158 37.3637 46.4594 37.3637 45.5264V15.031L20.9199 0.21582Z" fill="#8B5CF6"/>
+                                  <path d="M20.9209 13.3416V0.21582L37.3647 15.031H22.6103C21.6773 15.031 20.9209 14.2747 20.9209 13.3416Z" fill="#5B21B6"/>
+                                  <path d="M37.365 21.1617L25.0322 15.0312H37.365V21.1617Z" fill="#7C3AED"/>
+                                </svg>
+                                <p class="absolute bottom-2 md:bottom-3 text-center left-0 right-0 z-20 mx-auto text-2xs md:text-xs font-medium leading-3 text-white">
+                                    pdf
+                                </p>
+                            </div>
+                            <!-- Property details documents.doc -->
+                            <div class="flex flex-col w-full grow-0 justify-between">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-900 truncate w-32 md:w-40">
+                                        Property details documents.doc
+                                    </span>
+                                    <span class="text-sm font-medium text-gray-900">
+                                        60%
+                                    </span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-violet-700 h-2.5 rounded-full" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <button type="button" class="bg-gray-100 hover:bg-gray-200 rounded-lg p-1.5 ml-auto inline-flex items-center">
+                                <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                        </div>
                     </div>
                     <!-- Full Name, Mobile Number -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -2506,11 +2569,11 @@
                                 Case City
                             </label>
                             <select id="case-city" class="block w-full px-4 py-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-violet-500 focus:border-violet-500">
-                            <option selected>Select</option>
-                            <option value="Islamabad">Islamabad</option>
-                            <option value="Lahore">Lahore</option>
-                            <option value="Karachi">Karachi/option>
-                            <option value="Murree">Murree</option>
+                                <option selected>Select</option>
+                                <option value="Islamabad">Islamabad</option>
+                                <option value="Lahore">Lahore</option>
+                                <option value="Karachi">Karachi</option>
+                                <option value="Murree">Murree</option>
                             </select>
                         </div>
                     </div>
