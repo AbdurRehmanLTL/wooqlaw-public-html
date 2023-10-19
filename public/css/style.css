@@ -815,6 +815,9 @@ select {
 .top-3 {
   top: 0.75rem;
 }
+.bottom-6 {
+  bottom: 1.5rem;
+}
 .-z-10 {
   z-index: -10;
 }
@@ -3289,6 +3292,10 @@ select {
     position: absolute;
   }
 
+  .md\:relative {
+    position: relative;
+  }
+
   .md\:bottom-3 {
     bottom: 0.75rem;
   }
@@ -3590,6 +3597,10 @@ select {
 
   .md\:max-w-xl {
     max-width: 36rem;
+  }
+
+  .md\:max-w-md {
+    max-width: 28rem;
   }
 
   .md\:grow {
