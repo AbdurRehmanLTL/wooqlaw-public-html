@@ -2067,6 +2067,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
+.bg-green-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+}
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -3050,6 +3054,9 @@ select {
 }.hover\:bg-violet-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(76 29 149 / var(--tw-bg-opacity));
+}.hover\:bg-green-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 101 52 / var(--tw-bg-opacity));
 }.hover\:bg-gradient-to-b:hover {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }.hover\:from-sky-100:hover {
@@ -3178,6 +3185,9 @@ select {
 }.focus\:ring-violet-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(139 92 246 / var(--tw-ring-opacity));
+}.focus\:ring-green-300:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(134 239 172 / var(--tw-ring-opacity));
 }.focus\:ring-opacity-50:focus {
   --tw-ring-opacity: 0.5;
 }.focus\:valid\:ring-green-500:valid:focus {
