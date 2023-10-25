@@ -896,6 +896,10 @@ select {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
 }
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -990,6 +994,9 @@ select {
 }
 .mr-3 {
   margin-right: 0.75rem;
+}
+.mr-auto {
+  margin-right: auto;
 }
 .mt-1 {
   margin-top: 0.25rem;
@@ -1724,9 +1731,17 @@ select {
   border-bottom-right-radius: 0.75rem;
   border-bottom-left-radius: 0.75rem;
 }
+.rounded-l-2xl {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
 .rounded-l-full {
   border-top-left-radius: 9999px;
   border-bottom-left-radius: 9999px;
+}
+.rounded-r-2xl {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 .rounded-r-full {
   border-top-right-radius: 9999px;
@@ -1748,11 +1763,17 @@ select {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
 }
+.rounded-bl-2xl {
+  border-bottom-left-radius: 1rem;
+}
 .rounded-bl-full {
   border-bottom-left-radius: 9999px;
 }
 .rounded-bl-none {
   border-bottom-left-radius: 0px;
+}
+.rounded-br-2xl {
+  border-bottom-right-radius: 1rem;
 }
 .rounded-br-full {
   border-bottom-right-radius: 9999px;
@@ -3945,6 +3966,10 @@ select {
 
   .md\:gap-12 {
     gap: 3rem;
+  }
+
+  .md\:gap-14 {
+    gap: 3.5rem;
   }
 
   .md\:gap-16 {
