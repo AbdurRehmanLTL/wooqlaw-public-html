@@ -23,7 +23,7 @@
     <script defer src="./js/alpinefocus.min.js"></script>
     <!-- alpinejs v3.12 -->
     <script defer src="./js/alpine.min.js"></script>
-    <title>Inquiry Open Details</title>
+    <title>Inquiry Details Response</title>
 </head>
 
 <body class="overflow-hidden">
@@ -398,7 +398,7 @@
                                             </svg> 
                                         </button>
                                         <button onclick="inquiryopendetailsmodal.showModal()" type="submit" class="flex w-full max-w-fit md:w-60 px-3 py-1.5 md:px-6 md:py-3.5 gap-2 text-xs md:text-sm font-medium text-gray-800 border border-gray-700 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 items-center justify-center">
-                                            Stop New Offers
+                                            Stop Taking Proposals
                                             <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2549 3.26958C15.41 2.40669 14.205 2.0884 13.0254 2.42405C12.6934 2.51852 12.3477 2.32596 12.2532 1.99396C12.1587 1.66196 12.3513 1.31624 12.6833 1.22177C14.2985 0.762196 15.9788 1.20096 17.1481 2.39505C17.3895 2.64168 17.3854 3.03739 17.1387 3.27889C16.8921 3.52038 16.4964 3.51622 16.2549 3.26958ZM9.82522 2.75829C9.64684 2.4524 9.127 2.26688 8.59893 2.56868C8.0728 2.86937 7.98027 3.3994 8.15555 3.69997L10.2603 7.30924C10.4341 7.60742 10.3334 7.9901 10.0352 8.16399C9.73701 8.33787 9.35433 8.2371 9.18045 7.93892L7.07573 4.32966C7.07563 4.32948 7.07584 4.32984 7.07573 4.32966L6.37416 3.12657C6.19578 2.82067 5.67594 2.63516 5.14787 2.93695C4.62175 3.23764 4.52921 3.76767 4.70449 4.06825L7.86156 9.48215C8.03544 9.78033 7.93468 10.163 7.63649 10.3369C7.33831 10.5108 6.95563 10.41 6.78174 10.1118L5.3786 7.70565C5.20022 7.39976 4.68038 7.21424 4.15232 7.51604C3.62619 7.81673 3.53365 8.34676 3.70893 8.64733L6.866 14.0612C8.20678 16.3605 11.5154 17.1066 14.3212 15.5031C17.1251 13.9006 18.1218 10.6994 16.7841 8.40546L14.6794 4.79619C14.501 4.4903 13.9812 4.30478 13.4531 4.60658C12.927 4.90727 12.8345 5.4373 13.0097 5.73787L14.4129 8.14405C14.4969 8.28806 14.5198 8.45965 14.4767 8.62067C14.4335 8.7817 14.3278 8.91881 14.1831 9.00153C12.8977 9.73613 12.5038 11.1566 13.0665 12.1216C13.2404 12.4198 13.1397 12.8025 12.8415 12.9763C12.5433 13.1502 12.1606 13.0495 11.9867 12.7513C11.104 11.2376 11.6596 9.36533 13.0395 8.27036L9.82522 2.75829ZM12.0987 4.17561L10.905 2.12861C10.3085 1.10561 8.96913 0.917365 7.97869 1.48341C7.67345 1.65786 7.41382 1.89699 7.21807 2.17443C6.55136 1.44036 5.40317 1.35131 4.52763 1.85169C3.53526 2.41884 3.02502 3.66961 3.62467 4.69793L4.45981 6.13007C4.13895 6.16492 3.8207 6.26582 3.53207 6.43077C2.5397 6.99792 2.02946 8.2487 2.62912 9.27702L5.78619 14.6909C7.54514 17.7073 11.6733 18.4561 14.9415 16.5883C18.2116 14.7194 19.626 10.7974 17.8639 7.77577L15.7592 4.16651C15.1627 3.14351 13.8233 2.95527 12.8329 3.52131C12.5412 3.68802 12.2912 3.91379 12.0987 4.17561ZM4.17826 14.8838C4.47644 14.7099 4.85913 14.8107 5.03301 15.1089C5.72206 16.2905 6.77547 17.1841 8.07454 17.7639C8.38975 17.9046 8.53123 18.2741 8.39054 18.5893C8.24986 18.9046 7.88029 19.046 7.56508 18.9054C6.05549 18.2316 4.78899 17.1718 3.95319 15.7386C3.77931 15.4404 3.88008 15.0577 4.17826 14.8838Z" fill="black"/>
                                             </svg>
@@ -413,10 +413,10 @@
                                     </span>
                                 </div>
                             </div>
-                            <!-- Received Offers -->
+                            <!-- Received Proposals -->
                             <div class="flex flex-col w-full p-3 gap-3 bg-gray-200 rounded-lg">
                                 <div class="text-xl md:text-2xl font-normal text-gray-900">
-                                    Received Offers
+                                    Received Proposals
                                 </div>
                                 <div class="@container relative flex w-full flex-col flex-wrap items-start gap-3 rounded-2xl border bg-white min-h-[248px] p-2 @xl:p-4 shadow aos-init aos-animate" data-aos="fade-up" data-aos-delay="60">
                                     <div class="group flex flex-col w-full @xl:flex-row @xl:items-center justify-between gap-2 rounded-xl bg-gradient-to-b  from-gray-100  p-2">
@@ -787,10 +787,10 @@
                         </span>
                         <div class="flex flex-col gap-2 text-center">
                             <span class="text-sm font-semibold text-gray-900 md:text-lg">
-                                Stop New Offers
+                                Stop taking proposals
                             </span>
                             <span class="text-sm font-normal text-gray-600 md:text-base">
-                                Are you sure you want to Stop New Offers for this inquiry. This action can not be undone.
+                                Are you sure you want to stop taking proposals for this inquiry. This action can not be undone.
                             </span>
                         </div>
                     </div>
