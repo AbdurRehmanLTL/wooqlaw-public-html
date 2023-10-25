@@ -1292,12 +1292,6 @@ select {
 .w-px {
   width: 1px;
 }
-.w-18 {
-  width: 4.5rem;
-}
-.w-1 {
-  width: 0.25rem;
-}
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -2095,10 +2089,6 @@ select {
 .bg-yellow-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
-}
-.bg-yellow-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 249 195 / var(--tw-bg-opacity));
 }
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
@@ -4604,6 +4594,8 @@ select {
   }
 }.\[\&\>\*\>div\]\:p-3>*>div {
   padding: 0.75rem;
+}.\[\&\>\*\>div\]\:p-2>*>div {
+  padding: 0.5rem;
 }@media (min-width: 768px) {
 
   .md\:\[\&\>\*\>div\]\:table-cell>*>div {
