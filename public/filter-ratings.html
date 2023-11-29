@@ -251,7 +251,7 @@
                         >
                             Overview
                         </a>
-                        </li>
+                    </li>
                         <li class="basis-auto shrink-0 grow-0 md:grow">
                         <a
                             x-tabs:tab
@@ -1206,17 +1206,14 @@
                                                             <div class="flex items-center justify-center bg-gray-300 rounded-full box w-7 h-7 shrink-0">
                                                                 <svg class="w-4 h-4" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M7.24062 15.6405C8.84375 13.629 12.5 8.7539 12.5 6.01557C12.5 2.69447 9.8125 0 6.5 0C3.1875 0 0.5 2.69447 0.5 6.01557C0.5 8.7539 4.15625 13.629 5.75938 15.6405C6.14375 16.1198 6.85625 16.1198 7.24062 15.6405ZM6.5 4.01038C7.03043 4.01038 7.53914 4.22164 7.91421 4.59768C8.28929 4.97373 8.5 5.48376 8.5 6.01557C8.5 6.54738 8.28929 7.0574 7.91421 7.43345C7.53914 7.8095 7.03043 8.02076 6.5 8.02076C5.96957 8.02076 5.46086 7.8095 5.08579 7.43345C4.71071 7.0574 4.5 6.54738 4.5 6.01557C4.5 5.48376 4.71071 4.97373 5.08579 4.59768C5.46086 4.22164 5.96957 4.01038 6.5 4.01038Z" fill="black"/>
-                                                                    </svg>    
+                                                                </svg>    
                                                             </div>
                                                             <h2 class="w-full max-w-2xl text-base font-medium text-gray-900">
-                                                            Blue Area
+                                                                Blue Area
                                                             </h2>
                                                         </div>
-                                                        <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor"
-                                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd"
-                                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                                clip-rule="evenodd"></path>
+                                                        <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd"d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"clip-rule="evenodd"></path>
                                                         </svg>
                                                     </button>
                                                 </div>
@@ -1306,7 +1303,9 @@
                                     </div>
                                     <!-- continue -->
                                     <div class="flex px-20 py-2.5 mx-auto bg-violet-700 rounded-lg items-center justify-center" x-on:click="open = !open">
-                                    <button class="text-sm font-medium text-white">Continue</button>
+                                    <button class="text-sm font-medium text-white">
+                                        Continue
+                                    </button>
                                     </div>
                                 </div>
                             </span>
@@ -1321,82 +1320,81 @@
                                         <svg class="w-4 h-4" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M2 8.49992H14Z" fill="#1F2A37"/>
                                             <path d="M6.66667 13.1666L2 8.49992M2 8.49992L6.66667 3.83325M2 8.49992H14" stroke="#111928" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                            
+                                        </svg>
                                     </span>
                                     <span class="text-sm font-medium text-gray-800">
                                         Back
                                     </span>
                                 </a>
                                 <div class="flex flex-col w-full p-5 gap-7 rounded-xl bg-gray-50">
-                                        <h2 class="flex text-base font-medium md:text-lg text-violet-700">
-                                            Booking Summary
-                                        </h2>
-                                        <div class="flex flex-col w-full gap-8 bg-gray-50">
-                                            <div class="flex flex-col items-start gap-4 md:grid md:grid-cols-3">
-                                                <h3 class="flex text-sm font-medium text-gray-600 md:text-base">
-                                                    Lawyer
+                                    <h2 class="flex text-base font-medium md:text-lg text-violet-700">
+                                        Booking Summary
+                                    </h2>
+                                    <div class="flex flex-col w-full gap-8 bg-gray-50">
+                                        <div class="flex flex-col items-start gap-4 md:grid md:grid-cols-3">
+                                            <h3 class="flex text-sm font-medium text-gray-600 md:text-base">
+                                                Lawyer
+                                            </h3>
+                                            <div class="flex flex-col">
+                                                <h2 class="col-span-2 text-sm font-normal text-black md:text-base md:font-medium">
+                                                    Nimra Jalil Kiyani
+                                                </h2>
+                                                <h3 class="col-span-2 text-xs font-normal text-gray-600 md:text-sm md:font-normal">
+                                                    Advocate High Court
                                                 </h3>
-                                                <div class="flex flex-col">
-                                                    <h2 class="col-span-2 text-sm font-normal text-black md:text-base md:font-medium">
-                                                        Nimra Jalil Kiyani
-                                                    </h2>
-                                                    <h3 class="col-span-2 text-xs font-normal text-gray-600 md:text-sm md:font-normal">
-                                                        Advocate High Court
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                            <div class="flex flex-col items-start gap-4 md:grid md:grid-cols-3">
-                                                <h3 class="flex text-sm font-medium text-gray-600 md:text-base">
-                                                    Appointment Date& Time
-                                                </h3>
-                                                    <h2 class="col-span-2 text-sm font-normal text-black md:text-base md:font-medium">
-                                                    Fri, 01 May 022, 09:00 AM-09:30 AM
-                                                    </h2>
-                                            </div>
-                                            <div class="flex flex-col items-start gap-4 md:grid md:grid-cols-3">
-                                                <h3 class="flex text-sm font-medium text-gray-600 md:text-base">
-                                                    Location/Branch
-                                                </h3>
-                                                    <h2 class="col-span-2 text-sm font-normal text-black md:text-base md:font-medium">
-                                                    Islamabad, Office 234, Second Floor, Akbar PLaza, Jinaah Avenue
-                                                    </h2>
                                             </div>
                                         </div>
+                                        <div class="flex flex-col items-start gap-4 md:grid md:grid-cols-3">
+                                            <h3 class="flex text-sm font-medium text-gray-600 md:text-base">
+                                                Appointment Date& Time
+                                            </h3>
+                                                <h2 class="col-span-2 text-sm font-normal text-black md:text-base md:font-medium">
+                                                Fri, 01 May 022, 09:00 AM-09:30 AM
+                                                </h2>
+                                        </div>
+                                        <div class="flex flex-col items-start gap-4 md:grid md:grid-cols-3">
+                                            <h3 class="flex text-sm font-medium text-gray-600 md:text-base">
+                                                Location/Branch
+                                            </h3>
+                                                <h2 class="col-span-2 text-sm font-normal text-black md:text-base md:font-medium">
+                                                Islamabad, Office 234, Second Floor, Akbar PLaza, Jinaah Avenue
+                                                </h2>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="flex flex-col w-full p-5 gap-7 rounded-xl bg-gray-50">
                                     <h2 class="flex text-base font-medium text-gray-600 md:text-lg">
                                         Select Consultation Mode
                                     </h2>
-                                        <div class="flex flex-col w-full gap-7">
-                                            <div class="flex flex-col items-start">
-                                                <span class="">
-                                                    <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-violet-700">
-                                                    <label for="default-radio-1" class="ml-2 text-sm font-medium text-gray-900">Phone</label>
-                                                </span>
-                                                <span class="text-xs font-normal text-gray-600 pl-7">
-                                                    Talk to your lawyer on phone
-                                                </span>
-                                            </div>
-                                            <div class="flex flex-col items-start">
-                                                <span class="">
-                                                    <input id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-violet-700">
-                                                    <label for="default-radio-2" class="ml-2 text-sm font-medium text-gray-900">Video</label>
-                                                </span>
-                                                <span class="text-xs font-normal text-gray-600 pl-7">
-                                                    Book video call with lawyer on online video platform i.e. Zoom, Teams
-                                                </span>
-                                            </div>
-                                            <div class="flex flex-col items-start">
-                                                <span class="">
-                                                    <input id="default-radio-3" type="radio" value="" name="default-radio" class="w-4 h-4 text-violet-700">
-                                                    <label for="default-radio-3" class="ml-2 text-sm font-medium text-gray-900">At Office</label>
-                                                </span>
-                                                <span class="text-xs font-normal text-gray-600 pl-7">
-                                                    Consult lawyer at his/her office
-                                                </span>
-                                            </div>
+                                    <div class="flex flex-col w-full gap-7">
+                                        <div class="flex flex-col items-start">
+                                            <span class="">
+                                                <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-violet-700">
+                                                <label for="default-radio-1" class="ml-2 text-sm font-medium text-gray-900">Phone</label>
+                                            </span>
+                                            <span class="text-xs font-normal text-gray-600 pl-7">
+                                                Talk to your lawyer on phone
+                                            </span>
                                         </div>
+                                        <div class="flex flex-col items-start">
+                                            <span class="">
+                                                <input id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-violet-700">
+                                                <label for="default-radio-2" class="ml-2 text-sm font-medium text-gray-900">Video</label>
+                                            </span>
+                                            <span class="text-xs font-normal text-gray-600 pl-7">
+                                                Book video call with lawyer on online video platform i.e. Zoom, Teams
+                                            </span>
+                                        </div>
+                                        <div class="flex flex-col items-start">
+                                            <span class="">
+                                                <input id="default-radio-3" type="radio" value="" name="default-radio" class="w-4 h-4 text-violet-700">
+                                                <label for="default-radio-3" class="ml-2 text-sm font-medium text-gray-900">At Office</label>
+                                            </span>
+                                            <span class="text-xs font-normal text-gray-600 pl-7">
+                                                Consult lawyer at his/her office
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <a href="#" class="flex rounded-lg bg-violet-700 gap-2 px-5 py-2.5 mx-auto items-center justify-center">
                                 <span class="text-sm font-medium text-white" x-on:click="open = !open">
@@ -1406,7 +1404,6 @@
                                     <svg class="w-4 h-4" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1.5 0.5C1.23478 0.5 0.98043 0.605357 0.792893 0.792893C0.605357 0.98043 0.5 1.23478 0.5 1.5C0.5 1.76522 0.605357 2.01957 0.792893 2.20711C0.98043 2.39464 1.23478 2.5 1.5 2.5H2.72L3.025 3.722C3.02803 3.73607 3.03136 3.75007 3.035 3.764L4.393 9.194L3.5 10.086C2.24 11.346 3.132 13.5 4.914 13.5H13.5C13.7652 13.5 14.0196 13.3946 14.2071 13.2071C14.3946 13.0196 14.5 12.7652 14.5 12.5C14.5 12.2348 14.3946 11.9804 14.2071 11.7929C14.0196 11.6054 13.7652 11.5 13.5 11.5H4.914L5.914 10.5H12.5C12.6857 10.4999 12.8676 10.4481 13.0255 10.3504C13.1834 10.2528 13.311 10.1131 13.394 9.947L16.394 3.947C16.4702 3.79458 16.5061 3.62522 16.4985 3.45501C16.4908 3.28479 16.4398 3.11935 16.3502 2.97439C16.2606 2.82944 16.1355 2.70977 15.9867 2.62674C15.8379 2.54372 15.6704 2.50009 15.5 2.5H4.78L4.47 1.257C4.41583 1.04075 4.29095 0.848809 4.11521 0.711655C3.93946 0.574502 3.72293 0.500006 3.5 0.5H1.5ZM14.5 16C14.5 16.3978 14.342 16.7794 14.0607 17.0607C13.7794 17.342 13.3978 17.5 13 17.5C12.6022 17.5 12.2206 17.342 11.9393 17.0607C11.658 16.7794 11.5 16.3978 11.5 16C11.5 15.6022 11.658 15.2206 11.9393 14.9393C12.2206 14.658 12.6022 14.5 13 14.5C13.3978 14.5 13.7794 14.658 14.0607 14.9393C14.342 15.2206 14.5 15.6022 14.5 16ZM5 17.5C5.39782 17.5 5.77936 17.342 6.06066 17.0607C6.34196 16.7794 6.5 16.3978 6.5 16C6.5 15.6022 6.34196 15.2206 6.06066 14.9393C5.77936 14.658 5.39782 14.5 5 14.5C4.60218 14.5 4.22064 14.658 3.93934 14.9393C3.65804 15.2206 3.5 15.6022 3.5 16C3.5 16.3978 3.65804 16.7794 3.93934 17.0607C4.22064 17.342 4.60218 17.5 5 17.5Z" fill="white"/>
                                     </svg>
-                                        
                                 </span>
                                 </a>
                             </div>
@@ -1535,8 +1532,7 @@
                                         <span class="w-10 md:w-20 h:10 md:h-20">
                                             <svg class="w-10 md:w-20 h:10 md:h-20" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M39.9984 55.7484C38.2102 57.5367 35.2898 57.5367 33.5016 55.7484L23.0016 45.2484C21.2133 43.4602 21.2133 40.5398 23.0016 38.7516C24.7898 36.9633 27.7102 36.9633 29.4984 38.7516L36.75 46.0031L54.5016 28.2516C56.2898 26.4633 59.2102 26.4633 60.9984 28.2516C62.7867 30.0398 62.7867 32.9602 60.9984 34.7484L39.9984 55.7484ZM84 42C84 65.1984 65.1984 84 42 84C18.8016 84 0 65.1984 0 42C0 18.8016 18.8016 0 42 0C65.1984 0 84 18.8016 84 42ZM42 7.875C23.1492 7.875 7.875 23.1492 7.875 42C7.875 60.8508 23.1492 76.125 42 76.125C60.8508 76.125 76.125 60.8508 76.125 42C76.125 23.1492 60.8508 7.875 42 7.875Z" fill="#22C55E"/>
-                                                </svg>
-                                                
+                                            </svg>
                                         </span>
                                         <h2 class="text-base font-semibold text-center text-green-500 md:text-2xl">
                                             Your Appointment is Booked!
@@ -1568,9 +1564,9 @@
                                             <h3 class="flex gap-1 p-1 text-xs font-medium text-gray-600 md:text-sm md:p-2 md:gap-2">
                                                 Video Meeting Link
                                             </h3>
-                                                <a href="#" class="col-span-2 gap-2 p-2 overflow-hidden text-sm font-medium text-blue-600 text-clip">
-                                                    https://us05web.zoom.us/s/88538606833?zak=eyJ0eXAiOiJKV1QiLCJzdiI6IjAwMDAwMSIsInptX3NrbSI6InptX28ybSIsImFsZyI6IkhTMjU2In0.eyJhdWQiOiJjbGllbnRzbSIsInVpZCI6IlJWSXk0LW9NU1pLaHNTMkxJUmtkTXciLCJpc3MiOiJ3ZWIiLCJzayI6IjAiLCJzdHkiOjEwMCwid2NkIjoidXMwNSIsImNsdCI6MCwibW51bSI6Ijg4NTM4NjA2ODMzIiwiZXhwIjoxNjc4Mzc0MDYyLCJpYXQiOjE2NzgzNjY4NjIsImFpZCI6InpCWjBYblFuU3JTSVdjbF9QeVpYVFEiLCJjaWQiOiIifQ.ilzTwWX-kDFYl_9dQYZpxvh5PGTW58YwSePfYrLu5HU
-                                                </a>
+                                            <a href="#" class="col-span-2 gap-2 p-2 overflow-hidden text-sm font-medium text-blue-600 text-clip">
+                                                https://us05web.zoom.us/s/88538606833?zak=eyJ0eXAiOiJKV1QiLCJzdiI6IjAwMDAwMSIsInptX3NrbSI6InptX28ybSIsImFsZyI6IkhTMjU2In0.eyJhdWQiOiJjbGllbnRzbSIsInVpZCI6IlJWSXk0LW9NU1pLaHNTMkxJUmtkTXciLCJpc3MiOiJ3ZWIiLCJzayI6IjAiLCJzdHkiOjEwMCwid2NkIjoidXMwNSIsImNsdCI6MCwibW51bSI6Ijg4NTM4NjA2ODMzIiwiZXhwIjoxNjc4Mzc0MDYyLCJpYXQiOjE2NzgzNjY4NjIsImFpZCI6InpCWjBYblFuU3JTSVdjbF9QeVpYVFEiLCJjaWQiOiIifQ.ilzTwWX-kDFYl_9dQYZpxvh5PGTW58YwSePfYrLu5HU
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -1647,8 +1643,7 @@
                                     <rect x="505.971" y="130" width="26.7055" height="24" rx="4" fill="white"/>
                                     </clipPath>
                                     </defs>
-                                    </svg>
-                                    
+                                </svg>
                             </div>
                             <div class="flex flex-col flex-wrap gap-2 px-2 pt-2 pb-2 mx-auto bg-white rounded-b-lg shadow max-w-7xl md:px-5 md:pb-5 md:pt-12 md:gap-5">
                                 <div class="flex flex-col flex-wrap gap-2 border border-gray-100 rounded-lg md:gap-5">
@@ -1667,7 +1662,6 @@
                                                     <path d="M8.1045e-07 9.74351L4.50662e-06 9.8523C3.95542e-05 11.1434 5.74216e-05 11.789 0.310841 12.3171C0.621623 12.8453 1.18594 13.1588 2.31457 13.7859L3.50521 14.4473C2.68511 11.675 2.41151 8.69632 2.31038 6.14896C2.30604 6.03974 2.30115 5.92918 2.29622 5.81745L2.29276 5.739C1.31551 6.07835 0.766884 6.33128 0.424645 6.80612C-6.12438e-05 7.39539 -4.05546e-05 8.1781 8.1045e-07 9.74351Z" fill="#D97706"></path>
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0002 0.5C17.6755 0.5 19.8796 0.735632 21.5657 1.02011C23.2738 1.30831 24.1278 1.4524 24.8414 2.33125C25.555 3.21009 25.5173 4.15996 25.4419 6.0597C25.1829 12.5817 23.7755 20.7279 16.125 21.4485V26.75H18.2703C18.9853 26.75 19.6009 27.2547 19.7412 27.9558L20.025 29.375H24C24.6213 29.375 25.125 29.8787 25.125 30.5C25.125 31.1213 24.6213 31.625 24 31.625H6C5.37868 31.625 4.875 31.1213 4.875 30.5C4.875 29.8787 5.37868 29.375 6 29.375H9.975L10.2588 27.9558C10.3991 27.2547 11.0147 26.75 11.7297 26.75H13.875V21.4485C6.22494 20.7276 4.81753 12.5816 4.55861 6.0597C4.48318 4.15996 4.44547 3.21009 5.15905 2.33125C5.87262 1.4524 6.72667 1.30831 8.43477 1.02011C10.1209 0.735632 12.3249 0.5 15.0002 0.5ZM16.4285 6.7983L16.2811 6.53377C15.7111 5.51126 15.4261 5 15 5C14.5739 5 14.2889 5.51126 13.7189 6.53377L13.5715 6.79831C13.4095 7.08887 13.3285 7.23415 13.2022 7.33001C13.076 7.42587 12.9187 7.46146 12.6042 7.53262L12.3178 7.59741C11.2109 7.84785 10.6575 7.97307 10.5258 8.39648C10.3942 8.81989 10.7715 9.26108 11.526 10.1435L11.7213 10.3718C11.9357 10.6225 12.0429 10.7479 12.0911 10.903C12.1394 11.0581 12.1232 11.2254 12.0907 11.5599L12.0612 11.8645C11.9471 13.0418 11.8901 13.6304 12.2348 13.8921C12.5795 14.1538 13.0977 13.9152 14.1341 13.438L14.4022 13.3146C14.6967 13.179 14.8439 13.1112 15 13.1112C15.1561 13.1112 15.3033 13.179 15.5978 13.3146L15.8659 13.438C16.9023 13.9152 17.4205 14.1538 17.7652 13.8921C18.1099 13.6304 18.0529 13.0418 17.9388 11.8645L17.9093 11.5599C17.8768 11.2254 17.8606 11.0581 17.9089 10.903C17.9571 10.7479 18.0643 10.6225 18.2787 10.3717L18.474 10.1435C19.2285 9.26108 19.6058 8.81989 19.4742 8.39648C19.3425 7.97307 18.7891 7.84785 17.6822 7.59741L17.3959 7.53262C17.0813 7.46146 16.9241 7.42587 16.7978 7.33001C16.6715 7.23415 16.5905 7.08887 16.4285 6.7983Z" fill="#D97706"></path>
                                                 </svg>
-                                                    
                                             </span>
                                         </div>
                                         <div class="flex flex-col flex-wrap md:flex-row md:divide-x divide-gray-300 min-h-[64px] p-2 bg-white rounded-lg items-start md:items-center justify-start">
@@ -1752,7 +1746,6 @@
                                                     <path d="M8.1045e-07 9.74351L4.50662e-06 9.8523C3.95542e-05 11.1434 5.74216e-05 11.789 0.310841 12.3171C0.621623 12.8453 1.18594 13.1588 2.31457 13.7859L3.50521 14.4473C2.68511 11.675 2.41151 8.69632 2.31038 6.14896C2.30604 6.03974 2.30115 5.92918 2.29622 5.81745L2.29276 5.739C1.31551 6.07835 0.766884 6.33128 0.424645 6.80612C-6.12438e-05 7.39539 -4.05546e-05 8.1781 8.1045e-07 9.74351Z" fill="#D97706"></path>
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0002 0.5C17.6755 0.5 19.8796 0.735632 21.5657 1.02011C23.2738 1.30831 24.1278 1.4524 24.8414 2.33125C25.555 3.21009 25.5173 4.15996 25.4419 6.0597C25.1829 12.5817 23.7755 20.7279 16.125 21.4485V26.75H18.2703C18.9853 26.75 19.6009 27.2547 19.7412 27.9558L20.025 29.375H24C24.6213 29.375 25.125 29.8787 25.125 30.5C25.125 31.1213 24.6213 31.625 24 31.625H6C5.37868 31.625 4.875 31.1213 4.875 30.5C4.875 29.8787 5.37868 29.375 6 29.375H9.975L10.2588 27.9558C10.3991 27.2547 11.0147 26.75 11.7297 26.75H13.875V21.4485C6.22494 20.7276 4.81753 12.5816 4.55861 6.0597C4.48318 4.15996 4.44547 3.21009 5.15905 2.33125C5.87262 1.4524 6.72667 1.30831 8.43477 1.02011C10.1209 0.735632 12.3249 0.5 15.0002 0.5ZM16.4285 6.7983L16.2811 6.53377C15.7111 5.51126 15.4261 5 15 5C14.5739 5 14.2889 5.51126 13.7189 6.53377L13.5715 6.79831C13.4095 7.08887 13.3285 7.23415 13.2022 7.33001C13.076 7.42587 12.9187 7.46146 12.6042 7.53262L12.3178 7.59741C11.2109 7.84785 10.6575 7.97307 10.5258 8.39648C10.3942 8.81989 10.7715 9.26108 11.526 10.1435L11.7213 10.3718C11.9357 10.6225 12.0429 10.7479 12.0911 10.903C12.1394 11.0581 12.1232 11.2254 12.0907 11.5599L12.0612 11.8645C11.9471 13.0418 11.8901 13.6304 12.2348 13.8921C12.5795 14.1538 13.0977 13.9152 14.1341 13.438L14.4022 13.3146C14.6967 13.179 14.8439 13.1112 15 13.1112C15.1561 13.1112 15.3033 13.179 15.5978 13.3146L15.8659 13.438C16.9023 13.9152 17.4205 14.1538 17.7652 13.8921C18.1099 13.6304 18.0529 13.0418 17.9388 11.8645L17.9093 11.5599C17.8768 11.2254 17.8606 11.0581 17.9089 10.903C17.9571 10.7479 18.0643 10.6225 18.2787 10.3717L18.474 10.1435C19.2285 9.26108 19.6058 8.81989 19.4742 8.39648C19.3425 7.97307 18.7891 7.84785 17.6822 7.59741L17.3959 7.53262C17.0813 7.46146 16.9241 7.42587 16.7978 7.33001C16.6715 7.23415 16.5905 7.08887 16.4285 6.7983Z" fill="#D97706"></path>
                                                 </svg>
-                                                    
                                             </span>
                                         </div>
                                         <div class="flex flex-col flex-wrap md:flex-row md:divide-x divide-gray-300 min-h-[64px] p-2 bg-white rounded-lg items-start md:items-center justify-start">
@@ -1843,7 +1836,6 @@
                                         <div class="flex items-center gap-2 p-2 md:p-4 md:gap-3">
                                             <div href="#" class="relative flex w-10 h-10">
                                                 <img class="w-10 h-10" src="images/nimrajalil.png" alt="nimra jalil">
-                                    
                                                 <span class="absolute right-0 flex w-2 h-2 bg-green-600 rounded-full outline outline-gray-200 bottom-1">
                                                 </span>
                                             </div>
@@ -1867,7 +1859,6 @@
                                                 </clipPath>
                                                 </defs>
                                             </svg>
-                                
                                         </a>
                                     </div>
                                     <div class="flex flex-col max-w-2xl px-2 md:px-4">
@@ -1888,7 +1879,6 @@
                                             <svg class="w-3 h-3 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4382 2.77841C12.2931 2.73181 12.1345 2.74311 11.9998 2.80804C11.8523 2.87913 11.7548 3.0032 11.7197 3.13821L11.244 4.97206C11.0777 5.61339 10.8354 6.23198 10.5235 6.81599C10.0392 7.72267 9.30632 8.42 8.62647 9.00585L7.18773 10.2456C6.96475 10.4378 6.8474 10.7258 6.87282 11.0198L7.68498 20.4125C7.72601 20.887 8.12244 21.25 8.59635 21.25H13.245C16.3813 21.25 19.0238 19.0677 19.5306 16.1371L20.2361 12.0574C20.3332 11.4959 19.9014 10.9842 19.3348 10.9842L14.1537 10.9842C13.1766 10.9842 12.4344 10.1076 12.5921 9.14471L13.2548 5.10015C13.3456 4.54613 13.3197 3.97923 13.1787 3.43584C13.1072 3.16009 12.8896 2.92342 12.5832 2.82498L12.4382 2.77841L12.6676 2.06435L12.4382 2.77841ZM11.3486 1.45674C11.8312 1.2242 12.3873 1.18654 12.897 1.35029L13.042 1.39686L12.8126 2.11092L13.042 1.39686C13.819 1.64648 14.4252 2.26719 14.6307 3.0592C14.8241 3.80477 14.8596 4.58256 14.7351 5.34268L14.0724 9.38724C14.0639 9.439 14.1038 9.4842 14.1537 9.4842L19.3348 9.4842C20.8341 9.4842 21.9695 10.8365 21.7142 12.313L21.0087 16.3928C20.3708 20.081 17.0712 22.75 13.245 22.75H8.59635C7.3427 22.75 6.29852 21.7902 6.19056 20.5417L5.3784 11.149C5.31149 10.3753 5.62022 9.61631 6.20855 9.10933L7.64729 7.86954C8.3025 7.30492 8.85404 6.75767 9.20042 6.10924C9.45699 5.62892 9.65573 5.12107 9.79208 4.59542L10.2678 2.76157C10.417 2.18627 10.8166 1.71309 11.3486 1.45674ZM2.96767 9.4849C3.36893 9.46758 3.71261 9.76945 3.74721 10.1696L4.71881 21.4061C4.78122 22.1279 4.21268 22.75 3.48671 22.75C2.80289 22.75 2.25 22.1953 2.25 21.5127L2.25 10.2342C2.25 9.83256 2.5664 9.50221 2.96767 9.4849Z" fill="#6B7280"/>
                                             </svg>
-                                 
                                         </span>
                                             Likes
                                         <span class="flex items-center justify-center w-4 h-4 p-1 font-medium text-gray-900 bg-white rounded-full text-2xs md:text-xs">
@@ -1903,7 +1893,6 @@
                                                 <path d="M13.5 11C13.5 11.5523 13.0523 12 12.5 12C11.9477 12 11.5 11.5523 11.5 11C11.5 10.4477 11.9477 10 12.5 10C13.0523 10 13.5 10.4477 13.5 11Z" fill="#6B7280"/>
                                                 <path d="M17.5 11C17.5 11.5523 17.0523 12 16.5 12C15.9477 12 15.5 11.5523 15.5 11C15.5 10.4477 15.9477 10 16.5 10C17.0523 10 17.5 10.4477 17.5 11Z" fill="#6B7280"/>
                                             </svg>
-                                
                                         </span>
                                             Comments
                                         <span class="flex items-center justify-center w-4 h-4 p-1 font-medium text-gray-900 bg-white rounded-full text-2xs md:text-xs">
@@ -1918,148 +1907,170 @@
                     </div>
                     <div x-tabs:panel>
                         <section class="recommendations">
-                    <!-- Main Container 1 -->
-                    <div x-data="{ open: false }">
-                    <span x-show="!open">
-                    <div class="p-5">
-                        <div class="py-5 main-frame bg-gray-50 rounded-xl">
-                            <!-- Content -->
-                            <div class="flex flex-col flex-wrap items-center justify-center gap-5 Content">
-                                <div class="profile-phot"><a href="#">
-                                        <img src="images/Ellipse 291.png" alt="Profile Picture">
-                                    </a></div>
-                                <div class="flex flex-col items-center details">
-                                    <div class="text-base font-medium heading">Write a Recommendation</div>
-                                    <div class="text-center text-gray-600 sub-heading text">Share your experience of working with Nimra
-                                        Jalil</div>
-                                </div>
-                                <!-- BUTTON -->
-                                <a href="#">
-                                    <div class="flex justify-center button">
-                                        <button
-                                            class="w-48 h-10 text-sm font-medium text-white rounded-lg bg-violet-700 hover:bg-violet-800" x-on:click="open = !open">
-                                            <p>Log in to reccomendation</p>
-                                        </button>
+                            <!-- Main Container 1 -->
+                            <div x-data="{ open: false }">
+                                <span x-show="!open">
+                                    <div class="p-2 md:p-5">
+                                        <div class="py-2 md:py-5 main-frame bg-gray-50 rounded-xl">
+                                            <!-- Write a Recommendation -->
+                                            <div class="flex flex-col flex-wrap items-center justify-center gap-5 Content">
+                                                <div class="profile-phot">
+                                                    <a href="#">
+                                                        <img src="images/Ellipse 291.png" alt="Profile Picture">
+                                                    </a>
+                                                </div>
+                                                <div class="flex flex-col items-center details">
+                                                    <div class="text-sm md:text-base font-medium heading">
+                                                        Write a Recommendation
+                                                    </div>
+                                                    <div class="text-xs md:text-sm text-gray-600 text-center sub-heading">
+                                                        Share your experience of working with Nimra Jalil
+                                                    </div>
+                                                </div>
+                                                <!-- BUTTON -->
+                                                <a href="#">
+                                                    <div class="flex justify-center button">
+                                                        <button class="w-48 h-10 text-sm font-medium text-white rounded-lg bg-violet-700 hover:bg-violet-800" x-on:click="open = !open">
+                                                            <p>Log in to reccomendation</p>
+                                                        </button>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
-                                </a>
+                                </span>
+                                <span x-show="open">
+                                <!-- Main Container 2 -->
+                                    <section class="">
+                                        <div x-data="{ open: false }">
+                                            <span x-show="!open">
+                                                <div class="p-2 md:p-5">
+                                                    <!-- Give Rating -->
+                                                    <div class="flex flex-col bg-gray-50 rounded-xl py-2 md:py-5 gap-2 md:gap-5 items-center">
+                                                        <div class="text-sm md:text-base font-medium heading">
+                                                            Give Rating
+                                                        </div>
+                                                        <div class="rating flex flex-col items-center">
+                                                            <div class="starics">
+                                                                <svg class="w-28 h-6 md:w-40 md:h-8" viewBox="0 0 160 32" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <g clip-path="url(#clip0_180539_144460)">
+                                                                        <path
+                                                                            d="M29.3337 12.32L19.747 11.4933L16.0003 2.66667L12.2537 11.5067L2.66699 12.32L9.94699 18.6267L7.76033 28L16.0003 23.0267L24.2403 28L22.067 18.6267L29.3337 12.32ZM16.0003 20.5333L10.987 23.56L12.3203 17.8533L7.89366 14.0133L13.7337 13.5067L16.0003 8.13334L18.2803 13.52L24.1203 14.0267L19.6937 17.8667L21.027 23.5733L16.0003 20.5333Z"
+                                                                            fill="#F0BD09" />
+                                                                    </g>
+                                                                    <g clip-path="url(#clip1_180539_144460)">
+                                                                        <path
+                                                                            d="M61.3337 12.32L51.747 11.4933L48.0003 2.66667L44.2537 11.5067L34.667 12.32L41.947 18.6267L39.7603 28L48.0003 23.0267L56.2403 28L54.067 18.6267L61.3337 12.32ZM48.0003 20.5333L42.987 23.56L44.3203 17.8533L39.8937 14.0133L45.7337 13.5067L48.0003 8.13334L50.2803 13.52L56.1203 14.0267L51.6937 17.8667L53.027 23.5733L48.0003 20.5333Z"
+                                                                            fill="#F0BD09" />
+                                                                    </g>
+                                                                    <g clip-path="url(#clip2_180539_144460)">
+                                                                        <path
+                                                                            d="M93.3337 12.32L83.747 11.4933L80.0003 2.66667L76.2537 11.5067L66.667 12.32L73.947 18.6267L71.7603 28L80.0003 23.0267L88.2403 28L86.067 18.6267L93.3337 12.32ZM80.0003 20.5333L74.987 23.56L76.3203 17.8533L71.8937 14.0133L77.7337 13.5067L80.0003 8.13334L82.2803 13.52L88.1203 14.0267L83.6937 17.8667L85.027 23.5733L80.0003 20.5333Z"
+                                                                            fill="#F0BD09" />
+                                                                    </g>
+                                                                    <g clip-path="url(#clip3_180539_144460)">
+                                                                        <path
+                                                                            d="M125.334 12.32L115.747 11.4933L112 2.66667L108.254 11.5067L98.667 12.32L105.947 18.6267L103.76 28L112 23.0267L120.24 28L118.067 18.6267L125.334 12.32ZM112 20.5333L106.987 23.56L108.32 17.8533L103.894 14.0133L109.734 13.5067L112 8.13334L114.28 13.52L120.12 14.0267L115.694 17.8667L117.027 23.5733L112 20.5333Z"
+                                                                            fill="#F0BD09" />
+                                                                    </g>
+                                                                    <g clip-path="url(#clip4_180539_144460)">
+                                                                        <path
+                                                                            d="M157.334 12.32L147.747 11.4933L144 2.66667L140.254 11.5067L130.667 12.32L137.947 18.6267L135.76 28L144 23.0267L152.24 28L150.067 18.6267L157.334 12.32ZM144 20.5333L138.987 23.56L140.32 17.8533L135.894 14.0133L141.734 13.5067L144 8.13334L146.28 13.52L152.12 14.0267L147.694 17.8667L149.027 23.5733L144 20.5333Z"
+                                                                            fill="#F0BD09" />
+                                                                    </g>
+                                                                    <defs>
+                                                                        <clipPath id="clip0_180539_144460">
+                                                                            <rect width="32" height="32" rx="4" fill="white" />
+                                                                        </clipPath>
+                                                                        <clipPath id="clip1_180539_144460">
+                                                                            <rect x="32" width="32" height="32" rx="4" fill="white" />
+                                                                        </clipPath>
+                                                                        <clipPath id="clip2_180539_144460">
+                                                                            <rect x="64" width="32" height="32" rx="4" fill="white" />
+                                                                        </clipPath>
+                                                                        <clipPath id="clip3_180539_144460">
+                                                                            <rect x="96" width="32" height="32" rx="4" fill="white" />
+                                                                        </clipPath>
+                                                                        <clipPath id="clip4_180539_144460">
+                                                                            <rect x="128" width="32" height="32" rx="4" fill="white" />
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="text-xs md:text-sm">
+                                                                Rate your experience
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="p-2 md:p-5">
+                                                    <!-- Write a Recommendation -->
+                                                    <div class="main-frame bg-gray-50 rounded-xl">
+                                                        <div class="flex flex-col flex-wrap items-center justify-center p-2 md:py-5 gap-2 md:gap-5 Content">
+                                                            <div class="profile-photo">
+                                                                <a href="#">
+                                                                    <img src="images/Ellipse 291.png" alt="Profile Picture">
+                                                                </a>
+                                                            </div>
+                                                            <div class="text-sm md:text-base font-medium heading">
+                                                                Write a Recommendation
+                                                            </div>
+                                                            <div class="text-xs md:text-sm text-gray-600 text-center sub-heading">
+                                                                Share your experience of working with Nimra Jalil
+                                                            </div>
+                                                            <!-- Your Message Portion -->
+                                                            <div class="w-full message-portion sm:max-w-xl">
+                                                                <label for="message1" class="block mb-2 text-xs md:text-sm font-medium text-gray-900 dark:text-white">
+                                                                    Your message (Optional)
+                                                                </label>
+                                                                <textarea id="message1" rows="6" class="block p-2.5 w-full text-xs md:text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"placeholder="Write text here ..."></textarea>
+                                                            </div>
+                                                            <!-- BUTTON -->
+                                                            <a href="#">
+                                                                <div class="flex justify-center button">
+                                                                    <button class="w-48 h-10 text-sm font-medium text-white rounded-lg bg-violet-700 hover:bg-violet-800" x-on:click="open = !open">
+                                                                        <p>Post Recommendation</p>
+                                                                    </button>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span x-show="open">
+                                                <!-- Main Container 3 -->
+                                                <div class="p-2 md:p-5">
+                                                    <div class="gap-2 md:gap-5 py-2 md:py-5 bg-gray-50 rounded-xl">
+                                                        <!-- Thank you! -->
+                                                        <div class="flex flex-col flex-wrap items-center justify-center gap-5">
+                                                            <div class="profile-photo">
+                                                                <a href="#">
+                                                                    <img src="images/Ellipse 291.png" alt="Profile Picture">
+                                                                </a>
+                                                            </div>
+                                                            <div class="flex flex-col items-center details">
+                                                                <div class="text-sm md:text-base font-semibold text-green-500 heading">
+                                                                    Thank you!
+                                                                </div>
+                                                                <div class="text-xs md:text-sm text-center text-gray-600 sub-heading">
+                                                                    Your recommendation has been submitted successfully.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </section>
+                                </span>
                             </div>
-                        </div>
-                    </div>
-                    </span>
-                    <span x-show="open">
-                    <!-- Main Container 2 -->
-                    <section class="">
-                        <div x-data="{ open: false }">
-                    <span x-show="!open">
-                            <div class="p-5">
-                        <div class="main-frame bg-gray-50 rounded-xl">
-                            <!-- Content -->
-                            <div class="flex flex-col flex-wrap items-center justify-center gap-5 py-5 Content">
-                                <div class="profile-photo"><a href="#">
-                                        <img src="images/Ellipse 291.png" alt="Profile Picture">
-                                    </a></div>
-                                <div class="text-base font-medium heading">Write a Recommendation</div>
-                                <div class="text-center text-gray-600 sub-heading text">Share your experience of working with Nimra
-                                    Jalil</div>
-                                <div class="rating">
-                                    <div class="starics">
-                                        <svg width="160" height="32" viewBox="0 0 160 32" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_180539_144460)">
-                                                <path
-                                                    d="M29.3337 12.32L19.747 11.4933L16.0003 2.66667L12.2537 11.5067L2.66699 12.32L9.94699 18.6267L7.76033 28L16.0003 23.0267L24.2403 28L22.067 18.6267L29.3337 12.32ZM16.0003 20.5333L10.987 23.56L12.3203 17.8533L7.89366 14.0133L13.7337 13.5067L16.0003 8.13334L18.2803 13.52L24.1203 14.0267L19.6937 17.8667L21.027 23.5733L16.0003 20.5333Z"
-                                                    fill="#F0BD09" />
-                                            </g>
-                                            <g clip-path="url(#clip1_180539_144460)">
-                                                <path
-                                                    d="M61.3337 12.32L51.747 11.4933L48.0003 2.66667L44.2537 11.5067L34.667 12.32L41.947 18.6267L39.7603 28L48.0003 23.0267L56.2403 28L54.067 18.6267L61.3337 12.32ZM48.0003 20.5333L42.987 23.56L44.3203 17.8533L39.8937 14.0133L45.7337 13.5067L48.0003 8.13334L50.2803 13.52L56.1203 14.0267L51.6937 17.8667L53.027 23.5733L48.0003 20.5333Z"
-                                                    fill="#F0BD09" />
-                                            </g>
-                                            <g clip-path="url(#clip2_180539_144460)">
-                                                <path
-                                                    d="M93.3337 12.32L83.747 11.4933L80.0003 2.66667L76.2537 11.5067L66.667 12.32L73.947 18.6267L71.7603 28L80.0003 23.0267L88.2403 28L86.067 18.6267L93.3337 12.32ZM80.0003 20.5333L74.987 23.56L76.3203 17.8533L71.8937 14.0133L77.7337 13.5067L80.0003 8.13334L82.2803 13.52L88.1203 14.0267L83.6937 17.8667L85.027 23.5733L80.0003 20.5333Z"
-                                                    fill="#F0BD09" />
-                                            </g>
-                                            <g clip-path="url(#clip3_180539_144460)">
-                                                <path
-                                                    d="M125.334 12.32L115.747 11.4933L112 2.66667L108.254 11.5067L98.667 12.32L105.947 18.6267L103.76 28L112 23.0267L120.24 28L118.067 18.6267L125.334 12.32ZM112 20.5333L106.987 23.56L108.32 17.8533L103.894 14.0133L109.734 13.5067L112 8.13334L114.28 13.52L120.12 14.0267L115.694 17.8667L117.027 23.5733L112 20.5333Z"
-                                                    fill="#F0BD09" />
-                                            </g>
-                                            <g clip-path="url(#clip4_180539_144460)">
-                                                <path
-                                                    d="M157.334 12.32L147.747 11.4933L144 2.66667L140.254 11.5067L130.667 12.32L137.947 18.6267L135.76 28L144 23.0267L152.24 28L150.067 18.6267L157.334 12.32ZM144 20.5333L138.987 23.56L140.32 17.8533L135.894 14.0133L141.734 13.5067L144 8.13334L146.28 13.52L152.12 14.0267L147.694 17.8667L149.027 23.5733L144 20.5333Z"
-                                                    fill="#F0BD09" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_180539_144460">
-                                                    <rect width="32" height="32" rx="4" fill="white" />
-                                                </clipPath>
-                                                <clipPath id="clip1_180539_144460">
-                                                    <rect x="32" width="32" height="32" rx="4" fill="white" />
-                                                </clipPath>
-                                                <clipPath id="clip2_180539_144460">
-                                                    <rect x="64" width="32" height="32" rx="4" fill="white" />
-                                                </clipPath>
-                                                <clipPath id="clip3_180539_144460">
-                                                    <rect x="96" width="32" height="32" rx="4" fill="white" />
-                                                </clipPath>
-                                                <clipPath id="clip4_180539_144460">
-                                                    <rect x="128" width="32" height="32" rx="4" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </div>
-                                    <div class="text-sm text">Rate your experience</div>
-                                </div>
-                                <!-- Your Message Portion -->
-
-                                <div class="w-full message-portion sm:max-w-xl">
-                                    <label for="message1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
-                                        message</label>
-                                    <textarea id="message1" rows="6"
-                                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="Write your thoughts here ..."></textarea>
-                                </div>
-
-                                <!-- BUTTON -->
-                                <a href="#">
-                                    <div class="flex justify-center button">
-                                        <button
-                                            class="w-48 h-10 text-sm font-medium text-white rounded-lg bg-violet-700 hover:bg-violet-800" x-on:click="open = !open">
-                                            <p>Log in to reccomendation</p>
-                                        </button>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                            </div> 
-                    </span>
-                    <span x-show="open">
-                    <!-- Main Container 3 -->
-                    <div class="p-5">
-                        <div class="gap-5 py-5 bg-gray-50 rounded-xl">
-                            <!-- Content -->
-                            <div class="flex flex-col flex-wrap items-center justify-center gap-5">
-                                <div class="profile-photo"><a href="#">
-                                        <img src="images/Ellipse 291.png" alt="Profile Picture">
-                                    </a></div>
-                                <div class="flex flex-col items-center details">
-                                    <div class="text-xl font-semibold text-green-500 heading">Thank you!</div>
-                                    <div class="text-sm text-center text-gray-600 sub-heading"> Your recommendation has been submitted successfully.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </span>
-                    </div>
-                    </section>
-                    </span>
-                    </div>
                         </section>
                     </div>
                 </div>
             </div>    
         </section>
+        <!-- Recommendations -->
         <section class="container recommendations">
             <div class="p-2 bg-white rounded-lg md:p-5">
                 <div class="grid grid-cols-1 md:grid-cols-3 py-2.5 gap-2 md:gap-9 items-start mb-2 md:mb-10">
@@ -2069,13 +2080,13 @@
                             Sort By
                         </label>
                         <select id="sort-by" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5">
-                            <option selected>Top Reviews</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
+                            <option selected>This Month</option>
+                            <option value="Last 3 Months">Last 3 Months</option>
+                            <option value="Last 6 Months">Last 6 Months</option>
                         </select>
                     </div>
                     <!-- Filter By  -->
-                    <div class="flex flex-col gap-2 relative">
+                    <!-- <div class="flex flex-col gap-2 relative">
                     <label for="filter-by" class="block text-sm font-medium text-gray-900">
                         Filter By 
                     </label>
@@ -2084,7 +2095,7 @@
                         <option value="1">1</option>
                         <option value="2">2</option>
                     </select>
-                    </div>
+                    </div> -->
                     <!-- Filter By Ratings -->
                     <div class="relative md:pr-5 w-full" x-data="{ lawarea: false }">
                         <div class="flex items-center gap-2 relative">
@@ -2235,263 +2246,203 @@
                 </div>
                 <div class="gap-2 mb-10 main-frame">
                     <div class="flex flex-wrap justify-between mb-8">
-                        <div class="text-lg font-medium text-gray-400 title"><a class="text-lg font-medium text-gray-600" href="#">Recommendations</a></div>
+                        <div class="text-lg font-medium text-gray-400 title">
+                            <a class="text-lg font-medium text-gray-600" href="#">
+                                Recommendations
+                            </a>
+                        </div>
                     </div>
                     <!-- Cards List -->
-                    <div class="flex flex-wrap justify-center w-full gap-8 cards">
-                        <!-- Card-1 -->
-                        <div class="flex flex-col w-full gap-2 p-2 card bg-gray-50 md:p-6 md:gap-5 rounded-xl">
-                            <div class="para">
-                                <p class="text-sm font-medium text-gray-600">"Nimra jalil is an excellent lawyer, who handled my case very professionally. I am happy to recommend her to any body who want to hire her.”
-                                </p>
-                            </div>
-                            <div class="flex flex-col justify-between gap-2 card-footer md:flex-row">
-                                <a href="#">
-                                    <div class="flex items-center gap-3 id">
-                                        <div class="image">
-                                            <img src="images/Avatar.png" alt="avatar">
-                                        </div>
-                                        <div class="flex flex-col gap-1 detail">
-                                                <h2 class="text-base font-semibold text-gray-900">
-                                                    Haroon Rashid
-                                                </h2>
-                                                <h3 class="text-sm font-normal text-gray-600">
-                                                    22, May, 2022
-                                                </h3>
+                    <div class="flex flex-col gap-2">
+                        <!-- 1 -->
+                        <div class="flex flex-col w-full p-2 bg-white border border-gray-300 md:p-3 rounded-xl">
+                            <div class="flex flex-col w-full gap-3 md:gap-7">
+                                <div class="flex flex-col items-start md:justify-between gap-3 md:flex-row md:items-center">
+                                    <div class="flex gap-2.5 items-center justify-start md:justify-center">
+                                        <span class="flex items-center justify-center w-8 h-8 text-xs font-medium bg-gray-100 rounded-lg">
+                                            RM
+                                        </span>
+                                        <div class="flex flex-col items-start gap-1">
+                                            <span class="text-sm font-semibold text-gray-900">
+                                                Rifat Muneer
+                                            </span>
+                                            <span class="text-xs font-normal text-gray-500">
+                                                Posted 24, Jan 2023
+                                            </span>
                                         </div>
                                     </div>
-                                </a>
-                                <div class="flex flex-col items-start gap-1 reviews md:items-end">
-                                    <span class="stars">
-                                        <svg width="153" height="24" viewBox="0 0 153 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_180632_145010)">
-                                            <path d="M150.75 9.24L142.666 8.62L139.506 2L136.346 8.63L128.262 9.24L134.401 13.97L132.557 21L139.506 17.27L146.455 21L144.622 13.97L150.75 9.24ZM139.506 15.4L135.278 17.67L136.403 13.39L132.67 10.51L137.595 10.13L139.506 6.1L141.429 10.14L146.354 10.52L142.621 13.4L143.745 17.68L139.506 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <g clip-path="url(#clip1_180632_145010)">
-                                            <path d="M119.618 9.24L111.533 8.62L108.373 2L105.214 8.63L97.1289 9.24L103.268 13.97L101.424 21L108.373 17.27L115.322 21L113.489 13.97L119.618 9.24ZM108.373 15.4L104.145 17.67L105.27 13.39L101.537 10.51L106.462 10.13L108.373 6.1L110.296 10.14L115.221 10.52L111.488 13.4L112.612 17.68L108.373 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <g clip-path="url(#clip2_180632_145010)">
-                                            <path d="M88.3227 9.24L80.238 8.62L77.0784 2L73.9187 8.63L65.834 9.24L71.9734 13.97L70.1293 21L77.0784 17.27L84.0274 21L82.1946 13.97L88.3227 9.24ZM77.0784 15.4L72.8505 17.67L73.9749 13.39L70.2418 10.51L75.1668 10.13L77.0784 6.1L79.0012 10.14L83.9262 10.52L80.1931 13.4L81.3175 17.68L77.0784 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <g clip-path="url(#clip3_180632_145010)">
-                                            <path d="M57.0288 9.24L48.9441 8.62L45.7844 2L42.6247 8.63L34.54 9.24L40.6795 13.97L38.8354 21L45.7844 17.27L52.7334 21L50.9006 13.97L57.0288 9.24ZM45.7844 15.4L41.5565 17.67L42.681 13.39L38.9478 10.51L43.8729 10.13L45.7844 6.1L47.7072 10.14L52.6322 10.52L48.8991 13.4L50.0236 17.68L45.7844 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <g clip-path="url(#clip4_180632_145010)">
-                                            <path d="M25.7349 9.24L17.6501 8.62L14.4905 2L11.3308 8.63L3.24609 9.24L9.38552 13.97L7.54145 21L14.4905 17.27L21.4395 21L19.6067 13.97L25.7349 9.24ZM14.4905 15.4L10.2626 17.67L11.387 13.39L7.65389 10.51L12.5789 10.13L14.4905 6.1L16.4133 10.14L21.3383 10.52L17.6052 13.4L18.7296 17.68L14.4905 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(126.013)"/>
-                                            </clipPath>
-                                            <clipPath id="clip1_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(94.8799)"/>
-                                            </clipPath>
-                                            <clipPath id="clip2_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(63.585)"/>
-                                            </clipPath>
-                                            <clipPath id="clip3_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(32.291)"/>
-                                            </clipPath>
-                                            <clipPath id="clip4_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(0.99707)"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
-                                            
+                                    <div class="flex items-end justify-end gap-2">
+                                        <span>
+                                            <svg width="153" height="24" viewBox="0 0 153 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M150.751 9.24L142.666 8.62L139.507 2L136.347 8.63L128.262 9.24L134.402 13.97L132.558 21L139.507 17.27L146.456 21L144.623 13.97L150.751 9.24ZM139.507 15.4L135.279 17.67L136.403 13.39L132.67 10.51L137.595 10.13L139.507 6.1L141.429 10.14L146.355 10.52L142.621 13.4L143.746 17.68L139.507 15.4Z" fill="#F59E0B"></path>
+                                                <g clip-path="url(#clip0_286_26505)">
+                                                    <path d="M119.618 9.24L111.533 8.62L108.373 2L105.214 8.63L97.1289 9.24L103.268 13.97L101.424 21L108.373 17.27L115.322 21L113.489 13.97L119.618 9.24ZM108.373 15.4L104.145 17.67L105.27 13.39L101.537 10.51L106.462 10.13L108.373 6.1L110.296 10.14L115.221 10.52L111.488 13.4L112.612 17.68L108.373 15.4Z" fill="#F59E0B"></path>
+                                                </g>
+                                                <g clip-path="url(#clip1_286_26505)">
+                                                    <path d="M88.3235 9.24L80.2388 8.62L77.0791 2L73.9194 8.63L65.8347 9.24L71.9741 13.97L70.1301 21L77.0791 17.27L84.0281 21L82.1953 13.97L88.3235 9.24ZM77.0791 15.4L72.8512 17.67L73.9756 13.39L70.2425 10.51L75.1676 10.13L77.0791 6.1L79.0019 10.14L83.9269 10.52L80.1938 13.4L81.3182 17.68L77.0791 15.4Z" fill="#F59E0B"></path>
+                                                </g>
+                                                <g clip-path="url(#clip2_286_26505)">
+                                                    <path d="M57.0293 9.24L48.9446 8.62L45.7849 2L42.6252 8.63L34.5405 9.24L40.68 13.97L38.8359 21L45.7849 17.27L52.7339 21L50.9011 13.97L57.0293 9.24ZM45.7849 15.4L41.557 17.67L42.6815 13.39L38.9483 10.51L43.8734 10.13L45.7849 6.1L47.7077 10.14L52.6327 10.52L48.8996 13.4L50.024 17.68L45.7849 15.4Z" fill="#F59E0B"></path>
+                                                </g>
+                                                <g clip-path="url(#clip3_286_26505)">
+                                                    <path d="M25.7351 9.24L17.6504 8.62L14.4907 2L11.331 8.63L3.24634 9.24L9.38577 13.97L7.54169 21L14.4907 17.27L21.4397 21L19.6069 13.97L25.7351 9.24ZM14.4907 15.4L10.2628 17.67L11.3873 13.39L7.65413 10.51L12.5792 10.13L14.4907 6.1L16.4135 10.14L21.3385 10.52L17.6054 13.4L18.7298 17.68L14.4907 15.4Z" fill="#F59E0B"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_286_26505">
+                                                        <rect width="26.9865" height="24" fill="white" transform="translate(94.88)"></rect>
+                                                    </clipPath>
+                                                    <clipPath id="clip1_286_26505">
+                                                        <rect width="26.9865" height="24" fill="white" transform="translate(63.5858)"></rect>
+                                                    </clipPath>
+                                                    <clipPath id="clip2_286_26505">
+                                                        <rect width="26.9865" height="24" fill="white" transform="translate(32.2916)"></rect>
+                                                    </clipPath>
+                                                    <clipPath id="clip3_286_26505">
+                                                        <rect width="26.9865" height="24" fill="white" transform="translate(0.997437)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                        <span class="text-base font-medium ">
+                                            3.5
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-start w-full gap-3 md:flex-row md:gap-9">
+                                    <span class="flex w-full text-xs font-normal text-left md:text-justify md:text-sm">
+                                        Megan answered all my questions and was very friendly and understanding. Definitely
+                                        would
+                                        recommend to others and would be happy to use her for any future or further legal
+                                        matters.
                                     </span>
-                                    <span class="text-sm font-medium text-gray-900 review-nums">24 Reviews</span>
                                 </div>
                             </div>
                         </div>
-                        <!-- card-2 -->
-                        <div class="flex flex-col w-full gap-2 p-2 card bg-gray-50 md:p-6 md:gap-5 rounded-xl">
-                            <div class="para">
-                                <p class="text-sm font-medium text-gray-600">"Nimra jalil is an excellent lawyer, who handled my case very professionally. I am happy to recommend her to any body who want to hire her.”
-                                </p>
-                            </div>
-                            <div class="flex flex-col justify-between gap-2 card-footer md:flex-row">
-                                <a href="#">
-                                    <div class="flex items-center gap-3 id">
-                                        <div class="image">
-                                            <img src="images/Avatar.png" alt="avatar">
-                                        </div>
-                                        <div class="flex flex-col gap-1 detail">
-                                                <h2 class="text-base font-semibold text-gray-900">
-                                                    Haroon Rashid
-                                                </h2>
-                                                <h3 class="text-sm font-normal text-gray-600">
-                                                    22, May, 2022
-                                                </h3>
+                        <!-- 2 -->
+                        <div class="flex flex-col w-full p-2 bg-white border border-gray-300 md:p-3 rounded-xl">
+                            <div class="flex flex-col w-full gap-3 md:gap-7">
+                                <div class="flex flex-col items-start md:justify-between gap-3 md:flex-row md:items-center">
+                                    <div class="flex gap-2.5 items-center justify-start md:justify-center">
+                                        <span class="flex items-center justify-center w-8 h-8 text-xs font-medium bg-gray-100 rounded-lg">
+                                            RM
+                                        </span>
+                                        <div class="flex flex-col items-start gap-1">
+                                            <span class="text-sm font-semibold text-gray-900">
+                                                Rifat Muneer
+                                            </span>
+                                            <span class="text-xs font-normal text-gray-500">
+                                                Posted 24, Jan 2023
+                                            </span>
                                         </div>
                                     </div>
-                                </a>
-                                <div class="flex flex-col items-start gap-1 reviews md:items-end">
-                                    <span class="stars">
-                                        <svg width="153" height="24" viewBox="0 0 153 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_180632_145010)">
-                                            <path d="M150.75 9.24L142.666 8.62L139.506 2L136.346 8.63L128.262 9.24L134.401 13.97L132.557 21L139.506 17.27L146.455 21L144.622 13.97L150.75 9.24ZM139.506 15.4L135.278 17.67L136.403 13.39L132.67 10.51L137.595 10.13L139.506 6.1L141.429 10.14L146.354 10.52L142.621 13.4L143.745 17.68L139.506 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <g clip-path="url(#clip1_180632_145010)">
-                                            <path d="M119.618 9.24L111.533 8.62L108.373 2L105.214 8.63L97.1289 9.24L103.268 13.97L101.424 21L108.373 17.27L115.322 21L113.489 13.97L119.618 9.24ZM108.373 15.4L104.145 17.67L105.27 13.39L101.537 10.51L106.462 10.13L108.373 6.1L110.296 10.14L115.221 10.52L111.488 13.4L112.612 17.68L108.373 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <g clip-path="url(#clip2_180632_145010)">
-                                            <path d="M88.3227 9.24L80.238 8.62L77.0784 2L73.9187 8.63L65.834 9.24L71.9734 13.97L70.1293 21L77.0784 17.27L84.0274 21L82.1946 13.97L88.3227 9.24ZM77.0784 15.4L72.8505 17.67L73.9749 13.39L70.2418 10.51L75.1668 10.13L77.0784 6.1L79.0012 10.14L83.9262 10.52L80.1931 13.4L81.3175 17.68L77.0784 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <g clip-path="url(#clip3_180632_145010)">
-                                            <path d="M57.0288 9.24L48.9441 8.62L45.7844 2L42.6247 8.63L34.54 9.24L40.6795 13.97L38.8354 21L45.7844 17.27L52.7334 21L50.9006 13.97L57.0288 9.24ZM45.7844 15.4L41.5565 17.67L42.681 13.39L38.9478 10.51L43.8729 10.13L45.7844 6.1L47.7072 10.14L52.6322 10.52L48.8991 13.4L50.0236 17.68L45.7844 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <g clip-path="url(#clip4_180632_145010)">
-                                            <path d="M25.7349 9.24L17.6501 8.62L14.4905 2L11.3308 8.63L3.24609 9.24L9.38552 13.97L7.54145 21L14.4905 17.27L21.4395 21L19.6067 13.97L25.7349 9.24ZM14.4905 15.4L10.2626 17.67L11.387 13.39L7.65389 10.51L12.5789 10.13L14.4905 6.1L16.4133 10.14L21.3383 10.52L17.6052 13.4L18.7296 17.68L14.4905 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(126.013)"/>
-                                            </clipPath>
-                                            <clipPath id="clip1_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(94.8799)"/>
-                                            </clipPath>
-                                            <clipPath id="clip2_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(63.585)"/>
-                                            </clipPath>
-                                            <clipPath id="clip3_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(32.291)"/>
-                                            </clipPath>
-                                            <clipPath id="clip4_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(0.99707)"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
-                                            
+                                    <div class="flex items-end justify-end gap-2">
+                                        <span>
+                                            <svg width="153" height="24" viewBox="0 0 153 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M150.751 9.24L142.666 8.62L139.507 2L136.347 8.63L128.262 9.24L134.402 13.97L132.558 21L139.507 17.27L146.456 21L144.623 13.97L150.751 9.24ZM139.507 15.4L135.279 17.67L136.403 13.39L132.67 10.51L137.595 10.13L139.507 6.1L141.429 10.14L146.355 10.52L142.621 13.4L143.746 17.68L139.507 15.4Z" fill="#F59E0B"></path>
+                                                <g clip-path="url(#clip0_286_26505)">
+                                                    <path d="M119.618 9.24L111.533 8.62L108.373 2L105.214 8.63L97.1289 9.24L103.268 13.97L101.424 21L108.373 17.27L115.322 21L113.489 13.97L119.618 9.24ZM108.373 15.4L104.145 17.67L105.27 13.39L101.537 10.51L106.462 10.13L108.373 6.1L110.296 10.14L115.221 10.52L111.488 13.4L112.612 17.68L108.373 15.4Z" fill="#F59E0B"></path>
+                                                </g>
+                                                <g clip-path="url(#clip1_286_26505)">
+                                                    <path d="M88.3235 9.24L80.2388 8.62L77.0791 2L73.9194 8.63L65.8347 9.24L71.9741 13.97L70.1301 21L77.0791 17.27L84.0281 21L82.1953 13.97L88.3235 9.24ZM77.0791 15.4L72.8512 17.67L73.9756 13.39L70.2425 10.51L75.1676 10.13L77.0791 6.1L79.0019 10.14L83.9269 10.52L80.1938 13.4L81.3182 17.68L77.0791 15.4Z" fill="#F59E0B"></path>
+                                                </g>
+                                                <g clip-path="url(#clip2_286_26505)">
+                                                    <path d="M57.0293 9.24L48.9446 8.62L45.7849 2L42.6252 8.63L34.5405 9.24L40.68 13.97L38.8359 21L45.7849 17.27L52.7339 21L50.9011 13.97L57.0293 9.24ZM45.7849 15.4L41.557 17.67L42.6815 13.39L38.9483 10.51L43.8734 10.13L45.7849 6.1L47.7077 10.14L52.6327 10.52L48.8996 13.4L50.024 17.68L45.7849 15.4Z" fill="#F59E0B"></path>
+                                                </g>
+                                                <g clip-path="url(#clip3_286_26505)">
+                                                    <path d="M25.7351 9.24L17.6504 8.62L14.4907 2L11.331 8.63L3.24634 9.24L9.38577 13.97L7.54169 21L14.4907 17.27L21.4397 21L19.6069 13.97L25.7351 9.24ZM14.4907 15.4L10.2628 17.67L11.3873 13.39L7.65413 10.51L12.5792 10.13L14.4907 6.1L16.4135 10.14L21.3385 10.52L17.6054 13.4L18.7298 17.68L14.4907 15.4Z" fill="#F59E0B"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_286_26505">
+                                                        <rect width="26.9865" height="24" fill="white" transform="translate(94.88)"></rect>
+                                                    </clipPath>
+                                                    <clipPath id="clip1_286_26505">
+                                                        <rect width="26.9865" height="24" fill="white" transform="translate(63.5858)"></rect>
+                                                    </clipPath>
+                                                    <clipPath id="clip2_286_26505">
+                                                        <rect width="26.9865" height="24" fill="white" transform="translate(32.2916)"></rect>
+                                                    </clipPath>
+                                                    <clipPath id="clip3_286_26505">
+                                                        <rect width="26.9865" height="24" fill="white" transform="translate(0.997437)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                        <span class="text-base font-medium ">
+                                            3.5
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-start w-full gap-3 md:flex-row md:gap-9">
+                                    <span class="flex w-full text-xs font-normal text-left md:text-justify md:text-sm">
+                                        Megan answered all my questions and was very friendly and understanding. Definitely
+                                        would
+                                        recommend to others and would be happy to use her for any future or further legal
+                                        matters.
                                     </span>
-                                    <span class="text-sm font-medium text-gray-900 review-nums">24 Reviews</span>
                                 </div>
                             </div>
                         </div>
-                        <!-- card-3 -->
-                        <div class="flex flex-col w-full gap-2 p-2 card bg-gray-50 md:p-6 md:gap-5 rounded-xl">
-                            <div class="para">
-                                <p class="text-sm font-medium text-gray-600">"Nimra jalil is an excellent lawyer, who handled my case very professionally. I am happy to recommend her to any body who want to hire her.”
-                                </p>
-                            </div>
-                            <div class="flex flex-col justify-between gap-2 card-footer md:flex-row">
-                                <a href="#">
-                                    <div class="flex items-center gap-3 id">
-                                        <div class="image">
-                                            <img src="images/Avatar.png" alt="avatar">
-                                        </div>
-                                        <div class="flex flex-col gap-1 detail">
-                                                <h2 class="text-base font-semibold text-gray-900">
-                                                    Haroon Rashid
-                                                </h2>
-                                                <h3 class="text-sm font-normal text-gray-600">
-                                                    22, May, 2022
-                                                </h3>
+                        <!-- 3 -->
+                        <div class="flex flex-col w-full p-2 bg-white border border-gray-300 md:p-3 rounded-xl">
+                            <div class="flex flex-col w-full gap-3 md:gap-7">
+                                <div class="flex flex-col items-start md:justify-between gap-3 md:flex-row md:items-center">
+                                    <div class="flex gap-2.5 items-center justify-start md:justify-center">
+                                        <span class="flex items-center justify-center w-8 h-8 text-xs font-medium bg-gray-100 rounded-lg">
+                                            RM
+                                        </span>
+                                        <div class="flex flex-col items-start gap-1">
+                                            <span class="text-sm font-semibold text-gray-900">
+                                                Rifat Muneer
+                                            </span>
+                                            <span class="text-xs font-normal text-gray-500">
+                                                Posted 24, Jan 2023
+                                            </span>
                                         </div>
                                     </div>
-                                </a>
-                                <div class="flex flex-col items-start gap-1 reviews md:items-end">
-                                    <span class="stars">
-                                        <svg width="153" height="24" viewBox="0 0 153 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_180632_145010)">
-                                            <path d="M150.75 9.24L142.666 8.62L139.506 2L136.346 8.63L128.262 9.24L134.401 13.97L132.557 21L139.506 17.27L146.455 21L144.622 13.97L150.75 9.24ZM139.506 15.4L135.278 17.67L136.403 13.39L132.67 10.51L137.595 10.13L139.506 6.1L141.429 10.14L146.354 10.52L142.621 13.4L143.745 17.68L139.506 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <g clip-path="url(#clip1_180632_145010)">
-                                            <path d="M119.618 9.24L111.533 8.62L108.373 2L105.214 8.63L97.1289 9.24L103.268 13.97L101.424 21L108.373 17.27L115.322 21L113.489 13.97L119.618 9.24ZM108.373 15.4L104.145 17.67L105.27 13.39L101.537 10.51L106.462 10.13L108.373 6.1L110.296 10.14L115.221 10.52L111.488 13.4L112.612 17.68L108.373 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <g clip-path="url(#clip2_180632_145010)">
-                                            <path d="M88.3227 9.24L80.238 8.62L77.0784 2L73.9187 8.63L65.834 9.24L71.9734 13.97L70.1293 21L77.0784 17.27L84.0274 21L82.1946 13.97L88.3227 9.24ZM77.0784 15.4L72.8505 17.67L73.9749 13.39L70.2418 10.51L75.1668 10.13L77.0784 6.1L79.0012 10.14L83.9262 10.52L80.1931 13.4L81.3175 17.68L77.0784 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <g clip-path="url(#clip3_180632_145010)">
-                                            <path d="M57.0288 9.24L48.9441 8.62L45.7844 2L42.6247 8.63L34.54 9.24L40.6795 13.97L38.8354 21L45.7844 17.27L52.7334 21L50.9006 13.97L57.0288 9.24ZM45.7844 15.4L41.5565 17.67L42.681 13.39L38.9478 10.51L43.8729 10.13L45.7844 6.1L47.7072 10.14L52.6322 10.52L48.8991 13.4L50.0236 17.68L45.7844 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <g clip-path="url(#clip4_180632_145010)">
-                                            <path d="M25.7349 9.24L17.6501 8.62L14.4905 2L11.3308 8.63L3.24609 9.24L9.38552 13.97L7.54145 21L14.4905 17.27L21.4395 21L19.6067 13.97L25.7349 9.24ZM14.4905 15.4L10.2626 17.67L11.387 13.39L7.65389 10.51L12.5789 10.13L14.4905 6.1L16.4133 10.14L21.3383 10.52L17.6052 13.4L18.7296 17.68L14.4905 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(126.013)"/>
-                                            </clipPath>
-                                            <clipPath id="clip1_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(94.8799)"/>
-                                            </clipPath>
-                                            <clipPath id="clip2_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(63.585)"/>
-                                            </clipPath>
-                                            <clipPath id="clip3_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(32.291)"/>
-                                            </clipPath>
-                                            <clipPath id="clip4_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(0.99707)"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
-                                            
-                                    </span>
-                                    <span class="text-sm font-medium text-gray-900 review-nums">24 Reviews</span>
+                                    <div class="flex items-end justify-end gap-2">
+                                        <span>
+                                            <svg width="153" height="24" viewBox="0 0 153 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M150.751 9.24L142.666 8.62L139.507 2L136.347 8.63L128.262 9.24L134.402 13.97L132.558 21L139.507 17.27L146.456 21L144.623 13.97L150.751 9.24ZM139.507 15.4L135.279 17.67L136.403 13.39L132.67 10.51L137.595 10.13L139.507 6.1L141.429 10.14L146.355 10.52L142.621 13.4L143.746 17.68L139.507 15.4Z" fill="#F59E0B"></path>
+                                                <g clip-path="url(#clip0_286_26505)">
+                                                    <path d="M119.618 9.24L111.533 8.62L108.373 2L105.214 8.63L97.1289 9.24L103.268 13.97L101.424 21L108.373 17.27L115.322 21L113.489 13.97L119.618 9.24ZM108.373 15.4L104.145 17.67L105.27 13.39L101.537 10.51L106.462 10.13L108.373 6.1L110.296 10.14L115.221 10.52L111.488 13.4L112.612 17.68L108.373 15.4Z" fill="#F59E0B"></path>
+                                                </g>
+                                                <g clip-path="url(#clip1_286_26505)">
+                                                    <path d="M88.3235 9.24L80.2388 8.62L77.0791 2L73.9194 8.63L65.8347 9.24L71.9741 13.97L70.1301 21L77.0791 17.27L84.0281 21L82.1953 13.97L88.3235 9.24ZM77.0791 15.4L72.8512 17.67L73.9756 13.39L70.2425 10.51L75.1676 10.13L77.0791 6.1L79.0019 10.14L83.9269 10.52L80.1938 13.4L81.3182 17.68L77.0791 15.4Z" fill="#F59E0B"></path>
+                                                </g>
+                                                <g clip-path="url(#clip2_286_26505)">
+                                                    <path d="M57.0293 9.24L48.9446 8.62L45.7849 2L42.6252 8.63L34.5405 9.24L40.68 13.97L38.8359 21L45.7849 17.27L52.7339 21L50.9011 13.97L57.0293 9.24ZM45.7849 15.4L41.557 17.67L42.6815 13.39L38.9483 10.51L43.8734 10.13L45.7849 6.1L47.7077 10.14L52.6327 10.52L48.8996 13.4L50.024 17.68L45.7849 15.4Z" fill="#F59E0B"></path>
+                                                </g>
+                                                <g clip-path="url(#clip3_286_26505)">
+                                                    <path d="M25.7351 9.24L17.6504 8.62L14.4907 2L11.331 8.63L3.24634 9.24L9.38577 13.97L7.54169 21L14.4907 17.27L21.4397 21L19.6069 13.97L25.7351 9.24ZM14.4907 15.4L10.2628 17.67L11.3873 13.39L7.65413 10.51L12.5792 10.13L14.4907 6.1L16.4135 10.14L21.3385 10.52L17.6054 13.4L18.7298 17.68L14.4907 15.4Z" fill="#F59E0B"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_286_26505">
+                                                        <rect width="26.9865" height="24" fill="white" transform="translate(94.88)"></rect>
+                                                    </clipPath>
+                                                    <clipPath id="clip1_286_26505">
+                                                        <rect width="26.9865" height="24" fill="white" transform="translate(63.5858)"></rect>
+                                                    </clipPath>
+                                                    <clipPath id="clip2_286_26505">
+                                                        <rect width="26.9865" height="24" fill="white" transform="translate(32.2916)"></rect>
+                                                    </clipPath>
+                                                    <clipPath id="clip3_286_26505">
+                                                        <rect width="26.9865" height="24" fill="white" transform="translate(0.997437)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                        <span class="text-base font-medium ">
+                                            3.5
+                                        </span>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- card-4 -->
-                        <div class="flex flex-col w-full gap-2 p-2 card bg-gray-50 md:p-6 md:gap-5 rounded-xl">
-                            <div class="para">
-                                <p class="text-sm font-medium text-gray-600">"Nimra jalil is an excellent lawyer, who handled my case very professionally. I am happy to recommend her to any body who want to hire her.”
-                                </p>
-                            </div>
-                            <div class="flex flex-col justify-between gap-2 card-footer md:flex-row">
-                                <a href="#">
-                                    <div class="flex items-center gap-3 id">
-                                        <div class="image">
-                                            <img src="images/Avatar.png" alt="avatar">
-                                        </div>
-                                        <div class="flex flex-col gap-1 detail">
-                                                <h2 class="text-base font-semibold text-gray-900">
-                                                    Haroon Rashid
-                                                </h2>
-                                                <h3 class="text-sm font-normal text-gray-600">
-                                                    22, May, 2022
-                                                </h3>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="flex flex-col items-start gap-1 reviews md:items-end">
-                                    <span class="stars">
-                                        <svg width="153" height="24" viewBox="0 0 153 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_180632_145010)">
-                                            <path d="M150.75 9.24L142.666 8.62L139.506 2L136.346 8.63L128.262 9.24L134.401 13.97L132.557 21L139.506 17.27L146.455 21L144.622 13.97L150.75 9.24ZM139.506 15.4L135.278 17.67L136.403 13.39L132.67 10.51L137.595 10.13L139.506 6.1L141.429 10.14L146.354 10.52L142.621 13.4L143.745 17.68L139.506 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <g clip-path="url(#clip1_180632_145010)">
-                                            <path d="M119.618 9.24L111.533 8.62L108.373 2L105.214 8.63L97.1289 9.24L103.268 13.97L101.424 21L108.373 17.27L115.322 21L113.489 13.97L119.618 9.24ZM108.373 15.4L104.145 17.67L105.27 13.39L101.537 10.51L106.462 10.13L108.373 6.1L110.296 10.14L115.221 10.52L111.488 13.4L112.612 17.68L108.373 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <g clip-path="url(#clip2_180632_145010)">
-                                            <path d="M88.3227 9.24L80.238 8.62L77.0784 2L73.9187 8.63L65.834 9.24L71.9734 13.97L70.1293 21L77.0784 17.27L84.0274 21L82.1946 13.97L88.3227 9.24ZM77.0784 15.4L72.8505 17.67L73.9749 13.39L70.2418 10.51L75.1668 10.13L77.0784 6.1L79.0012 10.14L83.9262 10.52L80.1931 13.4L81.3175 17.68L77.0784 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <g clip-path="url(#clip3_180632_145010)">
-                                            <path d="M57.0288 9.24L48.9441 8.62L45.7844 2L42.6247 8.63L34.54 9.24L40.6795 13.97L38.8354 21L45.7844 17.27L52.7334 21L50.9006 13.97L57.0288 9.24ZM45.7844 15.4L41.5565 17.67L42.681 13.39L38.9478 10.51L43.8729 10.13L45.7844 6.1L47.7072 10.14L52.6322 10.52L48.8991 13.4L50.0236 17.68L45.7844 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <g clip-path="url(#clip4_180632_145010)">
-                                            <path d="M25.7349 9.24L17.6501 8.62L14.4905 2L11.3308 8.63L3.24609 9.24L9.38552 13.97L7.54145 21L14.4905 17.27L21.4395 21L19.6067 13.97L25.7349 9.24ZM14.4905 15.4L10.2626 17.67L11.387 13.39L7.65389 10.51L12.5789 10.13L14.4905 6.1L16.4133 10.14L21.3383 10.52L17.6052 13.4L18.7296 17.68L14.4905 15.4Z" fill="#F59E0B"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(126.013)"/>
-                                            </clipPath>
-                                            <clipPath id="clip1_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(94.8799)"/>
-                                            </clipPath>
-                                            <clipPath id="clip2_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(63.585)"/>
-                                            </clipPath>
-                                            <clipPath id="clip3_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(32.291)"/>
-                                            </clipPath>
-                                            <clipPath id="clip4_180632_145010">
-                                            <rect width="26.9865" height="24" fill="white" transform="translate(0.99707)"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
-                                            
+                                <div class="flex flex-col items-start w-full gap-3 md:flex-row md:gap-9">
+                                    <span class="flex w-full text-xs font-normal text-left md:text-justify md:text-sm">
+                                        Megan answered all my questions and was very friendly and understanding. Definitely
+                                        would
+                                        recommend to others and would be happy to use her for any future or further legal
+                                        matters.
                                     </span>
-                                    <span class="text-sm font-medium text-gray-900 review-nums">24 Reviews</span>
                                 </div>
                             </div>
                         </div>
