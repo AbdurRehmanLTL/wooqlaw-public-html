@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- AlpineJs Scripts -->
+    <!-- alpine/tooltip v1.0 --> 
+    <script defer src="./js/alpinetooltip.min.js"></script>
+    <!-- @alpinejs/ui v3.12 -->
+    <script defer src="./js/alpineui.min.js"></script>
+    <!-- @alpinejs/focus v3.12 -->
+    <script defer src="./js/alpinefocus.min.js"></script>
+    <!-- alpinejs v3.12 -->
+    <script defer src="./js/alpine.min.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css" />
+    <meta name="description" content="wooqlaw Public Portal">
+    <title>Video call - wooqlaw</title>
+</head>
+
+<body x-data="{scrolAtTop: false}">
+
+    <div class="bg-violet-50">
+        <div class="container h-screen">
+          <div class="flex items-center justify-between w-full py-3 mb-6 border-b border-violet-200 md:p-6">
+            <p class="text-lg font-medium leading-relaxed text-gray-900">02:30</p>
+            <div class="flex h-8 w-32 items-center justify-end space-x-1.5">
+              <div class="flex items-start justify-center h-5">
+                <svg width="129" height="33" viewBox="0 0 129 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.0311 33H12.9759C9.82312 33 7.26073 30.4301 7.26073 27.2736V14.8392C7.26073 14.079 6.64274 13.4598 5.88408 13.4598C5.12541 13.4598 4.50742 14.079 4.50742 14.8392V22.4987H0.166443V14.8392C0.166443 11.6802 2.73134 9.11278 5.88157 9.11278C9.03179 9.11278 11.5992 11.6827 11.5992 14.8392V27.2736C11.5992 28.0338 12.2172 28.653 12.9759 28.653H13.0311C13.7898 28.653 14.4078 28.0338 14.4078 27.2736V14.8392C14.4078 11.6802 16.9727 9.11278 20.1229 9.11278H20.2334C23.3862 9.11278 25.9486 11.6827 25.9486 14.8392V26.886H21.6076V14.8392C21.6076 14.079 20.9896 13.4598 20.2309 13.4598H20.1204C19.3617 13.4598 18.7437 14.079 18.7437 14.8392V27.2736C18.7437 30.4326 16.1788 33 13.0286 33H13.0311Z" fill="url(#paint0_linear_8410_96547)"></path>
+                  <path d="M5.36805 7.48845C7.43732 7.48845 9.11479 5.8121 9.11479 3.74422C9.11479 1.67635 7.43732 0 5.36805 0C3.29879 0 1.62132 1.67635 1.62132 3.74422C1.62132 5.8121 3.29879 7.48845 5.36805 7.48845Z" fill="#7C3AED"></path>
+                  <path d="M20.149 7.48845C21.8734 7.48845 23.2713 6.09149 23.2713 4.36826C23.2713 2.64503 21.8734 1.24807 20.149 1.24807C18.4246 1.24807 17.0267 2.64503 17.0267 4.36826C17.0267 6.09149 18.4246 7.48845 20.149 7.48845Z" fill="#F59E0B"></path>
+                  <path d="M124.562 6.17841C124.956 5.78245 125.434 5.58447 125.993 5.58447C126.551 5.58447 127.029 5.78245 127.423 6.17841C127.818 6.57436 128.015 7.05431 128.015 7.61524C128.015 8.17618 127.818 8.65612 127.423 9.05208C127.029 9.44803 126.551 9.64601 125.993 9.64601C125.434 9.64601 124.956 9.44803 124.562 9.05208C124.168 8.65612 123.971 8.17618 123.971 7.61524C123.971 7.05431 124.168 6.57436 124.562 6.17841V6.17841ZM125.993 9.47803C126.497 9.47803 126.934 9.29805 127.292 8.93509C127.65 8.57213 127.83 8.13118 127.83 7.61524C127.83 7.0993 127.65 6.65835 127.292 6.29539C126.934 5.93243 126.497 5.75245 125.993 5.75245C125.488 5.75245 125.046 5.93243 124.687 6.29539C124.329 6.65835 124.147 7.0993 124.147 7.61524C124.147 8.13118 124.326 8.57213 124.687 8.93509C125.046 9.29805 125.482 9.47803 125.993 9.47803ZM126.814 7.24928C126.814 7.54025 126.698 7.74423 126.462 7.86121L126.892 8.65312H126.423L126.058 7.9512H125.757V8.65312H125.327V6.57736H126.026C126.268 6.57736 126.459 6.64335 126.602 6.77234C126.745 6.90132 126.814 7.0603 126.814 7.25228V7.24928ZM125.757 6.97931V7.55825H126.026C126.136 7.55825 126.226 7.53125 126.288 7.48026C126.351 7.42626 126.384 7.35727 126.384 7.27328C126.384 7.0783 126.265 6.98231 126.026 6.98231H125.757V6.97931Z" fill="#6D28D9"></path>
+                  <path d="M61.3096 20.2425C60.1072 21.3955 58.6362 21.9733 56.9019 21.9733C55.1676 21.9733 53.7021 21.3955 52.508 20.2425C51.314 19.0896 50.7156 17.6744 50.7156 15.9998C50.7156 14.3252 51.314 12.9101 52.508 11.7571C53.7048 10.6042 55.1676 10.0264 56.9019 10.0264C58.6362 10.0264 60.1045 10.6042 61.3096 11.7571C62.512 12.9101 63.1131 14.3252 63.1131 15.9998C63.1131 17.6744 62.512 19.0896 61.3096 20.2425ZM54.6412 18.2389C55.2424 18.8274 55.996 19.1217 56.9019 19.1217C57.8078 19.1217 58.5669 18.8274 59.1764 18.2389C59.7859 17.6504 60.0906 16.904 60.0906 15.9972C60.0906 15.0903 59.7859 14.344 59.1764 13.7554C58.5669 13.1669 57.8078 12.8727 56.9019 12.8727C55.996 12.8727 55.2424 13.1669 54.6412 13.7554C54.0401 14.344 53.7381 15.0903 53.7381 15.9972C53.7381 16.904 54.0373 17.6504 54.6412 18.2389Z" fill="#6D28D9"></path>
+                  <path d="M74.1505 20.2425C72.9481 21.3955 71.4798 21.9733 69.7428 21.9733C68.0057 21.9733 66.543 21.3955 65.3489 20.2425C64.1549 19.0896 63.5565 17.6744 63.5565 15.9998C63.5565 14.3252 64.1549 12.9101 65.3489 11.7571C66.543 10.6042 68.0085 10.0264 69.7428 10.0264C71.477 10.0264 72.9454 10.6042 74.1505 11.7571C75.3528 12.9101 75.954 14.3252 75.954 15.9998C75.954 17.6744 75.3528 19.0896 74.1505 20.2425ZM67.4821 18.2389C68.0833 18.8274 68.8369 19.1217 69.7428 19.1217C70.6487 19.1217 71.4078 18.8274 72.0173 18.2389C72.6268 17.6504 72.9315 16.904 72.9315 15.9972C72.9315 15.0903 72.6268 14.344 72.0173 13.7554C71.4078 13.1669 70.6487 12.8727 69.7428 12.8727C68.8369 12.8727 68.0833 13.1669 67.4821 13.7554C66.8809 14.344 66.579 15.0903 66.579 15.9972C66.579 16.904 66.8809 17.6504 67.4821 18.2389Z" fill="#6D28D9"></path>
+                  <path d="M89.806 22.2067L89.806 5.81006H93.0058V22.2067H89.806Z" fill="#6D28D9"></path>
+                  <path d="M85.9524 10.342V10.8449C85.0133 10.3019 83.9522 10.0264 82.7637 10.0264C81.0294 10.0264 79.5639 10.6042 78.3698 11.7571C77.1758 12.9101 76.5774 14.3252 76.5774 15.9998C76.5774 17.6744 77.1758 19.0896 78.3698 20.2425C79.5639 21.3955 81.0294 21.9733 82.7637 21.9733C83.9522 21.9733 85.0133 21.6951 85.9524 21.1547V27.2003H88.975V10.342H85.9524ZM85.0382 18.2416C84.4287 18.8301 83.6696 19.1243 82.7637 19.1243C81.8578 19.1243 81.1042 18.8301 80.5031 18.2416C79.9019 17.653 79.5999 16.9067 79.5999 15.9998C79.5999 15.093 79.9019 14.3466 80.5031 13.7581C81.1042 13.1696 81.8578 12.8753 82.7637 12.8753C83.6696 12.8753 84.4287 13.1696 85.0382 13.7581C85.6477 14.3466 85.9524 15.093 85.9524 15.9998C85.9524 16.9067 85.6477 17.653 85.0382 18.2416Z" fill="#6D28D9"></path>
+                  <path d="M102.988 10.2781V10.8479C102.048 10.3048 100.987 10.0293 99.7989 10.0293C98.0646 10.0293 96.599 10.6071 95.405 11.7601C94.211 12.913 93.6125 14.3282 93.6125 16.0028C93.6125 17.6774 94.211 19.0925 95.405 20.2455C96.599 21.3984 98.0646 21.9762 99.7989 21.9762C100.987 21.9762 102.048 21.698 102.988 21.1577V21.7275H106.066V10.2781H102.988V10.2781ZM102.073 18.2445C101.464 18.833 100.705 19.1273 99.7989 19.1273C98.8929 19.1273 98.1394 18.833 97.5382 18.2445C96.937 17.656 96.6351 16.9096 96.6351 16.0028C96.6351 15.0959 96.937 14.3496 97.5382 13.761C98.1394 13.1725 98.8929 12.8783 99.7989 12.8783C100.705 12.8783 101.464 13.1725 102.073 13.761C102.683 14.3496 102.988 15.0959 102.988 16.0028C102.988 16.9096 102.683 17.656 102.073 18.2445Z" fill="#6D28D9"></path>
+                  <path d="M46.5739 17.2627C46.5739 18.2097 45.776 18.9828 44.7953 18.9828C43.8145 18.9828 43.0167 18.2124 43.0167 17.2627V10.3423H39.7614V17.2654C39.7614 18.2124 38.9636 18.9855 37.9801 18.9855C36.9966 18.9855 36.2015 18.2151 36.2015 17.2654V10.3423H32.9435V17.2654C32.9435 19.9458 35.2014 22.1287 37.9801 22.1287C39.296 22.1287 40.4901 21.6365 41.3877 20.8367C42.2853 21.6365 43.4793 22.1287 44.7953 22.1287C47.5712 22.1287 49.8319 19.9485 49.8319 17.2654V10.3423H46.5766V17.2654L46.5739 17.2627Z" fill="#6D28D9"></path>
+                  <path d="M120.71 10.3423V17.2654C120.71 18.2124 119.912 18.9855 118.931 18.9855C117.951 18.9855 117.153 18.2151 117.153 17.2654V10.3423H113.897V17.2654C113.897 18.2124 113.1 18.9855 112.116 18.9855C111.133 18.9855 110.338 18.2151 110.338 17.2654V10.3423H107.082V17.2654C107.082 19.9458 109.34 22.1287 112.119 22.1287C113.435 22.1287 114.629 21.6365 115.526 20.8367C116.424 21.6365 117.618 22.1287 118.934 22.1287C121.71 22.1287 123.971 19.9485 123.971 17.2654V10.3423H120.715H120.71Z" fill="#6D28D9"></path>
+                  <defs>
+                    <linearGradient id="paint0_linear_8410_96547" x1="0.166443" y1="14.2796" x2="25.9773" y2="14.2882" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#7C3AED"></stop>
+                      <stop offset="0.499604" stop-color="#F43F5E"></stop>
+                      <stop offset="1" stop-color="#F59E0B"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <a id="btnLeaveMeeting" style="display:none" href="javascript:void(0);" class="flex items-center justify-center gap-x-2 rounded-lg bg-red-500 px-5 py-2.5 shadow hover:bg-red-600">
+              <svg class="w-5 h-5" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.6667 3.83351L13.3334 7.16683M13.3334 3.8335L16.6667 7.16682" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                <path d="M12.9635 12.6231L12.5839 13.0227C12.5839 13.0227 11.6818 13.9725 9.21927 11.3799C6.75676 8.78736 7.65892 7.83756 7.65892 7.83756L7.89793 7.58593C8.48673 6.96604 8.54223 5.9708 8.02853 5.24425L6.97771 3.75801C6.3419 2.85875 5.1133 2.73996 4.38454 3.5072L3.07654 4.88428C2.71519 5.26471 2.47304 5.75788 2.50241 6.30495C2.57753 7.70455 3.1756 10.7159 6.5128 14.2293C10.0518 17.9552 13.3724 18.1033 14.7302 17.9692C15.1597 17.9269 15.5333 17.6952 15.8343 17.3783L17.0181 16.132C17.8171 15.2908 17.5918 13.8485 16.5694 13.26L14.9774 12.3436C14.306 11.9572 13.4881 12.0707 12.9635 12.6231Z" fill="white"></path>
+              </svg>
+              <span class="text-sm font-medium leading-tight text-white">End Call</span>
+            </a>
+          </div>
+          <div class="relative">
+            <div id="perticipants" class="relative flex h-full min-h-[200px] w-full items-center justify-center overflow-hidden rounded-lg md:min-h-[630px] md:rounded-3xl" :class="video == true ? '':'bg-gray-200'" x-data="{video: true}">
+              <div :class="video == true ? 'hidden': '!flex' " class="flex-col items-center justify-center w-16 h-16 bg-gray-100 rounded-full shadow md:h-36 md:w-36">
+                <p class="mb-0 text-base font-medium leading-10 text-center text-gray-900 md:text-5xl">YK</p>
+              </div>
+              <video :class="video == true ? 'block': 'hidden' " autoplay="" class="w-full h-full rounded-lg md:rounded-3xl">
+                <source src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_5MB.mp4">
+              </video>
+              <div class="absolute left-3 top-3 z-10 inline-flex items-start justify-start rounded-lg bg-gray-100 p-1.5 md:left-5 md:top-5">
+                <p class="mb-0 text-sm font-medium leading-normal md:text-base">Yasir Khan</p>
+              </div>
+            </div>
+            <div id="local" class="absolute bottom-3 right-3 flex min-h-[50px] w-1/4 items-center justify-center overflow-hidden rounded-lg shadow md:bottom-5 md:right-5 md:min-h-fit md:rounded-3xl" :class="myvideo == true ? '':'bg-gray-300'" x-data="{myvideo: true}">
+              <div :class="myvideo == true ? 'hidden': '!flex' " class="flex-col items-center justify-center bg-gray-100 rounded-full shadow h-9 w-9 md:h-12 md:w-12">
+                <p class="mb-0 text-sm font-medium leading-10 text-center text-gray-900 md:text-base">YK</p>
+              </div>
+              <video id="video" muted="true" autoplay="autoplay" :class="myvideo == true ? 'block': 'hidden' " class="w-full rounded-lg md:rounded-3xl">
+                <source src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_5MB.mp4">
+              </video>
+            </div>
+          </div>
+          <div class="flex justify-center py-3 md:p-6">
+            <div class="inline-flex items-start justify-start gap-x-2">
+              <button id="mute-button" x-on:click="mic = !mic" type="button" class="flex items-center justify-center gap-x-2 rounded-lg px-5 py-2.5 shadow" :class="mic == true ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-500 hover:bg-gray-600' " x-data="{mic : true}">
+                <svg :class="mic == true ? 'block' : 'hidden' " class="w-6 h-6" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.69231 10.8721C4.07466 10.8721 4.38462 11.1845 4.38462 11.5698V13.4302C4.38462 17.6687 7.79414 21.1047 12 21.1047C16.2059 21.1047 19.6154 17.6687 19.6154 13.4302V11.5698C19.6154 11.1845 19.9253 10.8721 20.3077 10.8721C20.69 10.8721 21 11.1845 21 11.5698V13.4302C21 18.4393 16.9706 22.5 12 22.5C7.02944 22.5 3 18.4393 3 13.4302V11.5698C3 11.1845 3.30996 10.8721 3.69231 10.8721Z" fill="white"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.5C8.55884 2.5 5.76923 5.31123 5.76923 8.77907V13.4302C5.76923 16.8981 8.55884 19.7093 12 19.7093C15.4412 19.7093 18.2308 16.8981 18.2308 13.4302V8.77907C18.2308 5.31124 15.4412 2.5 12 2.5Z" fill="white"></path>
+                </svg>
+                <svg :class="mic == true ? 'hidden' : 'block' " class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M21 12.9302C21 14.9123 20.3691 16.7458 19.2987 18.238L18.3015 17.2408C19.1307 16.0121 19.6154 14.5282 19.6154 12.9302V11.0698C19.6154 10.6845 19.9253 10.3721 20.3077 10.3721C20.69 10.3721 21 10.6845 21 11.0698V12.9302ZM17.2426 20.3032L20.4999 23.5606L21.5606 22.4999L2.06067 3L1.00001 4.06066L5.76923 8.82988V12.9302C5.76923 16.3981 8.55884 19.2093 12 19.2093C13.1852 19.2093 14.293 18.8758 15.2363 18.2969L16.2432 19.3039C15.0307 20.1253 13.5709 20.6047 12 20.6047C7.79414 20.6047 4.38462 17.1687 4.38462 12.9302V11.0698C4.38462 10.6845 4.07466 10.3721 3.69231 10.3721C3.30996 10.3721 3 10.6845 3 11.0698V12.9302C3 17.9393 7.02944 22 12 22C13.956 22 15.7662 21.3712 17.2426 20.3032ZM18.2308 12.9302C18.2308 14.1437 17.8892 15.2767 17.2977 16.237L6.46112 5.40045C7.49682 3.38068 9.58841 2 12 2C15.4412 2 18.2308 4.81124 18.2308 8.27907V12.9302Z" fill="white"></path>
+                </svg>
+                <p class="mb-0 text-xs font-medium leading-none text-white">Mic</p>
+              </button>
+      
+              <button id="video-button" x-on:click="camera = !camera" type="button" class="flex items-center justify-center gap-x-2 rounded-lg px-5 py-2.5 shadow" :class="camera == true ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-500 hover:bg-gray-600' " x-data="{camera : true}">
+                <svg :class="camera == true ? 'block' : 'hidden' " class="w-6 h-6" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 12V13C2 16.2875 2 17.9312 2.90796 19.0376C3.07418 19.2401 3.25989 19.4258 3.46243 19.592C4.56878 20.5 6.21252 20.5 9.5 20.5C12.7875 20.5 14.4312 20.5 15.5376 19.592C15.7401 19.4258 15.9258 19.2401 16.092 19.0376C16.7936 18.1827 16.9531 17.007 16.9893 15L17.6584 15.3292C19.6042 16.3021 20.5772 16.7886 21.2886 16.3489C22 15.9093 22 14.8215 22 12.6459V12.3541C22 10.1785 22 9.09075 21.2886 8.65107C20.5772 8.2114 19.6042 8.69788 17.6584 9.67082L16.9893 10C16.9531 7.99303 16.7936 6.8173 16.092 5.96243C15.9258 5.75989 15.7401 5.57418 15.5376 5.40796C14.4312 4.5 12.7875 4.5 9.5 4.5C6.21252 4.5 4.56878 4.5 3.46243 5.40796C3.25989 5.57418 3.07418 5.75989 2.90796 5.96243C2 7.06878 2 8.71252 2 12Z" fill="white"></path>
+                </svg>
+                <svg :class="camera == true ? 'hidden' : 'block' " class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2435 19.3042L19.4999 22.5606L20.5606 21.4999L1.06067 2L8.79169e-06 3.06066L3.37437 6.43502C3 7.51687 3 9.05314 3 11.5V12.5C3 15.7875 3 17.4312 3.90796 18.5376C4.07418 18.7401 4.25989 18.9258 4.46243 19.092C5.56878 20 7.21252 20 10.5 20C13.5084 20 15.1403 20 16.2435 19.3042ZM17.9893 14.5C17.9729 15.4098 17.9312 16.1487 17.8251 16.7644L5.43504 4.37437C6.51688 4 8.05315 4 10.5 4C13.7875 4 15.4312 4 16.5376 4.90796C16.7401 5.07418 16.9258 5.25989 17.092 5.46243C17.7936 6.3173 17.9531 7.49303 17.9893 9.50002L18.6584 9.17082C20.6042 8.19788 21.5772 7.7114 22.2886 8.15107C23 8.59075 23 9.67853 23 11.8541V12.1459C23 14.3215 23 15.4093 22.2886 15.8489C21.5772 16.2886 20.6042 15.8021 18.6584 14.8292L17.9893 14.5Z" fill="white"></path>
+                </svg>
+                <p class="mb-0 text-xs font-medium leading-none text-white">Camera</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    <script>
+        // Prefer camera resolution nearest to 1280x720.
+        var constraints = { audio: true, video: true };
+
+        navigator.mediaDevices.getUserMedia(constraints)
+        .then(function(mediaStream) {
+            var video = document.getElementById('myvideo');
+            video.srcObject = mediaStream;
+            video.onloadedmetadata = function(e) {
+                video.play();
+            };
+        })
+        .catch(function(err) { console.log(err.name + ": " + err.message); }); 
+        // always check for errors at the end.
+        
+    </script>
+
+</body>
+
+</html>
