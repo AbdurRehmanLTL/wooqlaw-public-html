@@ -1,5 +1,5 @@
 import { LitElement, html } from 'https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js';
-import { unsafeHTML } from 'https://unpkg.com/lit-html@latest/directives/unsafe-html.js?module';
+import { unsafeHTML } from 'https://esm.sh/lit-html/directives/unsafe-html';
 import { classMap } from 'https://unpkg.com/lit-html@latest/directives/class-map.js';
 
 
