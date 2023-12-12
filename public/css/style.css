@@ -926,9 +926,6 @@ select {
 .-mt-1 {
   margin-top: -0.25rem;
 }
-.mb-0 {
-  margin-bottom: 0px;
-}
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -1035,6 +1032,9 @@ select {
 .mt-8 {
   margin-top: 2rem;
 }
+.mb-0 {
+  margin-bottom: 0px;
+}
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -1050,11 +1050,11 @@ select {
 .inline {
   display: inline;
 }
-.\!flex {
-  display: flex !important;
-}
 .flex {
   display: flex;
+}
+.\!flex {
+  display: flex !important;
 }
 .inline-flex {
   display: inline-flex;
@@ -1894,10 +1894,6 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(241 245 249 / var(--tw-border-opacity));
 }
-.border-violet-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(221 214 254 / var(--tw-border-opacity));
-}
 .border-violet-700 {
   --tw-border-opacity: 1;
   border-color: rgb(109 40 217 / var(--tw-border-opacity));
@@ -1909,6 +1905,10 @@ select {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+.border-violet-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(221 214 254 / var(--tw-border-opacity));
 }
 .border-l-black {
   --tw-border-opacity: 1;
@@ -3965,10 +3965,6 @@ select {
 
   .md\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-6 {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .md\:flex-row {
