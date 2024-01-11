@@ -809,6 +809,9 @@ select {
 .right-0 {
   right: 0px;
 }
+.right-1 {
+  right: 0.25rem;
+}
 .right-3 {
   right: 0.75rem;
 }
@@ -824,6 +827,9 @@ select {
 .top-0 {
   top: 0px;
 }
+.top-1 {
+  top: 0.25rem;
+}
 .top-16 {
   top: 4rem;
 }
@@ -838,12 +844,6 @@ select {
 }
 .top-3 {
   top: 0.75rem;
-}
-.right-1 {
-  right: 0.25rem;
-}
-.top-1 {
-  top: 0.25rem;
 }
 .-z-10 {
   z-index: -10;
@@ -2424,9 +2424,6 @@ select {
 .pt-9 {
   padding-top: 2.25rem;
 }
-.pb-1\.5 {
-  padding-bottom: 0.375rem;
-}
 .text-left {
   text-align: left;
 }
@@ -2522,6 +2519,9 @@ select {
 }
 .leading-tight {
   line-height: 1.25;
+}
+.\!leading-none {
+  line-height: 1 !important;
 }
 .tracking-tight {
   letter-spacing: -0.025em;
@@ -3162,16 +3162,6 @@ select {
   --tw-gradient-from: #e0f2fe var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(224 242 254 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}.hover\:pb-1:hover {
-  padding-bottom: 0.25rem;
-}.hover\:pb-1\.5:hover {
-  padding-bottom: 0.375rem;
-}.hover\:pb-0:hover {
-  padding-bottom: 0px;
-}.hover\:pb-0\.5:hover {
-  padding-bottom: 0.125rem;
-}.hover\:pb-2:hover {
-  padding-bottom: 0.5rem;
 }.hover\:text-amber-700:hover {
   --tw-text-opacity: 1;
   color: rgb(180 83 9 / var(--tw-text-opacity));
@@ -4542,10 +4532,6 @@ select {
   .md\:hover\:overflow-y-auto:hover {
     overflow-y: auto;
   }
-
-  .hover\:md\:pb-0:hover {
-    padding-bottom: 0px;
-  }
 }@media (min-width: 1024px) {
 
   .lg\:mb-28 {
@@ -4566,6 +4552,10 @@ select {
 
   .lg\:w-28 {
     width: 7rem;
+  }
+
+  .lg\:w-32 {
+    width: 8rem;
   }
 
   .lg\:grid-cols-2 {
