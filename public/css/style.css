@@ -893,6 +893,9 @@ select {
 .col-span-5 {
   grid-column: span 5 / span 5;
 }
+.col-span-6 {
+  grid-column: span 6 / span 6;
+}
 .m-0 {
   margin: 0px;
 }
@@ -929,6 +932,10 @@ select {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .-ml-1 {
   margin-left: -0.25rem;
@@ -1050,6 +1057,9 @@ select {
 }
 .mt-8 {
   margin-top: 2rem;
+}
+.mt-7 {
+  margin-top: 1.75rem;
 }
 .line-clamp-1 {
   overflow: hidden;
@@ -2294,6 +2304,9 @@ select {
 .p-8 {
   padding: 2rem;
 }
+.p-7 {
+  padding: 1.75rem;
+}
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -2688,10 +2701,6 @@ select {
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity));
 }
-.text-green-800 {
-  --tw-text-opacity: 1;
-  color: rgb(22 101 52 / var(--tw-text-opacity));
-}
 .text-lime-800 {
   --tw-text-opacity: 1;
   color: rgb(63 98 18 / var(--tw-text-opacity));
@@ -2796,14 +2805,6 @@ select {
   --tw-text-opacity: 1;
   color: rgb(113 113 122 / var(--tw-text-opacity));
 }
-.text-green-700 {
-  --tw-text-opacity: 1;
-  color: rgb(21 128 61 / var(--tw-text-opacity));
-}
-.text-green-100 {
-  --tw-text-opacity: 1;
-  color: rgb(220 252 231 / var(--tw-text-opacity));
-}
 .underline {
   text-decoration-line: underline;
 }
@@ -2901,10 +2902,6 @@ select {
 }
 .drop-shadow-md {
   --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-.drop-shadow-sm {
-  --tw-drop-shadow: drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .invert {
@@ -3653,6 +3650,10 @@ select {
     inset: 0px;
   }
 
+  .sm\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -3794,6 +3795,10 @@ select {
 
   .md\:mt-12 {
     margin-top: 3rem;
+  }
+
+  .md\:mt-4 {
+    margin-top: 1rem;
   }
 
   .md\:mt-9 {
