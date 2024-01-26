@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- AlpineJs Scripts -->
+    <!-- alpine/tooltip v1.0 --> 
+    <script defer src="./js/alpinetooltip.min.js"></script>
+    <!-- @alpinejs/ui v3.12 -->
+    <script defer src="./js/alpineui.min.js"></script>
+    <!-- @alpinejs/focus v3.12 -->
+    <script defer src="./js/alpinefocus.min.js"></script>
+    <!-- alpinejs v3.12 -->
+    <script defer src="./js/alpine.min.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <meta name="description" content="wooqlaw Public Portal">
+    <title>pricing-1</title>
+</head>
+
+<body x-data="{scrolAtTop: false}">
+    <arm-header></arm-header>
+    <div class="absolute top-0 flex w-full -z-10">
+        <picture class="w-full">
+            <!-- load avif if supported -->
+            <source srcset="./images/hero-bg-gradient.avif" type="image/avif">
+            <!-- load webp if supported -->
+            <source srcset="./images/hero-bg-gradient.webp" type="image/webp">
+            <!-- load in case no `source` format applies 
+                  and use attributes for presentation -->
+            <img class="w-full h-[842px] md:h-[700px] object-cover md:object-none" loading="lazy" decoding="async" src="./images/hero-bg-gradient.png" alt="image" style="border-bottom-left-radius: 450px; border-bottom-right-radius: 450px;">
+        </picture>
+    </div>
+
+    <!-- Choose a plan that is just -->
+    <section class="container">
+        <div class="flex flex-col justify-center items-center">
+            <div class="flex flex-col items-center w-full">
+                <div class="flex flex-col items-center py-8 md:py-24">
+                    <span>
+                        <img class="" src="images/wooqlaw-header.png" alt="">
+                    </span>
+                        <div class="flex flex-col justify-center items-center font-bold text-lg md:text-4xl gap-2 md:gap-4 text-violet-700">
+                            <div class="flex flex-col text-center">
+                            <span>
+                                Choose a plan that is just 
+                            </span> 
+                            <span>
+                                right for you
+                            </span> 
+                        </div>
+                        <span class="flex text-sm md:text-xl text-center text-gray-900 md:max-w-2xl font-semibold">
+                            Transform the way you practice; build your presence, manage clients and experience legal research like never before                                        
+                        </span>
+                        <div class="flex flex-col items-centers justify-center gap-7">
+                        <span class="flex text-sm md:text-xl text-center text-gray-900 md:max-w-2xl font-semibold">
+                            Get started in minutes. Try it free for 30 days.                                    
+                        </span>
+                        <div class="flex justify-center text-xs md:text-sm font-medium py-1 px-2.5 border rounded-lg bg-violet-700 text-white max-w-md">
+                            2 months free with the Annual Subscription
+                        </div>
+                        <div class="flex justify-center items-center gap-2">
+                            <span class="text-sm font-medium text-gray-900">Monthly</span>
+                            <label class="relative inline-flex gap-2 cursor-pointer">  
+                                <input type="checkbox" value="" class="sr-only peer">
+                                <div class="w-11 h-6 bg-violet-700 peer-focus:outline-none peer-focus:ring-4 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-violet-700"></div>
+                                </label>
+                                <span class="text-sm font-medium text-gray-900">Annually</span>
+                        </div>
+                        </div>
+                    </div>                                                               
+                </div> 
+                <div class="grid gap-6 xl:grid-cols-2">
+                <!-- Pricing Card -->
+                <div class="flex flex-col w-full p-6 mx-auto text-center text-gray-900 rounded-lg shadow-sm bg-blue-50 xl:p-8">
+                    <h3 class="flex items-center justify-center gap-2 text-3xl font-bold text-center text-blue-500">
+                        <svg width="29" height="38" viewBox="0 0 29 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1289_13816)">
+                            <path d="M14.8865 37.0676H14.8264C11.3982 37.0676 8.61201 34.2713 8.61201 30.8368V17.307C8.61201 16.4799 7.94003 15.8061 7.11509 15.8061C6.29014 15.8061 5.61817 16.4799 5.61817 17.307V25.6413H0.897949V17.307C0.897949 13.8698 3.68692 11.0762 7.11236 11.0762C10.5378 11.0762 13.3295 13.8725 13.3295 17.307V30.8368C13.3295 31.6639 14.0015 32.3377 14.8264 32.3377H14.8865C15.7115 32.3377 16.3834 31.6639 16.3834 30.8368V17.307C16.3834 13.8698 19.1724 11.0762 22.5978 11.0762H22.718C26.1462 11.0762 28.9324 13.8725 28.9324 17.307V30.415H24.2122V17.307C24.2122 16.4799 23.5402 15.8061 22.7153 15.8061H22.5951C21.7702 15.8061 21.0982 16.4799 21.0982 17.307V30.8368C21.0982 34.274 18.3092 37.0676 14.8838 37.0676H14.8865Z" fill="url(#paint0_linear_1289_13816)"/>
+                            <path d="M22.5548 8.99122C24.774 8.99122 26.573 7.18746 26.573 4.96241C26.573 2.73736 24.774 0.933594 22.5548 0.933594C20.3356 0.933594 18.5366 2.73736 18.5366 4.96241C18.5366 7.18746 20.3356 8.99122 22.5548 8.99122Z" fill="#7413FF"/>
+                            <path d="M6.99251 8.99034C8.46644 8.99034 9.66129 7.79233 9.66129 6.31451C9.66129 4.83668 8.46644 3.63867 6.99251 3.63867C5.51858 3.63867 4.32373 4.83668 4.32373 6.31451C4.32373 7.79233 5.51858 8.99034 6.99251 8.99034Z" fill="#FF7244"/>
+                            </g>
+                            <defs>
+                            <linearGradient id="paint0_linear_1289_13816" x1="0.837854" y1="24.962" x2="29.4089" y2="22.4691" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FDD62C"/>
+                            <stop offset="0.27" stop-color="#FF7244"/>
+                            <stop offset="0.63" stop-color="#CC38FF"/>
+                            <stop offset="1" stop-color="#7413FF"/>
+                            </linearGradient>
+                            <clipPath id="clip0_1289_13816">
+                            <rect width="28.0345" height="36.1333" fill="white" transform="translate(0.897949 0.933594)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        <span>
+                            Basic
+                        </span>
+                    </h3>
+                    <div class="flex items-baseline justify-center my-8">
+                        <span class="mr-2 text-2xl font-extrabold md:text-5xl">Free</span>
+                    </div>
+                    <!-- List -->
+                    <ul role="list" class="mb-8 space-y-4 text-sm text-left md:text-base">
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Your wooqlaw® Profile.</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Search appearance</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Receive Direct Inquiries from clients</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Verified by wooqlaw®</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>wooqlaw® Case Management System</span>
+                        </li>
+                    </ul>
+                    <button type="button" disabled class="flex justify-center px-5 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-200 hover:bg-primary-200 focus:ring-4 focus:ring-primary-200 md:py-4">
+                        <svg class="w-5 h-5" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3807 5.29264C18.6203 5.54106 18.6132 5.93673 18.3648 6.17638L8.7394 15.4618C8.15469 16.0258 7.22176 16.0033 6.66494 15.4117L2.88521 11.3956C2.64863 11.1443 2.66062 10.7487 2.91198 10.5122C3.16335 10.2756 3.55889 10.2876 3.79546 10.5389L7.5752 14.555C7.65475 14.6395 7.78802 14.6427 7.87155 14.5621L17.4969 5.27675C17.7454 5.0371 18.141 5.04421 18.3807 5.29264Z" fill="#15803D"/>
+                        </svg>                                                        
+                    </button>
+                </div>
+                <!-- Pricing Card -->
+                <div class="flex flex-col relative z-10 w-full p-6 mx-auto text-center text-gray-900 rounded-lg shadow-sm bg-orange-50 xl:p-8">
+                    <div class="flex gap-1 absolute right-5 -top-3 md:-top-4">
+                        <span class="flex p-1.5 rounded-md bg-violet-700 text-xs font-semibold text-white md:text-sm">
+                            Popular
+                        </span>
+                        <span class="flex p-1.5 rounded-md bg-emerald-600 text-xs font-semibold text-white md:text-sm">
+                            Save over 18%
+                        </span>
+                    </div>
+                    <h3 class="flex items-center justify-center gap-2 text-3xl font-bold text-center text-orange-500">
+                        <svg width="29" height="38" viewBox="0 0 29 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1289_13816)">
+                            <path d="M14.8865 37.0676H14.8264C11.3982 37.0676 8.61201 34.2713 8.61201 30.8368V17.307C8.61201 16.4799 7.94003 15.8061 7.11509 15.8061C6.29014 15.8061 5.61817 16.4799 5.61817 17.307V25.6413H0.897949V17.307C0.897949 13.8698 3.68692 11.0762 7.11236 11.0762C10.5378 11.0762 13.3295 13.8725 13.3295 17.307V30.8368C13.3295 31.6639 14.0015 32.3377 14.8264 32.3377H14.8865C15.7115 32.3377 16.3834 31.6639 16.3834 30.8368V17.307C16.3834 13.8698 19.1724 11.0762 22.5978 11.0762H22.718C26.1462 11.0762 28.9324 13.8725 28.9324 17.307V30.415H24.2122V17.307C24.2122 16.4799 23.5402 15.8061 22.7153 15.8061H22.5951C21.7702 15.8061 21.0982 16.4799 21.0982 17.307V30.8368C21.0982 34.274 18.3092 37.0676 14.8838 37.0676H14.8865Z" fill="url(#paint0_linear_1289_13816)"/>
+                            <path d="M22.5548 8.99122C24.774 8.99122 26.573 7.18746 26.573 4.96241C26.573 2.73736 24.774 0.933594 22.5548 0.933594C20.3356 0.933594 18.5366 2.73736 18.5366 4.96241C18.5366 7.18746 20.3356 8.99122 22.5548 8.99122Z" fill="#7413FF"/>
+                            <path d="M6.99251 8.99034C8.46644 8.99034 9.66129 7.79233 9.66129 6.31451C9.66129 4.83668 8.46644 3.63867 6.99251 3.63867C5.51858 3.63867 4.32373 4.83668 4.32373 6.31451C4.32373 7.79233 5.51858 8.99034 6.99251 8.99034Z" fill="#FF7244"/>
+                            </g>
+                            <defs>
+                            <linearGradient id="paint0_linear_1289_13816" x1="0.837854" y1="24.962" x2="29.4089" y2="22.4691" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FDD62C"/>
+                            <stop offset="0.27" stop-color="#FF7244"/>
+                            <stop offset="0.63" stop-color="#CC38FF"/>
+                            <stop offset="1" stop-color="#7413FF"/>
+                            </linearGradient>
+                            <clipPath id="clip0_1289_13816">
+                            <rect width="28.0345" height="36.1333" fill="white" transform="translate(0.897949 0.933594)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        <span>
+                            PRO
+                        </span>
+                    </h3>
+                    <div class="flex items-baseline justify-center my-8">
+                        <span class="mr-2 text-2xl font-extrabold md:text-5xl">Rs. 2,999</span>
+                        <span class="text-gray-500">/month</span>
+                    </div>
+                    <!-- List -->
+                    <ul role="list" class="mb-8 space-y-4 text-sm text-left md:text-base">
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>All features of a basic profile</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Premium search appearance</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>wooqlaw® Legal Research Engine</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Direct and open inquiries</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>wooqlaw® Case Management System <span class="font-semibold">(Advanced)</span></span>
+                        </li>
+                    </ul>
+                    <button onclick="paymentmethodsmodal.showModal()" type="button" class="flex justify-center px-5 py-2 text-sm font-medium text-center text-white bg-orange-500 rounded-lg md:py-4 hover:bg-orange-600 focus:ring-4 focus:ring-orange-200">
+                        Renew                                                       
+                    </button>
+                </div>
+                </div>
+            </div>      
+        </div> 
+    </section>
+    <!-- Not sure how its works? Find out now! -->
+    <section>
+        <h2 class="text-base font-bold text-center text-orange-500 md:text-2xl py-8 md:py-24">
+            Not sure how its works? Find out now!
+        </h2>
+        <div class="flex md:flex-row flex-col px-2 md:px-0 max-w-full">
+            <div class="relative flex flex-col justify-between md:h-64 w-full md:bg-zinc-100 md:flex-row lg:gap-x-7 md:gap-1">
+                <div class="relative flex md:ml-24 justify-center w-full md:w-1/2">
+                    <picture class="flex justify-center w-full">
+                        <source srcset="./images/client.avif" type="image/avif">
+                        <source srcset="./images/client.webp" type="image/webp">
+                    <img style="transform: rotateY(180deg);" class="bottom-0 flex w-9/12 md:absolute md:w-fit" src="images/client1.png" alt="">
+                    </piccture>
+                </div>
+                <div class="flex flex-col items-center md:items-end w-full gap-5 px-3 py-5 overflow-hidden bg-zinc-100 md:w-2/3 lg:p-10 rounded-2xl md:rounded-none md:bg-transparent">
+                    <span class="flex flex-col gap-4 md:gap-5">
+                        <h2 class="flex text-base font-semibold text-gray-600 md:text-2xl justify-center md:justify-end">
+                            Book a live demo
+                        </h2>
+                        <p class="w-72 font-medium text-center md:text-end text-gray-600 text-xs md:text-sm lg:text-base">
+                            Book a live demo to see how Wooqlaw can help your law firm maximise efficiency and increase revenue.                                        
+                        </p>
+                    </span>
+                    <a href="#" class="flex px-4 py-3 text-xs md:text-lg font-semibold text-white rounded-full shadow-md bg-violet-700 hover:bg-violet-800 w-fit">
+                        Call us to Book
+                    </a>
+                </div>
+            </div>
+            <div class="relative flex flex-col-reverse justify-between w-full md:h-64 lg:gap-x-12 md:bg-violet-700 md:flex-row md:gap-1">
+                <div class="flex flex-col items-center md:items-start w-full gap-5 px-3 py-5 overflow-hidden bg-violet-700 md:w-2/3 lg:p-10 rounded-2xl md:rounded-none md:bg-transparent">
+                    <span class="flex flex-col items-center gap-4 md:gap-5 md:items-start">
+                        <h2 class="flex text-base font-semibold md:text-2xl text-white">
+                            Try Wooqlaw for free
+                        </h2>
+                        <p class="w-72 text-white font-medium text-center text-xs md:text-sm lg:text-base md:text-start">
+                            Try Wooqlaw software free for 30 days with no obligation. Easy setup. No credit card required. Cancel anytime.                                        
+                        </p>
+                    </span>
+                    <a href="#" class="flex items-center justify-start w-fit px-4 py-3 text-xs md:text-lg font-semibold text-violet-700 rounded-full shadow-md bg-white hover:bg-gray-100">
+                        Start My Free Trial
+                    </a>
+                </div>
+                <div class="relative flex mr-24 justify-center w-full md:w-1/2">
+                    <picture class="flex justify-center w-full">
+                        <source srcset="./images/lawyer.avif" type="image/avif">
+                        <source srcset="./images/lawyer.webp" type="image/webp">
+                    <img class="bottom-0 flex w-9/12 md:absolute md:w-fit" src="images/lawyer.png" alt="">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script type="module" src="./components/header.js"></script>
+
+</body>
+
+</html>
