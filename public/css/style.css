@@ -803,6 +803,9 @@ select {
 .left-0 {
   left: 0px;
 }
+.left-10 {
+  left: 2.5rem;
+}
 .left-3 {
   left: 0.75rem;
 }
@@ -853,6 +856,12 @@ select {
 }
 .top-3 {
   top: 0.75rem;
+}
+.left-8 {
+  left: 2rem;
+}
+.left-7 {
+  left: 1.75rem;
 }
 .-z-10 {
   z-index: -10;
@@ -2489,9 +2498,6 @@ select {
 .pt-5 {
   padding-top: 1.25rem;
 }
-.pt-8 {
-  padding-top: 2rem;
-}
 .pt-9 {
   padding-top: 2.25rem;
 }
@@ -2690,6 +2696,10 @@ select {
 .text-green-600 {
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+.text-green-700 {
+  --tw-text-opacity: 1;
+  color: rgb(21 128 61 / var(--tw-text-opacity));
 }
 .text-lime-800 {
   --tw-text-opacity: 1;
@@ -3308,6 +3318,9 @@ select {
 }.focus\:border-primary-600:focus {
   --tw-border-opacity: 1;
   border-color: rgb(37 99 235 / var(--tw-border-opacity));
+}.focus\:border-primary-700:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(29 78 216 / var(--tw-border-opacity));
 }.focus\:border-violet-500:focus {
   --tw-border-opacity: 1;
   border-color: rgb(139 92 246 / var(--tw-border-opacity));
@@ -3388,6 +3401,9 @@ select {
 }.focus\:ring-primary-600:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(37 99 235 / var(--tw-ring-opacity));
+}.focus\:ring-primary-700:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(29 78 216 / var(--tw-ring-opacity));
 }.focus\:ring-purple-900:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(88 28 135 / var(--tw-ring-opacity));
@@ -3734,6 +3750,10 @@ select {
     top: 1.25rem;
   }
 
+  .md\:left-10 {
+    left: 2.5rem;
+  }
+
   .md\:order-1 {
     order: 1;
   }
@@ -3867,16 +3887,8 @@ select {
     height: 1.5rem;
   }
 
-  .md\:h-60 {
-    height: 15rem;
-  }
-
   .md\:h-64 {
     height: 16rem;
-  }
-
-  .md\:h-72 {
-    height: 18rem;
   }
 
   .md\:h-8 {
@@ -4591,10 +4603,6 @@ select {
     padding-top: 3rem;
   }
 
-  .md\:pt-16 {
-    padding-top: 4rem;
-  }
-
   .md\:pt-2 {
     padding-top: 0.5rem;
   }
@@ -4780,12 +4788,12 @@ select {
          column-gap: 1.75rem;
   }
 
-  .lg\:p-14 {
-    padding: 3.5rem;
-  }
-
   .lg\:p-10 {
     padding: 2.5rem;
+  }
+
+  .lg\:p-14 {
+    padding: 3.5rem;
   }
 
   .lg\:px-8 {
