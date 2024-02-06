@@ -828,6 +828,9 @@ select {
 .left-6 {
   left: 1.5rem;
 }
+.left-7 {
+  left: 1.75rem;
+}
 .left-9 {
   left: 2.25rem;
 }
@@ -872,12 +875,6 @@ select {
 }
 .top-3 {
   top: 0.75rem;
-}
-.left-8 {
-  left: 2rem;
-}
-.left-7 {
-  left: 1.75rem;
 }
 .-z-10 {
   z-index: -10;
@@ -1199,8 +1196,8 @@ select {
 .h-\[842px\] {
   height: 842px;
 }
-.h-\[calc\(100dvh-3rem\)\] {
-  height: calc(100dvh - 3rem);
+.h-\[calc\(100dvh-7\.6rem\)\] {
+  height: calc(100dvh - 7.6rem);
 }
 .h-\[calc\(100dvh-7rem\)\] {
   height: calc(100dvh - 7rem);
@@ -1211,26 +1208,11 @@ select {
 .h-auto {
   height: auto;
 }
-.h-dvh {
-  height: 100dvh;
-}
 .h-full {
   height: 100%;
 }
 .h-screen {
   height: 100vh;
-}
-.h-\[calc\(100dvh-6rem\)\] {
-  height: calc(100dvh - 6rem);
-}
-.h-\[calc\(100dvh-8rem\)\] {
-  height: calc(100dvh - 8rem);
-}
-.h-\[calc\(100dvh-7\.5rem\)\] {
-  height: calc(100dvh - 7.5rem);
-}
-.h-\[calc\(100dvh-7\.6rem\)\] {
-  height: calc(100dvh - 7.6rem);
 }
 .max-h-\[100dvh\] {
   max-height: 100dvh;
@@ -3660,6 +3642,10 @@ select {
     left: 0px;
   }
 
+  .md\:left-10 {
+    left: 2.5rem;
+  }
+
   .md\:left-5 {
     left: 1.25rem;
   }
@@ -3670,10 +3656,6 @@ select {
 
   .md\:top-5 {
     top: 1.25rem;
-  }
-
-  .md\:left-10 {
-    left: 2.5rem;
   }
 
   .md\:order-1 {
@@ -3833,8 +3815,8 @@ select {
     height: 700px;
   }
 
-  .md\:h-\[calc\(100dvh-4rem\)\] {
-    height: calc(100dvh - 4rem);
+  .md\:h-\[calc\(100dvh-8\.8rem\)\] {
+    height: calc(100dvh - 8.8rem);
   }
 
   .md\:h-\[calc\(100vh-4\.5rem\)\] {
@@ -3851,42 +3833,6 @@ select {
 
   .md\:h-screen {
     height: 100vh;
-  }
-
-  .md\:h-\[calc\(100dvh-8rem\)\] {
-    height: calc(100dvh - 8rem);
-  }
-
-  .md\:h-\[calc\(100dvh-9rem\)\] {
-    height: calc(100dvh - 9rem);
-  }
-
-  .md\:h-\[calc\(100dvh-9\.5rem\)\] {
-    height: calc(100dvh - 9.5rem);
-  }
-
-  .md\:h-\[calc\(100dvh-8\.5rem\)\] {
-    height: calc(100dvh - 8.5rem);
-  }
-
-  .md\:h-\[calc\(100dvh-8\.6rem\)\] {
-    height: calc(100dvh - 8.6rem);
-  }
-
-  .md\:h-\[calc\(100dvh-8\.4rem\)\] {
-    height: calc(100dvh - 8.4rem);
-  }
-
-  .md\:h-\[calc\(100dvh-8\.3rem\)\] {
-    height: calc(100dvh - 8.3rem);
-  }
-
-  .md\:h-\[calc\(100dvh-8\.7rem\)\] {
-    height: calc(100dvh - 8.7rem);
-  }
-
-  .md\:h-\[calc\(100dvh-8\.8rem\)\] {
-    height: calc(100dvh - 8.8rem);
   }
 
   .md\:min-h-\[41\.25rem\] {
