@@ -812,6 +812,9 @@ select {
 .left-6 {
   left: 1.5rem;
 }
+.left-7 {
+  left: 1.75rem;
+}
 .left-9 {
   left: 2.25rem;
 }
@@ -856,12 +859,6 @@ select {
 }
 .top-3 {
   top: 0.75rem;
-}
-.left-8 {
-  left: 2rem;
-}
-.left-7 {
-  left: 1.75rem;
 }
 .-z-10 {
   z-index: -10;
@@ -3738,6 +3735,10 @@ select {
     left: 0px;
   }
 
+  .md\:left-10 {
+    left: 2.5rem;
+  }
+
   .md\:left-5 {
     left: 1.25rem;
   }
@@ -3748,10 +3749,6 @@ select {
 
   .md\:top-5 {
     top: 1.25rem;
-  }
-
-  .md\:left-10 {
-    left: 2.5rem;
   }
 
   .md\:order-1 {
