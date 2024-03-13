@@ -27,7 +27,13 @@ module.exports = {
         },
         colors: {
           primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a"}
-        }
+        },
+        dropShadow: {
+          'top': [
+              '0 -5px 8px rgb(0 0 0 / 10%)',
+              '0 -8px 5px rgb(0 0 0 / 6%)'
+          ]
+        },
       },
     },
     plugins: [
