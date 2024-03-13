@@ -2,48 +2,97 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Tailwind CSS-->
-    <link href="./css/style.css" rel="stylesheet">
+   <!-- Tailwind CSS-->
+   <link href="./css/style.css" rel="stylesheet">
 
-    <!-- Googel Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+   <!-- Googel Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet">
 
    <!-- AlpineJs Scripts -->
-    
-   <!-- alpine/tooltip v1.0 --> 
-   <script defer src="./js/alpinetooltip.min.js"></script>
-    <!-- @alpinejs/ui v3.12 -->
-    <script defer src="./js/alpineui.min.js"></script>
-    <!-- @alpinejs/focus v3.12 -->
-    <script defer src="./js/alpinefocus.min.js"></script>
-    <!-- alpinejs v3.12 -->
-    <script defer src="./js/alpine.min.js"></script>
 
-    <title>Listing - wooqlaw</title>
+   <!-- alpine/tooltip v1.0 -->
+   <script defer src="./js/alpinetooltip.min.js"></script>
+   <!-- @alpinejs/ui v3.12 -->
+   <script defer src="./js/alpineui.min.js"></script>
+   <!-- @alpinejs/focus v3.12 -->
+   <script defer src="./js/alpinefocus.min.js"></script>
+   <!-- alpinejs v3.12 -->
+   <script defer src="./js/alpine.min.js"></script>
+
+   <title>Listing - wooqlaw</title>
 </head>
 
 <body x-data="{scrolAtTop: false, filter: false}">
    <arm-header></arm-header>
-   <div class="container">
+   <div class="flex flex-col gap-2 md:gap-7 container">
+
+      <div class="flex flex-col gap-2">
+         <nav class="flex hidden md:block" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+               <li class="inline-flex items-center"><a href="en-pk/"
+                     class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:hover:text-white"><!--!--><svg
+                        aria-hidden="true" class="w-5 h-5 mr-2" width="20" height="21" viewBox="0 0 20 21" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M10.7069 2.79279C10.5194 2.60532 10.2651 2.5 9.99992 2.5C9.73475 2.5 9.48045 2.60532 9.29292 2.79279L2.29292 9.79279C2.11076 9.98139 2.00997 10.234 2.01224 10.4962C2.01452 10.7584 2.11969 11.0092 2.3051 11.1946C2.49051 11.38 2.74132 11.4852 3.00352 11.4875C3.26571 11.4897 3.51832 11.3889 3.70692 11.2068L3.99992 10.9138V17.4998C3.99992 17.765 4.10528 18.0194 4.29281 18.2069C4.48035 18.3944 4.7347 18.4998 4.99992 18.4998H6.99992C7.26514 18.4998 7.51949 18.3944 7.70703 18.2069C7.89456 18.0194 7.99992 17.765 7.99992 17.4998V15.4998C7.99992 15.2346 8.10528 14.9802 8.29281 14.7927C8.48035 14.6051 8.7347 14.4998 8.99992 14.4998H10.9999C11.2651 14.4998 11.5195 14.6051 11.707 14.7927C11.8946 14.9802 11.9999 15.2346 11.9999 15.4998V17.4998C11.9999 17.765 12.1053 18.0194 12.2928 18.2069C12.4803 18.3944 12.7347 18.4998 12.9999 18.4998H14.9999C15.2651 18.4998 15.5195 18.3944 15.707 18.2069C15.8946 18.0194 15.9999 17.765 15.9999 17.4998V10.9138L16.2929 11.2068C16.4815 11.3889 16.7341 11.4897 16.9963 11.4875C17.2585 11.4852 17.5093 11.38 17.6947 11.1946C17.8801 11.0092 17.9853 10.7584 17.9876 10.4962C17.9899 10.234 17.8891 9.98139 17.7069 9.79279L10.7069 2.79279Z"
+                           fill="#374151"></path>
+                     </svg>
+
+                     Home
+                  </a></li>
+               <!--!-->
+               <li aria-current="page">
+                  <div class="flex items-center"><svg aria-hidden="true" class="w-6 h-6 text-gray-400"
+                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                           d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                           clip-rule="evenodd"></path>
+                     </svg>
+                     <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2">Find Lawyer</span>
+                  </div>
+               </li>
+            </ol>
+         </nav>
+         <!--!-->
+         <div class="flex flex-col items-start gap-1">
+            <span class="font-medium text-base md:text-2xl">
+               Discover the Top Lawyers in Pakistan on wooqlaw.com
+            </span>
+            <span class="font-normal text-sm text-gray-700">
+               wooqlaw® enables lawyers and law firms to create their own unique online presence for prospective local &
+               international clients. Equipping you with the best legal case management system, court hearing diary, AI
+               powered Legal Research Engine LRE for judgements, document management and a custom website for your
+               business.
+            </span>
+         </div>
+      </div>
       <div class="flex flex-col w-full gap-4 mx-auto md:flex-row md:gap-5">
-         <section class="info-details md:!block" x-data x-on:click.outside="filter = false" x-show="filter" :class="! filter ? '' : 'fixed top-0 left-0 d-block z-50 w-5/6 overflow-y-auto h-screen bg-white p-3'">
-            <button  x-on:click="filter = false" type="button" class="fixed z-50 flex items-center justify-center w-10 h-10 bg-white rounded-full right-6 top-3 md:hidden">
+         <section class="info-details md:!block" x-data x-on:click.outside="filter = false" x-show="filter"
+            :class="! filter ? '' : 'fixed top-0 left-0 d-block z-50 w-5/6 overflow-y-auto h-screen bg-white p-3'">
+            <button x-on:click="filter = false" type="button"
+               class="fixed z-50 flex items-center justify-center w-10 h-10 bg-white rounded-full right-6 top-3 md:hidden">
                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29303 4.79308C4.48056 4.60561 4.73487 4.50029 5.00003 4.50029C5.26519 4.50029 5.5195 4.60561 5.70703 4.79308L10 9.08608L14.293 4.79308C14.3853 4.69757 14.4956 4.62139 14.6176 4.56898C14.7396 4.51657 14.8709 4.48898 15.0036 4.48783C15.1364 4.48668 15.2681 4.51198 15.391 4.56226C15.5139 4.61254 15.6255 4.68679 15.7194 4.78069C15.8133 4.87458 15.8876 4.98623 15.9379 5.10913C15.9881 5.23202 16.0134 5.3637 16.0123 5.49648C16.0111 5.62926 15.9835 5.76048 15.9311 5.88249C15.8787 6.00449 15.8025 6.11483 15.707 6.20708L11.414 10.5001L15.707 14.7931C15.8892 14.9817 15.99 15.2343 15.9877 15.4965C15.9854 15.7587 15.8803 16.0095 15.6948 16.1949C15.5094 16.3803 15.2586 16.4855 14.9964 16.4878C14.7342 16.49 14.4816 16.3892 14.293 16.2071L10 11.9141L5.70703 16.2071C5.51843 16.3892 5.26583 16.49 5.00363 16.4878C4.74143 16.4855 4.49062 16.3803 4.30521 16.1949C4.1198 16.0095 4.01463 15.7587 4.01236 15.4965C4.01008 15.2343 4.11087 14.9817 4.29303 14.7931L8.58603 10.5001L4.29303 6.20708C4.10556 6.01955 4.00024 5.76525 4.00024 5.50008C4.00024 5.23492 4.10556 4.98061 4.29303 4.79308Z" fill="#111928"/>
-               </svg>                  
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                     d="M4.29303 4.79308C4.48056 4.60561 4.73487 4.50029 5.00003 4.50029C5.26519 4.50029 5.5195 4.60561 5.70703 4.79308L10 9.08608L14.293 4.79308C14.3853 4.69757 14.4956 4.62139 14.6176 4.56898C14.7396 4.51657 14.8709 4.48898 15.0036 4.48783C15.1364 4.48668 15.2681 4.51198 15.391 4.56226C15.5139 4.61254 15.6255 4.68679 15.7194 4.78069C15.8133 4.87458 15.8876 4.98623 15.9379 5.10913C15.9881 5.23202 16.0134 5.3637 16.0123 5.49648C16.0111 5.62926 15.9835 5.76048 15.9311 5.88249C15.8787 6.00449 15.8025 6.11483 15.707 6.20708L11.414 10.5001L15.707 14.7931C15.8892 14.9817 15.99 15.2343 15.9877 15.4965C15.9854 15.7587 15.8803 16.0095 15.6948 16.1949C15.5094 16.3803 15.2586 16.4855 14.9964 16.4878C14.7342 16.49 14.4816 16.3892 14.293 16.2071L10 11.9141L5.70703 16.2071C5.51843 16.3892 5.26583 16.49 5.00363 16.4878C4.74143 16.4855 4.49062 16.3803 4.30521 16.1949C4.1198 16.0095 4.01463 15.7587 4.01236 15.4965C4.01008 15.2343 4.11087 14.9817 4.29303 14.7931L8.58603 10.5001L4.29303 6.20708C4.10556 6.01955 4.00024 5.76525 4.00024 5.50008C4.00024 5.23492 4.10556 4.98061 4.29303 4.79308Z"
+                     fill="#111928" />
+               </svg>
             </button>
             <div class="flex flex-col w-full gap-2 mb-3 md:w-56">
                <!-- Availability -->
                <div class="rounded-lg bg-gray-50 drop-shadow hover:bg-gray-100">
                   <div x-disclosure default-open>
                      <h2>
-                        <button type="button" class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600" x-disclosure:button>
+                        <button type="button"
+                           class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600"
+                           x-disclosure:button>
                            <span class="flex items-center gap-1">
                               <span>
                                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -64,8 +113,8 @@
                                  Availability
                               </span>
                            </span>
-                           <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor"
+                              viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd"
                                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                  clip-rule="evenodd"></path>
@@ -75,26 +124,36 @@
                      <div class="px-3 pb-3" x-disclosure:panel>
                         <div class="flex flex-col gap-4">
                            <div class="flex items-center gap-2">
-                              <input id="availability1-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                              <label for="availability1-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Near
-                              me</label>
+                              <input id="availability1-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="availability1-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Near
+                                 me</label>
                            </div>
                            <div class="flex items-center gap-2">
-                              <input id="availability2-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                              <label for="availability2-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Online</label>
+                              <input id="availability2-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="availability2-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Online</label>
                            </div>
                            <div class="flex items-center gap-2">
-                              <input id="availability3-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                              <label for="availability3-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Today</label>
+                              <input id="availability3-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="availability3-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Today</label>
                            </div>
                            <div class="flex items-center gap-2">
-                              <input id="availability4-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                              <label for="availability4-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Tomorrow</label>
+                              <input id="availability4-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="availability4-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Tomorrow</label>
                            </div>
                            <div class="flex items-center gap-2">
-                              <input id="availability5-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <input id="availability5-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
                               <div x-data="{ date : new Date().toISOString().split('T')[0] }" class="w-full">
-                                 <input id="availability5-date" x-bind:value="date" type="date" class="block w-full p-2 pl-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                                 <input id="availability5-date" x-bind:value="date" type="date"
+                                    class="block w-full p-2 pl-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
                                     placeholder="Custom date">
                               </div>
                            </div>
@@ -106,7 +165,9 @@
                <div class="rounded-lg bg-gray-50 drop-shadow hover:bg-gray-100">
                   <div x-disclosure default-open>
                      <h2>
-                        <button type="button" class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600" x-disclosure:button>
+                        <button type="button"
+                           class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600"
+                           x-disclosure:button>
                            <span class="flex items-center gap-1">
                               <span>
                                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -127,8 +188,8 @@
                                  District Court
                               </span>
                            </span>
-                           <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor"
+                              viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd"
                                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                  clip-rule="evenodd"></path>
@@ -140,14 +201,16 @@
                         <div class="hover:bg-gray-100">
                            <div x-disclosure>
                               <h2>
-                                 <button type="button" class="flex items-center justify-between w-full py-1 text-xs font-normal text-gray-600" x-disclosure:button>
+                                 <button type="button"
+                                    class="flex items-center justify-between w-full py-1 text-xs font-normal text-gray-600"
+                                    x-disclosure:button>
                                     <span class="flex items-center gap-1">
                                        <span>
                                           Special Tribunals Court
                                        </span>
                                     </span>
-                                    <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20"
-                                       xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'"
+                                       fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                        <path fill-rule="evenodd"
                                           d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                           clip-rule="evenodd"></path>
@@ -156,37 +219,50 @@
                               </h2>
                               <div class="pt-2 pb-3" x-disclosure:panel>
                                  <div class="flex flex-col gap-4">
-                                 <div class="flex items-center gap-2">
-                                    <input id="special1-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                                    <label for="special1-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Anti-Terrorism
-                                    Courts</label>
-                                 </div>
-                                 <div class="flex items-center gap-2">
-                                    <input id="special2-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                                    <label for="special2-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Consumer Courts
-                                    </label>
-                                 </div>
-                                 <div class="flex items-center gap-2">
-                                    <input id="special3-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                                    <label for="special3-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Anti-Corruption
-                                    Courts
-                                    </label>
-                                 </div>
-                                 <div class="flex items-center gap-2">
-                                    <input id="special4-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                                    <label for="special4-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Income tax
-                                    Tribunals
-                                    </label>
-                                 </div>
-                                 <div class="flex items-center gap-2">
-                                    <input id="special5-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                                    <label for="special5-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Federal Shariat
-                                    court
-                                    </label>
-                                 </div>
-                                 <a class="text-xs font-normal text-violet-700" href="#">
-                                 View More
-                                 </a>
+                                    <div class="flex items-center gap-2">
+                                       <input id="special1-checkbox" type="checkbox" value=""
+                                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                                       <label for="special1-checkbox"
+                                          class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Anti-Terrorism
+                                          Courts</label>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                       <input id="special2-checkbox" type="checkbox" value=""
+                                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                                       <label for="special2-checkbox"
+                                          class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Consumer
+                                          Courts
+                                       </label>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                       <input id="special3-checkbox" type="checkbox" value=""
+                                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                                       <label for="special3-checkbox"
+                                          class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Anti-Corruption
+                                          Courts
+                                       </label>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                       <input id="special4-checkbox" type="checkbox" value=""
+                                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                                       <label for="special4-checkbox"
+                                          class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Income
+                                          tax
+                                          Tribunals
+                                       </label>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                       <input id="special5-checkbox" type="checkbox" value=""
+                                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                                       <label for="special5-checkbox"
+                                          class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Federal
+                                          Shariat
+                                          court
+                                       </label>
+                                    </div>
+                                    <a class="text-xs font-normal text-violet-700" href="#">
+                                       View More
+                                    </a>
                                  </div>
                               </div>
                            </div>
@@ -195,14 +271,16 @@
                         <div class="hover:bg-gray-100">
                            <div x-disclosure>
                               <h2>
-                                 <button type="button" class="flex items-center justify-between w-full py-1 text-xs font-normal text-gray-600" x-disclosure:button>
+                                 <button type="button"
+                                    class="flex items-center justify-between w-full py-1 text-xs font-normal text-gray-600"
+                                    x-disclosure:button>
                                     <span class="flex items-center gap-1">
                                        <span>
                                           Subordinate Courts
                                        </span>
                                     </span>
-                                    <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20"
-                                       xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'"
+                                       fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                        <path fill-rule="evenodd"
                                           d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                           clip-rule="evenodd"></path>
@@ -211,11 +289,13 @@
                               </h2>
                               <div class="pt-2 pb-3" x-disclosure:panel>
                                  <div class="flex flex-col gap-4">
-                                 <div class="flex items-center gap-2">
-                                    <input id="subordinate1-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                                    <label for="subordinate1-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Subordinate
-                                    Courts</label>
-                                 </div>
+                                    <div class="flex items-center gap-2">
+                                       <input id="subordinate1-checkbox" type="checkbox" value=""
+                                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                                       <label for="subordinate1-checkbox"
+                                          class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Subordinate
+                                          Courts</label>
+                                    </div>
                                  </div>
                               </div>
                            </div>
@@ -227,29 +307,31 @@
                <div class="rounded-lg bg-gray-50 drop-shadow hover:bg-gray-100">
                   <div x-disclosure>
                      <h2>
-                        <button type="button" class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600" x-disclosure:button>
+                        <button type="button"
+                           class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600"
+                           x-disclosure:button>
                            <span class="flex items-center gap-1">
                               <span>
                                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <g clip-path="url(#clip0_181369_171233)">
-                                    <path
-                                       d="M9.99984 1.6665C6.77484 1.6665 4.1665 4.27484 4.1665 7.49984C4.1665 10.9748 7.84984 15.7665 9.3665 17.5915C9.69984 17.9915 10.3082 17.9915 10.6415 17.5915C12.1498 15.7665 15.8332 10.9748 15.8332 7.49984C15.8332 4.27484 13.2248 1.6665 9.99984 1.6665ZM9.99984 9.58317C8.84984 9.58317 7.9165 8.64984 7.9165 7.49984C7.9165 6.34984 8.84984 5.4165 9.99984 5.4165C11.1498 5.4165 12.0832 6.34984 12.0832 7.49984C12.0832 8.64984 11.1498 9.58317 9.99984 9.58317Z"
-                                       fill="#4B5563" />
-                                 </g>
-                                 <defs>
-                                    <clipPath id="clip0_181369_171233">
-                                       <rect width="20" height="20" fill="white" />
-                                    </clipPath>
-                                 </defs>
-                              </svg>
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_181369_171233)">
+                                       <path
+                                          d="M9.99984 1.6665C6.77484 1.6665 4.1665 4.27484 4.1665 7.49984C4.1665 10.9748 7.84984 15.7665 9.3665 17.5915C9.69984 17.9915 10.3082 17.9915 10.6415 17.5915C12.1498 15.7665 15.8332 10.9748 15.8332 7.49984C15.8332 4.27484 13.2248 1.6665 9.99984 1.6665ZM9.99984 9.58317C8.84984 9.58317 7.9165 8.64984 7.9165 7.49984C7.9165 6.34984 8.84984 5.4165 9.99984 5.4165C11.1498 5.4165 12.0832 6.34984 12.0832 7.49984C12.0832 8.64984 11.1498 9.58317 9.99984 9.58317Z"
+                                          fill="#4B5563" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_181369_171233">
+                                          <rect width="20" height="20" fill="white" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
                               </span>
                               <span>
                                  City
                               </span>
                            </span>
-                           <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor"
+                              viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd"
                                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                  clip-rule="evenodd"></path>
@@ -257,39 +339,53 @@
                         </button>
                      </h2>
                      <div class="px-3 pb-3" x-disclosure:panel>
-                     <div class="flex flex-col gap-4">
-                        <div class="flex items-center gap-2">
-                           <input id="city1-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="city1-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Karachi</label>
+                        <div class="flex flex-col gap-4">
+                           <div class="flex items-center gap-2">
+                              <input id="city1-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="city1-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Karachi</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="city2-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="city2-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Lahore</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="city3-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="city3-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Faislabad</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="city4-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="city4-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Rawalpindi</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="city5-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="city5-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Gujranwala</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="city6-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="city6-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Peshawar</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="city7-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="city7-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Multan</label>
+                           </div>
+                           <a class="text-xs font-normal text-violet-700" href="#">
+                              View More
+                           </a>
                         </div>
-                        <div class="flex items-center gap-2">
-                           <input id="city2-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="city2-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Lahore</label>
-                        </div>
-                        <div class="flex items-center gap-2">
-                           <input id="city3-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="city3-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Faislabad</label>
-                        </div>
-                        <div class="flex items-center gap-2">
-                           <input id="city4-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="city4-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Rawalpindi</label>
-                        </div>
-                        <div class="flex items-center gap-2">
-                           <input id="city5-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="city5-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Gujranwala</label>
-                        </div>
-                        <div class="flex items-center gap-2">
-                           <input id="city6-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="city6-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Peshawar</label>
-                        </div>
-                        <div class="flex items-center gap-2">
-                           <input id="city7-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="city7-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Multan</label>
-                        </div>
-                        <a class="text-xs font-normal text-violet-700" href="#">
-                        View More
-                        </a>
-                     </div>
                      </div>
                   </div>
                </div>
@@ -297,19 +393,24 @@
                <div class="rounded-lg bg-gray-50 drop-shadow hover:bg-gray-100">
                   <div x-disclosure>
                      <h2>
-                        <button type="button" class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600" x-disclosure:button>
+                        <button type="button"
+                           class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600"
+                           x-disclosure:button>
                            <span class="flex items-center gap-1">
                               <span>
-                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M16.2494 0.9375H13.4369C13.1882 0.9375 12.9498 1.03627 12.774 1.21209C12.5981 1.3879 12.4994 1.62636 12.4994 1.875C12.4994 2.12364 12.5981 2.3621 12.774 2.53791C12.9498 2.71373 13.1882 2.8125 13.4369 2.8125H13.9837L12.8119 3.99219C11.8304 3.22517 10.62 2.80976 9.37437 2.8125C7.96339 2.81168 6.60363 3.34117 5.56476 4.29595C4.5259 5.25074 3.8838 6.56109 3.76581 7.96712C3.64782 9.37316 4.06256 10.7722 4.92777 11.8868C5.79299 13.0013 7.04549 13.75 8.43687 13.9844V15H6.87437C6.62573 15 6.38727 15.0988 6.21146 15.2746C6.03564 15.4504 5.93687 15.6889 5.93687 15.9375C5.93687 16.1861 6.03564 16.4246 6.21146 16.6004C6.38727 16.7762 6.62573 16.875 6.87437 16.875H8.43687V18.125C8.43687 18.3736 8.53564 18.6121 8.71146 18.7879C8.88727 18.9637 9.12573 19.0625 9.37437 19.0625C9.62301 19.0625 9.86147 18.9637 10.0373 18.7879C10.2131 18.6121 10.3119 18.3736 10.3119 18.125V16.875H11.8744C12.123 16.875 12.3615 16.7762 12.5373 16.6004C12.7131 16.4246 12.8119 16.1861 12.8119 15.9375C12.8119 15.6889 12.7131 15.4504 12.5373 15.2746C12.3615 15.0988 12.123 15 11.8744 15H10.3119V13.9844C11.232 13.8286 12.0988 13.4463 12.8344 12.872C13.5699 12.2977 14.151 11.5495 14.5253 10.6947C14.8996 9.83984 15.0554 8.90532 14.9786 7.97531C14.9018 7.0453 14.5948 6.149 14.0853 5.36719L15.3119 4.14062V4.6875C15.3119 4.93614 15.4106 5.1746 15.5865 5.35041C15.7623 5.52623 16.0007 5.625 16.2494 5.625C16.498 5.625 16.7365 5.52623 16.9123 5.35041C17.0881 5.1746 17.1869 4.93614 17.1869 4.6875V1.875C17.1869 1.62636 17.0881 1.3879 16.9123 1.21209C16.7365 1.03627 16.498 0.9375 16.2494 0.9375ZM9.37437 12.1875C8.63269 12.1875 7.90767 11.9676 7.29098 11.5555C6.6743 11.1435 6.19365 10.5578 5.90982 9.87256C5.62599 9.18734 5.55173 8.43334 5.69643 7.70591C5.84112 6.97848 6.19827 6.3103 6.72272 5.78585C7.24717 5.2614 7.91535 4.90425 8.64278 4.75956C9.37021 4.61486 10.1242 4.68912 10.8094 4.97295C11.4947 5.25678 12.0803 5.73743 12.4924 6.35411C12.9044 6.9708 13.1244 7.69582 13.1244 8.4375C13.1244 9.43206 12.7293 10.3859 12.026 11.0892C11.3228 11.7924 10.3689 12.1875 9.37437 12.1875Z" fill="#4B5563"></path>
-                              </svg>
+                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M16.2494 0.9375H13.4369C13.1882 0.9375 12.9498 1.03627 12.774 1.21209C12.5981 1.3879 12.4994 1.62636 12.4994 1.875C12.4994 2.12364 12.5981 2.3621 12.774 2.53791C12.9498 2.71373 13.1882 2.8125 13.4369 2.8125H13.9837L12.8119 3.99219C11.8304 3.22517 10.62 2.80976 9.37437 2.8125C7.96339 2.81168 6.60363 3.34117 5.56476 4.29595C4.5259 5.25074 3.8838 6.56109 3.76581 7.96712C3.64782 9.37316 4.06256 10.7722 4.92777 11.8868C5.79299 13.0013 7.04549 13.75 8.43687 13.9844V15H6.87437C6.62573 15 6.38727 15.0988 6.21146 15.2746C6.03564 15.4504 5.93687 15.6889 5.93687 15.9375C5.93687 16.1861 6.03564 16.4246 6.21146 16.6004C6.38727 16.7762 6.62573 16.875 6.87437 16.875H8.43687V18.125C8.43687 18.3736 8.53564 18.6121 8.71146 18.7879C8.88727 18.9637 9.12573 19.0625 9.37437 19.0625C9.62301 19.0625 9.86147 18.9637 10.0373 18.7879C10.2131 18.6121 10.3119 18.3736 10.3119 18.125V16.875H11.8744C12.123 16.875 12.3615 16.7762 12.5373 16.6004C12.7131 16.4246 12.8119 16.1861 12.8119 15.9375C12.8119 15.6889 12.7131 15.4504 12.5373 15.2746C12.3615 15.0988 12.123 15 11.8744 15H10.3119V13.9844C11.232 13.8286 12.0988 13.4463 12.8344 12.872C13.5699 12.2977 14.151 11.5495 14.5253 10.6947C14.8996 9.83984 15.0554 8.90532 14.9786 7.97531C14.9018 7.0453 14.5948 6.149 14.0853 5.36719L15.3119 4.14062V4.6875C15.3119 4.93614 15.4106 5.1746 15.5865 5.35041C15.7623 5.52623 16.0007 5.625 16.2494 5.625C16.498 5.625 16.7365 5.52623 16.9123 5.35041C17.0881 5.1746 17.1869 4.93614 17.1869 4.6875V1.875C17.1869 1.62636 17.0881 1.3879 16.9123 1.21209C16.7365 1.03627 16.498 0.9375 16.2494 0.9375ZM9.37437 12.1875C8.63269 12.1875 7.90767 11.9676 7.29098 11.5555C6.6743 11.1435 6.19365 10.5578 5.90982 9.87256C5.62599 9.18734 5.55173 8.43334 5.69643 7.70591C5.84112 6.97848 6.19827 6.3103 6.72272 5.78585C7.24717 5.2614 7.91535 4.90425 8.64278 4.75956C9.37021 4.61486 10.1242 4.68912 10.8094 4.97295C11.4947 5.25678 12.0803 5.73743 12.4924 6.35411C12.9044 6.9708 13.1244 7.69582 13.1244 8.4375C13.1244 9.43206 12.7293 10.3859 12.026 11.0892C11.3228 11.7924 10.3689 12.1875 9.37437 12.1875Z"
+                                       fill="#4B5563"></path>
+                                 </svg>
                               </span>
                               <span>
                                  Gender
                               </span>
                            </span>
-                           <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor"
+                              viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd"
                                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                  clip-rule="evenodd"></path>
@@ -317,16 +418,20 @@
                         </button>
                      </h2>
                      <div class="px-3 pb-3" x-disclosure:panel>
-                     <div class="flex flex-col gap-4">
-                        <div class="flex items-center gap-2">
-                           <input id="gender1-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="gender1-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Male</label>
+                        <div class="flex flex-col gap-4">
+                           <div class="flex items-center gap-2">
+                              <input id="gender1-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="gender1-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Male</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="gender2-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="gender2-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Female</label>
+                           </div>
                         </div>
-                        <div class="flex items-center gap-2">
-                           <input id="gender2-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="gender2-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Female</label>
-                        </div>
-                     </div>
                      </div>
                   </div>
                </div>
@@ -334,35 +439,37 @@
                <div class="rounded-lg bg-gray-50 drop-shadow hover:bg-gray-100">
                   <div x-disclosure>
                      <h2>
-                        <button type="button" class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600" x-disclosure:button>
+                        <button type="button"
+                           class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600"
+                           x-disclosure:button>
                            <span class="flex items-center gap-1">
                               <span>
-                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g clip-path="url(#clip0_181369_170163)">
-                                 <path
-                                    d="M16.6649 1.66797H7.77604V4.44575H8.88715V2.77908H16.6649C16.9983 2.77908 17.2205 3.0013 17.2205 3.33464V9.44575C17.2205 9.77908 16.9983 10.0013 16.6649 10.0013H9.44271V13.8902H6.49826L4.44271 15.5013V13.8902H2.77604C2.44271 13.8902 2.22049 13.668 2.22049 13.3346V7.22352C2.22049 6.89019 2.44271 6.66797 2.77604 6.66797H9.99826V5.55686H2.77604C1.8316 5.55686 1.10938 6.27908 1.10938 7.22352V13.3346C1.10938 14.2791 1.8316 15.0013 2.77604 15.0013H3.3316V17.8346L6.8316 15.0013H10.5538V11.1124H16.6649C17.6094 11.1124 18.3316 10.3902 18.3316 9.44575V3.33464C18.3316 2.39019 17.6094 1.66797 16.6649 1.66797Z"
-                                    fill="#4B5563" />
-                                 <path
-                                    d="M3.44141 12.7218H4.77474L5.10807 11.8329H6.8303L7.16363 12.7218H8.49696L6.60807 7.77734H5.27474L3.44141 12.7218ZM5.94141 9.16623L6.49696 10.8885H5.38585L5.94141 9.16623Z"
-                                    fill="#4B5563" />
-                                 <path
-                                    d="M11.1094 9.44314C11.7205 9.44314 12.5538 9.27647 13.3316 8.88759C14.1094 9.27647 14.9983 9.44314 15.5538 9.44314V8.33203C15.5538 8.33203 14.9983 8.33203 14.3872 8.10981C15.0538 7.44314 15.5538 6.44314 15.5538 4.9987V4.44314H13.8872V3.33203H12.776V4.44314H11.1094V5.55425H14.3872C14.276 6.55425 13.8316 7.16536 13.3316 7.55425C12.9983 7.27648 12.6649 6.88759 12.4427 6.38759H11.276C11.4983 7.10981 11.8316 7.66536 12.276 8.10981C11.7205 8.33203 11.2205 8.33203 11.1094 8.33203V9.44314Z"
-                                    fill="#4B5563" />
-                              </g>
-                              <defs>
-                                 <clipPath id="clip0_181369_170163">
-                                    <rect width="20" height="20" fill="white" />
-                                 </clipPath>
-                              </defs>
-                           </svg>
+                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_181369_170163)">
+                                       <path
+                                          d="M16.6649 1.66797H7.77604V4.44575H8.88715V2.77908H16.6649C16.9983 2.77908 17.2205 3.0013 17.2205 3.33464V9.44575C17.2205 9.77908 16.9983 10.0013 16.6649 10.0013H9.44271V13.8902H6.49826L4.44271 15.5013V13.8902H2.77604C2.44271 13.8902 2.22049 13.668 2.22049 13.3346V7.22352C2.22049 6.89019 2.44271 6.66797 2.77604 6.66797H9.99826V5.55686H2.77604C1.8316 5.55686 1.10938 6.27908 1.10938 7.22352V13.3346C1.10938 14.2791 1.8316 15.0013 2.77604 15.0013H3.3316V17.8346L6.8316 15.0013H10.5538V11.1124H16.6649C17.6094 11.1124 18.3316 10.3902 18.3316 9.44575V3.33464C18.3316 2.39019 17.6094 1.66797 16.6649 1.66797Z"
+                                          fill="#4B5563" />
+                                       <path
+                                          d="M3.44141 12.7218H4.77474L5.10807 11.8329H6.8303L7.16363 12.7218H8.49696L6.60807 7.77734H5.27474L3.44141 12.7218ZM5.94141 9.16623L6.49696 10.8885H5.38585L5.94141 9.16623Z"
+                                          fill="#4B5563" />
+                                       <path
+                                          d="M11.1094 9.44314C11.7205 9.44314 12.5538 9.27647 13.3316 8.88759C14.1094 9.27647 14.9983 9.44314 15.5538 9.44314V8.33203C15.5538 8.33203 14.9983 8.33203 14.3872 8.10981C15.0538 7.44314 15.5538 6.44314 15.5538 4.9987V4.44314H13.8872V3.33203H12.776V4.44314H11.1094V5.55425H14.3872C14.276 6.55425 13.8316 7.16536 13.3316 7.55425C12.9983 7.27648 12.6649 6.88759 12.4427 6.38759H11.276C11.4983 7.10981 11.8316 7.66536 12.276 8.10981C11.7205 8.33203 11.2205 8.33203 11.1094 8.33203V9.44314Z"
+                                          fill="#4B5563" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_181369_170163">
+                                          <rect width="20" height="20" fill="white" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
                               </span>
                               <span>
                                  Language
                               </span>
                            </span>
-                           <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor"
+                              viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd"
                                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                  clip-rule="evenodd"></path>
@@ -370,57 +477,81 @@
                         </button>
                      </h2>
                      <div class="px-3 pb-3" x-disclosure:panel>
-                     <div class="flex flex-col gap-4">
-                        <div class="flex items-center gap-2">
-                           <input id="language1-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="language1-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">English</label>
+                        <div class="flex flex-col gap-4">
+                           <div class="flex items-center gap-2">
+                              <input id="language1-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language1-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">English</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language2-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language2-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Urdu</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language3-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language3-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Arabic</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language4-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language4-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Sindhi</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language5-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language5-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Pashto</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language6-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language6-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Balochi</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language7-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language7-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Punjabi</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language8-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language8-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Kashmiri</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language9-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language9-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Saraiki</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language10-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language10-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Hindko</label>
+                           </div>
                         </div>
-                        <div class="flex items-center gap-2">
-                           <input id="language2-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="language2-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Urdu</label>
-                        </div>
-                        <div class="flex items-center gap-2">
-                           <input id="language3-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="language3-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Arabic</label>
-                        </div>
-                        <div class="flex items-center gap-2">
-                           <input id="language4-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="language4-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Sindhi</label>
-                        </div>
-                        <div class="flex items-center gap-2">
-                           <input id="language5-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="language5-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Pashto</label>
-                        </div>
-                        <div class="flex items-center gap-2">
-                           <input id="language6-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="language6-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Balochi</label>
-                        </div>
-                        <div class="flex items-center gap-2">
-                           <input id="language7-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="language7-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Punjabi</label>
-                        </div>
-                        <div class="flex items-center gap-2">
-                           <input id="language8-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="language8-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Kashmiri</label>
-                        </div>
-                        <div class="flex items-center gap-2">
-                           <input id="language9-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="language9-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Saraiki</label>
-                        </div>
-                        <div class="flex items-center gap-2">
-                           <input id="language10-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
-                           <label for="language10-checkbox" class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Hindko</label>
-                        </div>
-                     </div>
                      </div>
                   </div>
                </div>
             </div>
             <div class="sticky bottom-0 flex gap-2 bg-white md:hidden">
-               <button class="px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-lg focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 shrink-0" type="button">
+               <button
+                  class="px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-lg focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 shrink-0"
+                  type="button">
                   Reset
                </button>
-               <button class="px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 grow" type="button" x-on:click="filter = false">
+               <button
+                  class="px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 grow"
+                  type="button" x-on:click="filter = false">
                   Update
                </button>
             </div>
@@ -430,11 +561,29 @@
             <div
                class="@container relative flex w-full flex-col flex-wrap items-start gap-3 rounded-2xl border bg-white min-h-[248px] p-2 @xl:p-4 shadow aos-init aos-animate"
                data-aos="fade-up" data-aos-delay="30">
+               <!-- Search bar -->
+               <div class="relative w-full">
+                  <!--!-->
+                  <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                     <svg class="h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                           d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+                     </svg>
+                  </div>
+                  <input type="text" id="default-search"
+                     class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-sm text-gray-900 focus:border-purple-500 focus:ring-purple-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-purple-500 dark:focus:ring-purple-500"
+                     placeholder="Search" required=""><!--!-->
+                  <button type="button"
+                     class="absolute bottom-2.5 right-2.5 rounded-lg bg-purple-700 px-4 py-2 text-sm font-medium text-white hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">Search</button>
+               </div>
+
+
                <div
                   class="group flex flex-col w-full @xl:flex-row @xl:items-center justify-between gap-2 rounded-xl bg-gradient-to-b  from-yellow-100  p-2">
                   <div class="flex items-center gap-3"><a href="/en-pk/lawyer/arshid+mehmood+kiani844131/"
-                        class="relative flex w-20 h-20 shrink-0"><!--!--><svg class="absolute z-10 top-1 right-1" width="18"
-                           height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        class="relative flex w-20 h-20 shrink-0"><!--!--><svg class="absolute z-10 top-1 right-1"
+                           width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <rect width="18" height="18" rx="4" fill="#FDF6B2"></rect>
                            <path
                               d="M13.4844 10.221L13.5913 9.22658C13.6484 8.69602 13.6861 8.34568 13.6565 8.12494L13.6668 8.125C14.1501 8.125 14.5418 7.73325 14.5418 7.25C14.5418 6.76675 14.1501 6.375 13.6668 6.375C13.1836 6.375 12.7918 6.76675 12.7918 7.25C12.7918 7.46855 12.872 7.66839 13.0044 7.82174C12.8143 7.93913 12.5656 8.18683 12.1913 8.55966L12.1913 8.55967L12.1913 8.55967C11.9029 8.8469 11.7588 8.99052 11.5979 9.01276C11.5088 9.02508 11.418 9.01241 11.3357 8.97617C11.1872 8.91078 11.0882 8.73323 10.8901 8.37814L9.84626 6.50648C9.72409 6.28743 9.62183 6.10408 9.52964 5.95655C9.90784 5.76359 10.1668 5.37037 10.1668 4.91667C10.1668 4.27233 9.6445 3.75 9.00016 3.75C8.35583 3.75 7.8335 4.27233 7.8335 4.91667C7.8335 5.37037 8.09249 5.76359 8.47069 5.95655C8.37849 6.10409 8.27625 6.28741 8.15407 6.50648L7.1102 8.37814C6.91216 8.73323 6.81313 8.91078 6.66462 8.97617C6.58233 9.01241 6.49152 9.02508 6.4024 9.01276C6.24156 8.99052 6.09739 8.8469 5.80904 8.55967C5.43475 8.18684 5.18607 7.93913 4.99589 7.82174C5.12837 7.66839 5.2085 7.46855 5.2085 7.25C5.2085 6.76675 4.81675 6.375 4.3335 6.375C3.85025 6.375 3.4585 6.76675 3.4585 7.25C3.4585 7.73325 3.85025 8.125 4.3335 8.125L4.34383 8.12494C4.31426 8.34568 4.35194 8.69602 4.40901 9.22658L4.51596 10.221C4.57533 10.7729 4.6247 11.2981 4.68517 11.7708H13.3152C13.3756 11.2981 13.425 10.7729 13.4844 10.221Z"
@@ -453,40 +602,46 @@
                      </a><!--!-->
                      <div content="flex flex-col justify-between flex-wrap">
                         <div class="mb-2"><a href="/en-pk/lawyer/arshid+mehmood+kiani844131/"
-                              class="txt flex text-sm @xl:text-base font-medium text-black">Arshid Mehmood Kiani</a><span
-                              class="mb-1 text-sm font-normal txt">
+                              class="txt flex text-sm @xl:text-base font-medium text-black">Arshid Mehmood
+                              Kiani</a><span class="mb-1 text-sm font-normal txt">
                               <h3 class="text-sm font-normal">Advocate High Court</h3>
                            </span></div>
                      </div>
                   </div>
                </div><!--!-->
                <div class="flex flex-col w-full gap-2 group">
-                  <div class="flex items-center gap-2 p-2 font-medium border rounded-lg bg-slate-50 border-slate-100"><!--!-->
+                  <div class="flex items-center gap-2 p-2 font-medium border rounded-lg bg-slate-50 border-slate-100">
+                     <!--!-->
                      <div class="flex gap-1 overflow-x-auto line-clamp-1 scroll">
                         <div
                            class="basis-auto shrink-0 grow-0 md:grow px-3 py-0.5 bg-violet-100 rounded-md justify-start items-center gap-1 inline-flex">
-                           <div class="text-sm font-medium leading-tight text-center text-black">FBR Tax Return Filling</div>
+                           <div class="text-sm font-medium leading-tight text-center text-black">FBR Tax Return Filling
+                           </div>
                         </div>
                         <div
                            class="basis-auto shrink-0 grow-0 md:grow px-3 py-0.5 bg-violet-100 rounded-md justify-start items-center gap-1 inline-flex">
-                           <div class="text-sm font-medium leading-tight text-center text-black">FBR Tax Return Filling</div>
+                           <div class="text-sm font-medium leading-tight text-center text-black">FBR Tax Return Filling
+                           </div>
                         </div>
                         <div
                            class="basis-auto shrink-0 grow-0 md:grow px-3 py-0.5 bg-violet-100 rounded-md justify-start items-center gap-1 inline-flex">
-                           <div class="text-sm font-medium leading-tight text-center text-black">FBR Tax Return Filling</div>
+                           <div class="text-sm font-medium leading-tight text-center text-black">FBR Tax Return Filling
+                           </div>
                         </div>
                         <div
                            class="basis-auto shrink-0 grow-0 md:grow px-3 py-0.5 bg-violet-100 rounded-md justify-start items-center gap-1 inline-flex">
-                           <div class="text-sm font-medium leading-tight text-center text-black">FBR Tax Return Filling</div>
+                           <div class="text-sm font-medium leading-tight text-center text-black">FBR Tax Return Filling
+                           </div>
                         </div>
                         <div
                            class="basis-auto shrink-0 grow-0 md:grow px-3 py-0.5 bg-violet-100 rounded-md justify-start items-center gap-1 inline-flex">
-                           <div class="text-sm font-medium leading-tight text-center text-black">FBR Tax Return Filling</div>
+                           <div class="text-sm font-medium leading-tight text-center text-black">FBR Tax Return Filling
+                           </div>
                         </div>
                      </div>
                   </div>
-                  <div class="flex items-center gap-2 p-2 font-medium border rounded-lg bg-slate-50 border-slate-100"><!--!--><span
-                        class="w-5 h-5 shrink-0"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                  <div class="flex items-center gap-2 p-2 font-medium border rounded-lg bg-slate-50 border-slate-100">
+                     <!--!--><span class="w-5 h-5 shrink-0"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                            xmlns="http://www.w3.org/2000/svg">
                            <path
                               d="M11.8475 2.91637C10.6633 2.36121 9.33627 2.36121 8.1521 2.91637L2.57617 5.53049C1.67951 5.95087 1.44573 7.13627 1.87484 7.95555L1.87484 12.0833C1.87484 12.4285 2.15466 12.7083 2.49984 12.7083C2.84502 12.7083 3.12484 12.4285 3.12484 12.0833V8.89336L8.15218 11.2503C9.33635 11.8055 10.6634 11.8055 11.8476 11.2503L17.4235 8.63617C18.6364 8.06754 18.6364 6.09916 17.4235 5.53053L11.8475 2.91637Z"
@@ -494,7 +649,8 @@
                            <path
                               d="M4.1665 10.7623V13.8545C4.1665 14.6945 4.58609 15.481 5.32095 15.888C6.54459 16.5656 8.50317 17.5 9.99984 17.5C11.4965 17.5 13.4551 16.5656 14.6787 15.888C15.4136 15.481 15.8332 14.6945 15.8332 13.8545V10.7623L12.3782 12.3821C10.8578 13.0949 9.14192 13.0949 7.62157 12.3821L4.1665 10.7623Z"
                               fill="#1C274D"></path>
-                        </svg></span><span class="txt text-xs @xl:text-sm truncate grow">BA, MA, LLM | 25 year(s) experience </span>
+                        </svg></span><span class="txt text-xs @xl:text-sm truncate grow">BA, MA, LLM | 25 year(s)
+                        experience </span>
                   </div>
                   <div class="flex items-center gap-2 p-2 border rounded-lg bg-slate-50 border-slate-100"><!--!--><span
                         class="w-5 h-5 shrink-0"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -503,10 +659,11 @@
                               d="M8.56272 1.87919C8.63238 1.87498 8.706 1.87499 8.80059 1.875H11.1994C11.294 1.87499 11.3676 1.87498 11.4373 1.87919C12.321 1.93271 13.0948 2.49046 13.425 3.31188C13.451 3.37662 13.4743 3.4465 13.5042 3.53623L13.5067 3.54379C13.5762 3.73077 13.7356 3.94338 13.9587 4.11324C13.9835 4.13215 14.0085 4.15 14.0334 4.16681C15.8283 4.1689 16.7652 4.20204 17.411 4.72748C17.5435 4.83527 17.6646 4.95635 17.7724 5.08883C18.3332 5.77808 18.3332 6.79898 18.3332 8.84077C18.3332 9.35888 18.3332 9.61793 18.2075 9.82C18.1831 9.85937 18.1553 9.89662 18.1247 9.93137C17.9672 10.1098 17.7191 10.1842 17.2228 10.3331L13.3332 11.5V10.8333C13.3332 9.91286 12.587 9.16667 11.6665 9.16667H8.33317C7.4127 9.16667 6.6665 9.91286 6.6665 10.8333V11.5L2.77684 10.3331C2.28059 10.1842 2.03246 10.1098 1.87501 9.93137C1.84434 9.89662 1.81663 9.85937 1.79215 9.82C1.6665 9.61793 1.6665 9.35888 1.6665 8.84077C1.6665 6.79898 1.6665 5.77808 2.22732 5.08883C2.33511 4.95635 2.45619 4.83527 2.58867 4.72748C3.23445 4.20204 4.17135 4.1689 5.96628 4.16681C5.99123 4.14999 6.01618 4.13213 6.04103 4.11321C6.26424 3.94332 6.42362 3.7307 6.49308 3.54375C6.52471 3.44886 6.54836 3.37807 6.57498 3.31188C6.9052 2.49046 7.67902 1.93271 8.56272 1.87919ZM12.3487 4.01509C12.3689 4.0664 12.3911 4.11695 12.4152 4.16667H7.58461C7.60866 4.11703 7.63084 4.06656 7.65096 4.01535L7.65225 4.01244L7.65573 4.00418L7.65979 3.99408L7.66361 3.98411L7.66664 3.97582L7.66812 3.97164L7.67165 3.96144L7.67485 3.95203L7.67659 3.94681L7.67887 3.93986L7.68073 3.934L7.68222 3.92918C7.71458 3.83227 7.72515 3.80205 7.73477 3.77813C7.88487 3.40475 8.23661 3.15124 8.63828 3.12691C8.66517 3.12528 8.69812 3.125 8.81761 3.125H11.1824C11.3019 3.125 11.3348 3.12528 11.3617 3.12691C11.7634 3.15124 12.1151 3.40475 12.2652 3.77813C12.2747 3.8017 12.2847 3.83081 12.3176 3.92916L12.319 3.93392L12.3209 3.93982L12.3232 3.94678L12.3249 3.952L12.3281 3.96139L12.3316 3.97157L12.3331 3.97574L12.3362 3.98401L12.3399 3.99392L12.344 4.00393L12.3474 4.01207L12.3487 4.01509ZM11.6665 10.4167H8.33317C8.10305 10.4167 7.9165 10.6032 7.9165 10.8333V12.6346C7.9165 12.8049 8.02023 12.9582 8.17842 13.0214L8.76187 13.2548C9.55657 13.5727 10.4431 13.5727 11.2378 13.2548L11.8212 13.0214C11.9794 12.9582 12.0832 12.8049 12.0832 12.6346V10.8333C12.0832 10.6032 11.8966 10.4167 11.6665 10.4167ZM6.67547 12.8076L2.50472 11.5564C2.5298 14.1518 2.68141 16.5421 3.5981 17.3569C4.69645 18.3332 6.46422 18.3332 9.99975 18.3332C13.5353 18.3332 15.303 18.3332 16.4014 17.3569C17.3181 16.5421 17.4697 14.1518 17.4948 11.5564L13.3242 12.8076C13.2607 13.4182 12.8642 13.9506 12.2855 14.182L11.702 14.4154C10.6093 14.8525 9.39035 14.8525 8.29763 14.4154L7.71419 14.182C7.1355 13.9506 6.73902 13.4182 6.67547 12.8076Z"
                               fill="#1C274C"></path>
                         </svg></span>
-                     <span class="txt text-xs @xl:text-sm truncate grow font-medium">Criminal Law | Civil Law | Constitutional
+                     <span class="txt text-xs @xl:text-sm truncate grow font-medium">Criminal Law | Civil Law |
+                        Constitutional
                         Law</span>
                   </div><!--!-->
-            
+
                   <div class="flex items-center gap-2 p-2 border rounded-lg bg-slate-50 border-slate-100"><!--!--><span
                         class="w-5 h-5 shrink-0"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                            xmlns="http://www.w3.org/2000/svg">
@@ -532,8 +689,568 @@
             <arm-card></arm-card>
          </div>
       </div>
+      <div class="flex flex-col justify-center items-start md:px-24 md:py-2 gap-1 md:gap-2">
+         <span class="font-semibold text-lg md:text-3xl text-gray-700">
+            Are you looking for Top Lawyers in Pakistan?
+         </span>
+         <span class="font-medium text-sm md:text-base text-gray-700">
+            Are you in need of expert legal assistance in Pakistan? Look no further! Welcome to wooqlaw.com, your
+            one-stop destination for finding the best lawyers across the country. Our platform is dedicated to
+            connecting you with top-tier legal professionals who can effectively address your diverse legal needs.
+            Whether you require assistance with corporate law, family law, criminal defence, or any other legal matter,
+            we've got you covered.
+         </span>
+      </div>
+      <div class="flex flex-col justify-center items-start md:px-24 md:py-2 gap-1 md:gap-2">
+         <span class="font-semibold text-lg md:text-3xl text-gray-700">
+            Why Choose the Best Lawyers in Pakistan?
+         </span>
+         <span class="font-medium text-sm md:text-base text-gray-700">
+            When it comes to navigating the complexities of the legal system, expertise and experience are paramount.
+            Our curated selection of the best lawyers in Pakistan brings together seasoned practitioners with proven
+            track records of success. By choosing one of our featured lawyers, you can rest assured that your case will
+            be handled with the utmost professionalism and dedication, leading to optimal outcomes.
+         </span>
+      </div>
+      <div class="flex flex-col justify-center items-start md:px-24 md:py-2 gap-1 md:gap-2">
+         <span class="font-semibold text-base md:text-3xl text-gray-700">
+            Explore Our Dynamic Directory of Top Lawyers.
+         </span>
+         <span class="font-medium text-sm md:text-base text-gray-700">
+            With a dynamic number of top lawyers listed on wooqlaw.com, you have access to a diverse pool of legal
+            talent from various cities and regions across Pakistan. Our comprehensive directory allows you to filter
+            your search based on location, specialisation, and other criteria, making it easy to find the perfect legal
+            representative for your specific needs.
+         </span>
+      </div>
+      <div class="flex flex-col justify-center items-start md:px-24 md:py-2 gap-1 md:gap-2">
+         <span class="font-semibold text-base md:text-3xl text-gray-700">
+            Why Choose wooqlaw®?
+         </span>
+         <span class="font-medium text-sm md:text-base text-gray-700">
+            At wooqlaw.com (Internal link to Home Page), we understand the importance of finding the right lawyer who
+            not only possesses the necessary expertise but also aligns with your specific requirements. Here's why our
+            platform stands out:
+            <br><br>
+            <ol class="list-disc font-normal text-xs md:text-sm text-gray-600 ml-5">
+               <li>
+                  <span class="font-semibold text-sm md:text-base text-gray-700">
+                     Extensive Network:
+                     <span class="font-medium text-sm md:text-base text-gray-700">
+                        Our platform features a diverse pool of experienced lawyers covering a wide range of legal
+                        areas, ensuring you find the perfect match for your case.
+                     </span>
+                  </span>
+               </li>
+               <li>
+                  <span class="font-semibold text-sm md:text-base text-gray-700">
+                     Convenience:
+                     <span class="font-medium text-sm md:text-base text-gray-700">
+                        We believe in transparency throughout the legal process. Each lawyer's profile on our platform
+                        includes comprehensive information about their qualifications, expertise, and client reviews,
+                        empowering you to make informed decisions.</span>
+                  </span>
+               </li>
+               <li>
+                  <span class="font-semibold text-sm md:text-base text-gray-700">
+                     Transparency:
+                     <span class="font-medium text-sm md:text-base text-gray-700">
+                        Finding a lawyer has never been easier. With our intuitive search filters, you can narrow down
+                        your options based on location, gender, area of law, and more, saving you time and effort.
+                     </span>
+                  </span>
+               </li>
+               <li>
+                  <span class="font-semibold text-sm md:text-base text-gray-700">
+                     Quality Assurance:
+                     <span class="font-medium text-sm md:text-base text-gray-700">
+                        We uphold high standards of quality and professionalism among our featured lawyers. Rest
+                        assured, you'll receive top-notch legal assistance tailored to your unique needs.
+                     </span>
+                  </span>
+               </li>
+            </ol>
+         </span>
+      </div>
+      <div class="flex flex-col justify-center items-start md:px-24 md:py-2 gap-1 md:ap-2">
+         <span class="font-semibold text-base md:text-3xl text-gray-700">
+            Legal Resources for Pakistan:
+         </span>
+         <span class="font-medium text-sm md:text-base text-gray-700">
+            In addition to connecting you with trusted lawyers, we strive to empower you with valuable legal knowledge.
+            Explore our curated resources to stay informed about the legal landscape in Pakistan:
+            <br><br>
+            <ol class="list-disc font-normal text-xs md:text-sm text-gray-600 ml-5">
+               <li>
+                  <span class="font-semibold text-sm md:text-base text-gray-700">
+                     Lawguide:
+                     <span class="font-medium text-sm md:text-base text-gray-700">
+                        Access a comprehensive Lawguide on various legal topics relevant to Pakistan(Internal link to
+                        Blog Page), including family law, business law, and more. Our experts break down complex legal
+                        concepts into easily understandable insights.
+                     </span>
+                  </span>
+               </li>
+               <li>
+                  <span class="font-semibold text-sm md:text-base text-gray-700">
+                     FAQs:
+                     <span class="font-medium text-sm md:text-base text-gray-700">
+                        Have questions about the legal process in Pakistan? Browse our frequently asked questions
+                        (Internal link to FAQ Page) section for answers to common queries. From understanding court
+                        procedures to navigating legal documentation, we've got you covered.
+                     </span>
+                  </span>
+               </li>
+               <li>
+                  <span class="font-semibold text-sm md:text-base text-gray-700">
+                     Latest Legal Updates:
+                     <span class="font-medium text-sm md:text-base text-gray-700">
+                        Stay up-to-date with the latest developments in Pakistani law (Internal link to Blog Page). Our
+                        platform features regular updates and analysis on key legal changes, ensuring you remain
+                        informed about important legislative developments.
+                     </span>
+                  </span>
+               </li>
+               <li>
+                  <span class="font-semibold text-sm md:text-base text-gray-700">
+                     Quality Assurance:
+                     <span class="font-medium text-sm md:text-base text-gray-700">
+                        We uphold high standards of quality and professionalism among our featured lawyers. Rest
+                        assured, you'll receive top-notch legal assistance tailored to your unique needs.
+                     </span>
+                  </span>
+               </li>
+            </ol>
+         </span>
+      </div>
+      <!-- Faqs -->
+      <div class="flex flex-col w-full bg-white md:px-24 md:py-2 gap-1 md:gap-2">
+         <div class="flex items-center justify-between">
+            <h2 class="text-base md:text-lg font-medium text-gray-600">
+               Frequently Asked Questions (FAQs):
+            </h2>
+         </div>
+         <div id="faqs" x-data>
+            <div x-disclosure>
+               <h2 class="flex items-center justify-between gap-2 border rounded-md">
+                  <button type="button"
+                     class="flex items-center justify-between w-full p-3 md:p-5 font-medium text-left text-gray-600 bg-gray-100  "
+                     x-disclosure:button>
+                     <span class="flex items-center gap-2">
+                        <svg class="w-5 h-5 shrink-0" viewBox="0 0 20 20" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M18.3333 10.0001C18.3333 14.6025 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6025 1.66666 10.0001C1.66666 5.39771 5.39762 1.66675 9.99999 1.66675C14.6024 1.66675 18.3333 5.39771 18.3333 10.0001ZM9.99999 6.45842C9.48222 6.45842 9.06249 6.87815 9.06249 7.39592C9.06249 7.74109 8.78267 8.02092 8.43749 8.02092C8.09231 8.02092 7.81249 7.74109 7.81249 7.39592C7.81249 6.18779 8.79187 5.20841 9.99999 5.20841C11.2081 5.20841 12.1875 6.18779 12.1875 7.39592C12.1875 7.98828 11.9512 8.52673 11.5691 8.92005C11.4922 8.9992 11.4189 9.07247 11.3489 9.14238C11.1691 9.32209 11.0115 9.47953 10.8732 9.65716C10.6907 9.89168 10.625 10.0641 10.625 10.2084V10.8334C10.625 11.1786 10.3452 11.4584 9.99999 11.4584C9.65481 11.4584 9.37499 11.1786 9.37499 10.8334V10.2084C9.37499 9.66242 9.62916 9.22045 9.8868 8.88942C10.0774 8.64449 10.317 8.40537 10.5115 8.2113C10.5701 8.15276 10.6247 8.09832 10.6725 8.04906C10.8371 7.87961 10.9375 7.65012 10.9375 7.39592C10.9375 6.87815 10.5178 6.45842 9.99999 6.45842ZM9.99999 14.1667C10.4602 14.1667 10.8333 13.7937 10.8333 13.3334C10.8333 12.8732 10.4602 12.5001 9.99999 12.5001C9.53975 12.5001 9.16666 12.8732 9.16666 13.3334C9.16666 13.7937 9.53975 14.1667 9.99999 14.1667Z"
+                              fill="#1C274C" />
+                        </svg>
+                        <span class="font-medium text-sm md:text-base text-gray-900">How can I find a lawyer near
+                           me?</span>
+                     </span>
+                     <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                           d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                           clip-rule="evenodd"></path>
+                     </svg>
+                  </button>
+               </h2>
+               <div x-disclosure:panel>
+                  <div class="p-3 md:p-5 border rounded-b-lg bg-white">
+                     <p class="">
+                        <span class="font-medium text-sm md:text-base text-gray-500">
+                           Answer:
+                        </span class="font-normal text-sm md:text-base text-gray-500"> To find a lawyer near you, simply
+                        utilise our search filters and enter your city or region. Our platform will then display a list
+                        of featured lawyers operating in your area, making it easy for you to connect with legal
+                        professionals in your vicinity.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="faqs" x-data>
+            <div x-disclosure>
+               <h2 class="flex items-center justify-between gap-2 border rounded-md">
+                  <button type="button"
+                     class="flex items-center justify-between w-full p-3 md:p-5 font-medium text-left text-gray-600 bg-gray-100  "
+                     x-disclosure:button>
+                     <span class="flex items-center gap-2">
+                        <svg class="w-5 h-5 shrink-0" viewBox="0 0 20 20" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M18.3333 10.0001C18.3333 14.6025 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6025 1.66666 10.0001C1.66666 5.39771 5.39762 1.66675 9.99999 1.66675C14.6024 1.66675 18.3333 5.39771 18.3333 10.0001ZM9.99999 6.45842C9.48222 6.45842 9.06249 6.87815 9.06249 7.39592C9.06249 7.74109 8.78267 8.02092 8.43749 8.02092C8.09231 8.02092 7.81249 7.74109 7.81249 7.39592C7.81249 6.18779 8.79187 5.20841 9.99999 5.20841C11.2081 5.20841 12.1875 6.18779 12.1875 7.39592C12.1875 7.98828 11.9512 8.52673 11.5691 8.92005C11.4922 8.9992 11.4189 9.07247 11.3489 9.14238C11.1691 9.32209 11.0115 9.47953 10.8732 9.65716C10.6907 9.89168 10.625 10.0641 10.625 10.2084V10.8334C10.625 11.1786 10.3452 11.4584 9.99999 11.4584C9.65481 11.4584 9.37499 11.1786 9.37499 10.8334V10.2084C9.37499 9.66242 9.62916 9.22045 9.8868 8.88942C10.0774 8.64449 10.317 8.40537 10.5115 8.2113C10.5701 8.15276 10.6247 8.09832 10.6725 8.04906C10.8371 7.87961 10.9375 7.65012 10.9375 7.39592C10.9375 6.87815 10.5178 6.45842 9.99999 6.45842ZM9.99999 14.1667C10.4602 14.1667 10.8333 13.7937 10.8333 13.3334C10.8333 12.8732 10.4602 12.5001 9.99999 12.5001C9.53975 12.5001 9.16666 12.8732 9.16666 13.3334C9.16666 13.7937 9.53975 14.1667 9.99999 14.1667Z"
+                              fill="#1C274C" />
+                        </svg>
+                        <span class="font-medium text-sm md:text-base text-gray-900">How can I find the best lawyer for
+                           my case on wooqlaw.com?</span>
+                     </span>
+                     <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                           d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                           clip-rule="evenodd"></path>
+                     </svg>
+                  </button>
+               </h2>
+               <div x-disclosure:panel>
+                  <div class="p-3 md:p-5 border rounded-b-lg bg-white">
+                     <p class="">
+                        <span class="font-medium text-sm md:text-base text-gray-500">
+                           Answer:
+                        </span class="font-normal text-sm md:text-base text-gray-500"> To find a lawyer near you, simply
+                        utilise our search filters and enter your city or region. Our platform will then display a list
+                        of featured lawyers operating in your area, making it easy for you to connect with legal
+                        professionals in your vicinity.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="faqs" x-data>
+            <div x-disclosure>
+               <h2 class="flex items-center justify-between gap-2 border rounded-md">
+                  <button type="button"
+                     class="flex items-center justify-between w-full p-3 md:p-5 font-medium text-left text-gray-600 bg-gray-100  "
+                     x-disclosure:button>
+                     <span class="flex items-center gap-2">
+                        <svg class="w-5 h-5 shrink-0" viewBox="0 0 20 20" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M18.3333 10.0001C18.3333 14.6025 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6025 1.66666 10.0001C1.66666 5.39771 5.39762 1.66675 9.99999 1.66675C14.6024 1.66675 18.3333 5.39771 18.3333 10.0001ZM9.99999 6.45842C9.48222 6.45842 9.06249 6.87815 9.06249 7.39592C9.06249 7.74109 8.78267 8.02092 8.43749 8.02092C8.09231 8.02092 7.81249 7.74109 7.81249 7.39592C7.81249 6.18779 8.79187 5.20841 9.99999 5.20841C11.2081 5.20841 12.1875 6.18779 12.1875 7.39592C12.1875 7.98828 11.9512 8.52673 11.5691 8.92005C11.4922 8.9992 11.4189 9.07247 11.3489 9.14238C11.1691 9.32209 11.0115 9.47953 10.8732 9.65716C10.6907 9.89168 10.625 10.0641 10.625 10.2084V10.8334C10.625 11.1786 10.3452 11.4584 9.99999 11.4584C9.65481 11.4584 9.37499 11.1786 9.37499 10.8334V10.2084C9.37499 9.66242 9.62916 9.22045 9.8868 8.88942C10.0774 8.64449 10.317 8.40537 10.5115 8.2113C10.5701 8.15276 10.6247 8.09832 10.6725 8.04906C10.8371 7.87961 10.9375 7.65012 10.9375 7.39592C10.9375 6.87815 10.5178 6.45842 9.99999 6.45842ZM9.99999 14.1667C10.4602 14.1667 10.8333 13.7937 10.8333 13.3334C10.8333 12.8732 10.4602 12.5001 9.99999 12.5001C9.53975 12.5001 9.16666 12.8732 9.16666 13.3334C9.16666 13.7937 9.53975 14.1667 9.99999 14.1667Z"
+                              fill="#1C274C" />
+                        </svg>
+                        <span class="font-medium text-sm md:text-base text-gray-900">How do I schedule a consultation with a lawyer listed on wooqlaw.com?</span>
+                     </span>
+                     <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                           d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                           clip-rule="evenodd"></path>
+                     </svg>
+                  </button>
+               </h2>
+               <div x-disclosure:panel>
+                  <div class="p-3 md:p-5 border rounded-b-lg bg-white">
+                     <p class="">
+                        <span class="font-medium text-sm md:text-base text-gray-500">
+                           Answer:
+                        </span class="font-normal text-sm md:text-base text-gray-500"> To find a lawyer near you, simply
+                        utilise our search filters and enter your city or region. Our platform will then display a list
+                        of featured lawyers operating in your area, making it easy for you to connect with legal
+                        professionals in your vicinity.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="faqs" x-data>
+            <div x-disclosure>
+               <h2 class="flex items-center justify-between gap-2 border rounded-md">
+                  <button type="button"
+                     class="flex items-center justify-between w-full p-3 md:p-5 font-medium text-left text-gray-600 bg-gray-100  "
+                     x-disclosure:button>
+                     <span class="flex items-center gap-2">
+                        <svg class="w-5 h-5 shrink-0" viewBox="0 0 20 20" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M18.3333 10.0001C18.3333 14.6025 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6025 1.66666 10.0001C1.66666 5.39771 5.39762 1.66675 9.99999 1.66675C14.6024 1.66675 18.3333 5.39771 18.3333 10.0001ZM9.99999 6.45842C9.48222 6.45842 9.06249 6.87815 9.06249 7.39592C9.06249 7.74109 8.78267 8.02092 8.43749 8.02092C8.09231 8.02092 7.81249 7.74109 7.81249 7.39592C7.81249 6.18779 8.79187 5.20841 9.99999 5.20841C11.2081 5.20841 12.1875 6.18779 12.1875 7.39592C12.1875 7.98828 11.9512 8.52673 11.5691 8.92005C11.4922 8.9992 11.4189 9.07247 11.3489 9.14238C11.1691 9.32209 11.0115 9.47953 10.8732 9.65716C10.6907 9.89168 10.625 10.0641 10.625 10.2084V10.8334C10.625 11.1786 10.3452 11.4584 9.99999 11.4584C9.65481 11.4584 9.37499 11.1786 9.37499 10.8334V10.2084C9.37499 9.66242 9.62916 9.22045 9.8868 8.88942C10.0774 8.64449 10.317 8.40537 10.5115 8.2113C10.5701 8.15276 10.6247 8.09832 10.6725 8.04906C10.8371 7.87961 10.9375 7.65012 10.9375 7.39592C10.9375 6.87815 10.5178 6.45842 9.99999 6.45842ZM9.99999 14.1667C10.4602 14.1667 10.8333 13.7937 10.8333 13.3334C10.8333 12.8732 10.4602 12.5001 9.99999 12.5001C9.53975 12.5001 9.16666 12.8732 9.16666 13.3334C9.16666 13.7937 9.53975 14.1667 9.99999 14.1667Z"
+                              fill="#1C274C" />
+                        </svg>
+                        <span class="font-medium text-sm md:text-base text-gray-900">What areas of law do your featured lawyers specialise in?</span>
+                     </span>
+                     <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                           d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                           clip-rule="evenodd"></path>
+                     </svg>
+                  </button>
+               </h2>
+               <div x-disclosure:panel>
+                  <div class="p-3 md:p-5 border rounded-b-lg bg-white">
+                     <p class="">
+                        <span class="font-medium text-sm md:text-base text-gray-500">
+                           Answer:
+                        </span class="font-normal text-sm md:text-base text-gray-500"> To find a lawyer near you, simply
+                        utilise our search filters and enter your city or region. Our platform will then display a list
+                        of featured lawyers operating in your area, making it easy for you to connect with legal
+                        professionals in your vicinity.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="faqs" x-data>
+            <div x-disclosure>
+               <h2 class="flex items-center justify-between gap-2 border rounded-md">
+                  <button type="button"
+                     class="flex items-center justify-between w-full p-3 md:p-5 font-medium text-left text-gray-600 bg-gray-100  "
+                     x-disclosure:button>
+                     <span class="flex items-center gap-2">
+                        <svg class="w-5 h-5 shrink-0" viewBox="0 0 20 20" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M18.3333 10.0001C18.3333 14.6025 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6025 1.66666 10.0001C1.66666 5.39771 5.39762 1.66675 9.99999 1.66675C14.6024 1.66675 18.3333 5.39771 18.3333 10.0001ZM9.99999 6.45842C9.48222 6.45842 9.06249 6.87815 9.06249 7.39592C9.06249 7.74109 8.78267 8.02092 8.43749 8.02092C8.09231 8.02092 7.81249 7.74109 7.81249 7.39592C7.81249 6.18779 8.79187 5.20841 9.99999 5.20841C11.2081 5.20841 12.1875 6.18779 12.1875 7.39592C12.1875 7.98828 11.9512 8.52673 11.5691 8.92005C11.4922 8.9992 11.4189 9.07247 11.3489 9.14238C11.1691 9.32209 11.0115 9.47953 10.8732 9.65716C10.6907 9.89168 10.625 10.0641 10.625 10.2084V10.8334C10.625 11.1786 10.3452 11.4584 9.99999 11.4584C9.65481 11.4584 9.37499 11.1786 9.37499 10.8334V10.2084C9.37499 9.66242 9.62916 9.22045 9.8868 8.88942C10.0774 8.64449 10.317 8.40537 10.5115 8.2113C10.5701 8.15276 10.6247 8.09832 10.6725 8.04906C10.8371 7.87961 10.9375 7.65012 10.9375 7.39592C10.9375 6.87815 10.5178 6.45842 9.99999 6.45842ZM9.99999 14.1667C10.4602 14.1667 10.8333 13.7937 10.8333 13.3334C10.8333 12.8732 10.4602 12.5001 9.99999 12.5001C9.53975 12.5001 9.16666 12.8732 9.16666 13.3334C9.16666 13.7937 9.53975 14.1667 9.99999 14.1667Z"
+                              fill="#1C274C" />
+                        </svg>
+                        <span class="font-medium text-sm md:text-base text-gray-900">Can I choose a lawyer based on their gender?</span>
+                     </span>
+                     <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                           d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                           clip-rule="evenodd"></path>
+                     </svg>
+                  </button>
+               </h2>
+               <div x-disclosure:panel>
+                  <div class="p-3 md:p-5 border rounded-b-lg bg-white">
+                     <p class="">
+                        <span class="font-medium text-sm md:text-base text-gray-500">
+                           Answer:
+                        </span class="font-normal text-sm md:text-base text-gray-500"> To find a lawyer near you, simply
+                        utilise our search filters and enter your city or region. Our platform will then display a list
+                        of featured lawyers operating in your area, making it easy for you to connect with legal
+                        professionals in your vicinity.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="faqs" x-data>
+            <div x-disclosure>
+               <h2 class="flex items-center justify-between gap-2 border rounded-md">
+                  <button type="button"
+                     class="flex items-center justify-between w-full p-3 md:p-5 font-medium text-left text-gray-600 bg-gray-100  "
+                     x-disclosure:button>
+                     <span class="flex items-center gap-2">
+                        <svg class="w-5 h-5 shrink-0" viewBox="0 0 20 20" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M18.3333 10.0001C18.3333 14.6025 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6025 1.66666 10.0001C1.66666 5.39771 5.39762 1.66675 9.99999 1.66675C14.6024 1.66675 18.3333 5.39771 18.3333 10.0001ZM9.99999 6.45842C9.48222 6.45842 9.06249 6.87815 9.06249 7.39592C9.06249 7.74109 8.78267 8.02092 8.43749 8.02092C8.09231 8.02092 7.81249 7.74109 7.81249 7.39592C7.81249 6.18779 8.79187 5.20841 9.99999 5.20841C11.2081 5.20841 12.1875 6.18779 12.1875 7.39592C12.1875 7.98828 11.9512 8.52673 11.5691 8.92005C11.4922 8.9992 11.4189 9.07247 11.3489 9.14238C11.1691 9.32209 11.0115 9.47953 10.8732 9.65716C10.6907 9.89168 10.625 10.0641 10.625 10.2084V10.8334C10.625 11.1786 10.3452 11.4584 9.99999 11.4584C9.65481 11.4584 9.37499 11.1786 9.37499 10.8334V10.2084C9.37499 9.66242 9.62916 9.22045 9.8868 8.88942C10.0774 8.64449 10.317 8.40537 10.5115 8.2113C10.5701 8.15276 10.6247 8.09832 10.6725 8.04906C10.8371 7.87961 10.9375 7.65012 10.9375 7.39592C10.9375 6.87815 10.5178 6.45842 9.99999 6.45842ZM9.99999 14.1667C10.4602 14.1667 10.8333 13.7937 10.8333 13.3334C10.8333 12.8732 10.4602 12.5001 9.99999 12.5001C9.53975 12.5001 9.16666 12.8732 9.16666 13.3334C9.16666 13.7937 9.53975 14.1667 9.99999 14.1667Z"
+                              fill="#1C274C" />
+                        </svg>
+                        <span class="font-medium text-sm md:text-base text-gray-900">How do I know if a lawyer is reputable?</span>
+                     </span>
+                     <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                           d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                           clip-rule="evenodd"></path>
+                     </svg>
+                  </button>
+               </h2>
+               <div x-disclosure:panel>
+                  <div class="p-3 md:p-5 border rounded-b-lg bg-white">
+                     <p class="">
+                        <span class="font-medium text-sm md:text-base text-gray-500">
+                           Answer:
+                        </span class="font-normal text-sm md:text-base text-gray-500"> To find a lawyer near you, simply
+                        utilise our search filters and enter your city or region. Our platform will then display a list
+                        of featured lawyers operating in your area, making it easy for you to connect with legal
+                        professionals in your vicinity.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="faqs" x-data>
+            <div x-disclosure>
+               <h2 class="flex items-center justify-between gap-2 border rounded-md">
+                  <button type="button"
+                     class="flex items-center justify-between w-full p-3 md:p-5 font-medium text-left text-gray-600 bg-gray-100  "
+                     x-disclosure:button>
+                     <span class="flex items-center gap-2">
+                        <svg class="w-5 h-5 shrink-0" viewBox="0 0 20 20" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M18.3333 10.0001C18.3333 14.6025 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6025 1.66666 10.0001C1.66666 5.39771 5.39762 1.66675 9.99999 1.66675C14.6024 1.66675 18.3333 5.39771 18.3333 10.0001ZM9.99999 6.45842C9.48222 6.45842 9.06249 6.87815 9.06249 7.39592C9.06249 7.74109 8.78267 8.02092 8.43749 8.02092C8.09231 8.02092 7.81249 7.74109 7.81249 7.39592C7.81249 6.18779 8.79187 5.20841 9.99999 5.20841C11.2081 5.20841 12.1875 6.18779 12.1875 7.39592C12.1875 7.98828 11.9512 8.52673 11.5691 8.92005C11.4922 8.9992 11.4189 9.07247 11.3489 9.14238C11.1691 9.32209 11.0115 9.47953 10.8732 9.65716C10.6907 9.89168 10.625 10.0641 10.625 10.2084V10.8334C10.625 11.1786 10.3452 11.4584 9.99999 11.4584C9.65481 11.4584 9.37499 11.1786 9.37499 10.8334V10.2084C9.37499 9.66242 9.62916 9.22045 9.8868 8.88942C10.0774 8.64449 10.317 8.40537 10.5115 8.2113C10.5701 8.15276 10.6247 8.09832 10.6725 8.04906C10.8371 7.87961 10.9375 7.65012 10.9375 7.39592C10.9375 6.87815 10.5178 6.45842 9.99999 6.45842ZM9.99999 14.1667C10.4602 14.1667 10.8333 13.7937 10.8333 13.3334C10.8333 12.8732 10.4602 12.5001 9.99999 12.5001C9.53975 12.5001 9.16666 12.8732 9.16666 13.3334C9.16666 13.7937 9.53975 14.1667 9.99999 14.1667Z"
+                              fill="#1C274C" />
+                        </svg>
+                        <span class="font-medium text-sm md:text-base text-gray-900">Are your legal resources applicable to the laws of Pakistan?</span>
+                     </span>
+                     <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                           d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                           clip-rule="evenodd"></path>
+                     </svg>
+                  </button>
+               </h2>
+               <div x-disclosure:panel>
+                  <div class="p-3 md:p-5 border rounded-b-lg bg-white">
+                     <p class="">
+                        <span class="font-medium text-sm md:text-base text-gray-500">
+                           Answer:
+                        </span class="font-normal text-sm md:text-base text-gray-500"> To find a lawyer near you, simply
+                        utilise our search filters and enter your city or region. Our platform will then display a list
+                        of featured lawyers operating in your area, making it easy for you to connect with legal
+                        professionals in your vicinity.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <div class="flex md:flex-row flex-col items-start gap-2 md:px-24 py-2 w-full">
+         <!-- List of lawyers by arae of law in pakistan  -->
+         <div class="flex flex-col items-start p-3 gap-2 w-full">
+            <span class="font-semibold text-xl text-gray-700">
+               List of Lawyers by Areas of Law in Pakistan
+            </span>
+           
+               <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                  <li>
+                    <a href="#">Best Criminal Lawyers in Pakistan</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Family Lawyers in Pakistan</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Civil Lawyers in Pakistan</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Property Lawyers in Pakistan</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Immigration Lawyers in Pakistan</a>
+                  </li>
+               </ol>
+           <a class="font-medium text-sm md:text-base text-blue-600" href="#">Show All</a>
+         </div>
+         <!-- List of lawyers by courts in pakistan -->
+         <div class="flex flex-col items-start p-3 gap-2 w-full">
+            <span class="font-semibold text-xl text-gray-700">
+               List of Lawyers By Courts in Pakistan
+            </span>
+           
+               <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                  <li>
+                    <a href="#">Best Rawalpindi High Court Lawyers in Pakistan</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Anti-Corruption Court Lawyers in Pakistan</a>
+                  </li>
+                  <li>
+                     <a href="#">Best High Court Lawyers in Pakistan</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Supreme Court Lawyers  in Pakistan</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Islamabad High Court Lawyers in Pakistan</a>
+                  </li>
+               </ol>
+           <a class="font-medium text-sm md:text-base text-blue-600" href="#">Show All</a>
+         </div>
+      </div>
+
+      <div class="flex md:flex-row flex-col items-start gap-2 md:px-24 py-2 w-full">
+         <!-- list of lawyers by top cities -->
+         <div class="flex flex-col items-start p-3 gap-2 w-full">
+            <span class="font-semibold text-xl text-gray-700">
+               List of Lawyers By Top Cities in Pakistan
+            </span> 
+               <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                  <li>
+                    <a href="#">Best Lawyers in Islamabad</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Lawyers in Rawalpindi</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Lawyers in Karachi</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Lawyers in Lahore</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Lawyers in Faisalabad</a>
+                  </li>
+               </ol>
+           <a class="font-medium text-sm md:text-base text-blue-600" href="#">Show All</a>
+         </div>
+         <!-- list of female lawyers in top cities -->
+         <div class="flex flex-col items-start p-3 gap-2 w-full">
+            <span class="font-semibold text-xl text-gray-700">
+               List of Female Lawyers in Top Cities of Pakistan
+            </span>
+           
+               <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                  <li>
+                    <a href="#">Best Female Lawyers in Islamabad</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Female Lawyers in Rawalpindi</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Female Lawyers in Karachi</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Female Lawyers in Lahore</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Female Lawyers in Faisalabad</a>
+                  </li>
+               </ol>
+           <a class="font-medium text-sm md:text-base text-blue-600" href="#">Show All</a>
+         </div>
+      </div>
+
+      <div class="flex md:flex-row flex-col items-start gap-2 md:px-24 py-2 w-full">
+         <!-- List of Lawyers in Other Cities Of Pakistan -->
+         <div class="flex flex-col items-start p-3 gap-2 w-full">
+            <span class="font-semibold text-xl text-gray-700">
+               List of Lawyers in Other Cities Of Pakistan
+            </span> 
+               <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                  <li>
+                    <a href="#">Best Lawyers in Muzaffarabad</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Lawyers in Gujar Khan</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Lawyers in Faisalabad</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Lawyers in Chakwal</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Lawyers in Multan</a>
+                  </li>
+               </ol>
+           <a class="font-medium text-sm md:text-base text-blue-600" href="#">Show All</a>
+         </div>
+         <!-- List of Lawyers By Languages in Pakistan -->
+         <div class="flex flex-col items-start p-3 gap-2 w-full">
+            <span class="font-semibold text-xl text-gray-700">
+               List of Lawyers By Languages in Pakistan
+            </span>
+           
+               <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                  <li>
+                    <a href="#">Best English Speaking Lawyers in Pakistan</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Urdu Speaking Lawyers in Pakistan</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Punjabi Speaking Lawyers in Pakistan</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Pashto Speaking Lawyers in Pakistan</a>
+                  </li>
+                  <li>
+                     <a href="#">Best Balochi Speaking Lawyers in Pakistan</a>
+                  </li>
+               </ol>
+           <a class="font-medium text-sm md:text-base text-blue-600" href="#">Show All</a>
+         </div>
+      </div>
    </div>
-   
+
    <script type="module" src="./components/header.js"></script>
    <script type="module" src="./components/card.js"></script>
    <script>
@@ -548,15 +1265,15 @@
       //    }))
       // })
 
-         document.addEventListener('alpine:init', () => {
-            Alpine.data('modal', () => ({
-                  showModal(name) {
-                     this.$dispatch('showModal', { name: name} )
-                  },
-                  closeModal(name) {
-                     this.$dispatch('closeModal', { name: name} )
-                  }
-            }))
+      document.addEventListener('alpine:init', () => {
+         Alpine.data('modal', () => ({
+            showModal(name) {
+               this.$dispatch('showModal', { name: name })
+            },
+            closeModal(name) {
+               this.$dispatch('closeModal', { name: name })
+            }
+         }))
       })
    </script>
 </body>
