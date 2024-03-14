@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Tailwind CSS-->
+   <link href="./css/style.css" rel="stylesheet">
+
+   <!-- Googel Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+   <!-- AlpineJs Scripts -->
+
+   <!-- alpine/tooltip v1.0 -->
+   <script defer src="./js/alpinetooltip.min.js"></script>
+   <!-- @alpinejs/ui v3.12 -->
+   <script defer src="./js/alpineui.min.js"></script>
+   <!-- @alpinejs/focus v3.12 -->
+   <script defer src="./js/alpinefocus.min.js"></script>
+   <!-- alpinejs v3.12 -->
+   <script defer src="./js/alpine.min.js"></script>
+
+   <title>Lawyers</title>
+</head>
+
+<body x-data="{scrolAtTop: false, filter: false}">
+   <arm-header></arm-header>
+   <section class="container">
+      <div class="flex flex-col mx-auto gap-2 md:gap-7 items-center mb-14">
+         <!-- Welcome to wooqlaw.com: Your Gateway to Online Legal Advice in Pakistan -->
+         <div class="flex flex-col gap-2 md:gap-3 md:px-32">
+            <h1 class="font-semibold text-lg md:text-3xl text-gray-900 text-center">
+               Welcome to wooqlaw.com: Your Gateway to Online Legal Advice in Pakistan
+            </h1>
+            <span class="font-medium text-sm md:text-base text-gray-700 text-center">
+               At Wooqlaw, we pride ourselves on being your premier destination for accessing comprehensive listings of legal professionals across Pakistan. Whether you're seeking online legal advice, online lawyers, or online legal consultation, our platform connects you with the right lawyer tailored to your specific needs. With a vast directory of lawyers in Pakistan categorized by areas of law, courts, cities, gender, and languages spoken, finding the perfect legal expert has never been easier.
+            </span>
+         </div>
+         <!-- List of Lawyers by Areas of Law in Pakistan -->
+         <div class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
+            <h2 class="font-semibold text-base md:text-2xl text-gray-900 text-center">
+               List of Lawyers by Areas of Law in Pakistan
+            </h2>
+            <span class="font-medium text-sm md:text-base text-gray-700 text-center max-w-3xl">
+               Navigate through our extensive directory of legal practitioners specializing in various areas of law, including but not limited to:
+            </span>
+            <div class="grid grid-cols-1 md:grid-cols-2">
+               <div class="flex flex-col">
+                  <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                     <li>
+                        <a href="#">Best Criminal Lawyers in Pakistan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Family Lawyers in Pakistan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Civil Lawyers in Pakistan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Property Lawyers in Pakistan</a>
+                     </li>
+                  </ol>
+               </div>
+               <div class="flex flex-col">
+                  <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                     <li>
+                        <a href="#">Best Criminal Lawyers in Pakistan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Family Lawyers in Pakistan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Civil Lawyers in Pakistan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Property Lawyers in Pakistan</a>
+                     </li>
+                  </ol>
+               </div>
+            </div>
+         </div>
+         <!-- List of Lawyers by Courts in Pakistan -->
+         <div class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
+            <h2 class="font-semibold text-base md:text-2xl text-gray-900 text-center">
+               List of Lawyers by Courts in Pakistan
+            </h2>
+            <span class="font-medium text-sm md:text-base text-gray-700 text-center max-w-3xl">
+               Find lawyers proficient in representing clients in different courts across Pakistan, ensuring you receive tailored legal assistance suited to your jurisdictional requirements.
+            </span>
+            <div class="grid grid-cols-1 md:grid-cols-2">
+               <div class="flex flex-col">
+                  <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                     <li>
+                        <a href="#">Best Criminal Court Lawyers in Pakistan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Anti-Corruption Court Lawyers in Pakistan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Banking Court Lawyers in Pakistan</a>
+                     </li>
+                  </ol>
+               </div>
+               <div class="flex flex-col">
+                  <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                     <li>
+                        <a href="#">Best Criminal Court Lawyers in Pakistan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Anti-Corruption Court Lawyers in Pakistan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Banking Court Lawyers in Pakistan</a>
+                     </li>
+                  </ol>
+               </div>
+            </div>
+         </div>
+         <!-- List of Lawyers by Top Cities in Pakistan -->
+         <div class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
+            <h2 class="font-semibold text-base md:text-2xl text-gray-900 text-center">
+               List of Lawyers by Top Cities in Pakistan
+            </h2>
+            <span class="font-medium text-sm md:text-base text-gray-700 text-center max-w-3xl">
+               Discover top-notch legal professionals operating in major cities throughout Pakistan, including Karachi, Lahore, Islamabad, Rawalpindi, Faisalabad, and more.
+            </span>
+            <div class="grid grid-cols-1 md:grid-cols-2">
+               <div class="flex flex-col">
+                  <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                     <li>
+                        <a href="#">Best Lawyers in Islamabad (50 Lawyers Available)</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Rawalpindi (40 Lawyers Available)</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Karachi</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Lahore</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Faislabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Multan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Gujranwala</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Attock</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Peshawar</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Quetta</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Muzaffarabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Gujar Khan</a>
+                     </li>
+                  </ol>
+               </div>
+               <div class="flex flex-col">
+                  <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                     <li>
+                        <a href="#">Best Lawyers in Islamabad (50 Lawyers Available)</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Rawalpindi (40 Lawyers Available)</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Karachi</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Lahore</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Faislabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Multan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Gujranwala</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Attock</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Peshawar</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Quetta</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Muzaffarabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Gujar Khan</a>
+                     </li>
+                  </ol>
+               </div>
+            </div>
+         </div>
+         <!-- List of Female Lawyers in Top Cities of Pakistan -->
+         <div class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
+            <h2 class="font-semibold text-base md:text-2xl text-gray-900 text-center">
+               List of Female Lawyers in Top Cities of Pakistan
+            </h2>
+            <span class="font-medium text-sm md:text-base text-gray-700 text-center max-w-3xl">
+               Empowering our users with inclusivity, we present a dedicated list of proficient female lawyers practising in key cities across Pakistan, ensuring diversity and representation in legal services.
+            </span>
+            <div class="grid grid-cols-1 md:grid-cols-2">
+               <div class="flex flex-col">
+                  <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                     <li>
+                        <a href="#">Best Female Lawyers in Islamabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Rawalpindi</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Karachi</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Lahore</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Faislabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Multan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Gujranwala</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Attock</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Peshawar</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Quetta</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Muzaffarabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Gujar Khan</a>
+                     </li>
+                  </ol>
+               </div>
+               <div class="flex flex-col">
+                  <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                     <li>
+                        <a href="#">Best Female Lawyers in Islamabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Rawalpindi</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Karachi</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Lahore</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Faislabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Multan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Gujranwala</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Attock</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Peshawar</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Quetta</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Muzaffarabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Female Lawyers in Gujar Khan</a>
+                     </li>
+                  </ol>
+               </div>
+            </div>
+         </div>
+         <!-- List of Male Lawyers in Top Cities of Pakistan -->
+         <div class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
+            <h2 class="font-semibold text-base md:text-2xl text-gray-900 text-center">
+               List of Male Lawyers in Top Cities of Pakistan
+            </h2>
+            <span class="font-medium text-sm md:text-base text-gray-700 text-center max-w-3xl">
+               Explore a comprehensive compilation of male lawyers practising in prominent cities across Pakistan, offering diverse legal expertise to cater to your specific legal needs.
+            </span>
+            <div class="grid grid-cols-1 md:grid-cols-2">
+               <div class="flex flex-col">
+                  <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                     <li>
+                        <a href="#">Best Male Lawyers in Islamabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Rawalpindi</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Karachi</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Lahore</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Faislabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Multan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Gujranwala</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Attock</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Peshawar</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Quetta</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Muzaffarabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Gujar Khan</a>
+                     </li>
+                  </ol>
+               </div>
+               <div class="flex flex-col">
+                  <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                     <li>
+                        <a href="#">Best Male Lawyers in Islamabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Rawalpindi</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Karachi</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Lahore</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Faislabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Multan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Gujranwala</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Attock</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Peshawar</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Quetta</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Muzaffarabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Male Lawyers in Gujar Khan</a>
+                     </li>
+                  </ol>
+               </div>
+            </div>
+         </div>
+         <!-- List of Lawyers in All Cities of Pakistan -->
+         <div class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
+            <h2 class="font-semibold text-base md:text-2xl text-gray-900 text-center">
+               List of Lawyers in All Cities of Pakistan
+            </h2>
+            <span class="font-medium text-sm md:text-base text-gray-700 text-center max-w-3xl">
+               Access an exhaustive directory of online lawyers spanning all cities in Pakistan, guaranteeing accessibility to legal assistance regardless of your location.
+            </span>
+            <div class="grid grid-cols-1 md:grid-cols-2">
+               <div class="flex flex-col">
+                  <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                     <li>
+                        <a href="#">Best Lawyers in Muzafrabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Gujar Khan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Faisalabad</a>
+                     </li>
+                  </ol>
+               </div>
+               <div class="flex flex-col">
+                  <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                     <li>
+                        <a href="#">Best Lawyers in Muzafrabad</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Gujar Khan</a>
+                     </li>
+                     <li>
+                        <a href="#">Best Lawyers in Faisalabad</a>
+                     </li>
+                  </ol>
+               </div>
+            </div>
+         </div>
+         <!-- List of Lawyers By Languages in Pakistan -->
+         <div class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
+            <h2 class="font-semibold text-base md:text-2xl text-gray-900 text-center">
+               List of Lawyers By Languages in Pakistan
+            </h2>
+            <span class="font-medium text-sm md:text-base text-gray-700 text-center max-w-3xl">
+               Language is no barrier when it comes to legal representation. Find lawyers proficient in various languages spoken across Pakistan, ensuring effective communication and understanding between you and your legal representative.
+            </span>
+            <div class="grid grid-cols-1 md:grid-cols-2">
+               <div class="flex flex-col">
+                  <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                     <li>
+                        <a href="#">English Speaking Lawyers in Pakistan</a>
+                     </li>
+                     <li>
+                        <a href="#">Urdu Speaking Lawyers in Pakistan</a>
+                     </li>
+                     <li>
+                        <a href="#">Punjabi Speaking Lawyers in Pakistan</a>
+                     </li>
+                  </ol>
+               </div>
+               <div class="flex flex-col">
+                  <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+                     <li>
+                        <a href="#">English Speaking Lawyers in Pakistan</a>
+                     </li>
+                     <li>
+                        <a href="#">Urdu Speaking Lawyers in Pakistan</a>
+                     </li>
+                     <li>
+                        <a href="#">Punjabi Speaking Lawyers in Pakistan</a>
+                     </li>
+                  </ol>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- CTA -->
+   <arm-cta></arm-cta>
+   <!-- Quick Links -->
+   <arm-quicklinks></arm-quicklinks>
+   <!-- Quick Links -->
+   <arm-footer></arm-footer>
+
+   <script>
+      // document.addEventListener('alpine:init', () => {
+      //    Alpine.data('modal', () => ({
+      //          showModal(name) {
+      //             this.$dispatch('showModal', { name: name} )
+      //          },
+      //          closeModal(name) {
+      //             this.$dispatch('closeModal', { name: name} )
+      //          }
+      //    }))
+      // })
+
+      document.addEventListener('alpine:init', () => {
+         Alpine.data('modal', () => ({
+            showModal(name) {
+               this.$dispatch('showModal', { name: name })
+            },
+            closeModal(name) {
+               this.$dispatch('closeModal', { name: name })
+            }
+         }))
+      })
+   </script>
+
+   <script type="module" src="./components/header.js"></script>
+   <script type="module" src="./components/card.js"></script>
+   <script type="module" src="./components/cta.js"></script>
+   <script type="module" src="./components/quicklinks.js"></script>
+   <script type="module" src="./components/footer.js"></script>
+
+</body>
+
+</html>

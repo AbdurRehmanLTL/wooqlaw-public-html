@@ -1,6 +1,5 @@
 /*
 ! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
-! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
 *//*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -1368,9 +1367,6 @@ select {
 }
 .w-px {
   width: 1px;
-}
-.w-\[560px\] {
-  width: 560px;
 }
 .max-w-2xl {
   max-width: 42rem;
@@ -3745,24 +3741,16 @@ select {
     width: 460px !important;
   }
 
+  .sm\:\!w-\[560px\] {
+    width: 560px !important;
+  }
+
   .sm\:w-96 {
     width: 24rem;
   }
 
   .sm\:w-auto {
     width: auto;
-  }
-
-  .sm\:\!w-\[560px\] {
-    width: 560px !important;
-  }
-
-  .sm\:w-\[560px\] {
-    width: 560px;
-  }
-
-  .sm\:\!w-\[520px\] {
-    width: 520px !important;
   }
 
   .sm\:max-w-xl {
@@ -4576,6 +4564,11 @@ select {
   .md\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+
+  .md\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 
   .md\:px-4 {
