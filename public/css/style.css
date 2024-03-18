@@ -1079,6 +1079,15 @@ select {
 .mt-8 {
   margin-top: 2rem;
 }
+.mt-10 {
+  margin-top: 2.5rem;
+}
+.mt-20 {
+  margin-top: 5rem;
+}
+.mt-12 {
+  margin-top: 3rem;
+}
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -3575,8 +3584,6 @@ select {
     font-size: 0.75rem;
     line-height: 1rem;
   }
-}:is([dir="rtl"] .rtl\:text-right) {
-  text-align: right;
 }:is([dir="rtl"] .peer:checked ~ .rtl\:peer-checked\:after\:-translate-x-full)::after {
   content: var(--tw-content);
   --tw-translate-x: -100%;
