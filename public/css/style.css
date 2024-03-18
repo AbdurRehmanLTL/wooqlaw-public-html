@@ -878,6 +878,21 @@ select {
 .top-3 {
   top: 0.75rem;
 }
+.left-56 {
+  left: 14rem;
+}
+.top-28 {
+  top: 7rem;
+}
+.left-28 {
+  left: 7rem;
+}
+.top-20 {
+  top: 5rem;
+}
+.left-36 {
+  left: 9rem;
+}
 .-z-10 {
   z-index: -10;
 }
@@ -1084,15 +1099,6 @@ select {
 }
 .mt-8 {
   margin-top: 2rem;
-}
-.mt-10 {
-  margin-top: 2.5rem;
-}
-.mt-20 {
-  margin-top: 5rem;
-}
-.mt-12 {
-  margin-top: 3rem;
 }
 .line-clamp-1 {
   overflow: hidden;
@@ -3887,6 +3893,14 @@ iframe {
     inset: 0px;
   }
 
+  .sm\:left-36 {
+    left: 9rem;
+  }
+
+  .sm\:top-20 {
+    top: 5rem;
+  }
+
   .sm\:col-span-3 {
     grid-column: span 3 / span 3;
   }
@@ -4000,6 +4014,46 @@ iframe {
 
   .md\:top-5 {
     top: 1.25rem;
+  }
+
+  .md\:left-56 {
+    left: 14rem;
+  }
+
+  .md\:top-28 {
+    top: 7rem;
+  }
+
+  .md\:left-28 {
+    left: 7rem;
+  }
+
+  .md\:top-16 {
+    top: 4rem;
+  }
+
+  .md\:top-20 {
+    top: 5rem;
+  }
+
+  .md\:left-36 {
+    left: 9rem;
+  }
+
+  .md\:top-24 {
+    top: 6rem;
+  }
+
+  .md\:left-44 {
+    left: 11rem;
+  }
+
+  .md\:left-48 {
+    left: 12rem;
+  }
+
+  .md\:left-52 {
+    left: 13rem;
   }
 
   .md\:order-1 {
@@ -4980,6 +5034,18 @@ iframe {
   }
 }
 @media (min-width: 1024px) {
+
+  .lg\:left-56 {
+    left: 14rem;
+  }
+
+  .lg\:top-28 {
+    top: 7rem;
+  }
+
+  .lg\:left-40 {
+    left: 10rem;
+  }
 
   .lg\:mb-28 {
     margin-bottom: 7rem;
