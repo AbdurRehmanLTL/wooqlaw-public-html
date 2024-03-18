@@ -26,6 +26,23 @@
    <script defer src="./js/alpine.min.js"></script>
 
    <title>Lawyers</title>
+
+   <script>
+      function goToSection() {
+          // Get the hash value from the URL
+          var hash = window.location.hash;
+          
+          // Scroll to the section with the specified ID
+          if (hash) {
+              var element = document.querySelector(hash);
+              if (element) {
+                  element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+          }
+      }
+      window.onload = goToSection;
+  </script>
+
 </head>
 
 <body x-data="{scrolAtTop: false, filter: false}">
@@ -42,7 +59,7 @@
             </span>
          </div>
          <!-- List of Lawyers by Areas of Law in Pakistan -->
-         <div class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
+         <div id="list_of_lawyers_by_areas_of_law-in-pakistan" class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
             <h2 class="font-semibold text-base md:text-2xl text-gray-900 text-center">
                List of Lawyers by Areas of Law in Pakistan
             </h2>
@@ -85,7 +102,7 @@
             </div>
          </div>
          <!-- List of Lawyers by Courts in Pakistan -->
-         <div class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
+         <div id="list_of_lawyers_by_courts_in_pakistan" class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
             <h2 class="font-semibold text-base md:text-2xl text-gray-900 text-center">
                List of Lawyers by Courts in Pakistan
             </h2>
@@ -122,7 +139,7 @@
             </div>
          </div>
          <!-- List of Lawyers by Top Cities in Pakistan -->
-         <div class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
+         <div id="list_of_lawyers_by_top-cities-in-pakistan" class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
             <h2 class="font-semibold text-base md:text-2xl text-gray-900 text-center">
                List of Lawyers by Top Cities in Pakistan
             </h2>
@@ -213,7 +230,7 @@
             </div>
          </div>
          <!-- List of Female Lawyers in Top Cities of Pakistan -->
-         <div class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
+         <div id="list of female lawyers in top cities" class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
             <h2 class="font-semibold text-base md:text-2xl text-gray-900 text-center">
                List of Female Lawyers in Top Cities of Pakistan
             </h2>
@@ -304,7 +321,7 @@
             </div>
          </div>
          <!-- List of Male Lawyers in Top Cities of Pakistan -->
-         <div class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
+         <div id="" class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
             <h2 class="font-semibold text-base md:text-2xl text-gray-900 text-center">
                List of Male Lawyers in Top Cities of Pakistan
             </h2>
@@ -395,7 +412,7 @@
             </div>
          </div>
          <!-- List of Lawyers in All Cities of Pakistan -->
-         <div class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
+         <div id="list_of_lawyers_in_other_cities_of_pakistan" class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
             <h2 class="font-semibold text-base md:text-2xl text-gray-900 text-center">
                List of Lawyers in All Cities of Pakistan
             </h2>
@@ -432,7 +449,7 @@
             </div>
          </div>
          <!-- List of Lawyers By Languages in Pakistan -->
-         <div class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
+         <div id="list_of_lawyers_by_languages_in_pakistan" class="flex flex-col gap-2 md:gap-4 px-5 md:px-10 py-5 bg-white rounded-lg shadow">
             <h2 class="font-semibold text-base md:text-2xl text-gray-900 text-center">
                List of Lawyers By Languages in Pakistan
             </h2>
