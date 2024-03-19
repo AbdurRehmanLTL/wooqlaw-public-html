@@ -1229,6 +1229,12 @@ select {
 .h-screen {
   height: 100vh;
 }
+.h-\[3\] {
+  height: 3;
+}
+.h-\[12\] {
+  height: 12;
+}
 .max-h-\[100dvh\] {
   max-height: 100dvh;
 }
@@ -1385,6 +1391,18 @@ select {
 }
 .w-px {
   width: 1px;
+}
+.w-1 {
+  width: 0.25rem;
+}
+.w-\[1\] {
+  width: 1;
+}
+.w-\[16\] {
+  width: 16;
+}
+.w-\[4\] {
+  width: 4;
 }
 .max-w-2xl {
   max-width: 42rem;
