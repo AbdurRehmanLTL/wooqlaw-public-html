@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Tailwind CSS-->
+   <link href="./css/style.css" rel="stylesheet">
+
+   <!-- Googel Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet">
+
+   <!-- AlpineJs Scripts -->
+
+   <!-- alpine/tooltip v1.0 -->
+   <script defer src="./js/alpinetooltip.min.js"></script>
+   <!-- @alpinejs/ui v3.12 -->
+   <script defer src="./js/alpineui.min.js"></script>
+   <!-- @alpinejs/focus v3.12 -->
+   <script defer src="./js/alpinefocus.min.js"></script>
+   <!-- alpinejs v3.12 -->
+   <script defer src="./js/alpine.min.js"></script>
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+   <title>Listing - wooqlaw</title>
+</head>
+
+<body x-data="{scrolAtTop: false, filter: false}">
+   <arm-header></arm-header>
+   <div class="flex flex-col gap-2 md:gap-7 container">
+
+      <div class="flex flex-col gap-2">
+         <nav class="flex hidden md:block" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+               <li class="inline-flex items-center"><a href="en-pk/"
+                     class="inline-flex items-center text-sm font-medium text-gray-900 hover:text-blue-600 dark:hover:text-white"><!--!-->
+                     <img class="w-5 h-5 mr-2" src="images/listingpage/home-1.svg" alt="">
+                     Home
+                  </a></li>
+               <!--!-->
+               <li aria-current="page">
+                  <div class="flex items-center">
+                     <img class="w-6 h-6 text-gray-400" src="images/listingpage/chevron-right.svg" alt="">
+                     <span class="ml-1 text-sm font-medium text-gray-700 md:ml-2">Find Lawyer</span>
+                  </div>
+               </li>
+            </ol>
+         </nav>
+         <!--!-->
+         <div class="flex flex-col items-start gap-1">
+            <h1 class="font-medium text-base md:text-2xl text-gray-900">
+               Discover the Best Lawyers in Pakistan on wooqlaw.com
+            </h1>
+            <p class="font-normal text-xs md:text-sm text-gray-700">
+               wooqlaw® enables lawyers and law firms to create their own unique online presence for prospective local &
+               international clients. Equipping you with the best legal case management system, court hearing diary, AI
+               powered Legal Research Engine LRE for judgements, document management and a custom website for your
+               business.
+            </p>
+         </div>
+      </div>
+      <div class="flex flex-col w-full gap-4 mx-auto md:flex-row md:gap-5">
+         <section class="info-details md:!block" x-data x-on:click.outside="filter = false" x-show="filter"
+            :class="! filter ? '' : 'fixed top-0 left-0 d-block z-50 w-5/6 overflow-y-auto h-screen bg-white p-3'">
+            <button x-on:click="filter = false" type="button"
+               class="fixed z-50 flex items-center justify-center w-10 h-10 bg-white rounded-full right-6 top-3 md:hidden">
+               <img class="w-5 h-5 shrink-0" src="images/listingpage/close.svg" alt="">
+            </button>
+            <div class="flex flex-col w-full gap-2 mb-3 md:w-56">
+               <!-- Availability -->
+               <div class="rounded-lg bg-gray-50 drop-shadow hover:bg-gray-100">
+                  <div x-disclosure default-open>
+                     <h2>
+                        <button type="button"
+                           class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600"
+                           x-disclosure:button>
+                           <span class="flex items-center gap-1">
+                              <span>
+                                 <img class="w-5 h-5 shrink-0" src="images/listingpage/law-area.svg" alt="">
+                              </span>
+                              <span>
+                                 Availability
+                              </span>
+                           </span>
+                           <img :class="$disclosure.isOpen && 'rotate-180'" class="w-4 h-4 shrink-0"
+                              src="images/listingpage/chevron-down-1.svg" alt="">
+                        </button>
+                     </h2>
+                     <div class="px-3 pb-3" x-disclosure:panel>
+                        <div class="flex flex-col gap-4">
+                           <div class="flex items-center gap-2">
+                              <input id="availability1-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="availability1-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Near
+                                 me</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="availability2-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="availability2-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Online</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="availability3-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="availability3-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Today</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="availability4-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="availability4-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Tomorrow</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="availability5-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <div x-data="{ date : new Date().toISOString().split('T')[0] }" class="w-full">
+                                 <input id="availability5-date" x-bind:value="date" type="date"
+                                    class="block w-full p-2 pl-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                                    placeholder="Custom date">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- District Court -->
+               <div class="rounded-lg bg-gray-50 drop-shadow hover:bg-gray-100">
+                  <div x-disclosure default-open>
+                     <h2>
+                        <button type="button"
+                           class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600"
+                           x-disclosure:button>
+                           <span class="flex items-center gap-1">
+                              <span>
+                                 <img class="w-5 h-5 shrink-0" src="images/listingpage/district-court.svg" alt="">
+                              </span>
+                              <span>
+                                 District Court
+                              </span>
+                           </span>
+                           <img :class="$disclosure.isOpen && 'rotate-180'" class="w-4 h-4 shrink-0"
+                              src="images/listingpage/chevron-down-1.svg" alt="">
+                        </button>
+                     </h2>
+                     <div class="px-3 pb-3" x-disclosure:panel>
+                        <!-- Special Tribunals Court -->
+                        <div class="hover:bg-gray-100">
+                           <div x-disclosure>
+                              <h2>
+                                 <button type="button"
+                                    class="flex items-center justify-between w-full py-1 text-xs font-normal text-gray-600"
+                                    x-disclosure:button>
+                                    <span class="flex items-center gap-1">
+                                       <span>
+                                          Special Tribunals Court
+                                       </span>
+                                    </span>
+                                    <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'"
+                                       fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                       <path fill-rule="evenodd"
+                                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                          clip-rule="evenodd"></path>
+                                    </svg>
+                                 </button>
+                              </h2>
+                              <div class="pt-2 pb-3" x-disclosure:panel>
+                                 <div class="flex flex-col gap-4">
+                                    <div class="flex items-center gap-2">
+                                       <input id="special1-checkbox" type="checkbox" value=""
+                                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                                       <label for="special1-checkbox"
+                                          class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Anti-Terrorism
+                                          Courts</label>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                       <input id="special2-checkbox" type="checkbox" value=""
+                                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                                       <label for="special2-checkbox"
+                                          class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Consumer
+                                          Courts
+                                       </label>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                       <input id="special3-checkbox" type="checkbox" value=""
+                                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                                       <label for="special3-checkbox"
+                                          class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Anti-Corruption
+                                          Courts
+                                       </label>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                       <input id="special4-checkbox" type="checkbox" value=""
+                                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                                       <label for="special4-checkbox"
+                                          class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Income
+                                          tax
+                                          Tribunals
+                                       </label>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                       <input id="special5-checkbox" type="checkbox" value=""
+                                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                                       <label for="special5-checkbox"
+                                          class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Federal
+                                          Shariat
+                                          court
+                                       </label>
+                                    </div>
+                                    <a class="text-xs font-normal text-violet-700" href="#">
+                                       View More
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Subordinate Courts -->
+                        <div class="hover:bg-gray-100">
+                           <div x-disclosure>
+                              <h2>
+                                 <button type="button"
+                                    class="flex items-center justify-between w-full py-1 text-xs font-normal text-gray-600"
+                                    x-disclosure:button>
+                                    <span class="flex items-center gap-1">
+                                       <span>
+                                          Subordinate Courts
+                                       </span>
+                                    </span>
+                                    <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'"
+                                       fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                       <path fill-rule="evenodd"
+                                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                          clip-rule="evenodd"></path>
+                                    </svg>
+                                 </button>
+                              </h2>
+                              <div class="pt-2 pb-3" x-disclosure:panel>
+                                 <div class="flex flex-col gap-4">
+                                    <div class="flex items-center gap-2">
+                                       <input id="subordinate1-checkbox" type="checkbox" value=""
+                                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                                       <label for="subordinate1-checkbox"
+                                          class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Subordinate
+                                          Courts</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- City -->
+               <div class="rounded-lg bg-gray-50 drop-shadow hover:bg-gray-100">
+                  <div x-disclosure>
+                     <h2>
+                        <button type="button"
+                           class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600"
+                           x-disclosure:button>
+                           <span class="flex items-center gap-1">
+                              <span>
+                                 <img class="w-5 h-5 shrink-0" src="images/listingpage/city.svg" alt="">
+                              </span>
+                              <span>
+                                 City
+                              </span>
+                           </span>
+                           <img :class="$disclosure.isOpen && 'rotate-180'" class="w-4 h-4 shrink-0"
+                              src="images/listingpage/chevron-down-1.svg" alt="">
+                        </button>
+                     </h2>
+                     <div class="px-3 pb-3" x-disclosure:panel>
+                        <div class="flex flex-col gap-4">
+                           <div class="flex items-center gap-2">
+                              <input id="city1-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="city1-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Karachi</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="city2-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="city2-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Lahore</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="city3-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="city3-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Faislabad</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="city4-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="city4-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Rawalpindi</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="city5-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="city5-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Gujranwala</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="city6-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="city6-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Peshawar</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="city7-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="city7-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Multan</label>
+                           </div>
+                           <a class="text-xs font-normal text-violet-700" href="#">
+                              View More
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Gender -->
+               <div class="rounded-lg bg-gray-50 drop-shadow hover:bg-gray-100">
+                  <div x-disclosure>
+                     <h2>
+                        <button type="button"
+                           class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600"
+                           x-disclosure:button>
+                           <span class="flex items-center gap-1">
+                              <img class="w-5 h-5 shrink-0" src="images/listingpage/gender.svg" alt="">
+                              <span>
+                                 Gender
+                              </span>
+                           </span>
+                           <img :class="$disclosure.isOpen && 'rotate-180'" class="w-4 h-4 shrink-0"
+                              src="images/listingpage/chevron-down-1.svg" alt="">
+                        </button>
+                     </h2>
+                     <div class="px-3 pb-3" x-disclosure:panel>
+                        <div class="flex flex-col gap-4">
+                           <div class="flex items-center gap-2">
+                              <input id="gender1-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="gender1-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Male</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="gender2-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="gender2-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Female</label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Language -->
+               <div class="rounded-lg bg-gray-50 drop-shadow hover:bg-gray-100">
+                  <div x-disclosure>
+                     <h2>
+                        <button type="button"
+                           class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600"
+                           x-disclosure:button>
+                           <span class="flex items-center gap-1">
+                              <img class="w-5 h-5 shrink-0" src="images/listingpage/language.svg" alt="">
+                              <span>
+                                 Language
+                              </span>
+                           </span>
+                           <img :class="$disclosure.isOpen && 'rotate-180'" class="w-4 h-4 shrink-0"
+                              src="images/listingpage/chevron-down-1.svg" alt="">
+                        </button>
+                     </h2>
+                     <div class="px-3 pb-3" x-disclosure:panel>
+                        <div class="flex flex-col gap-4">
+                           <div class="flex items-center gap-2">
+                              <input id="language1-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language1-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">English</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language2-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language2-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Urdu</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language3-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language3-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Arabic</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language4-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language4-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Sindhi</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language5-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language5-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Pashto</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language6-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language6-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Balochi</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language7-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language7-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Punjabi</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language8-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language8-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Kashmiri</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language9-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language9-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Saraiki</label>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <input id="language10-checkbox" type="checkbox" value=""
+                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 peer">
+                              <label for="language10-checkbox"
+                                 class="text-xs font-normal text-gray-600 cursor-pointer peer-checked:text-black">Hindko</label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sticky bottom-0 flex gap-2 bg-white md:hidden">
+               <button
+                  class="px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-lg focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 shrink-0"
+                  type="button">
+                  Reset
+               </button>
+               <button
+                  class="px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 grow"
+                  type="button" x-on:click="filter = false">
+                  Update
+               </button>
+            </div>
+         </section>
+         <!--Card Listing-->
+         <div class="flex flex-col w-full gap-2">
+            <div class="@container relative flex w-full flex-col flex-wrap items-start gap-3 rounded-2xl border bg-white min-h-[248px] p-2 @xl:p-4 shadow aos-init aos-animate"
+               data-aos="fade-up" data-aos-delay="30">
+               <!-- Search bar -->
+               <div class="relative w-full">
+                  <!--!-->
+                  <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                     <img class="h-4 w-4 text-gray-700" src="images/listingpage/search-outline.svg" alt="">
+                  </div>
+                  <input type="text" id="default-search"
+                     class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-sm text-gray-900 focus:border-purple-500 focus:ring-purple-500"
+                     placeholder="Search" required=""><!--!-->
+                  <button type="button"
+                     class="absolute bottom-2.5 right-2.5 rounded-lg bg-purple-700 px-4 py-2 text-sm font-medium text-white hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300">Search</button>
+               </div>
+               <div class="group flex flex-col w-full @xl:flex-row @xl:items-center justify-between gap-2 rounded-xl bg-gradient-to-b from-yellow-100  p-2">
+                  <div class="flex items-center gap-3"><a href="/en-pk/lawyer/arshid+mehmood+kiani844131/"
+                        class="relative flex w-20 h-20 shrink-0">
+                        <!--!-->
+                        <img class="absolute z-10 top-1 right-1 h-4 w-4" src="images/listingpage/Icon Shapes.svg"
+                           alt="">
+                        <!--!-->
+                        <div class="relative flex items-center justify-center w-20 h-20 text-base rounded-md md:text-3xl shrink-0 ">
+                           <img class="object-cover w-20 h-20 text-base rounded-md md:text-3xl "
+                              src="https://prodwooqlaw.blob.core.windows.net/uploads/94ab81b6-ce23-4979-4e25-08daf5810fb4/7b6c7640-4be1-4b8c-a2de-943d9e08f7c7.webp"
+                              alt="arshid+mehmood+kiani"
+                              onerror="this.onerror='_content/Kartoa.Framework.MicroUIs/images/avatar-new.svg';this.src='_content/Kartoa.Framework.MicroUIs/images/avatar-new.svg';">
+                        </div>
+                     </a><!--!-->
+                     <div content="flex flex-col justify-between flex-wrap">
+                        <div class="mb-2"><a href="/en-pk/lawyer/arshid+mehmood+kiani844131/"
+                              class="txt flex text-sm @xl:text-base font-medium text-black">Arshid Mehmood
+                              Kiani</a><span class="mb-1 text-sm font-normal txt">
+                              <h3 class="text-sm font-normal">Advocate High Court</h3>
+                           </span></div>
+                     </div>
+                  </div>
+               </div>
+               <!--!-->
+               <div class="flex flex-col w-full gap-2 group">
+                  <div class="flex items-center gap-2 p-2 font-medium border rounded-lg bg-slate-50 border-slate-100">
+                     <!--!-->
+                     <div class="flex gap-1 overflow-x-auto line-clamp-1 scroll">
+                        <div
+                           class="basis-auto shrink-0 grow-0 md:grow px-3 py-0.5 bg-violet-100 rounded-md justify-start items-center gap-1 inline-flex">
+                           <div class="text-sm font-medium leading-tight text-center text-black">FBR Tax Return Filling
+                           </div>
+                        </div>
+                        <div
+                           class="basis-auto shrink-0 grow-0 md:grow px-3 py-0.5 bg-violet-100 rounded-md justify-start items-center gap-1 inline-flex">
+                           <div class="text-sm font-medium leading-tight text-center text-black">FBR Tax Return Filling
+                           </div>
+                        </div>
+                        <div
+                           class="basis-auto shrink-0 grow-0 md:grow px-3 py-0.5 bg-violet-100 rounded-md justify-start items-center gap-1 inline-flex">
+                           <div class="text-sm font-medium leading-tight text-center text-black">FBR Tax Return Filling
+                           </div>
+                        </div>
+                        <div
+                           class="basis-auto shrink-0 grow-0 md:grow px-3 py-0.5 bg-violet-100 rounded-md justify-start items-center gap-1 inline-flex">
+                           <div class="text-sm font-medium leading-tight text-center text-black">FBR Tax Return Filling
+                           </div>
+                        </div>
+                        <div
+                           class="basis-auto shrink-0 grow-0 md:grow px-3 py-0.5 bg-violet-100 rounded-md justify-start items-center gap-1 inline-flex">
+                           <div class="text-sm font-medium leading-tight text-center text-black">FBR Tax Return Filling
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="flex items-center gap-2 p-2 font-medium border rounded-lg bg-slate-50 border-slate-100">
+                     <!--!-->
+                     <span class="w-5 h-5 shrink-0">
+                        <img src="images/listingpage/square-academic-cap.svg" alt="">
+                     </span>
+                     <span class="txt text-xs @xl:text-sm truncate grow">BA, MA, LLM | 25 year(s)
+                        experience </span>
+                  </div>
+                  <div class="flex items-center gap-2 p-2 border rounded-lg bg-slate-50 border-slate-100">
+                     <!--!-->
+                     <span class="w-5 h-5 shrink-0">
+                        <img src="images/listingpage/case.svg" alt="">
+                     </span>
+                     <span class="txt text-xs @xl:text-sm truncate grow font-medium">Criminal Law | Civil Law |
+                        Constitutional
+                        Law</span>
+                  </div>
+                  <!--!-->
+                  <div class="flex items-center gap-2 p-2 border rounded-lg bg-slate-50 border-slate-100">
+                     <!--!-->
+                     <span class="w-5 h-5 shrink-0">
+                        <img src="images/listingpage/map-point-wave.svg" alt="">
+                     </span>
+                     <span class="flex flex-col gap-1 font-medium truncate txt grow"><span
+                           class="text-2xs @xl:text-xs truncate">Islamabad office, Islamabad</span></span>
+                  </div>
+               </div>
+            </div>
+            <div  class="@container relative flex w-full flex-col flex-wrap items-start gap-3 rounded-2xl border bg-white min-h-[248px] p-2 @xl:p-4 shadow aos-init aos-animate"
+               data-aos="fade-up" data-aos-delay="40">
+               <div
+                  class="group flex flex-col w-full @xl:flex-row @xl:items-center justify-between gap-2 rounded-xl bg-gradient-to-b  from-yellow-100  p-2">
+                  <div class="flex items-center gap-3">
+                     <a href="/en-pk/lawyer/qamarrehman244675/" class="relative flex w-20 h-20 shrink-0">
+                        <!--!-->
+                        <img class="absolute z-10 top-1 right-1 h-4 w-4" src="images/listingpage/Icon Shapes.svg"
+                           alt="">
+                        <!--!-->
+                        <div
+                           class="w-20 h-20 text-base md:text-3xl  rounded-md relative flex items-center justify-center shrink-0 ">
+                           <img class="w-20 h-20 text-base md:text-3xl object-cover rounded-md "
+                              src="https://prodwooqlaw.blob.core.windows.net/uploads/da9d6624-c142-4a30-3081-08daefdcc721/55909e5d-b235-41c2-a03e-34f9b80b1902.webp"
+                              alt="qamar+rehman"
+                              onerror="this.onerror='_content/Kartoa.Framework.MicroUIs/images/avatar-new.svg';this.src='_content/Kartoa.Framework.MicroUIs/images/avatar-new.svg';">
+                        </div>
+                     </a><!--!-->
+
+
+                     <div content="flex flex-col justify-between flex-wrap">
+                        <div class="mb-2"><a href="/en-pk/lawyer/qamarrehman244675/"
+                              class="txt flex text-sm @xl:text-base font-medium text-black">Qamar Rehman </a><span
+                              class="mb-1 text-sm font-normal txt">
+                              <p class="text-sm font-normal">Advocate High Court</p>
+                           </span>
+                        </div>
+                        <button
+                           class="icon flex w-fit items-center justify-center gap-1 md:gap-2 rounded-full border bg-orange-500 py-1 pr-1 @xl:pr-2 pl-1"><!--!--><span
+                              class="flex items-center justify-center circle">
+                              <span class="icon">
+                                 <img class="w-5 h-5 shrink-0" src="images/listingpage/play-intro.svg" alt="">
+                              </span>
+                           </span>
+                           <!--!-->
+                           <span class="txt text-2xs md:text-xs font-normal text-white">Play Intro</span>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+               <!--!-->
+               <div class="w-full group flex flex-col gap-2">
+                  <div class="flex items-center gap-2 p-2 font-medium border rounded-lg bg-slate-50 border-slate-100">
+                     <div class="flex gap-1 overflow-x-auto line-clamp-1 py-1  scroll">
+                        <div
+                           class="basis-auto shrink-0 grow-0 md:grow px-3 py-0.5 bg-violet-100 rounded-md justify-start items-center gap-1 inline-flex">
+                           <div class="text-sm font-medium leading-tight text-center text-black">Business Immigration UK
+                           </div>
+                        </div>
+                        <div
+                           class="basis-auto shrink-0 grow-0 md:grow px-3 py-0.5 bg-violet-100 rounded-md justify-start items-center gap-1 inline-flex">
+                           <div class="text-sm font-medium leading-tight text-center text-black">Family Immigration UK
+                           </div>
+                        </div>
+                        <div
+                           class="basis-auto shrink-0 grow-0 md:grow px-3 py-0.5 bg-violet-100 rounded-md justify-start items-center gap-1 inline-flex">
+                           <div class="text-sm font-medium leading-tight text-center text-black">Visa Appeal Intl</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="flex items-center gap-2 p-2 bg-slate-50 rounded-lg border border-slate-100 font-medium">
+                     <!--!-->
+                     <span class="h-5 w-5 shrink-0">
+                        <img src="images/listingpage/square-academic-cap.svg" alt="">
+                     </span>
+                     <span class="txt text-xs @xl:text-sm truncate grow">MA , LLB, QLTT (UK)</span>
+                  </div>
+                  <div class="flex items-center gap-2 p-2 bg-slate-50 rounded-lg border border-slate-100">
+                     <!--!-->
+                     <span class="h-5 w-5 shrink-0">
+                        <img src="images/listingpage/case.svg" alt="">
+                     </span>
+                     <span class="txt text-xs @xl:text-sm truncate grow font-medium">Immigration Law | Auqaf &amp;
+                        Religious affairs Law</span>
+                  </div><!--!-->
+
+                  <div class="flex items-center gap-2 p-2 bg-slate-50 rounded-lg border border-slate-100">
+                     <!--!-->
+                     <span class="h-5 w-5 shrink-0">
+                        <img src="images/listingpage/map-point-wave.svg" alt="">
+                     </span>
+                     <span class="txt flex flex-col gap-1 truncate grow font-medium"><span
+                           class="text-2xs @xl:text-xs truncate">BLUE AREA ISLAMABAD, F8 COURTS, Islamabad</span></span>
+                  </div>
+               </div>
+            </div>
+            <!--Card-->
+            <arm-card featured="true"></arm-card>
+            <!--Card-->
+            <arm-card></arm-card>
+            <!--Card-->
+            <arm-card></arm-card>
+            <!--Card-->
+            <arm-card></arm-card>
+         </div>
+      </div>
+      <div class="flex flex-col justify-center items-start md:px-24 md:py-2 gap-1 md:gap-2">
+         <h2 class="font-semibold text-lg md:text-3xl text-gray-900">
+            Are you looking for Top Lawyers in Pakistan?
+         </h2>
+         <span class="font-medium text-sm md:text-base text-gray-700">
+            Are you in need of expert legal assistance in Pakistan? Look no further! Welcome to wooqlaw.com, your
+            one-stop destination for finding the best lawyers across the country. Our platform is dedicated to
+            connecting you with top-tier legal professionals who can effectively address your diverse legal needs.
+            Whether you require assistance with corporate law, family law, criminal defence, or any other legal matter,
+            we've got you covered.
+         </span>
+      </div>
+      <div class="flex flex-col justify-center items-start md:px-24 md:py-2 gap-1 md:gap-2">
+         <h2 class="font-semibold text-lg md:text-3xl text-gray-900">
+            Why Choose the Best Lawyers in Pakistan?
+         </h2>
+         <span class="font-medium text-sm md:text-base text-gray-700">
+            When it comes to navigating the complexities of the legal system, expertise and experience are paramount.
+            Our curated selection of the best lawyers in Pakistan brings together seasoned practitioners with proven
+            track records of success. By choosing one of our featured lawyers, you can rest assured that your case will
+            be handled with the utmost professionalism and dedication, leading to optimal outcomes.
+         </span>
+      </div>
+      <div class="flex flex-col justify-center items-start md:px-24 md:py-2 gap-1 md:gap-2">
+         <h2 class="font-semibold text-lg md:text-3xl text-gray-900">
+            Explore Our Dynamic Directory of Top Lawyers.
+         </h2>
+         <span class="font-medium text-sm md:text-base text-gray-700">
+            With a dynamic number of top lawyers listed on wooqlaw.com, you have access to a diverse pool of legal
+            talent from various cities and regions across Pakistan. Our comprehensive directory allows you to filter
+            your search based on location, specialisation, and other criteria, making it easy to find the perfect legal
+            representative for your specific needs.
+         </span>
+      </div>
+      <div class="flex flex-col justify-center items-start md:px-24 md:py-2 gap-1 md:gap-2">
+         <h2 class="font-semibold text-base md:text-3xl text-gray-900">
+            Why Choose wooqlaw®?
+         </h2>
+         <span class="font-medium text-sm md:text-base text-gray-700">
+            At wooqlaw.com (Internal link to Home Page), we understand the importance of finding the right lawyer who
+            not only possesses the necessary expertise but also aligns with your specific requirements. Here's why our
+            platform stands out:
+            <br><br>
+            <ol class="list-disc font-normal text-xs md:text-sm text-gray-600 ml-5">
+               <li>
+                  <span class="font-semibold text-sm md:text-base text-gray-900">
+                     Extensive Network:
+                     <span class="font-medium text-sm md:text-base text-gray-900">
+                        Our platform features a diverse pool of experienced lawyers covering a wide range of legal
+                        areas, ensuring you find the perfect match for your case.
+                     </span>
+                  </span>
+               </li>
+               <li>
+                  <span class="font-semibold text-sm md:text-base text-gray-900">
+                     Convenience:
+                     <span class="font-medium text-sm md:text-base text-gray-900">
+                        We believe in transparency throughout the legal process. Each lawyer's profile on our platform
+                        includes comprehensive information about their qualifications, expertise, and client reviews,
+                        empowering you to make informed decisions.</span>
+                  </span>
+               </li>
+               <li>
+                  <span class="font-semibold text-sm md:text-base text-gray-900">
+                     Transparency:
+                     <span class="font-medium text-sm md:text-base text-gray-900">
+                        Finding a lawyer has never been easier. With our intuitive search filters, you can narrow down
+                        your options based on location, gender, area of law, and more, saving you time and effort.
+                     </span>
+                  </span>
+               </li>
+               <li>
+                  <span class="font-semibold text-sm md:text-base text-gray-900">
+                     Quality Assurance:
+                     <span class="font-medium text-sm md:text-base text-gray-900">
+                        We uphold high standards of quality and professionalism among our featured lawyers. Rest
+                        assured, you'll receive top-notch legal assistance tailored to your unique needs.
+                     </span>
+                  </span>
+               </li>
+            </ol>
+         </span>
+      </div>
+      <div class="flex flex-col justify-center items-start md:px-24 md:py-2 gap-1 md:ap-2">
+         <h2 class="font-semibold text-base md:text-3xl text-gray-900">
+            Legal Resources for Pakistan:
+         </h2>
+         <span class="font-medium text-sm md:text-base text-gray-700">
+            In addition to connecting you with trusted lawyers, we strive to empower you with valuable legal knowledge.
+            Explore our curated resources to stay informed about the legal landscape in Pakistan:
+            <br><br>
+            <ol class="list-disc font-normal text-xs md:text-sm text-gray-600 ml-5">
+               <li>
+                  <span class="font-semibold text-sm md:text-base text-gray-900">
+                     Lawguide:
+                     <span class="font-medium text-sm md:text-base text-gray-900">
+                        Access a comprehensive Lawguide on various legal topics relevant to Pakistan(Internal link to
+                        Blog Page), including family law, business law, and more. Our experts break down complex legal
+                        concepts into easily understandable insights.
+                     </span>
+                  </span>
+               </li>
+               <li>
+                  <span class="font-semibold text-sm md:text-base text-gray-900">
+                     FAQs:
+                     <span class="font-medium text-sm md:text-base text-gray-900">
+                        Have questions about the legal process in Pakistan? Browse our frequently asked questions
+                        (Internal link to FAQ Page) section for answers to common queries. From understanding court
+                        procedures to navigating legal documentation, we've got you covered.
+                     </span>
+                  </span>
+               </li>
+               <li>
+                  <span class="font-semibold text-sm md:text-base text-gray-900">
+                     Latest Legal Updates:
+                     <span class="font-medium text-sm md:text-base text-gray-900">
+                        Stay up-to-date with the latest developments in Pakistani law (Internal link to Blog Page). Our
+                        platform features regular updates and analysis on key legal changes, ensuring you remain
+                        informed about important legislative developments.
+                     </span>
+                  </span>
+               </li>
+               <li>
+                  <span class="font-semibold text-sm md:text-base text-gray-900">
+                     Quality Assurance:
+                     <span class="font-medium text-sm md:text-base text-gray-900">
+                        We uphold high standards of quality and professionalism among our featured lawyers. Rest
+                        assured, you'll receive top-notch legal assistance tailored to your unique needs.
+                     </span>
+                  </span>
+               </li>
+            </ol>
+         </span>
+      </div>
+      <!-- Faqs -->
+      <div class="flex flex-col w-full bg-white md:px-24 md:py-2 gap-1 md:gap-2">
+         <div class="flex items-center justify-between">
+            <h2 class="text-base md:text-lg font-medium text-gray-900">
+               Frequently Asked Questions (FAQs):
+            </h2>
+         </div>
+         <div x-data="{ open: false }">
+            <div x-disclosure="" class="flex flex-col w-full border rounded-lg bg-white overflow-hidden">
+               <h2 @click="open = !open" class="flex items-center justify-between gap-2 p-2 md:p-5"
+                  :class="{ 'bg-gray-200': open }" aria-expanded="false" aria-controls="alpine-disclosure-panel-1">
+                  <span class="flex items-center gap-2">
+                     <img class="w-5 h-5 shrink-0" src="images/listingpage/question-mark.svg" alt="">
+                     <span class="font-medium text-sm md:text-base text-gray-900">How can I find a lawyer near
+                        me?</span>
+                  </span>
+                  <img :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4  transition-transform duration-200 transform rotate-0" src="images/listingpage/chevron-down.svg" alt="">
+               </h2>
+               <div x-disclosure:panel="" id="alpine-disclosure-panel-1" x-show="open"
+                  class="border rounded-b-lg bg-white">
+                  <div class="flex flex-col p-2 md:p-5">
+                     <p>
+                        <span class="font-medium text-sm md:text-base text-gray-700">Answer:</span>
+                        <span class="font-normal text-sm md:text-base text-gray-700"> To find a lawyer near you,
+                           simply utilise our search filters and enter your city or region. Our platform will then
+                           display a list of featured lawyers operating in your area, making it easy for you to
+                           connect with legal professionals in your vicinity.
+                        </span>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div x-data="{ open: false }">
+            <div x-disclosure="" class="flex flex-col w-full border rounded-lg bg-white overflow-hidden">
+               <h2 @click="open = !open" class="flex items-center justify-between gap-2 p-2 md:p-5"
+                  :class="{ 'bg-gray-200': open }" aria-expanded="false" aria-controls="alpine-disclosure-panel-2">
+                  <span class="flex items-center gap-2">
+                     <img class="w-5 h-5 shrink-0" src="images/listingpage/question-mark.svg" alt="">
+                     <span class="font-medium text-sm md:text-base text-gray-900">How can I find the best lawyer for my
+                        case on wooqlaw.com?</span>
+                  </span>
+                  <img :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4  transition-transform duration-200 transform rotate-0" src="images/listingpage/chevron-down.svg" alt="">
+
+               </h2>
+               <div x-disclosure:panel="" id="alpine-disclosure-panel-2" x-show="open"
+                  class="border rounded-b-lg bg-white">
+                  <div class="flex flex-col p-2 md:p-5">
+                     <p>
+                        <span class="font-medium text-sm md:text-base text-gray-700">Answer:</span>
+                        <span class="font-normal text-sm md:text-base text-gray-700"> To find a lawyer near you,
+                           simply utilise our search filters and enter your city or region. Our platform will then
+                           display a list of featured lawyers operating in your area, making it easy for you to
+                           connect with legal professionals in your vicinity.
+                        </span>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div x-data="{ open: false }">
+            <div x-disclosure="" class="flex flex-col w-full border rounded-lg bg-white overflow-hidden">
+               <h2 @click="open = !open" class="flex items-center justify-between gap-2 p-2 md:p-5"
+                  :class="{ 'bg-gray-200': open }" aria-expanded="false" aria-controls="alpine-disclosure-panel-3">
+                  <span class="flex items-center gap-2">
+                     <img class="w-5 h-5 shrink-0" src="images/listingpage/question-mark.svg" alt="">
+                     <span class="font-medium text-sm md:text-base text-gray-900">How do I schedule a consultation with
+                        a lawyer listed on wooqlaw.com?</span>
+                  </span>
+                  <img :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 transition-transform duration-200 transform rotate-0" src="images/listingpage/chevron-down.svg" alt="">
+
+               </h2>
+               <div x-disclosure:panel="" id="alpine-disclosure-panel-3" x-show="open"
+                  class="border rounded-b-lg bg-white">
+                  <div class="flex flex-col p-2 md:p-5">
+                     <p>
+                        <span class="font-medium text-sm md:text-base text-gray-700">Answer:</span>
+                        <span class="font-normal text-sm md:text-base text-gray-700"> To find a lawyer near you,
+                           simply utilise our search filters and enter your city or region. Our platform will then
+                           display a list of featured lawyers operating in your area, making it easy for you to
+                           connect with legal professionals in your vicinity.
+                        </span>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div x-data="{ open: false }">
+            <div x-disclosure="" class="flex flex-col w-full border rounded-lg bg-white overflow-hidden">
+               <h2 @click="open = !open" class="flex items-center justify-between gap-2 p-2 md:p-5"
+                  :class="{ 'bg-gray-200': open }" aria-expanded="false" aria-controls="alpine-disclosure-panel-4">
+                  <span class="flex items-center gap-2">
+                     <img class="w-5 h-5 shrink-0" src="images/listingpage/question-mark.svg" alt="">
+                     <span class="font-medium text-sm md:text-base text-gray-900">What areas of law do your featured
+                        lawyers specialise in?</span>
+                  </span>
+                  <img :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4  transition-transform duration-200 transform rotate-0" src="images/listingpage/chevron-down.svg" alt="">
+               </h2>
+               <div x-disclosure:panel="" id="alpine-disclosure-panel-4" x-show="open"
+                  class="border rounded-b-lg bg-white">
+                  <div class="flex flex-col p-2 md:p-5">
+                     <p>
+                        <span class="font-medium text-sm md:text-base text-gray-700">Answer:</span>
+                        <span class="font-normal text-sm md:text-base text-gray-700"> To find a lawyer near you,
+                           simply utilise our search filters and enter your city or region. Our platform will then
+                           display a list of featured lawyers operating in your area, making it easy for you to
+                           connect with legal professionals in your vicinity.
+                        </span>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div x-data="{ open: false }">
+            <div x-disclosure="" class="flex flex-col w-full border rounded-lg bg-white overflow-hidden">
+               <h2 @click="open = !open" class="flex items-center justify-between gap-2 p-2 md:p-5"
+                  :class="{ 'bg-gray-200': open }" aria-expanded="false" aria-controls="alpine-disclosure-panel-5">
+                  <span class="flex items-center gap-2">
+                     <img class="w-5 h-5 shrink-0" src="images/listingpage/question-mark.svg" alt="">
+                     <span class="font-medium text-sm md:text-base text-gray-900">Can I choose a lawyer based on their
+                        gender?</span>
+                  </span>
+                  <img :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4  transition-transform duration-200 transform rotate-0" src="images/listingpage/chevron-down.svg" alt="">
+               </h2>
+               <div x-disclosure:panel="" id="alpine-disclosure-panel-5" x-show="open"
+                  class="border rounded-b-lg bg-white">
+                  <div class="flex flex-col p-2 md:p-5">
+                     <p>
+                        <span class="font-medium text-sm md:text-base text-gray-700">Answer:</span>
+                        <span class="font-normal text-sm md:text-base text-gray-700"> To find a lawyer near you,
+                           simply utilise our search filters and enter your city or region. Our platform will then
+                           display a list of featured lawyers operating in your area, making it easy for you to
+                           connect with legal professionals in your vicinity.
+                        </span>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div x-data="{ open: false }">
+            <div x-disclosure="" class="flex flex-col w-full border rounded-lg bg-white overflow-hidden">
+               <h2 @click="open = !open" class="flex items-center justify-between gap-2 p-2 md:p-5"
+                  :class="{ 'bg-gray-200': open }" aria-expanded="false" aria-controls="alpine-disclosure-panel-6">
+                  <span class="flex items-center gap-2">
+                     <img class="w-5 h-5 shrink-0" src="images/listingpage/question-mark.svg" alt="">
+                     <span class="font-medium text-sm md:text-base text-gray-900">How do I know if a lawyer is
+                        reputable?</span>
+                  </span>
+                  <img :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4  transition-transform duration-200 transform rotate-0" src="images/listingpage/chevron-down.svg" alt="">
+               </h2>
+               <div x-disclosure:panel="" id="alpine-disclosure-panel-6" x-show="open"
+                  class="border rounded-b-lg bg-white">
+                  <div class="flex flex-col p-2 md:p-5">
+                     <p>
+                        <span class="font-medium text-sm md:text-base text-gray-700">Answer:</span>
+                        <span class="font-normal text-sm md:text-base text-gray-700"> To find a lawyer near you,
+                           simply utilise our search filters and enter your city or region. Our platform will then
+                           display a list of featured lawyers operating in your area, making it easy for you to
+                           connect with legal professionals in your vicinity.
+                        </span>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div x-data="{ open: false }">
+            <div x-disclosure="" class="flex flex-col w-full border rounded-lg bg-white overflow-hidden">
+               <h2 @click="open = !open" class="flex items-center justify-between gap-2 p-2 md:p-5"
+                  :class="{ 'bg-gray-200': open }" aria-expanded="false" aria-controls="alpine-disclosure-panel-7">
+                  <span class="flex items-center gap-2">
+                     <img class="w-5 h-5 shrink-0" src="images/listingpage/question-mark.svg" alt="">
+                     <span class="font-medium text-sm md:text-base text-gray-900">Are your legal resources applicable to
+                        the laws of Pakistan?</span>
+                  </span>
+                  <img :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4  transition-transform duration-200 transform rotate-0" src="images/listingpage/chevron-down.svg" alt="">
+               </h2>
+               <div x-disclosure:panel="" id="alpine-disclosure-panel-7" x-show="open"
+                  class="border rounded-b-lg bg-white">
+                  <div class="flex flex-col p-2 md:p-5">
+                     <p>
+                        <span class="font-medium text-sm md:text-base text-gray-700">Answer:</span>
+                        <span class="font-normal text-sm md:text-base text-gray-700"> To find a lawyer near you,
+                           simply utilise our search filters and enter your city or region. Our platform will then
+                           display a list of featured lawyers operating in your area, making it easy for you to
+                           connect with legal professionals in your vicinity.
+                        </span>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="flex md:flex-row flex-col items-start gap-2 md:px-24 py-2 w-full">
+         <!-- List of lawyers by arae of law in pakistan  -->
+         <div class="flex flex-col items-start p-3 gap-2 w-full">
+            <span class="font-semibold text-xl text-gray-900">
+               List of Lawyers by Areas of Law in Pakistan
+            </span>
+
+            <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+               <li>
+                  <a href="#">Best Criminal Lawyers in Pakistan</a>
+               </li>
+               <li>
+                  <a href="#">Best Family Lawyers in Pakistan</a>
+               </li>
+               <li>
+                  <a href="#">Best Civil Lawyers in Pakistan</a>
+               </li>
+               <li>
+                  <a href="#">Best Property Lawyers in Pakistan</a>
+               </li>
+               <li>
+                  <a href="#">Best Immigration Lawyers in Pakistan</a>
+               </li>
+            </ol>
+            <a class="font-medium text-sm md:text-base text-blue-600"
+               href="lawyers.html#list_of_lawyers_by_areas_of_law-in-pakistan">Show All</a>
+         </div>
+         <!-- List of lawyers by courts in pakistan -->
+         <div class="flex flex-col items-start p-3 gap-2 w-full">
+            <span class="font-semibold text-xl text-gray-900">
+               List of Lawyers By Courts in Pakistan
+            </span>
+
+            <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+               <li>
+                  <a href="#">Best Rawalpindi High Court Lawyers in Pakistan</a>
+               </li>
+               <li>
+                  <a href="#">Best Anti-Corruption Court Lawyers in Pakistan</a>
+               </li>
+               <li>
+                  <a href="#">Best High Court Lawyers in Pakistan</a>
+               </li>
+               <li>
+                  <a href="#">Best Supreme Court Lawyers in Pakistan</a>
+               </li>
+               <li>
+                  <a href="#">Best Islamabad High Court Lawyers in Pakistan</a>
+               </li>
+            </ol>
+            <a class="font-medium text-sm md:text-base text-blue-600"
+               href="lawyers.html#list_of_lawyers_by_courts_in_pakistan">Show All</a>
+         </div>
+      </div>
+
+      <div class="flex md:flex-row flex-col items-start gap-2 md:px-24 py-2 w-full">
+         <!-- list of lawyers by top cities -->
+         <div class="flex flex-col items-start p-3 gap-2 w-full">
+            <span class="font-semibold text-xl text-gray-900">
+               List of Lawyers By Top Cities in Pakistan
+            </span>
+            <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+               <li>
+                  <a href="#">Best Lawyers in Islamabad</a>
+               </li>
+               <li>
+                  <a href="#">Best Lawyers in Rawalpindi</a>
+               </li>
+               <li>
+                  <a href="#">Best Lawyers in Karachi</a>
+               </li>
+               <li>
+                  <a href="#">Best Lawyers in Lahore</a>
+               </li>
+               <li>
+                  <a href="#">Best Lawyers in Faisalabad</a>
+               </li>
+            </ol>
+            <a class="font-medium text-sm md:text-base text-blue-600"
+               href="lawyers.html#list_of_lawyers_by_top-cities-in-pakistan">Show All</a>
+         </div>
+         <!-- list of female lawyers in top cities -->
+         <div class="flex flex-col items-start p-3 gap-2 w-full">
+            <span class="font-semibold text-xl text-gray-900">
+               List of Female Lawyers in Top Cities of Pakistan
+            </span>
+
+            <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+               <li>
+                  <a href="#">Best Female Lawyers in Islamabad</a>
+               </li>
+               <li>
+                  <a href="#">Best Female Lawyers in Rawalpindi</a>
+               </li>
+               <li>
+                  <a href="#">Best Female Lawyers in Karachi</a>
+               </li>
+               <li>
+                  <a href="#">Best Female Lawyers in Lahore</a>
+               </li>
+               <li>
+                  <a href="#">Best Female Lawyers in Faisalabad</a>
+               </li>
+            </ol>
+            <a class="font-medium text-sm md:text-base text-blue-600"
+               href="lawyers.html#list of female lawyers in top cities">Show All</a>
+         </div>
+      </div>
+
+      <div class="flex md:flex-row flex-col items-start gap-2 md:px-24 py-2 w-full">
+         <!-- List of Lawyers in Other Cities Of Pakistan -->
+         <div class="flex flex-col items-start p-3 gap-2 w-full">
+            <span class="font-semibold text-xl text-gray-900">
+               List of Lawyers in Other Cities Of Pakistan
+            </span>
+            <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+               <li>
+                  <a href="#">Best Lawyers in Muzaffarabad</a>
+               </li>
+               <li>
+                  <a href="#">Best Lawyers in Gujar Khan</a>
+               </li>
+               <li>
+                  <a href="#">Best Lawyers in Faisalabad</a>
+               </li>
+               <li>
+                  <a href="#">Best Lawyers in Chakwal</a>
+               </li>
+               <li>
+                  <a href="#">Best Lawyers in Multan</a>
+               </li>
+            </ol>
+            <a class="font-medium text-sm md:text-base text-blue-600"
+               href="lawyers.html#list_of_lawyers_in_other_cities_of_pakistan">Show All</a>
+         </div>
+         <!-- List of Lawyers By Languages in Pakistan -->
+         <div class="flex flex-col items-start p-3 gap-2 w-full">
+            <span class="font-semibold text-xl text-gray-900">
+               List of Lawyers By Languages in Pakistan
+            </span>
+
+            <ol class="list-disc font-medium text-sm md:text-base text-blue-600 ml-5">
+               <li>
+                  <a href="#">Best English Speaking Lawyers in Pakistan</a>
+               </li>
+               <li>
+                  <a href="#">Best Urdu Speaking Lawyers in Pakistan</a>
+               </li>
+               <li>
+                  <a href="#">Best Punjabi Speaking Lawyers in Pakistan</a>
+               </li>
+               <li>
+                  <a href="#">Best Pashto Speaking Lawyers in Pakistan</a>
+               </li>
+               <li>
+                  <a href="#">Best Balochi Speaking Lawyers in Pakistan</a>
+               </li>
+            </ol>
+            <a class="font-medium text-sm md:text-base text-blue-600"
+               href="lawyers.html#list_of_lawyers_by_languages_in_pakistan">Show All</a>
+         </div>
+      </div>
+   </div>
+
+   <script type="module" src="./components/header.js"></script>
+   <script type="module" src="./components/card.js"></script>
+   <script>
+      // document.addEventListener('alpine:init', () => {
+      //    Alpine.data('modal', () => ({
+      //          showModal(name) {
+      //             this.$dispatch('showModal', { name: name} )
+      //          },
+      //          closeModal(name) {
+      //             this.$dispatch('closeModal', { name: name} )
+      //          }
+      //    }))
+      // })
+
+      document.addEventListener('alpine:init', () => {
+         Alpine.data('modal', () => ({
+            showModal(name) {
+               this.$dispatch('showModal', { name: name })
+            },
+            closeModal(name) {
+               this.$dispatch('closeModal', { name: name })
+            }
+         }))
+      })
+   </script>
+</body>
+
+</html>
